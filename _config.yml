@@ -5,7 +5,7 @@ relative_permalinks:    false
 title:                  'Bits'
 tagline:                'Blog posts from @mdminhazulhaque'
 description:            'Blog posts from <a href="https://minhazulhaque.com/" target="_blank">@mdminhazulhaque</a>.'
-url:                    http://bits.minhazulhaque.com
+url:                    'http://bits.minhazulhaque.com'
 paginate:               5
 exclude:                ['etc', 'CNAME']
 author:
@@ -15,6 +15,9 @@ author:
     twitter:            'https://twitter.com/mdminhazulhaque'
     github:             'https://github.com/minhazul-haque'
     linkedin:           'https://bd.linkedin.com/in/mdminhazulhaque'
+    stackexchange:      'https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts'
+    imdb:               'www.imdb.com/user/ur39009218/ratings'
+    instagram:          'https://www.instagram.com/md.minhazul.haque'
 gems:
-                        - jekyll-sitemap
-                        - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-paginate
