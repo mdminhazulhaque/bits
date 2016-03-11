@@ -10,7 +10,7 @@ Since OS X supports custom keylaout files, I created this layout based on the or
 There may have been similar Probhat keylaouts around there, but this one supports OS X actions using the following hotkeys.
 
 |CMD|ALT|CTRL|
-|---|---|---|
+|:---:|:---:|:---:|
 |⌘|⌥|⌃|
 
 Which means, even when `Probhat` layout is activated, you can hit `⌘+A` to select all, `⌘+C` to copy, `⌃+D` to send EOF or other `⌘+⌥` combinations.
