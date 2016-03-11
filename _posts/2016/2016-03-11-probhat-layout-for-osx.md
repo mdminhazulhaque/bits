@@ -23,6 +23,8 @@ Run the following command in Terminal.
 curl https://raw.githubusercontent.com/minhazul-haque/Probhat/master/install.sh | sudo bash
 ```
 
+Then enter your password so the installer script can copy the necessary files to `/Library/Keyboard\ Layouts` directory.
+
 ## Configure
 
 1. Reboot, or log out and log in again after installing.
