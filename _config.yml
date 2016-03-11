@@ -6,7 +6,7 @@ title:                  'Bits'
 tagline:                'Blog posts from @mdminhazulhaque'
 description:            'Blog posts from <a href="https://minhazulhaque.com/" target="_blank">@mdminhazulhaque</a>.'
 url:                    'http://bits.minhazulhaque.com'
-paginate:               5
+paginate:               20
 exclude:                ['etc', 'CNAME']
 author:
     name:               'Md. Minhazul Haque'
