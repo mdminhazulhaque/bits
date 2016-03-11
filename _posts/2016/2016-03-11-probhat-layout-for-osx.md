@@ -31,11 +31,11 @@ curl https://raw.githubusercontent.com/minhazul-haque/Probhat/master/install.sh 
 4. Get back to `Keyboard Preferences` > `Shortcuts` > `Input Sources` and turn on `Select the previous input source` with shortcut key `⌘+Space`.
 5. Now you will see `Probhat` on input method list on menu bar.
 
-    ![Probhat Input](img_inputmenu.png)
+    ![Probhat Input](https://github.com/minhazul-haque/Probhat/raw/master/img_inputmenu.png)
     
 6. Hit any text editor, browser, Facebook or whatever, press `⌘+Space` and start typing Bangla in Probhat!
 
-    ![Bangla in Text Editor](img_texteditor.png)
+    ![Bangla in Text Editor](https://github.com/minhazul-haque/Probhat/raw/master/img_texteditor.png)
 
 ## License
 
