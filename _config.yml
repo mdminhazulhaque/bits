@@ -15,8 +15,7 @@ author:
     twitter:            'https://twitter.com/mdminhazulhaque'
     github:             'https://github.com/minhazul-haque'
     linkedin:           'https://bd.linkedin.com/in/mdminhazulhaque'
-    stackexchange:      'https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts'
-    instagram:          'https://www.instagram.com/md.minhazul.haque'
+    stackoverflow:      'https://stackoverflow.com/users/1288414/md-minhazul-haque'
 gems:
     - jekyll-sitemap
     - jekyll-paginate
