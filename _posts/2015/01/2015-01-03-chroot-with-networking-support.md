@@ -22,25 +22,29 @@ setup.
 This would be the series of commands to mount essential paths.
 
 ```bash
-mkdir /media/kubuntu
-mount -t auto -o acl /dev/sda1  /media/kubuntu
-mount --bind /dev /media/kubuntu/dev
-mount --bind /tmp /media/kubuntu/tmp
-mount --bind /proc /media/kubuntu/proc
-mount --bind /sys /media/kubuntu/sys
+DEVICE=/dev/sda1
+MOUNTPATH=/media/kubuntu
+
+mkdir -p $MOUNTPATH
+mount -t auto -o acl $DEVICE  $MOUNTPATH
+mount --bind /dev $MOUNTPATH/dev
+mount --bind /tmp $MOUNTPATH/tmp
+mount --bind /proc $MOUNTPATH/proc
+mount --bind /sys $MOUNTPATH/sys
 ```
 
 Before executing chroot, run the following command.
 
 ```bash
-mount --bind /etc/resolv.conf /media/kubuntu/etc/resolv.conf
+# do this after connecting to internet
+mount --bind /etc/resolv.conf $MOUNTPATH/etc/resolv.conf
+chroot $MOUNTPATH
 ```
 This will bind resolve configuration inside chroot environment also. Then
 execute chroot.
 
-```bash 
-chroot /media/kubuntu
+```bash
+chroot $MOUNTPATH
 ```
 
 Do a ping inside chroot shell. Does it work or not? ;)
-
