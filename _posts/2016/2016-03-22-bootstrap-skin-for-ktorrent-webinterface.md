@@ -18,5 +18,5 @@ And on mobile ...
 ![Bootstrap Skin Mobile](https://raw.githubusercontent.com/minhazul-haque/KTorrentBootstrapUI/master/img/mobile_all_torrent.png)
 
 <div class="message">
-Grab the skin from [github.com/minhazul-haque/KTorrentBootstrapUI](https://github.com/minhazul-haque/KTorrentBootstrapUI)
+Grab the skin from <a href="https://github.com/minhazul-haque/KTorrentBootstrapUI">github.com/minhazul-haque/KTorrentBootstrapUI</a>
 </div>
