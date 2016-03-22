@@ -6,7 +6,7 @@ categories: kde
 ---
 
 <div class="message">
-Grab the Bootstrap Skin from <a href="https://github.com/minhazul-haque/KTorrentBootstrapUI">github.com/minhazul-haque/KTorrentBootstrapUI</a>
+Grab the Bootstrap Skin from <a href="https://github.com/minhazul-haque/KTorrentBootstrapUI">minhazul-haque/KTorrentBootstrapUI</a>
 </div>
 
 I have been using KTorrent, one awesome BitTorrent client for KDE, for almost 4 years. KTorrent comes with a plugin named WebInterface which makes it possible to see the list of torrents, control them and add torrents from remote network.
