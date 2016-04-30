@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create Gist using Go
+title: Create (Secret) Gist using Go
 date: 2016-04-30
 categories: golang
 ---
@@ -26,6 +26,8 @@ The content of `request.json` is -
   }
 }
 ```
+
+If the Gist has to be a secret one, set `public` to `true`.
 
 On successful Gist creation, the header will contain the status code `201 Created` and the URI of the Gist as `Location` header. The same thing can be achieved using Golang. Thanks to their nice HTTP POST library and easy to embed JSON buffer. Here is the code I wrote.
 
