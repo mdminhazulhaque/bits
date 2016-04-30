@@ -5,12 +5,14 @@ date: 2016-04-30
 categories: golang
 ---
 
-[Github Gist API](https://developer.github.com/v3/gists/) provides easy functionalities to create (and manage) Gists using simple API call. A simpliest workaround would be using cURL's POST request with JSON parameters.
+[Github Gists API](https://developer.github.com/v3/gists/) provides easy functionalities to create (and manage) Gists using simple API call. A simpliest workaround would be using cURL's POST request with JSON parameters.
 
-First, an OAuth token has to be generated. Go to [https://github.com/settings/tokens/new](https://github.com/settings/tokens/new) and create a new token with `gist` option checked. Save it for future use. Say the token is `afa495114ac154195bd71895b5850bc231e1a9bd`. Then the cURL command would be -
+First, an OAuth token has to be generated. Go to [Tokens](https://github.com/settings/tokens/new) and create a new token with `gist` option checked. Save it for future use. Say the token is `afa495114ac154195bd71895b5850bc231e1a9bd`.
+
+Now the cURL command to create a Gist would be -
 
 ```bash
-curl -H "Content-Type: application/json" -X POST --data @'request.json' -H "Authorization: token afa495114ac154195bd71895b5850bc231e1a9bd" https://api.github.com/gists -I
+curl -H "Content-Type: application/json" -X POST --data @request.json -H "Authorization: token afa495114ac154195bd71895b5850bc231e1a9bd" https://api.github.com/gists -I
 ```
 
 The content of `request.json` is -
