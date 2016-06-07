@@ -42,7 +42,7 @@ Then enter your password so the installer script can copy the necessary files to
 ## Contribute
 
 <div class="message">
-Send bugfixes or commits to [minhazul-haque/Probhat](https://github.com/minhazul-haque/Probhat)
+Send bugfixes or commits to <a href="https://github.com/minhazul-haque/Probhat">minhazul-haque/Probhat</a>
 </div>
 
 ## License
