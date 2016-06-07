@@ -39,6 +39,12 @@ Then enter your password so the installer script can copy the necessary files to
 
     ![Bangla in Text Editor](https://github.com/minhazul-haque/Probhat/raw/master/img_texteditor.png)
 
+## Contribute
+
+<div class="message">
+Send bugfixes or commits to [minhazul-haque/Probhat](https://github.com/minhazul-haque/Probhat)
+</div>
+
 ## License
 
 This keyboard layout is available under the [MIT](http://mths.be/mit) license.
