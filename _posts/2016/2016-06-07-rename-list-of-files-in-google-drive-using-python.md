@@ -7,7 +7,7 @@ categories: python
 
 Here is a code snippet I wrote months ago to rename a thousand files using Google Drive Python API. Please note that you need to set the scope to `https://www.googleapis.com/auth/drive` so the API call can commit changes to your drive. You need to authorize the app first. Run the script, it will open a browser session, allow access to Drive. Then you will be able to download `credentials.json` from Google Drive Developer Console website.
 
-```
+```python
 from __future__ import print_function
 import httplib2
 import os
