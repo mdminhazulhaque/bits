@@ -5,7 +5,6 @@ date: 2016-06-16
 categories: python
 ---
 
-It's really painfull to pull some hundred megabytes of file from Dropbox and upload them to Google Drive, right? I know! I had to transfer some large files from Dropbox to Google Drive. So I looked around the internet for some easy solution. There are some pretty awesome and free online tools to do that. But wait! I am not going to share my files with them. Plus some of them will apply size limit. So I came up with my own solution using Google Drive API.
 
 What you'll need
 
@@ -22,7 +21,7 @@ You might not know, you can download files from Dropbox using wget/curl by appen
 
 ## Push to Google Drive
 
-Now it's time to tune up my Python script to upload the downloaded file to Google Drive. It's a simple API caller script, but I modified some so you don't need to explicitely set file title, mimetype etc. Take a look at it.
+Now it's time to tune up my Python script to upload the downloaded file to Google Drive. It's a simple API caller script, but I modified some so you don't need to explicitly set file title, mimetype etc. Take a look at it.
 
 ```python
 from apiclient import errors, discovery
