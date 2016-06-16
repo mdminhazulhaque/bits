@@ -5,13 +5,12 @@ date: 2016-06-16
 categories: python
 ---
 
-
 What you'll need
 
 * A __VPS__ or any remote server to run Python, pip and wget
 * Patience
 
-First thing first. Generate a Drive API oAuth Secret from [Google API Console](https://console.developers.google.com). Save it as `client_secret.json` to your working directory. We'll be needing this later.
+First things first. Generate a Drive API oAuth Secret from [Google API Console](https://console.developers.google.com). Save it as `client_secret.json` to your working directory. We'll be needing this later.
 
 ## Pull file from Dropbox
 
