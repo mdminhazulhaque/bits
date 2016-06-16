@@ -16,7 +16,7 @@ First things first. Generate a Drive API oAuth Secret from [Google API Console](
 
 You might not know, you can download files from Dropbox using wget/curl by appending `dl=1` at the end of file URI. So download the file you need to send to Google Drive using wget/curl/aria2c or what tool you prefer. Here is a sample execution.
 
-`wget 'https://www.dropbox.com/s/2v2efzgbn8txz6g/Sprint4GDeveloperPack-1.6.1.2.2.tar.gz?dl=1'`
+`wget 'https://www.dropbox.com/s/2v2efzgbn8txz6g/HelloWorld.zip?dl=1'`
 
 ## Push to Google Drive
 
@@ -78,7 +78,9 @@ def get_mimetype(filename):
 def insert_file(service, filename, parent_id=None):
     filemimetype = get_mimetype(filename)
     
-    media_body = MediaFileUpload(filename, mimetype=filemimetype, resumable=True)
+    media_body = MediaFileUpload(filename,
+                mimetype=filemimetype,
+                resumable=True)
     body = {'title': filename, 'mimeType': filemimetype}
     # Set the parent folder if provided
     if parent_id:
