@@ -20,7 +20,7 @@ You might not know, you can download files from Dropbox using wget/curl by appen
 
 ## Push to Google Drive
 
-Now it's time to tune up my Python script to upload the downloaded file to Google Drive. It's a simple API caller script, but I modified some so you don't need to explicitly set file title, mimetype etc. Take a look at it.
+Now it's time to tune up my Python script to upload the downloaded file to Google Drive. It's a simple API caller script, but I modified some so you don't need to explicitly set file title, mimetype etc. Take a look at it. You could save the script as `gdrive_upload.py`.
 
 ```python
 from apiclient import errors, discovery
@@ -120,7 +120,7 @@ if __name__ == '__main__':
 Now do the followings.
 
 1. Change `filename` variable to the path of the file you downloaded earlier
-2. Run `python3 gdrive_upload_file.py --noauth_local_webserver` because the VPS might not have Xserver installed and start a browser.
+2. Run `python3 gdrive_upload.py --noauth_local_webserver` because the VPS might not have Xserver installed and start a browser.
 3. Allow Google Drive Access to your Uploader script, enter the verification code and wait for the file being uploaded!
 4. Profit!
 
