@@ -10,6 +10,7 @@ Here is my solution that can convert Bangla number into English, and English num
 ### BanglaConverter Class
 
 ```php
+<?php
 class BanglaConverter {
     public static $bn = array("১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯", "০");
     public static $en = array("1", "2", "3", "4", "5", "6", "7", "8", "9", "0");
