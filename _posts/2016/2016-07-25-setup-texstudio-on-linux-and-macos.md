@@ -25,7 +25,7 @@ brew cask install texstudio
 
 But you'll still need latex tools. Most popular distribution for macOS is mactex, but it's huge in size (approx. 2GB!) which causes a headache for Macbook Air users like me. So I suggest you download [mactex-basictex](https://tug.org/mactex/morepackages.html) package from their website and install it.
 
-But wait! You'll still experience problems when compiling. TeXstudio will throw nasty errors for some missing components, i.e. `subfiles`, `appendix` etc (if you use them explicitely of course). Don't worry. mactex comes with texlive manager which can install extra components per your need.
+But wait! You'll still experience problems when compiling. TeXstudio will throw nasty errors for some missing components, i.e. `subfiles`, `appendix` etc (if you use them explicitly of course). Don't worry. mactex comes with texlive manager which can install extra components per your need.
 
 First update TeXLive manager. Then install latex packages just like you do with `apt-get`.
 
