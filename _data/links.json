@@ -1,0 +1,60 @@
+{
+  "blog": {
+    "href": "http://bits.mdminhazulhaque.com",
+    "icon": "fa-pencil",
+    "title": "Blog",
+    "show": "true"
+  },
+  "github": {
+    "href": "https://github.com/minhazul-haque",
+    "icon": "fa-github",
+    "title": "Github",
+    "show": "true"
+  },
+  "stackexchange": {
+    "href": "https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts",
+    "icon": "fa-stack-exchange",
+    "title": "StackExchange",
+    "show": "true"
+  },
+  "linkedin": {
+    "href": "https://bd.linkedin.com/in/mdminhazulhaque",
+    "icon": "fa-linkedin",
+    "title": "LinkedIn",
+    "show": "true"
+  },
+  "twitter": {
+    "href": "https://twitter.com/mdminhazulhaque",
+    "icon": "fa-twitter",
+    "title": "Twitter",
+    "show": "true"
+  },
+  "googleplus": {
+    "href": "https://plus.google.com/+MuhammadMinhazulHaque",
+    "icon": "fa-google-plus",
+    "title": "Google+",
+    "show": "true"
+  },
+  "instagram": {
+    "href": "https://www.instagram.com/md.minhazul.haque/",
+    "icon": "fa-instagram",
+    "title": "Instagram",
+    "show": "true"
+  },
+  "imdb": {
+    "href": "http://www.imdb.com/user/ur39009218/ratings/",
+    "icon": "fa-film",
+    "title": "IMDb",
+    "show": "false"
+  },
+  "quora": {
+    "href": "https://www.quora.com/profile/Md-Minhazul-Haque",
+    "icon": "fa-question",
+    "title": "Quora",
+    "show": "false"
+  },
+  "aplombtech": {
+    "href": "http://www.aplombtechbd.com/",
+    "show": "false"
+  }
+}

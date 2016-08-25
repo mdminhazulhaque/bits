@@ -7,12 +7,8 @@
         </a>
       </h1>
       <p class="lead">{{ site.description }}</p>
-      <p>Find me at&nbsp;
-        <a href="{{ site.author.github }}"><span class="socicon socicon-github"></a>&nbsp;
-        <a href="{{ site.author.twitter }}"><span class="socicon socicon-twitter"></a>&nbsp;
-        <a href="{{ site.author.linkedin }}"><span class="socicon socicon-linkedin"></a>&nbsp;
-        <a href="{{ site.author.stackoverflow }}"><span class="socicon socicon-stackoverflow"></a>&nbsp;
-        <a href="{{ site.author.gplus }}"><span class="socicon socicon-googleplus"></a>
+      <p>Find me at ...{% for link in site.data.links %}{% if link.last.show == "true" and link.last.title != "Blog" %}
+      <br><a href="{{ link.last.href }}"><i class="fa fa-fw {{ link.last.icon }}"></i> {{ link.last.title }}</a>{% endif %}{% endfor %}
       </p>
     </div>
     <p>&copy; 2012 - {{ site.time | date: '%Y' }}. All rights reserved.</p>
