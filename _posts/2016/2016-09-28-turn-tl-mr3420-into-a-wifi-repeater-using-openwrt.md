@@ -6,7 +6,7 @@ categories: openwrt
 ---
 
 <div class="message">
-Download OpenWRT firmware for TP-Link TL-MR3420 with relayd from [minhazul-haque/OpenWRT-TL-MR3420](https://github.com/minhazul-haque/OpenWRT-TL-MR3420/tree/master/repeater)
+Download OpenWRT firmware for TP-Link TL-MR3420 with relayd from <a href="https://github.com/minhazul-haque/OpenWRT-TL-MR3420/tree/master/repeater">minhazul-haque/OpenWRT-TL-MR3420</a>
 </div>
 
 I have been using my TL-MR3420 (Version 2.2) router as a repeater for a month. The access point in my house is an Apple Airport which delivers pretty good signal even when there exists several obstacles (walls, doors) between the Airport and my WLAN card. But ...
@@ -128,5 +128,5 @@ If you fail, review the config files and keep trying. I suggest you to closely o
 Good luck!
 
 <div class="message">
-Thanks to [Daniel Wayne Armstrong's post](http://www.circuidipity.com/openwrt-bridged-repeater.html) for writing a nice post which really works and saved me from headache.
+Thanks to <a href="http://www.circuidipity.com/openwrt-bridged-repeater.html">Daniel Wayne Armstrong's post</a> for writing a nice post which really works and saved me from headache.
 </div>
