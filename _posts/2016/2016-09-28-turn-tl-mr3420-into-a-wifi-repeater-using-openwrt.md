@@ -9,7 +9,7 @@ categories: openwrt
 Download OpenWRT firmware for TP-Link TL-MR3420 with relayd from <a href="https://github.com/minhazul-haque/OpenWRT-TL-MR3420/tree/master/repeater">minhazul-haque/OpenWRT-TL-MR3420</a>
 </div>
 
-I have been using my TL-MR3420 (Version 2.2) router as a repeater for a month. The access point in my house is an Apple Airport which delivers pretty good signal even when there exists several obstacles (walls, doors) between the Airport and my WLAN card. But ...
+I have been using my [TL-MR3420](http://www.tp-link.com.bd/products/details/cat-14_TL-MR3420.html) (Version 2.2) router as a repeater for a month. The access point in my house is an Apple Airport which delivers pretty good signal even when there exists several obstacles (walls, doors) between the Airport and my WLAN card. But ...
 
 First, let's disable firewall and DNS masquareding because we will be using a Bridged Repeater which will act exactly like the Airport I have been using as access point. Then install `relayd` which will get most of the job done for us.
 
