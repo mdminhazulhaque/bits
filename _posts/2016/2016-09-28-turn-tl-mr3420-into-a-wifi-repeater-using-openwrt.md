@@ -11,9 +11,9 @@ Download TL-MR3420 OpenWRT Firmware with relayd preinstalled from <a href="https
 
 I have been using my [TL-MR3420](http://www.tp-link.com.bd/products/details/cat-14_TL-MR3420.html) (Version 2.2) router as a repeater for a month. The access point in my house is an Apple Airport which delivers pretty good signal even when there exists several obstacles (walls, doors) between the Airport and my WLAN card. But I badly needed a repeater for syncing files from/to my devices. So I turned my old router into a WiFi repeater.
 
-First, let's disable firewall and DNS masquareding because we will be using a Bridged Repeater which will act exactly like the Airport I have been using as access point. Then install `relayd` which will get most of the job done for us.
+First, let's disable the firewall and DNS masquerading because we will be using a Bridged Repeater which will act exactly like the Airport I have been using as access point. First, install `relayd` which will get most of the job done for us.
 
-```
+```bash
 /etc/init.d/firewall stop
 /etc/init.d/firewall disable
 /etc/init.d/dnsmasq stop
@@ -55,7 +55,7 @@ config wifi-iface
 
 Now let's change `/etc/config/network` also. You have to be very careful in this step. Otherwise the repeater may not work, or even if it works, you may not get internet connectivity through it.
 
-```
+```bash
 # nano /etc/config/network
 config interface 'loopback'
     option ifname 'lo'
@@ -100,7 +100,7 @@ Note that I have used `10.0.1.254` which will be the repeater's IP address. This
 
 Now, edit `/etc/config/dhcp` according to the following.
 
-```
+```bash
 # nano /etc/config/dhcp
 config dhcp 'lan'
     option interface 'lan'
@@ -116,7 +116,7 @@ config dhcp 'wan'
 
 Now we are almost done. Now just enable `relayd` and reboot the router.
 
-```
+```bash
 /etc/init.d/relayd enable
 reboot
 ```
