@@ -96,7 +96,7 @@ config switch_vlan
     option ports '0 1 2 3 4'
 ```
 
-Note that I have used `10.0.1.254` which will be the repeater's IP address. This is very important to set this IP correctly. Do not set IP address like `10.0.1.1` or any IP which is researved in the Airport (or any source WiFi access point). You can later `ssh` or `telnet` using the IP address of the `stabridge` device.
+Note that I have used `10.0.1.254` which will be the repeater's IP address. This is very important to set this IP correctly. Do not set IP address like `10.0.1.1` which is the gateway of the access point (!) or any other IP which is already reserved in the Airport (or any source WiFi access point). You can later `ssh` or `telnet` using the IP address of the `stabridge` device.
 
 Now, edit `/etc/config/dhcp` according to the following.
 
