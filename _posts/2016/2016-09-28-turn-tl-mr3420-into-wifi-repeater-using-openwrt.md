@@ -121,7 +121,7 @@ Now we are almost done. Now just enable `relayd` and reboot the router.
 reboot
 ```
 
-After 15-30s of boot, you can see the new repeater SSID in the WiFi menu of your phone/compuer. Connect to it and check if the internet works.
+After 15-30s of boot, you can see the new repeater SSID in the WiFi menu of your phone/computer. Connect to it and check if the internet works.
 
 If you fail, review the config files and keep trying. I suggest you to closely observe the config file because if you miss one single character, the WiFi may not start, or the internet connectivity might fall.
 
