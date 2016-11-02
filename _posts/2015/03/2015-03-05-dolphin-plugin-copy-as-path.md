@@ -8,7 +8,11 @@ I was missing the feature of **Copy filename as path** in Dolphin (KDE File Mana
 
 Create a file named `copyaspath.desktop` in the following directory.
 
-    /home/minhaz/.kde/share/kde4/services/ServiceMenus
+    ~/.kde/share/kde4/services/ServiceMenus
+
+For KDE5, use the following directory (thanks to Peter).
+
+    ~/.local/share/kservice5
 
 Replace minhaz with your username. Then add the following lines to the file
 **copyaspath.desktop**.
@@ -32,5 +36,3 @@ appear. Clicking it will copy the absolute name of the file to clipboard.
 
 
 [![](http://i.imgur.com/3uLH7qs.png)](http://i.imgur.com/3uLH7qs.png)
-
-You can [download the file copyaspath.desktop](https://gist.github.com/minhazul-haque/dc9cd74c939d386a0df6/raw/385a8731c2a397ea708dec761c93ee1cc2213b56/copyaspath.desktop) from Gist.
