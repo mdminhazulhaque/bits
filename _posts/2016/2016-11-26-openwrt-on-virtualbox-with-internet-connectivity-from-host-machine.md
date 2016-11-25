@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenWRT inside VirtualBox with Internet Connectivity from Host Machine
+title: 'OpenWRT inside VirtualBox with Internet Connectivity from Host Machine'
 date: 2016-11-2016
 categories: openwrt
 ---
