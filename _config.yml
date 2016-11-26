@@ -3,8 +3,8 @@ highlighter:            rouge
 permalink:              /:categories/:title.html
 relative_permalinks:    false
 title:                  'Bits'
-description:            'Random posts written by <a href="https://mdminhazulhaque.com">Md. Minhazul Haque</a>'
-url:                    'http://bits.minhazulhaque.com'
+description:            'Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a>'
+url:                    'http://bits.minhazulhaque.io'
 paginate:               20
 gems:
     - jekyll-sitemap
