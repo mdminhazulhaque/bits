@@ -30,7 +30,7 @@ function handle_request(env)
     uhttpd.send("Status: 200 OK\r\n")
     uhttpd.send("Content-Type: text/html\r\n\r\n")
     
-    # strip `/lua/` from the begining
+    # strip "/lua/" from the begining
     local command = pr.urldecode(string.sub(env.REQUEST_URI, 6))
     
     local proc = assert(io.popen(command))
@@ -51,7 +51,7 @@ You might already have guessed that this simple Lua script will execute any shel
 Now it's time to do some real check. Let's run the command `uname -a`. I did run the following.
 
 ```
-minhaz:~ $ curl -s 'http://localhost:8080/lua/uname%20-a'
+minhaz:~ $ curl -s 'http://192.168.1.1/lua/uname%20-a'
 Linux OpenWrt 4.4.14 #1 SMP Thu Nov 24 11:24:16 UTC 2016 x86_64 GNU/Linux
 ```
 
