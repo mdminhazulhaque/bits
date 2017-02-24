@@ -32,7 +32,7 @@ And here is the response.
 To connect to your desired network, simple use the following command.
 
 ```bash
-nmcli device wifi connect MYHOME password 'p@55w0rd'
+$ nmcli device wifi connect MYHOME password 'p@55w0rd'
 Device 'wlan0' successfully activated with 'd54d566c-fa31-4a21-ae4b-a1279d10f3e3'.
 ```
 
