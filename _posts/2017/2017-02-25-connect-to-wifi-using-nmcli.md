@@ -19,15 +19,14 @@ nmcli device wifi list
 And here is the response.
 
 ```
-*  SSID                         MODE   CHAN  RATE       SIGNAL  BARS  SECURITY  
-   MT7620_AP                    Infra  1     54 Mbit/s  100     ▂▄▆█            
-   MYHOME                       Infra  2     54 Mbit/s  100     ▂▄▆█  WPA2      
-   Minhaz+                      Infra  11    54 Mbit/s  95      ▂▄▆█  WPA2      
-   xiaomi-repeater-v1_miap66e7  Infra  1     54 Mbit/s  87      ▂▄▆█            
-   ESP8266                      Infra  2     54 Mbit/s  55      ▂▄__  WPA1 WPA2 
-   APL_RT_3111                  Infra  11    54 Mbit/s  34      ▂▄__  WPA2      
-   LINK3                        Infra  11    54 Mbit/s  12      ▂___  WPA1 WPA2 
-   AAMRA-WIFI                   Infra  11    54 Mbit/s  12      ▂___  WPA1 WPA2 
+*  SSID            MODE   CHAN  RATE       SIGNAL  BARS  SECURITY  
+   MT7620_AP       Infra  1     54 Mbit/s  100     ▂▄▆█            
+   MYHOME          Infra  2     54 Mbit/s  100     ▂▄▆█  WPA2      
+   Minhaz+         Infra  11    54 Mbit/s  95      ▂▄▆█  WPA2      
+   xiaomi-repeater Infra  1     54 Mbit/s  87      ▂▄▆█            
+   ESP8266         Infra  2     54 Mbit/s  55      ▂▄__  WPA1 WPA2 
+   LINK3           Infra  11    54 Mbit/s  12      ▂___  WPA1 WPA2 
+   AAMRA-WIFI      Infra  11    54 Mbit/s  12      ▂___  WPA1 WPA2 
 ```
 
 To connect to your desired network, simple use the following command.
