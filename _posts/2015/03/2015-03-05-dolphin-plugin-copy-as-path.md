@@ -13,7 +13,7 @@ Create a file named `copy-path.desktop` in the following directory.
 
 For KDE5, use the following directory (thanks to Peter).
 
-    ~/.local/share/kservice5
+    ~/.local/share/kservices5
 
 Then add the following lines to the file `copy-path.desktop`.
 
