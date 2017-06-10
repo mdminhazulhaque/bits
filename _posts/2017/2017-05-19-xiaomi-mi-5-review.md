@@ -5,7 +5,7 @@ date: 2017-05-19
 categories: phones
 ---
 
-![Xiaomi MI 5 Photo by Minhaz](http://i.imgur.com/nbBzviE.jpg)
+![Xiaomi MI 5 Photo by Minhaz](http://i.imgur.com/XccX3Pe.jpg)
 
 শুরুতেই বলে নেই, নিচের সকল মতামত ও এনালাইসিস প্রায় মাসখানেক ধরে নানারকম মডেলের ফোন (যেমন OnePlus3, Nexus 5X/6P, iPhone 6, Samsung A3, HTC A9, Samsung A5 2017 ইত্যাদি) এর সাথে তুলনা করে করা হয়েছে। এবং যেহেতু আমি একজন ডেভলপার, কাজেই আমার রিভিউ এবং অন্যদের রিভিউ আলাদা হতে পারে। তবুও আমি চেষ্টা করছি নিরপেক্ষ রিভিউ করতে।
 
