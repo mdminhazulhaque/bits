@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Find Image in Another Image using OpenCV and NumPy
+title: Find An Image in Another Image using OpenCV and NumPy
 date: 2017-07-12
 categories: opencv
 ---
