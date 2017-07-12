@@ -15,13 +15,13 @@ Install kdialog or zenity. If you are using KDE, kdialog should come built-in. G
 Then use the sleep command and set kdialog or zenity with a message which you want to show. For example, to set a reminder about "Call mom" after 10 minutes, simply do the following.
 
 ```bash
-sleep 10m &&& kdialog --msgbox "Call mom"
+sleep 10m && kdialog --msgbox "Call mom"
 ```
 
 Or for zenity, do this.
 
 ```bash
-sleep 10m &&& zenity --info --text "Call mom"
+sleep 10m && zenity --info --text "Call mom"
 ```
 
 If you don't want to keep the terminal on, simply put an ampersand at the end of the command. This will run the process in the background.
