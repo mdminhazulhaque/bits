@@ -9,7 +9,6 @@ Installing Avro on Linux has become pretty much easy these days. Thanks to [this
 First, download the latest `deb` file for Avro and install it.
 
 ```bash
-# links
 wget https://github.com/maateen/avro/releases/download/v2.1/avro_2.1-3_all.deb
 sudo dpkg -i avro_2.1-3_all.deb
 sudo apt install -f
@@ -27,6 +26,6 @@ Here comes the best part. You need to set `ibus` as default IME at boot time. Th
 sudo echo IM_CONFIG_DEFAULT_MODE=ibus >> /etc/default/im-config
 ```
 
-Now run `ibus-setup` and do add `Avro Keyboard` from `Bengali` section as `Normal User` (no root). When you are done, just reboot your computer. After rebooting, Bengali text should appear as it should be.
+Now run `ibus-setup` and do add `Avro Keyboard` from `Bengali` section as `Normal User` (no root). When you are done, just reboot your computer. After rebooting, Bengali text should appear when you type as it should be.
 
 Let me know if this trick helped you. Or if you have a better one to share!
