@@ -1,0 +1,40 @@
+---
+layout: post
+title: "Successful Installation of DD-WRT for TL-WR845N"
+date: 2018-05-16
+categories: ddwrt
+---
+
+Several days ago I got my home router burnt due to the frequent thunderstorms. Luckily, only the WAN port of the router was damaged. So I decided to use the switch interface as WAN. I knew how to configure the switch as WAN on OpenWRT. But sadly there was no modded firmware for this model. I searched the internet and tried some firmwares. But none of them worked. Moreover, latest models from TP-Link does not support flashing 3rd party roms from the WebUI.
+
+So I opened the case of the router, took out the PCB, and insert 4 male headers on the debug UART port. Here is how the UART pin mapping looks like.
+
+![PCB](https://i.imgur.com/FH7i7oT.jpg)
+
+![Debug UART](https://i.imgur.com/aoN5zIT.jpg)
+
+From the debug log, I found that the chip is Qualcomm Atheros QCA9533-BL3A and connected to 32MB RAM and 4 MB SPI Flash. I looked into DD-WRT forum and found that it is a rebranded version of TL-WR841ND v10. So I decided to use a firmware built for TL-WR841ND. This time I failed again because the product in the firmware header mismatched. I am glad that a user named `ian5142c` from [DD-WRT forum](https://www.dd-wrt.com/phpBB2/viewtopic.php?p=1107635) uploaded a firmware with compatible header.
+
+I had to install TFTP server in my Linux PC and ran it via `xinetd`. Here is the config file located at `/etc/xinetd.d/tftp`.
+
+```bash
+service tftp
+{
+protocol        = udp
+port            = 69
+socket_type     = dgram
+wait            = yes
+user            = nobody
+server          = /usr/sbin/in.tftpd
+server_args     = /tmp
+disable         = no
+}
+```
+
+I downloaded the firmware from [this link](https://www.dd-wrt.com/phpBB2/download.php?id=40123&sid=8dea5fdab81f6bfcf0ad214be2334488) and renamed it as `wr845nv1_tp_recovery.bin` and put it at `/tmp`. Then I connected the router with my computer via ethernet cable. As I said the router's WAN port was damaged. So I used any of the 4-LAN ports. My computer's IP was set to `192.168.1.86` as the router looks for this IP while booting in recovery mode. To boot in recovery mode, the RESET button has to be pressed and hold while powering on the router.
+
+I could see the debug messages coming through the UART. Uboot pulled the firmware from my computer, flashed it and rebooted. After a minute, I got an SSID named `ddwrt` with no password set. After getting connected through WiFi, I browsed `192.168.1.1` and got the WebUI. (Use `admin/admin` as username/password for logging in to the control panel.)
+
+Rest of the configuration was quite simple. I disabled DHCP Server from `eth0` (switch) and changed WAN from `eth1` to `eth0`. I got linkup using PPPoE from WAN.
+
+So far I am happy and my `hacked` router is performing great.
