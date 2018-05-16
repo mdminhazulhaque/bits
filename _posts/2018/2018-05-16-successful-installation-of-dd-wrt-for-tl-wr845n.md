@@ -33,7 +33,7 @@ disable         = no
 
 I downloaded the firmware from [this link](https://www.dd-wrt.com/phpBB2/download.php?id=40123&sid=8dea5fdab81f6bfcf0ad214be2334488) and renamed it as `wr845nv1_tp_recovery.bin` and put it in `/tmp`. Then I connected the router with my computer via ethernet cable. As I said earlier that the router's WAN port was damaged. So I used any of the 4-LAN ports. My computer's IP was set to `192.168.1.86` as the router looks for this IP while booting in recovery mode. To boot in recovery mode, the RESET button has to be pressed and hold while powering on the router.
 
-I could see the debug messages coming through the UART. Uboot pulled the firmware from my computer, flashed it and rebooted. After a minute, I got a broadcasting SSID named `ddwrt` with open encryption. After getting connected through the WiFi, I browsed the link `https://192.168.1.1` and found a nice looking WebUI there. (Use `admin/admin` as username/password for logging in to the control panel.)
+I could see the debug messages coming through the UART. Uboot pulled the firmware from my computer, flashed it and rebooted. After a minute, I got a broadcasting SSID named `ddwrt` with open encryption. After getting connected through the WiFi, I browsed the link `http://192.168.1.1` and found a nice looking WebUI there. (Use `admin/admin` as username/password for logging in to the control panel.)
 
 Rest of the configuration was quite simple. I disabled DHCP Server from `eth0` (switch) and changed WAN from `eth1` to `eth0`. I got linkup using PPPoE from WAN.
 
