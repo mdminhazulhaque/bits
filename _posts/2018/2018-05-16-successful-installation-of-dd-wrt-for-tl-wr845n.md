@@ -5,17 +5,17 @@ date: 2018-05-16
 categories: ddwrt
 ---
 
-Several days ago I got my home router burnt due to the frequent thunderstorms. Luckily, only the WAN port of the router was damaged. So I decided to use the switch interface as WAN. I knew how to configure the switch as WAN on OpenWRT. But sadly there was no modded firmware for this model. I searched the internet and tried some firmwares. But none of them worked. Moreover, latest models from TP-Link does not support flashing 3rd party roms from the WebUI.
+Several days ago I got my home router burnt due to the frequent thunderstorms. Luckily, only the WAN port of the router was damaged. So I decided to use the switch interface as WAN. I knew how to configure the switch as WAN on OpenWRT. Unfortunately there was no modded firmware for this model. I searched over the internet and tried flashing some firmwares. But none of them worked. Moreover, latest models from TP-Link does not support flashing 3rd party firmware from the WebUI.
 
-So I opened the case of the router, took out the PCB, and insert 4 male headers on the debug UART port. Here is how the UART pin mapping looks like.
+So I opened the case of the router, took out the PCB, and insert 4 male headers on the debug UART port. This is how the UART pin mapping looks like -
 
 ![PCB](https://i.imgur.com/FH7i7oT.jpg)
 
 ![Debug UART](https://i.imgur.com/aoN5zIT.jpg)
 
-From the debug log, I found that the chip is Qualcomm Atheros QCA9533-BL3A and connected to 32MB RAM and 4 MB SPI Flash. I looked into DD-WRT forum and found that it is a rebranded version of TL-WR841ND v10. So I decided to use a firmware built for TL-WR841ND. This time I failed again because the product information in the firmware header mismatched. I am glad that a user named `ian5142c` from [DD-WRT forum](https://www.dd-wrt.com/phpBB2/viewtopic.php?p=1107635) uploaded a firmware with compatible header.
+From the debug log, I found that the chip model is Qualcomm Atheros QCA9533-BL3A and it was connected to 32MB DRAM and 4 MB SPI Flash. I searched in the DD-WRT forum and found that the model is a rebranded version of TP Link TL-WR841ND v10. So I decided to use a firmware which was built for TL-WR841ND. I failed again because the product information in the firmware header was mismatched. But, I am glad that a user named `ian5142c` from [DD-WRT forum](https://www.dd-wrt.com/phpBB2/viewtopic.php?p=1107635) uploaded a firmware with the correct header info for that model.
 
-I had to install TFTP server in my Linux PC and ran it via `xinetd`. Here is the config file located at `/etc/xinetd.d/tftp`.
+I had to install TFTP server in my Linux PC and ran it via `xinetd`. Here is the config file located at `/etc/xinetd.d/tftp` -
 
 ```bash
 service tftp
@@ -31,10 +31,10 @@ disable         = no
 }
 ```
 
-I downloaded the firmware from [this link](https://www.dd-wrt.com/phpBB2/download.php?id=40123&sid=8dea5fdab81f6bfcf0ad214be2334488) and renamed it as `wr845nv1_tp_recovery.bin` and put it in `/tmp`. Then I connected the router with my computer via ethernet cable. As I said earlier that the router's WAN port was damaged. So I used any of the 4-LAN ports. My computer's IP was set to `192.168.1.86` as the router looks for this IP while booting in recovery mode. To boot in recovery mode, the RESET button has to be pressed and hold while powering on the router.
+I downloaded the correct firmware from [this link](https://www.dd-wrt.com/phpBB2/download.php?id=40123&sid=8dea5fdab81f6bfcf0ad214be2334488) and renamed it as `wr845nv1_tp_recovery.bin` and put it in `/tmp`. Then I connected the router with my computer via ethernet cable. As I said the router's WAN port was damaged, so I used one of the four LAN ports. Then I set my computer's IP to `192.168.1.86` so that the router can find this IP while booting in recovery mode. In that case, the RESET button needs to be pressed and hold while powering on the router.
 
-I could see the debug messages coming through the UART. Uboot pulled the firmware from my computer, flashed it and rebooted. After a minute, I got a broadcasting SSID named `ddwrt` with open encryption. After getting connected through the WiFi, I browsed the link `http://192.168.1.1` and found a nice looking WebUI there. (Use `admin/admin` as username/password for logging in to the control panel.)
+I could see the debug messages coming through the UART console. Then uboot pulled the firmware from my computer, flashed it and rebooted by itself. After a minute, I got a broadcasting SSID named `ddwrt` with open encryption in my phone's WiFI menu. After getting connected through the WiFi, I browsed the link `http://192.168.1.1` (use `admin/admin` as username/password) and found that control panel impressive.
 
-Rest of the configuration was quite simple. I disabled DHCP Server from `eth0` (switch) and changed WAN from `eth1` to `eth0`. I got linkup using PPPoE from WAN.
+Rest of the configuration process were quite simple. Then at first, I disabled the DHCP Server from `eth0` (switch) and changed the WAN from `eth1` to `eth0`. Finally, I got the link up using PPPoE.
 
-So far I am happy and my `hacked` router is performing great.
+After completing all these terms, I am satisfied and my `hacked` router is performing quite good.
