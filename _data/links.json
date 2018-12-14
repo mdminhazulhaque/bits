@@ -29,12 +29,6 @@
     "title": "Twitter",
     "show": "true"
   },
-  "googleplus": {
-    "href": "https://plus.google.com/+MdMinhazulHaque",
-    "icon": "fa-google-plus",
-    "title": "Google+",
-    "show": "true"
-  },
   "instagram": {
     "href": "https://www.instagram.com/md.minhazul.haque/",
     "icon": "fa-instagram",
