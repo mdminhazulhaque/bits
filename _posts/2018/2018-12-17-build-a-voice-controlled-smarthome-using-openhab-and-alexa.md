@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Build A Voice Controlled SmartHome using openHAB and Alexa
+title: Build a Voice Controlled SmartHome using openHAB and Alexa
 date: 2018-12-17
 categories: linux
 ---
 
-Amazon Alexa Marketplace have lots of third party SmartHome skills to start with. But why not  build your own SmartHome, right?
+The Amazon Alexa Marketplace has lots of third party SmartHome skills to start with. But why not  build your own SmartHome, right?
 
 First thing is, you have to create some openHAB items with proper tagname, label and type. Here I have added 4 devices in `[Lighting]` tag as `Switch` item. This tagname is very important because Amazon Alexa API uses this tagname to export device list into Alexa's SmartHome Discovery menu. I have used `exec1` binding as output trigger of the items. The binding configuration is given as `/home/ubuntu/mysmarthome.py %3$s %2$s` which means it will call `/home/ubuntu/mysmarthome.py` with `%3$s = Item's Programetic Name` (not Label) and `%2$s = Item's State`. Here is the complete item file.
 
