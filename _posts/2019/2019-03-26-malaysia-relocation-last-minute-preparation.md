@@ -38,7 +38,7 @@ categories: malaysia
 * [Grab](https://play.google.com/store/apps/details?id=com.grabtaxi.passenger) - ইহা মালয়েশিয়ার উবার/পাঠাও
 * [Moovit](https://play.google.com/store/apps/details?id=com.tranzmate) - গুগল ম্যাপসে সকল মালয়েশিয়ান রুটের ডিটেইলস সবসময় ঠিক দেখায়না। এটা দিয়ে মালয়েশিয়ান বাস, ট্রেনের রুট জানতে পারবেন।
 * [KLIA Ekspress](https://play.google.com/store/apps/details?id=com.xchanging.erla) - কুয়ালালুমপুর এয়ারপোর্ট থেকে কুয়ালালুমপুর শহরের ট্রেনের এপ, টিকেট কেটে QR কোড দিয়েই স্টেশনে ঢুকতে পারবেন।
-* [Skype](https://play.google.com/store/apps/details?id=com.skype.raider) | [WhatsApp](https://play.google.com/store/apps/details?id=com.whatsapp) | [imo](https://play.google.com/store/apps/details?id=com.imo.android.imoim) - এয়ারপোর্টে পৌঁছে বাসায় কথা বলার জন্য, যার যেটা প্রেফারড আরকি।
+* [Skype](https://play.google.com/store/apps/details?id=com.skype.raider) \| [WhatsApp](https://play.google.com/store/apps/details?id=com.whatsapp) \| [imo](https://play.google.com/store/apps/details?id=com.imo.android.imoim) - এয়ারপোর্টে পৌঁছে বাসায় কথা বলার জন্য, যার যেটা প্রেফারড আরকি।
 
 > যারা বিদেশ থেকে বাংলাদেশে সরাসরি মোবাইল নম্বরে কল দিতে চান (ফিচার ফোন ইউজার), তাদের জন্য Skype দিয়ে ২-৩ টাকা রেটে প্রতি মিনিট কথা বলতে পারেন। এটা ইউজ করার জন্য আপনি যাকে ফোন করবেন তার স্মার্টফোন থাকার প্রয়োজন নেই। জাস্ট রওনা দেওয়ার পূর্বে ক্রেডিট কার্ড দিয়ে আপনার স্কাইপ একাউন্টে ৫ ডলার রিচার্জ করে নিন। এয়ারপোর্টে নেমে ফ্রি ওয়াইফাই দিয়ে আপনি যেকোন নম্বরে ১৫০-২০০ মিনিট কথা বলতে পারবেন।
 
