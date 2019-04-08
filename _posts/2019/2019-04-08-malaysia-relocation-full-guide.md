@@ -1,0 +1,16 @@
+---
+layout: post
+title: "মালয়েশিয়ায় রিলোকেশন গাইড"
+date: 2019-04-08
+categories: malaysia
+---
+যারা মালয়েশিয়ায় রিলোকেট হতে চান, অথবা রিলোকেশন অফার পেয়েছেন কিন্তু কোথায় কখন কিভাবে কি করবেন এ সম্পর্কে কনফিউজড, তাদের জন্য এই ব্লগপোস্ট সিরিজ লিখলাম। শুধুমাত্র রিলোকেশনই নয়, মালয়েশিয়া ভ্রমণ কিংবা অন্য দেশে যারা রিলোকেট হতে যাচ্ছেন তারাও বেশ কিছু আইডিয়া পাবেন এই সিরিজ থেকে।
+
+* [মালয়েশিয়ায় রিলোকেশন ০ - রেজিউম প্রস্তুতি ও ইন্টারভিউ](https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-preparation-apply-interview-etc.html)
+* [মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস](https://bits.mdminhazulhaque.io/malaysia/malaysia-salary-negotiation-employment-pass.html)
+* [মালয়েশিয়ায় রিলোকেশন ২ - ভিসার জন্য এপ্লাই করা](https://bits.mdminhazulhaque.io/malaysia/malaysia-single-entry-visa-prep.html)
+* [মালয়েশিয়ায় রিলোকেশন ৩ - শেষ মুহুর্তের প্রস্তুতি](https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-last-minute-preparation.html)
+* [মালয়েশিয়ায় রিলোকেশন ৪ - ইমিগ্রেশন](https://bits.mdminhazulhaque.io/malaysia/malaysia-immigration.html)
+* [মালয়েশিয়ায় রিলোকেশন ৫ - লাইফস্টাইল টিপস](https://bits.mdminhazulhaque.io/malaysia/malaysia-life-style-tips.html)
+
+আপনারা চাইলে আপনাদের মতামত, অভিজ্ঞতাও শেয়ার করতে পারেন। ধন্যবাদ সবাইকে।
