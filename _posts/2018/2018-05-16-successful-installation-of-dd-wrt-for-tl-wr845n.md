@@ -38,3 +38,8 @@ I could see the debug messages coming through the UART console. Then uboot pulle
 Rest of the configuration process were quite simple. Then at first, I disabled the DHCP Server from `eth0` (switch) and changed the WAN from `eth1` to `eth0`. Finally, I got the link up using PPPoE.
 
 After completing all these terms, I am satisfied and my `hacked` router is performing quite good.
+
+> You can use this beta firmwares from dd-wrt also (<span color="red">at your own risk</span>)
+>
+* [wr841ndv10](ftp://ftp.dd-wrt.com/betas/2019/02-19-2019-r38840/tplink_tl-wr841ndv10/)
+* [wr841ndv11](ftp://ftp.dd-wrt.com/betas/2019/02-19-2019-r38840/tplink_tl-wr841ndv11/)
