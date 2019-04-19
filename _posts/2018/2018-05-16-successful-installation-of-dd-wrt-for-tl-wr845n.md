@@ -39,7 +39,7 @@ Rest of the configuration process were quite simple. Then at first, I disabled t
 
 After completing all these terms, I am satisfied and my `hacked` router is performing quite good.
 
-> You can use this beta firmwares from dd-wrt also (<span color="red">at your own risk</span>)
+> You can use this beta firmwares from dd-wrt also (**at your own risk**)
 >
 * [wr841ndv10](ftp://ftp.dd-wrt.com/betas/2019/02-19-2019-r38840/tplink_tl-wr841ndv10/)
 * [wr841ndv11](ftp://ftp.dd-wrt.com/betas/2019/02-19-2019-r38840/tplink_tl-wr841ndv11/)
