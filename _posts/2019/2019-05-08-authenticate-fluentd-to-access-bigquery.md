@@ -15,9 +15,9 @@ I followed the whole process but ended up receiving the following error at `/var
 2019-05-07 16:13:15 +0000 [warn]: #0 emit transaction failed: error_class=RuntimeError error="failed to fetch schema from bigquery" location="/opt/td-agent/embedded/lib/ruby/gems/2.4.0/gems/fluent-plugin-bigquery-2.1.0/lib/fluent/plugin/out_bigquery_base.rb:190:in `fetch_schema'" tag="nginx.access"
 ```
 
-What I guessed was Fluentd could not access my BigQuery table. Obviously it could not because I had not authenticated `gcloud` on my machine. I tried authenticating `gcloud` tool from `td-agent` user but failed as `td-agent` has no valid shell. Also I tried the same for `root`, but did not help.
+What I guessed was that Fluentd could not access BigQuery table on GCP. Obviously it could not anyway because I had not authenticated `gcloud` in the VM. I tried authenticating `gcloud` tool from `td-agent` user but failed as `td-agent` has no valid shell. Also I tried the same for `root`, but did not help.
 
-Finally after one day of searching the internet, I got some clue about putting JSON files somewhere so the `fluent-plugin-bigquery` can read it.
+Finally after one day of searching over the internet, I got some clue about putting JSON files in somewhere so the `fluent-plugin-bigquery` can read it.
 
 Go to [Google Cloud Platform > APIs & Services](https://console.cloud.google.com/apis/credentials). Then click on `Credentials` and hit on the `Create Credentials` button. Choose `Service Account Key` from the combo box. This will open a new page where you have to fill the credential name, roles etc.
 
