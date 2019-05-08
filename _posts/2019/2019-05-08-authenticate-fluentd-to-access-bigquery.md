@@ -12,7 +12,8 @@ I followed the whole process but ended up receiving the following error at `/var
 
 ```
 2019-05-07 16:13:15 +0000 [error]: #0 tables.get API project_id="farm-rock-85697" dataset="fluentd" table="nginx_access" code=403 message="accessDenied: Access Denied: Table farm-rock-85697:fluentd.nginx_access: The user 87674165174597-compute@developer.gserviceaccount.com does not have bigquery.tables.get permission for table farm-rock-85697:fluentd.nginx_access."
-2019-05-07 16:13:15 +0000 [warn]: #0 emit transaction failed: error_class=RuntimeError error="failed to fetch schema from bigquery" location="/opt/td-agent/embedded/lib/ruby/gems/2.4.0/gems/fluent-plugin-bigquery-2.1.0/lib/fluent/plugin/out_bigquery_base.rb:190:in `fetch_schema'" tag="nginx.access"```
+2019-05-07 16:13:15 +0000 [warn]: #0 emit transaction failed: error_class=RuntimeError error="failed to fetch schema from bigquery" location="/opt/td-agent/embedded/lib/ruby/gems/2.4.0/gems/fluent-plugin-bigquery-2.1.0/lib/fluent/plugin/out_bigquery_base.rb:190:in `fetch_schema'" tag="nginx.access"
+```
 
 What I guessed was Fluentd could not access my BigQuery table. Obviously it could not because I had not authenticated `gcloud` on my machine. I tried authenticating `gcloud` tool from `td-agent` user but failed as `td-agent` has no valid shell. Also I tried the same for `root`, but did not help.
 
