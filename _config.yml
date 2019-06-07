@@ -6,6 +6,16 @@ title:                  'Bits'
 description:            'Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a>'
 url:                    'https://bits.mdminhazulhaque.io'
 paginate:               20
-gems:
+plugins:
+    - jekyll-feed
+    - jekyll-archives
     - jekyll-sitemap
     - jekyll-paginate
+    - jekyll-tagging-related_posts
+jekyll-archives:
+  enabled:
+    - tags
+  layouts:
+    tag: "tags"
+  permalinks:
+    tag: '/tags/:name.html'
