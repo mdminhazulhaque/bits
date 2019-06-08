@@ -2,7 +2,7 @@
 layout: post
 title: "Weka: Train and Test Datasets using Java"
 date: 2015-10-11 03:09:00
-categories: machine-learning
+categories: ml
 ---
 
 A simple Java code to load ARFF datasets into [Weka](http://www.cs.waikato.ac.nz/ml/weka/), train using J48 classifier and test random patterns.
