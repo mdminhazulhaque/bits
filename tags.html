@@ -1,0 +1,23 @@
+---
+layout: default
+title: All Tags
+---
+<div class="post">
+    <h1 class="post-title">All Tags</h1>
+    <table>
+        {% assign sorted_cats = site.categories | sort %}
+        {% tablerow tag in sorted_cats cols: 4 %}
+        <a href="#{{ tag[0] | slugify }}" class="post-tag"><i class="fa fa-fw fa-tag"></i> {{ tag[0] | downcase }}</a>
+        {% endtablerow %}
+    </table>
+    {% for tag in sorted_cats %}
+        <h2 id="{{ tag[0] | slugify }}">#{{ tag[0] }}</h2>
+        <ul>
+        {% for post in tag[1] %}
+            <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+                <li>{{ post.title }}</li>
+            </a>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+</div>
