@@ -2,7 +2,7 @@
 layout: post
 title: "Skype-like Desktop Popup Notification in Qt"
 date: 2015-01-04 05:50:00
-categories: Qt
+categories: qt
 ---
 Qt has no popup desktop notification applet by default. As Qt is highly customizable and almost all widgets are inherited from QWidget, so a custom QWidget can be used as desktop popup applet.
 

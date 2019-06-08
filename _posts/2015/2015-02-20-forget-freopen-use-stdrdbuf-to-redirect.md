@@ -2,7 +2,7 @@
 layout: post
 title: "Forget freopen, Use std::rdbuf to Redirect cin and cout"
 date: 2015-02-20 03:26:00
-categories: CPP
+categories: cpp
 ---
 C-style legacy codes should not be written inside a C++ program.
 

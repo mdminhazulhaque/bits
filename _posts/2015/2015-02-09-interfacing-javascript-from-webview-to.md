@@ -2,7 +2,7 @@
 layout: post
 title: "Interfacing Javascript from Webview to native Android"
 date: 2015-02-09 22:41:00
-categories: Android
+categories: android
 ---
 Native methods can be called from a Webview using JavaScript. To add a interface to webview, the method `addJavascriptInterface` can be used. Here is an example.
 

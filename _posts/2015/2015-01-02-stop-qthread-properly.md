@@ -2,7 +2,7 @@
 layout: post
 title: "Stop QThread properly"
 date: 2015-01-02 05:20:00
-categories: Qt
+categories: qt
 ---
 Are you annoyed with this message? When you try to terminate a thread while
 quitting the main application thread, and this weird message appears after the

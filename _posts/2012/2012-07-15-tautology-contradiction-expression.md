@@ -2,7 +2,7 @@
 layout: post
 title: "Tautology/Contradiction Expression Verification"
 date: 2012-07-15 17:49:00
-categories: CPP
+categories: cpp
 ---
 
 Tautology is a logical expression which is always true for any values of its

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Probhat Layout for OS X
-categories: OSX
+categories: osx
 ---
 The Probhat layout is redesigned by [Ankur](http://www.ankurbangla.org). Most of the Linux distro are including this layout with their latest releases. And it has been real easy using Probhat on Windows using Avro.
 

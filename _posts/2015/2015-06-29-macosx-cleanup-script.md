@@ -2,7 +2,7 @@
 layout: post
 title: "MacOSX Cleanup Script"
 date: 2015-06-29 05:40:00
-categories: Mac
+categories: mac
 ---
 Recently I had been running out of space on my Mac. Then I downloaded some
 apps for cleaning up caches and log files. Most of them are premium apps. So I

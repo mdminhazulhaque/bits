@@ -2,7 +2,7 @@
 layout: post
 title: "Calculate ARGB/RGBA from Raw Color and Alpha Value"
 date: 2015-02-16 11:03:00
-categories: CPP
+categories: cpp
 ---
 RGBA or ARGB colors are created from 3 primary color values (RGB) and 1 value called alpha, combined into a single 32bit unsigned integer.
 

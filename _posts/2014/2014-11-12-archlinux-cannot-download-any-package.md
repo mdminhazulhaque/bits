@@ -2,7 +2,7 @@
 layout: post
 title: "ArchLinux: Cannot download any package on Raspberry Pi"
 date: 2014-11-12 23:08:00
-categories: Linux
+categories: linux
 ---
 Many of you out there must have encountered this weird problem - cannot download or synchronize or update AUR database. Pinging any website shows success but whenever you run `pacman -Syyy` or `pacman -Su` the following errors occur.
     

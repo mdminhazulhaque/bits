@@ -2,7 +2,7 @@
 layout: post
 title: "Make Arduino IDE Prettier"
 date: 2015-01-03 04:25:00
-categories: Linux
+categories: linux
 ---
 Arduino IDE is written in Java and it looks ugly as the default Look And Feel
 (GTKLookAndFeel) sucks on Ubuntu or similar systems.

@@ -2,7 +2,7 @@
 layout: post
 title: "/etc/fstab Optimization for SSD and RAM"
 date: 2015-01-03 04:15:00
-categories: Linux
+categories: linux
 ---
 I have been using **Samsung 840 Pro SSD** with **8GB 1600MHz DDR3** memory
 module.

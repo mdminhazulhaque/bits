@@ -2,7 +2,7 @@
 layout: post
 title: "Sort A Vector Of Pairs Based On First Or Second Element"
 date: 2012-11-12 14:04:00
-categories: CPP
+categories: cpp
 ---
 Any vector can be sorted using STL of C++. In fact, templates like vector,
 list etc have function sort() inline. But when sorting a vector of pairs based

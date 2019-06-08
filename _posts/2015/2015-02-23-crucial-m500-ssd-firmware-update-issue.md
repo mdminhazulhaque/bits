@@ -2,7 +2,7 @@
 layout: post
 title: "Crucial M500 SSD Firmware Update Issue"
 date: 2015-02-23 16:57:00
-categories: SSD
+categories: ssd
 ---
 Yesterday I got a Crucial M500 240GB SSD with firmware revision MU03.
 

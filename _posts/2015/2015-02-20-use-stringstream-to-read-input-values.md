@@ -2,7 +2,7 @@
 layout: post
 title: "Use stringstream to Read Input Values from string"
 date: 2015-02-20 01:39:00
-categories: CPP
+categories: cpp
 ---
 In C++, **cin** and **cout** is used to take standard input and output respectively from console. For debugging or testing, executing program and provide console input repeatedly might seem boring to anyone.
 

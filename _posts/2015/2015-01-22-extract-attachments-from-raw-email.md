@@ -2,7 +2,7 @@
 layout: post
 title: "Extract Attachments from RAW Email"
 date: 2015-01-22 11:02:00
-categories: Others
+categories: others
 ---
 I couldn't download any attachment from Gmail for the last couple of days. The problem might be with my ISP or my router's MTU who knows. So I tried to download the attachments embedded in the RAW email.
 

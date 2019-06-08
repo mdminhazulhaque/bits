@@ -2,7 +2,7 @@
 layout: post
 title: "Shuffle Items of an Array in C"
 date: 2015-01-22 20:16:00
-categories: C
+categories: c
 ---
 C does not come up with C++ like shuffle or random_shuffle templates. So an easy trick to shuffle the items of an array could be -
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Driver for ICatch PC Camera for Windows 7"
 date: 2012-09-21 00:44:00
-categories: Others
+categories: others
 ---
 Atlast I found a solution to make a very old webcam work on Windows 7 x64. This is a webcam I found from my friend.
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Integer and String Conversion using C++ Generics"
 date: 2015-06-30 22:10:00
-categories: CPP
+categories: cpp
 ---
 I have created some template functions for string to int and int to string
 conversion. The **typename** keyword came real handy. Although C++11 has

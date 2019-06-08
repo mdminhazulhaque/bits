@@ -2,7 +2,7 @@
 layout: post
 title: "Bash One-liner to Set GRUB Timeout"
 date: 2015-01-02 23:55:00
-categories: Linux
+categories: linux
 ---
 To set GRUB timeout to 5 seconds, use this command.
 
