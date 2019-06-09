@@ -11,9 +11,16 @@ plugins:
     - jekyll-sass-converter
     - jekyll-sitemap
     - jekyll-paginate
+    - jekyll-archives
 sass:
     style: compressed
 exclude:
     - poole
     - hyde
-    - submodules.sh
+    - submodule.sh
+jekyll-archives:
+    enabled:
+        - categories
+    layout: category
+    permalinks:
+        category: /:name/index.html
