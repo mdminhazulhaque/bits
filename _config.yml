@@ -8,14 +8,12 @@ url:                    'https://bits.mdminhazulhaque.io'
 paginate:               20
 plugins:
     - jekyll-feed
-#    - jekyll-archives
+    - jekyll-sass-converter
     - jekyll-sitemap
     - jekyll-paginate
-#    - jekyll-tagging-related_posts
-#jekyll-archives:
-#  enabled:
-#    - tags
-#  layouts:
-#    tag: "tags"
-#  permalinks:
-#    tag: '/tags/:name.html'
+sass:
+    style: compressed
+exclude:
+    - poole
+    - hyde
+    - submodules.sh
