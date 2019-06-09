@@ -1,13 +1,10 @@
 ---
 layout: default
 ---
-<style>
-hr.narrow{margin: 0.5rem 0;}
-</style>
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <hr class="narrow">
-  Published on <i class="fa fa-fw fa-calendar"></i> {{ page.date | date_to_string }}, Tagged in<i class="fa fa-fw fa-tag"></i> <a style="color:#303030;" href="/tags#{{ page.categories }}">{{ page.categories }}</a>
+  Published on <i class="fa fa-fw fa-calendar"></i> {{ page.date | date_to_string }}, Tagged in<i class="fa fa-fw fa-tag"></i> <a href="/tags#{{ page.categories }}">{{ page.categories }}</a>
   <hr class="narrow">
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <ins class="adsbygoogle"
