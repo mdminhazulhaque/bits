@@ -1,0 +1,9 @@
+[submodule "poole"]
+	path = poole
+	url = git@github.com:poole/poole.git
+[submodule "hyde"]
+	path = hyde
+	url = git@github.com:poole/hyde.git
+[submodule "pygments-css"]
+	path = pygments-css
+	url = git@github.com:richleland/pygments-css.git
