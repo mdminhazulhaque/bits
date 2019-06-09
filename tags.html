@@ -4,20 +4,9 @@ title: All Tags
 ---
 <div class="post">
     <h1 class="post-title">All Tags</h1>
-    <table>
-        {% assign sorted_cats = site.tags | sort %}
-        {% tablerow tag in sorted_cats cols: 4 %}
-        <a href="#{{ tag[0] | slugify }}" class="post-tag"><i class="fa fa-fw fa-tag"></i> {{ tag[0] | downcase }}</a>
-        {% endtablerow %}
-    </table>
-    {% for tag in sorted_cats %}
-        <h2 id="{{ tag[0] | slugify }}">#{{ tag[0] }}</h2>
-        <ul>
-        {% for post in tag[1] %}
-            <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-                <li>{{ post.title }}</li>
-            </a>
+    <hr>
+        {% assign sorted_cats = site.categories | sort %}
+        {% for tag in sorted_cats %}
+        <a href="/{{ tag[0] | slugify }}" class="post-tag"><h2>#{{ tag[0] | downcase }}</h2></a><span class="post-date"><i class="fa fa-fw fa-tag"></i> {{ tag[1].size }} posts</span>
         {% endfor %}
-        </ul>
-    {% endfor %}
 </div>
