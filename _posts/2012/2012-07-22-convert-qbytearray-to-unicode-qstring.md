@@ -2,7 +2,7 @@
 layout: post
 title: "Convert QByteArray to Unicode QString"
 date: 2012-07-22 17:16:00
-tag: qt
+category: qt
 ---
 I was working with a networking based application. But when I requested data
 with QNetworkAccessManager, I got the reply text like this one.

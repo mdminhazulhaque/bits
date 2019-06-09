@@ -2,7 +2,7 @@
 layout: post
 title: "Handle Interrupt Signal in C/C++"
 date: 2015-02-21 14:27:00
-tag: c
+category: c
 ---
 Keyboard shortcut like Ctrl+C is used to pass SIGTERM event to program.
 

@@ -2,7 +2,7 @@
 layout: post
 title: Copy File from Dropbox to Google Drive
 date: 2016-06-16
-tag: python
+category: python
 ---
 
 What you'll need

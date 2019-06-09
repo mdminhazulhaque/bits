@@ -2,7 +2,7 @@
 layout: post
 title: "Bash: Regexp for MAC Address Validation"
 date: 2015-01-09 08:16:00
-tag: linux
+category: linux
 ---
 MAC Address aka HWAddress is a unique identifier assigned to network interfaces.
 

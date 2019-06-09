@@ -2,7 +2,7 @@
 layout: post
 title: "[Solved] Google Play Accessible Using Mobile Data, Fails Over WiFi"
 date: 2015-04-26 01:25:00
-tag: android
+category: android
 ---
 Accessing Google Play Store from Android phones and getting the error message "connection timed out" - this is a very common issue for Android users. There are TONS of threads out there regarding this problem.
 

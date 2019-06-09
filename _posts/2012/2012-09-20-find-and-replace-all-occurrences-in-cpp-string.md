@@ -2,7 +2,7 @@
 layout: post
 title: "Find and Replace All Occurrences in a C++ String"
 date: 2012-09-20 08:00:00
-tag: cpp
+category: cpp
 ---
 
 I am familiar with QString and always use its overloaded functions like

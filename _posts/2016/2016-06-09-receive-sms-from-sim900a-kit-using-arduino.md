@@ -2,7 +2,7 @@
 layout: post
 title: Receive SMS from SIM900A Kit using Arduino
 date: 2016-06-09
-tag: arduino
+category: arduino
 ---
 
 Sending SMS through SIM900A Kit is quite easy. You just need to turn on text based composition mode, write the text and send 0x1a. Here is an example. Note that SIM900A is an instance of `SoftwareSerial` class connected via Serial interface of the Arduino.

@@ -2,7 +2,7 @@
 layout: post
 title: Convert Number between Banlga and English in PHP
 date: 2016-06-29
-tag: php
+category: php
 ---
 
 Here is my solution that can convert Bangla number into English, and English number into Bangla.

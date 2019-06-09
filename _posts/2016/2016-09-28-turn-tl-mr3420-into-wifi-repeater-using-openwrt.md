@@ -2,7 +2,7 @@
 layout: post
 title: Turn TL-MR3420 into WiFi Repeater using OpenWRT
 date: 2016-09-28
-tag: openwrt
+category: openwrt
 ---
 
 <div class="message">

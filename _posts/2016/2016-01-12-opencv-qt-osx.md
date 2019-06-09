@@ -2,7 +2,7 @@
 layout: post
 title: "OpenCV3 with Qt5 on Mac OS X"
 date: 2016-01-12 12:37:00
-tag: mac
+category: mac
 ---
 Qt Creator is a great IDE to work with C++ projects and libraries. I have always been using Ubuntu for projects and research works. Almost all libraries can be found in Ubuntu repository. Recently, I had to configure OpenCV on Mac OS X. I was using Qt5 prebuilt binaries downloaded from [qt.io](http://www.qt.io/download-open-source/). The copies of OpenCV libraries came from [brew](http://brew.sh/). When I added OpenCV flags to Qt project file, I got the following error message.
 

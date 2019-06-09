@@ -2,7 +2,7 @@
 layout: post
 title: Setup TeXstudio on Linux and macOS
 date: 2016-07-25
-tag: tex
+category: tex
 ---
 
 [TeXstudio](http://www.texstudio.org/) is a great integrated writing environment for creating LaTeX documents. TeXstudio needs local latex distribution in order to compile and preview documents.

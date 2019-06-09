@@ -2,7 +2,7 @@
 layout: post
 title: "Some words about Qt DOM Node, Element and Attribute"
 date: 2015-01-02 21:41:00
-tag: qt
+category: qt
 ---
 ##  Add Instruction Node
 

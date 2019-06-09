@@ -2,7 +2,7 @@
 layout: post
 title: "Draw the Flag of Bangladesh with OpenGL"
 date: 2015-01-03 00:21:00
-tag: opengl
+category: opengl
 ---
 Recently I became interested with OpenGL again. Here is a flag of Bangladesh
 which was drawn using OpenGL with exact ratio (10:6).

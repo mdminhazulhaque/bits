@@ -2,7 +2,7 @@
 layout: post
 title: "Android-Javascript Bridge"
 date: 2015-02-10 03:05:00
-tag: android
+category: android
 ---
 Last post I wrote about [Interfacing Javascript from Webview to native Android](http://blog.minhazulhaque.com/2015/02/interfacing-javascript-from-webview-to.html) was about one way communication from Javascript to Android activity.
 

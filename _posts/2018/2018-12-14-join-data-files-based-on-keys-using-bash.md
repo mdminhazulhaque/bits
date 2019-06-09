@@ -2,7 +2,7 @@
 layout: post
 title: Join Data Files based on Keys using Bash
 date: 2018-12-14
-tag: linux
+category: linux
 ---
 
 I was looking for a *nix tool that takes two or more input files and joins them like SQL JOIN statement does. And I was not surprised at all. I found `join`.

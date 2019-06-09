@@ -2,7 +2,7 @@
 layout: post
 title: "Root Samsung Galaxy ACE NXT (SM-G313HZ)"
 date: 2015-01-30 17:06:00
-tag: android
+category: android
 ---
 I purchased Samsung Galaxy ACE NXT (SM-G313HZ) two months ago and went through several failed attempt to root the phone. Odin is used a lot to root such phones but I was missing a custom recovery.
 

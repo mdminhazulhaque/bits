@@ -2,7 +2,7 @@
 layout: post
 title: FTP Daemon Management Script for OS X
 date: 2016-03-20
-tag: osx
+category: osx
 ---
 
 OS X comes with a handy, built-in FTP Server located at `/usr/libexec/ftpd` which can be easily started from commandline. I prefer it to `pureftpd` or `proftpd`.

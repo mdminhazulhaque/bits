@@ -2,7 +2,7 @@
 layout: post
 title: "Banglalion WiMAX devices on Mac OS X Yosemite Success"
 date: 2015-02-28 12:59:00
-tag: mac
+category: mac
 ---
 Few days ago I found out that Banglalion WiMAX modems do not work after Mac OS X upgrade, or in 64bit mode.
 

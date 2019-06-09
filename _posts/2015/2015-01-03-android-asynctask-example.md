@@ -2,7 +2,7 @@
 layout: post
 title: "Android AsyncTask Example"
 date: 2015-01-03 04:44:00
-tag: android
+category: android
 ---
 AsyncTask is a great API to perform background operations and without manipulating threads and/or handlers.
 

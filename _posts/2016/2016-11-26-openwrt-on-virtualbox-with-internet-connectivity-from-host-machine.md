@@ -2,7 +2,7 @@
 layout: post
 title: 'OpenWRT inside VirtualBox with Internet Connectivity from Host Machine'
 date: 2016-11-26
-tag: openwrt
+category: openwrt
 ---
 
 Last week I tried to run OpenWRT inside a VM and had a lot of troubles before being successful. So I thought that I should write a post about it.

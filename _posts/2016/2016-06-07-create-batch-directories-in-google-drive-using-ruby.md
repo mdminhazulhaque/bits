@@ -2,7 +2,7 @@
 layout: post
 title: Create Batch Directories in Google Drive using Ruby
 date: 2016-06-07
-tag: ruby
+category: ruby
 ---
 
 Here is a code snippet I wrote months ago to create several directories using Google Drive Ruby API. Please note that you need to set the scope to `https://www.googleapis.com/auth/drive` so the API call can commit changes to your drive. You need to authorize the app first. Run the script, it will open a browser session, allow access to Drive. Then you will be able to download `credentials.json` from Google Drive Developer Console website.

@@ -2,7 +2,7 @@
 layout: post
 title: "Successful Installation of DD-WRT for TL-WR845N"
 date: 2018-05-16
-tag: ddwrt
+category: ddwrt
 ---
 
 Several days ago I got my home router burnt due to the frequent thunderstorms. Luckily, only the WAN port of the router was damaged. So I decided to use the switch interface as WAN. I knew how to configure the switch as WAN on OpenWRT. Unfortunately there was no modded firmware for this model. I searched over the internet and tried flashing some firmwares. But none of them worked. Moreover, latest models from TP-Link does not support flashing 3rd party firmware from the WebUI.

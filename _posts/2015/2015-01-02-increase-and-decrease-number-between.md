@@ -2,7 +2,7 @@
 layout: post
 title: "Increase and decrease a number between two min and max values"
 date: 2015-01-02 21:46:00
-tag: cpp
+category: cpp
 ---
 Increasing and decreasing a number between two bounds is rather important in most cases. I used it mostly in OpenGL scenes to render objects from min to
 max value and from max to min. The algorithm is quite simple. Shortly,

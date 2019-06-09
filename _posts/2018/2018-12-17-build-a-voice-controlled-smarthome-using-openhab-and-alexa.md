@@ -2,7 +2,7 @@
 layout: post
 title: Build a Voice Controlled SmartHome using openHAB and Alexa
 date: 2018-12-17
-tag: linux
+category: linux
 ---
 
 The Amazon Alexa Marketplace has lots of third party SmartHome skills to start with. But why not  build your own SmartHome, right?

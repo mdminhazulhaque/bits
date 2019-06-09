@@ -2,7 +2,7 @@
 layout: post
 title: "Xiaomi MI 5 রিভিউ"
 date: 2017-05-19
-tag: phones
+category: phones
 ---
 
 ![Xiaomi MI 5 Photo by Minhaz](http://i.imgur.com/XccX3Pe.jpg)

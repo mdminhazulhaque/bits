@@ -2,7 +2,7 @@
 layout: post
 title: "Create N-Dimensional Vector with Preset Values in C++"
 date: 2016-01-14 01:33:00
-tag: cpp
+category: cpp
 ---
 A simple 2D vector can be initialized with preset values using fill constructor.
 
