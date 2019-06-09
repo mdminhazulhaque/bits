@@ -5,7 +5,7 @@ title: All Tags
 <div class="post">
     <h1 class="post-title">All Tags</h1>
     <table>
-        {% assign sorted_cats = site.categories | sort %}
+        {% assign sorted_cats = site.tags | sort %}
         {% tablerow tag in sorted_cats cols: 4 %}
         <a href="#{{ tag[0] | slugify }}" class="post-tag"><i class="fa fa-fw fa-tag"></i> {{ tag[0] | downcase }}</a>
         {% endtablerow %}
