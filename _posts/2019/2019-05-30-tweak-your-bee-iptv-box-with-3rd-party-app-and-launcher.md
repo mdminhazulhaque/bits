@@ -61,17 +61,17 @@ Before celebrating my success, I did some extra tweaks.
 * Disabled autolock screen
 * Disabled the following packages using `pm disable <pkg>`
     
-    * com.android.htmlviewer # Won't do any WebDev thingy
-    * com.android.inputmethod.pinyin # Don't need Chinese input
-    * com.android.printspooler # Never going to print anything
-    * com.android.providers.downloads.ui # Ugly download button
-    * com.android.providers.userdictionary
-    * com.android.stk # SIM Toolkit support
-    * com.corpus.stb.beeiptv # So the vendor gets no chance to complain again
-    * com.google.android.googlequicksearchbox # I always hated this search app
-    * com.svox.pico # WTF
-    * com.zidoo.ota.update # Update might reset all my hardwork, so be safe
-    * com.zidoo.test # Seems suspicious
+    * `com.android.htmlviewer` # Won't do any WebDev thingy
+    * `com.android.inputmethod.pinyin` # Don't need Chinese input
+    * `com.android.printspooler` # Never going to print anything
+    * `com.android.providers.downloads.ui` # Ugly download button
+    * `com.android.providers.userdictionary
+    * `com.android.stk` # SIM Toolkit support
+    * `com.corpus.stb.beeiptv` # So the vendor gets no chance to complain again
+    * `com.google.android.googlequicksearchbox` # I always hated this search app
+    * `com.svox.pico` # WTF
+    * `com.zidoo.ota.update` # Update might reset all my hardwork, so be safe
+    * `com.zidoo.test` # Seems suspicious
     
 * Set the animation speed to 0x to boost performance
 
