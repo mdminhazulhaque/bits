@@ -2,7 +2,7 @@
 layout: post
 title: Run Custom Lua Script as CGI with uhttpd
 date: 2016-11-26
-categories: openwrt
+tag: openwrt
 ---
 
 uhttpd is a lightweight HTTP web server that supports running Lua scripts as CGI. It is possible to create custom REST API or any other callback using Lua functionality of uhttpd. All you need to do is to put a script somewhere in your filesystem that has one `handle_request` function, and tweak some UCI configs. Let me tell you more.

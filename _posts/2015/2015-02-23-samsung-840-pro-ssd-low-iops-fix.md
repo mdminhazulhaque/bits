@@ -2,7 +2,7 @@
 layout: post
 title: "Samsung 840 PRO SSD Low IOPS Fix"
 date: 2015-02-23 15:36:00
-categories: ssd
+tag: ssd
 ---
 I have been using Samsung 840 PRO SSD for the last few months. It is an amazing SSD with blazing speed and responsiveness. It takes 2-3 seconds to boot my Kubuntu or Windows system.
 

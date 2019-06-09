@@ -2,7 +2,7 @@
 layout: post
 title: "An Easy to Use Boilerplate 'debuild' Project"
 date: 2015-06-29 05:27:00
-categories: linux
+tag: linux
 ---
 
 "dpkg-deb-boilerplate" is an easy to use boilerplate `debuild` project for building debian package using [Lanuchpad](https://launchpad.net) or other services.

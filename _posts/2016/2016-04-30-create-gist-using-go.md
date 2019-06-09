@@ -2,7 +2,7 @@
 layout: post
 title: Create (Secret) Gist using Go
 date: 2016-04-30
-categories: golang
+tag: golang
 ---
 
 [Github Gists API](https://developer.github.com/v3/gists/) provides easy functionalities to create (and manage) Gists using simple API call. A simpliest workaround would be using cURL's POST request with JSON parameters.

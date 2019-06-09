@@ -2,7 +2,7 @@
 layout: post
 title: "My Perfect Kubuntu Setup"
 date: 2015-05-07 09:31:00
-categories: linux
+tag: linux
 ---
 [Last Updated: Thursday, May 07, 2015] It has been 3 years since I started using Kubuntu as my primary OS. Here is a list of PPAs and packages I
 installed. I also added some tweaks.

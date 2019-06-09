@@ -2,7 +2,7 @@
 layout: post
 title: "`chroot` with Networking Support"
 date: 2015-01-03 00:05:00
-categories: linux
+tag: linux
 ---
 Google says,
 

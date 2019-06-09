@@ -2,7 +2,7 @@
 layout: post
 title: "Convert CPP to PDF with Syntax Highlighting"
 date: 2015-09-09 02:02:00
-categories: cpp
+tag: cpp
 ---
 I just had converted a bunch of CPP files to PDF with Syntax Highlighting. I think it will be helpful to share how I did that.
 

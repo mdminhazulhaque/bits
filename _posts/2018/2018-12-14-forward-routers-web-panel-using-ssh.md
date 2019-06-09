@@ -2,7 +2,7 @@
 layout: post
 title: Forward Router's Web Panel using SSH
 date: 2018-12-14
-categories: linux
+tag: linux
 ---
 
 Forwarding SSH is a very common practice for those who have limited access to Public IPs to their home network. It is possible to enable reverse proxy other ports/services inside the same network as the remote unit is.

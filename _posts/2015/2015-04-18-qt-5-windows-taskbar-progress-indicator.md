@@ -2,7 +2,7 @@
 layout: post
 title: "Qt 5 Windows Taskbar Progress Indicator"
 date: 2015-04-18 01:03:00
-categories: qt
+tag: qt
 ---
 Qt 5.2 has built in support for indicating progress and other states in
 Windows Taskbar icon.

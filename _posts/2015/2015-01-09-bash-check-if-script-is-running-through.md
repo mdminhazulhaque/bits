@@ -2,7 +2,7 @@
 layout: post
 title: "Bash: Check If Script is Running through Pipe"
 date: 2015-01-09 07:54:00
-categories: linux
+tag: linux
 ---
 Bash scripts can be run directly with arguments, or through pipes.
 

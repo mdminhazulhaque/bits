@@ -2,7 +2,7 @@
 layout: post
 title: Connect to WiFi using nmcli
 date: 2017-02-25
-categories: linux
+tag: linux
 ---
 These days SoC with WiFi chip are very cheap and there exists lots of headless Linux OS for these machines. For example, Orange Pi Zero costs less than 10 US dollars.
 

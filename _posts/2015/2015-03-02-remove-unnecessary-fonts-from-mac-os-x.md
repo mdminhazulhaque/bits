@@ -2,7 +2,7 @@
 layout: post
 title: "Remove Unnecessary Fonts from Mac OS X"
 date: 2015-03-02 15:22:00
-categories: mac
+tag: mac
 ---
 Months ago I got a Macbook Air with Mac OS X Yosemite installed.
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Create custom functions for Fish"
 date: 2015-01-02 21:54:00
-categories: linux
+tag: linux
 ---
 [Fish](http://ridiculousfish.com/shell/) has become my favorite shell for the last several months. Most lovely features of it are - auto-complete, auto- capitalization and colorful text. I use fish shell as my default shell with [Konsole](http://konsole.kde.org/) on my KDE 4.10 desktop.
 

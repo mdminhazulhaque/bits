@@ -2,7 +2,7 @@
 layout: post
 title: "OpenGL Write Bitmap Text with Color"
 date: 2015-01-02 21:43:00
-categories: opengl
+tag: opengl
 ---
 OpenGL does not provide support for fonts, and hence does not provide support
 for "text". But GLUT supports bitmap text with a limited number of fonts. The

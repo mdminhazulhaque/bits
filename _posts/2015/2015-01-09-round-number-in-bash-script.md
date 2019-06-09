@@ -2,7 +2,7 @@
 layout: post
 title: "Round a Number in a Bash Script"
 date: 2015-01-09 07:27:00
-categories: linux
+tag: linux
 ---
 Bash only evaluates expressions with non-floating point numbers. So there is no built-in function for rounding up or down floating point numbers.
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Install Avro on Kubuntu 16.04"
 date: 2018-01-30
-categories: linux
+tag: linux
 ---
 Installing Avro on Linux has become pretty much easy these days. Thanks to [this](http://linux.omicronlab.com/ubuntu_14.04.html) blog post by Omicron Lab. But there are many users out there who failed successfully to configure Avro with ibus, specially on non-Ubuntu distros. Because Kubuntu (or other non-GNOME distros) does not use ibus as IME. So I found an workaround.
 

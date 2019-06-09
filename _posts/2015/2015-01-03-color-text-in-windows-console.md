@@ -2,7 +2,7 @@
 layout: post
 title: "Color Text in Windows Console"
 date: 2015-01-03 01:42:00
-categories: cpp
+tag: cpp
 ---
 Coloring texts in a console isn't a great idea cause GUI widgets are preferable. But some people find it useful while scripting or creating a console application.
 

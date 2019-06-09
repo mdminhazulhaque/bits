@@ -2,7 +2,7 @@
 layout: post
 title: Bootstrap Skin for KTorrent WebInterface
 date: 2016-03-22
-categories: kde
+tag: kde
 ---
 
 <div class="message">

@@ -2,7 +2,7 @@
 layout: post
 title: "Split C++ String by Single Character Delimiter"
 date: 2015-01-03 04:51:00
-categories: cpp
+tag: cpp
 ---
 A string can be sliced into a vector of strings by invoking the `std::getline` method.
 

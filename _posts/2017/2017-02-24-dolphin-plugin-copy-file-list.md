@@ -2,7 +2,7 @@
 layout: post
 title: "Dolphin Plugin: Copy File List"
 date: 2017-02-24
-categories: kde
+tag: kde
 ---
 The following KServiceMenu comes handy if you frequently need to copy the list of files in an specific folder. Simple put the following lines to `~/.local/share/kservices5/copy-file-list.desktop` and reload Dolphin.
 

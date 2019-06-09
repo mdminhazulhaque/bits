@@ -2,7 +2,7 @@
 layout: post
 title: "Dolphin Plugin: Copy as path"
 date: 2015-03-05 14:21:00
-categories: linux
+tag: linux
 ---
 
 I was missing the feature of `Copy File Path` in Dolphin (KDE File Manager). So I created one by myself. You need `xclip` installed for this.

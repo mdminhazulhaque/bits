@@ -2,7 +2,7 @@
 layout: post
 title: "Cut string between two XML nodes using GREP"
 date: 2015-06-29 05:34:00
-categories: linux
+tag: linux
 ---
 Say you want to extract some string between two patterns. GREP's Perl
 integration does a nice job to perform such match.

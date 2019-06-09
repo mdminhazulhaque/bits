@@ -2,7 +2,7 @@
 layout: post
 title: Clean MQTT Retained Payload from Topic Tree Recursively
 date: 2017-04-27
-categories: mqtt
+tag: mqtt
 ---
 
 I believe you are trying to clean retained messages from topics like the following by only providing the topic prefix `foo/`.

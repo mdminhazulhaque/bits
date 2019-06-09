@@ -2,7 +2,7 @@
 layout: post
 title: Banglalion Modem Running on NanoPi Neo
 date: 2016-08-16
-categories: linux
+tag: linux
 ---
 
 Recently I got a [Nanopi Neo](http://www.friendlyarm.com/index.php?route=product/product&product_id=132) with Allwinner H3 SoC, 512MB RAM, 1 USB-A port and 1 Ethernet port. I am using [Armbian](http://www.armbian.com/) as OS which is based on Debian.

@@ -2,7 +2,7 @@
 layout: post
 title: "Samsung ACE NXT (SM-G313HZ) Bloatware List"
 date: 2015-01-30 13:53:00
-categories: android
+tag: android
 ---
 I have been using Samsung Galaxy ACE NXT (which is also known as Samsung Galaxy V in some regions) for the last 3 months. It is an entry level
 smartphone with 3G, Dual Sim, and Android 4.4.

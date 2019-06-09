@@ -2,7 +2,7 @@
 layout: post
 title: Find An Image in Another Image using OpenCV and NumPy
 date: 2017-07-12
-categories: opencv
+tag: opencv
 ---
 
 Several days ago, I needed to catch new message notification from Skype4Linux. As far I know they do not provide any API (like dbus or HTTP API like Skype 4.3 native) to catch new message event. So I deciced to monitor the system tray of my desktop and look for the unread icon that Skype shows. Finally I had myself written a tiny Python script that serves the purpose.

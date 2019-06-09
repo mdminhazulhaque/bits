@@ -2,7 +2,7 @@
 layout: post
 title: "Setup A Popup Reminder Using Bash"
 date: 2015-01-22 15:40:00
-categories: linux
+tag: linux
 ---
 Well, who doesn't forget the milk on the stove while working on computer? I do.
 

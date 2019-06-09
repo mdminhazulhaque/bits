@@ -2,7 +2,7 @@
 layout: post
 title: Run openHAB as root on Ubuntu
 date: 2018-11-06
-categories: linux
+tag: linux
 ---
 
 Although running openHAB as root is a massive security risk, and should not be a good practice to do, it might come handy for solving permission issues related to serial read/write, or executing special commands like sudo or apt.

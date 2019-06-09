@@ -2,7 +2,7 @@
 layout: post
 title: "Some Regex Examples"
 date: 2015-04-10 03:41:00
-categories: regex
+tag: regex
 ---
 Regular expression for any binary string:
 
