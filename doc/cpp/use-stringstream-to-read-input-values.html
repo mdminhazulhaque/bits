@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <meta name="description" content="In C++, cin and cout is used to take standard input and output respectively from console. For debugging or testing, executing program and provide console...">
+  <meta name="author" content="Md. Minhazul Haque">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Bits",
+      "item": "https://bits.mdminhazulhaque.io/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "cpp",
+      "item": "https://bits.mdminhazulhaque.io/cpp"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Use stringstream to Read Input Values from string",
+      "item": "https://bits.mdminhazulhaque.io//cpp/use-stringstream-to-read-input-values.html"
+    }]
+  }</script>
+  <title>Use stringstream to Read Input Values from string | Bits</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Inconsolata" rel="stylesheet">
+  <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/print.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190609">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <style>.blink{animation:blink 1s infinite}@keyframes blink{to{opacity:.0}}</style>
+</head>
+
+  <body>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+        Bits<span class="blink">_</span>
+        </a>
+      </h1>
+      <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p>
+      <p>Find me at ...
+      <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a>
+      <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a>
+      <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+      <br><a href="https://twitter.com/mdminhazulhaque"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+      <br><a href="https://www.instagram.com/md.minhazul.haque/"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+      </p>
+    </div>
+    <p>&copy; 2012 - 2019. All rights reserved.</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Use stringstream to Read Input Values from string</h1>
+  <hr>
+  <i class="fa fa-fw fa-calendar"></i>20 Feb 2015 <i class="fa fa-fw fa-tag"></i><a href="/cpp">cpp</a>
+  <hr>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="2958174403"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <p>In C++, <strong>cin</strong> and <strong>cout</strong> is used to take standard input and output respectively from console. For debugging or testing, executing program and provide console input repeatedly might seem boring to anyone.</p>
+
+<p>An alternative method to take inputs from a saved text file is known as piping. Let’s analyze the following code.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="cp">#define DEBUG(x) cout &lt;&lt; #x &lt;&lt; " = " &lt;&lt; x &lt;&lt; endl
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="cm">/** backup cin buffer and redirect to in.txt **/</span>
+    <span class="n">ifstream</span> <span class="n">in</span><span class="p">(</span><span class="s">"in.txt"</span><span class="p">);</span>
+    <span class="n">streambuf</span> <span class="o">*</span><span class="n">cinbuf</span> <span class="o">=</span> <span class="n">cin</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">();</span>
+    <span class="n">cin</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="n">in</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">());</span>
+    <span class="cm">/** backup cout buffer and redirect to out.txt **/</span>
+    <span class="n">ofstream</span> <span class="n">out</span><span class="p">(</span><span class="s">"out.txt"</span><span class="p">);</span>
+    <span class="n">streambuf</span> <span class="o">*</span><span class="n">coutbuf</span> <span class="o">=</span> <span class="n">cout</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">();</span>
+    <span class="n">cout</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="n">out</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">());</span>
+    <span class="cm">/** do some cin **/</span>
+    <span class="kt">int</span> <span class="n">one_kilobyte</span><span class="p">,</span> <span class="n">number_of_the_beast</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">pi</span><span class="p">,</span> <span class="n">golden_ratio</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">my_name</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">one_kilobyte</span>
+        <span class="o">&gt;&gt;</span> <span class="n">number_of_the_beast</span>
+        <span class="o">&gt;&gt;</span> <span class="n">my_name</span>
+        <span class="o">&gt;&gt;</span> <span class="n">pi</span>
+        <span class="o">&gt;&gt;</span> <span class="n">golden_ratio</span><span class="p">;</span>
+    <span class="cm">/** do some cout **/</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">one_kilobyte</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">number_of_the_beast</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">my_name</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">pi</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">golden_ratio</span><span class="p">);</span>
+    <span class="cm">/** reset cin and cout buffer **/</span>
+    <span class="n">cin</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="n">cinbuf</span><span class="p">);</span>
+    <span class="n">cout</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="n">coutbuf</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This program will print 1 line that read from stdin. A piping can automate the input process. From shell let’s do the following.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minhaz@minhaz-desktop ~&gt; echo "the quick brown fox jumps over the lazy dog" | ./program
+the quick brown fox jumps over the lazy dog
+</code></pre></div></div>
+
+<p>C-style freopen is often used to redirect a file to stdin. But creating another file, setting up freopen is too much for me. Haha. Here is a program that takes several inputs from console and prints them.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="cp">#define DEBUG(x) cout &lt;&lt; #x &lt;&lt; " = " &lt;&lt; x &lt;&lt; endl
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">one_kilobyte</span><span class="p">,</span> <span class="n">number_of_the_beast</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">one_kilobyte</span> <span class="o">&gt;&gt;</span> <span class="n">number_of_the_beast</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">my_name</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">my_name</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">pi</span><span class="p">,</span> <span class="n">golden_ratio</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">pi</span> <span class="o">&gt;&gt;</span> <span class="n">golden_ratio</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">a_line</span><span class="p">;</span>
+    <span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span> <span class="n">a_line</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">one_kilobyte</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">number_of_the_beast</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">my_name</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">pi</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">golden_ratio</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">a_line</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>And here is the content that will be fed to the program.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1024 666
+minhaz 3.14159 1.61803
+the quick brown fox jumps over the lazy dog
+</code></pre></div></div>
+
+<p>Well, it would be better If I could hardcode the file content inside my code and use cin style operations of setting vales to variables. So I looked into
+this issue and found stringstream can do that for me. Here is an workaround I tried.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="cp">#define DEBUG(x) cout &lt;&lt; #x &lt;&lt; " = " &lt;&lt; x &lt;&lt; endl
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="cm">/** hardcode the input file content **/</span>
+    <span class="n">string</span> <span class="n">str</span> <span class="o">=</span> <span class="s">"1024 666"</span>
+                <span class="s">"minhaz 3.14159 1.61803"</span>
+                <span class="s">"the quick brown fox jumps over the lazy dog"</span><span class="p">;</span>
+    <span class="cm">/** create a stream **/</span>
+    <span class="n">stringstream</span> <span class="n">stream</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+    <span class="cm">/** now use stream instead of cin **/</span>
+    <span class="kt">int</span> <span class="n">one_kilobyte</span><span class="p">,</span> <span class="n">number_of_the_beast</span><span class="p">;</span>
+    <span class="n">stream</span> <span class="o">&gt;&gt;</span> <span class="n">one_kilobyte</span> <span class="o">&gt;&gt;</span> <span class="n">number_of_the_beast</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">my_name</span><span class="p">;</span>
+    <span class="n">stream</span> <span class="o">&gt;&gt;</span> <span class="n">my_name</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">pi</span><span class="p">,</span> <span class="n">golden_ratio</span><span class="p">;</span>
+    <span class="n">stream</span> <span class="o">&gt;&gt;</span> <span class="n">pi</span> <span class="o">&gt;&gt;</span> <span class="n">golden_ratio</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">a_line</span><span class="p">;</span>
+    <span class="n">getline</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">a_line</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">one_kilobyte</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">number_of_the_beast</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">my_name</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">pi</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">golden_ratio</span><span class="p">);</span>
+    <span class="n">DEBUG</span><span class="p">(</span><span class="n">a_line</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>As you can see I hardcoded the file content inside my program and used a stream instead of cin to set values of the variables. No console input or
+piping is required. Here is the output.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>one_kilobyte = 1024
+number_of_the_beast = 666
+my_name = minhaz
+pi = 3.14159
+golden_ratio = 1.61803
+a_line = the quick brown fox jumps over the lazy dog
+</code></pre></div></div>
+
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="7351100586"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+    </div>
+  </body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-57632461-7', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>

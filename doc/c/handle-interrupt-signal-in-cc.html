@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <meta name="description" content="Keyboard shortcut like Ctrl+C is used to pass SIGTERM event to program.
+
+A signal handler can be set to catch when Ctrl+C is pressed to avoid execution t...">
+  <meta name="author" content="Md. Minhazul Haque">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Bits",
+      "item": "https://bits.mdminhazulhaque.io/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "c",
+      "item": "https://bits.mdminhazulhaque.io/c"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Handle Interrupt Signal in C/C++",
+      "item": "https://bits.mdminhazulhaque.io//c/handle-interrupt-signal-in-cc.html"
+    }]
+  }</script>
+  <title>Handle Interrupt Signal in C/C++ | Bits</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Inconsolata" rel="stylesheet">
+  <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/print.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190609">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <style>.blink{animation:blink 1s infinite}@keyframes blink{to{opacity:.0}}</style>
+</head>
+
+  <body>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+        Bits<span class="blink">_</span>
+        </a>
+      </h1>
+      <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p>
+      <p>Find me at ...
+      <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a>
+      <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a>
+      <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+      <br><a href="https://twitter.com/mdminhazulhaque"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+      <br><a href="https://www.instagram.com/md.minhazul.haque/"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+      </p>
+    </div>
+    <p>&copy; 2012 - 2019. All rights reserved.</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Handle Interrupt Signal in C/C++</h1>
+  <hr>
+  <i class="fa fa-fw fa-calendar"></i>21 Feb 2015 <i class="fa fa-fw fa-tag"></i><a href="/c">c</a>
+  <hr>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="2958174403"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <p>Keyboard shortcut like Ctrl+C is used to pass SIGTERM event to program.</p>
+
+<p>A signal handler can be set to catch when Ctrl+C is pressed to avoid execution termination. Here is a program that avoids Ctrl+C event 3 times then exits.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+#include &lt;signal.h&gt;
+#define msleep(t) usleep(1000*(t))
+</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">ctrl_c_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">signal_handler</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">++</span><span class="n">ctrl_c_count</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"ok ok, you pressed ctrl+c 3 times, quitting</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"i said, ctrl+c cannot stop me</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">signal</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">signal_handler</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"you cannot stop me by pressing ctrl+c</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="n">msleep</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Output</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minhaz@minhaz-desktop ~&gt; ./signal-term-test
+you cannot stop me by pressing ctrl+c
+you cannot stop me by pressing ctrl+c
+you cannot stop me by pressing ctrl+c
+^Ci said, ctrl+c cannot stop me
+you cannot stop me by pressing ctrl+c
+you cannot stop me by pressing ctrl+c
+you cannot stop me by pressing ctrl+c
+^Ci said, ctrl+c cannot stop me
+you cannot stop me by pressing ctrl+c
+you cannot stop me by pressing ctrl+c
+you cannot stop me by pressing ctrl+c
+^Cok ok, you pressed ctrl+c 3 times, quitting
+</code></pre></div></div>
+
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="7351100586"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+    </div>
+  </body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-57632461-7', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>

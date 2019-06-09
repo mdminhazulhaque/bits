@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <meta name="description" content="OpenGL does not provide support for fonts, and hence does not provide support
+for “text”. But GLUT supports bitmap text with a limited number of fonts. T...">
+  <meta name="author" content="Md. Minhazul Haque">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Bits",
+      "item": "https://bits.mdminhazulhaque.io/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "opengl",
+      "item": "https://bits.mdminhazulhaque.io/opengl"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "OpenGL Write Bitmap Text with Color",
+      "item": "https://bits.mdminhazulhaque.io//opengl/opengl-write-bitmap-text-with-color.html"
+    }]
+  }</script>
+  <title>OpenGL Write Bitmap Text with Color | Bits</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Inconsolata" rel="stylesheet">
+  <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/print.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190609">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <style>.blink{animation:blink 1s infinite}@keyframes blink{to{opacity:.0}}</style>
+</head>
+
+  <body>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+        Bits<span class="blink">_</span>
+        </a>
+      </h1>
+      <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p>
+      <p>Find me at ...
+      <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a>
+      <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a>
+      <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+      <br><a href="https://twitter.com/mdminhazulhaque"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+      <br><a href="https://www.instagram.com/md.minhazul.haque/"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+      </p>
+    </div>
+    <p>&copy; 2012 - 2019. All rights reserved.</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">OpenGL Write Bitmap Text with Color</h1>
+  <hr>
+  <i class="fa fa-fw fa-calendar"></i>03 Jan 2015 <i class="fa fa-fw fa-tag"></i><a href="/opengl">opengl</a>
+  <hr>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="2958174403"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <p>OpenGL does not provide support for fonts, and hence does not provide support
+for “text”. But GLUT supports bitmap text with a limited number of fonts. The
+function glutBitmapCharacter is used to print a bitmap character at a 3D
+position inside the model. A series of characters can be printer using
+glutBitmapCharacter which makes a string like functionality.</p>
+
+<p>This small snippet will print a text.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// The character array to hole the string</span>
+<span class="kt">char</span> <span class="n">text</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"The text I want to print"</span><span class="p">;</span>
+<span class="c1">// The color, red for me</span>
+<span class="n">glColor3f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="c1">// Position of the text to be printer</span>
+<span class="n">glRasterPos3f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">'\0'</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">glutBitmapCharacter</span><span class="p">(</span><span class="n">GLUT_BITMAP_HELVETICA_18</span><span class="p">,</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</code></pre></div></div>
+<p>Let’s test this with an example. I wrote a code that rotates a blue cube by
+keystrokes. I will print the rotation value of X and Y axis on the screen. So,
+I used sprintf() to print the rotation value into the character array.
+Basically the arrangement looks like this.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">text</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">text</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+    <span class="n">sprintf</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="s">"X:%.0f Y:%.0f"</span><span class="p">,</span> <span class="n">xrot</span><span class="p">,</span> <span class="n">yrot</span><span class="p">);</span>
+    <span class="n">glColor3f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">glRasterPos3f</span><span class="p">(</span> <span class="o">-</span><span class="mi">25</span> <span class="p">,</span> <span class="mi">20</span> <span class="p">,</span> <span class="n">zoom</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">'\0'</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">glutBitmapCharacter</span><span class="p">(</span><span class="n">GLUT_BITMAP_HELVETICA_18</span><span class="p">,</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now I am going to call the function text from my render function of OpenGL. My
+code to draw the whole scene is,</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;GL/gl.h&gt;
+#include &lt;GL/glu.h&gt;
+#include &lt;GL/glut.h&gt;
+#include &lt;cstdio&gt;
+</span>
+<span class="kt">float</span> <span class="n">xrot</span> <span class="o">=</span> <span class="mf">0.00</span><span class="p">,</span> <span class="n">yrot</span> <span class="o">=</span> <span class="mf">0.00</span><span class="p">,</span> <span class="n">zoom</span> <span class="o">=</span> <span class="o">-</span><span class="mi">30</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">text</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">text</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+    <span class="n">sprintf</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="s">"X:%.0f Y:%.0f"</span><span class="p">,</span> <span class="n">xrot</span><span class="p">,</span> <span class="n">yrot</span><span class="p">);</span>
+    <span class="n">glColor3f</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">glRasterPos3f</span><span class="p">(</span> <span class="o">-</span><span class="mi">25</span> <span class="p">,</span> <span class="mi">20</span> <span class="p">,</span> <span class="n">zoom</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">'\0'</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">glutBitmapCharacter</span><span class="p">(</span><span class="n">GLUT_BITMAP_HELVETICA_18</span><span class="p">,</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">render</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">glClear</span><span class="p">(</span><span class="n">GL_COLOR_BUFFER_BIT</span> <span class="o">|</span> <span class="n">GL_DEPTH_BUFFER_BIT</span><span class="p">);</span>
+    <span class="n">glLoadIdentity</span><span class="p">();</span>
+
+    <span class="n">glTranslatef</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">zoom</span><span class="p">);</span>
+
+    <span class="c1">// Write the text before any transformation or rotation</span>
+    <span class="c1">// Or the text will change its position with the models</span>
+    <span class="n">text</span><span class="p">();</span>
+
+    <span class="n">glRotatef</span><span class="p">(</span><span class="n">xrot</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">glRotatef</span><span class="p">(</span><span class="n">yrot</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="c1">// Blue Cube</span>
+    <span class="n">glColor3f</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">);</span>
+    <span class="n">glutSolidCube</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+
+    <span class="n">glFlush</span><span class="p">();</span>
+    <span class="n">glutSwapBuffers</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">glClearColor</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">glClearDepth</span><span class="p">(</span> <span class="mf">1.0</span> <span class="p">);</span>
+    <span class="n">glEnable</span><span class="p">(</span><span class="n">GL_DEPTH_TEST</span><span class="p">);</span>
+    <span class="n">glEnable</span><span class="p">(</span><span class="n">GL_LIGHTING</span><span class="p">);</span>
+    <span class="n">glShadeModel</span><span class="p">(</span><span class="n">GL_SMOOTH</span><span class="p">);</span>
+    <span class="n">glEnable</span><span class="p">(</span><span class="n">GL_COLOR_MATERIAL</span><span class="p">);</span>
+    <span class="n">glColorMaterial</span><span class="p">(</span><span class="n">GL_FRONT</span><span class="p">,</span> <span class="n">GL_AMBIENT_AND_DIFFUSE</span><span class="p">);</span>
+    <span class="n">glEnable</span><span class="p">(</span><span class="n">GL_LIGHT0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">reshape</span><span class="p">(</span><span class="kt">int</span> <span class="n">w</span><span class="p">,</span> <span class="kt">int</span> <span class="n">h</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">float</span> <span class="n">aspectRatio</span> <span class="o">=</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">w</span><span class="o">/</span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">h</span><span class="p">;</span>
+    <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_PROJECTION</span><span class="p">);</span>
+    <span class="n">glLoadIdentity</span><span class="p">();</span>
+    <span class="n">gluPerspective</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="n">aspectRatio</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">);</span>
+    <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_MODELVIEW</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">keyboard</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">key</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">switch</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="k">case</span> <span class="sc">'s'</span><span class="p">:</span>
+        <span class="n">xrot</span> <span class="o">-=</span> <span class="mf">1.0</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="sc">'a'</span><span class="p">:</span>
+        <span class="n">yrot</span> <span class="o">-=</span> <span class="mf">1.0</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="sc">'w'</span><span class="p">:</span>
+        <span class="n">xrot</span> <span class="o">+=</span> <span class="mf">1.0</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="sc">'d'</span><span class="p">:</span>
+        <span class="n">yrot</span> <span class="o">+=</span> <span class="mf">1.0</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">27</span><span class="p">:</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">glutPostRedisplay</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">glutInit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span><span class="n">argv</span><span class="p">);</span>
+    <span class="n">glutInitDisplayMode</span><span class="p">(</span><span class="n">GLUT_DOUBLE</span> <span class="o">|</span> <span class="n">GLUT_RGB</span> <span class="o">|</span> <span class="n">GLUT_DEPTH</span> <span class="p">);</span>
+    <span class="n">glutInitWindowSize</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
+    <span class="n">glutCreateWindow</span><span class="p">(</span><span class="s">"Bitmap Text Example"</span><span class="p">);</span>
+    <span class="n">init</span><span class="p">();</span>
+    <span class="n">glutKeyboardFunc</span><span class="p">(</span><span class="n">keyboard</span><span class="p">);</span>
+    <span class="n">glutReshapeFunc</span><span class="p">(</span><span class="n">reshape</span><span class="p">);</span>
+    <span class="n">glutDisplayFunc</span><span class="p">(</span><span class="n">render</span><span class="p">);</span>
+    <span class="n">glutMainLoop</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now save and run the code with appropriate linkers. Mine looks like this.</p>
+
+<p><a href="http://i.imgur.com/GhQQN7N.png"><img src="http://i.imgur.com/GhQQN7N.png" alt="GLUT Bitmap Text" /></a> You see the black text at top-left corner of the screen? Why I rotate the cube with W/A/S/D, the values of X and Y changes and that is printed. I used raster point (-25,20) which makes it top-left aligned. You can use custom color, position etc.</p>
+
+<p>If this post does not work for you, let me know.</p>
+
+
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="7351100586"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+    </div>
+  </body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-57632461-7', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>

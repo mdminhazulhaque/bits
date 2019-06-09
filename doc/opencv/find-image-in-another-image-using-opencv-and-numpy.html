@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <meta name="description" content="Several days ago, I needed to catch new message notification from Skype4Linux. As far I know they do not provide any API (like dbus or HTTP API like Skyp...">
+  <meta name="author" content="Md. Minhazul Haque">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Bits",
+      "item": "https://bits.mdminhazulhaque.io/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "opencv",
+      "item": "https://bits.mdminhazulhaque.io/opencv"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Find An Image in Another Image using OpenCV and NumPy",
+      "item": "https://bits.mdminhazulhaque.io//opencv/find-image-in-another-image-using-opencv-and-numpy.html"
+    }]
+  }</script>
+  <title>Find An Image in Another Image using OpenCV and NumPy | Bits</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Inconsolata" rel="stylesheet">
+  <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/print.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190609">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <style>.blink{animation:blink 1s infinite}@keyframes blink{to{opacity:.0}}</style>
+</head>
+
+  <body>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+        Bits<span class="blink">_</span>
+        </a>
+      </h1>
+      <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p>
+      <p>Find me at ...
+      <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a>
+      <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a>
+      <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+      <br><a href="https://twitter.com/mdminhazulhaque"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+      <br><a href="https://www.instagram.com/md.minhazul.haque/"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+      </p>
+    </div>
+    <p>&copy; 2012 - 2019. All rights reserved.</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Find An Image in Another Image using OpenCV and NumPy</h1>
+  <hr>
+  <i class="fa fa-fw fa-calendar"></i>12 Jul 2017 <i class="fa fa-fw fa-tag"></i><a href="/opencv">opencv</a>
+  <hr>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="2958174403"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <p>Several days ago, I needed to catch new message notification from Skype4Linux. As far I know they do not provide any API (like dbus or HTTP API like Skype 4.3 native) to catch new message event. So I deciced to monitor the system tray of my desktop and look for the unread icon that Skype shows. Finally I had myself written a tiny Python script that serves the purpose.</p>
+
+<p>As a first step, I had to find a small image (24x24 pixels) in a large image (system tray, 400x60 pixels). OpenCV comes with a handy function named <code class="highlighter-rouge">matchTemplate</code> that provides a matrix of best match of a matrix in another matrix (there are several methods on doing this although). I took advantage of the function <code class="highlighter-rouge">where</code> of NumPy because it provides setting a threshold level of the match. So here is the <code class="highlighter-rouge">has_image</code> function I wrote.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">has_image</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="n">needle</span><span class="p">):</span>
+    <span class="n">haystack</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+    <span class="n">needle</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">needle</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+    <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">needle</span><span class="o">.</span><span class="n">shape</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">matchTemplate</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="n">needle</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">TM_CCOEFF_NORMED</span><span class="p">)</span>
+    <span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.99</span>
+    <span class="n">loc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">res</span> <span class="o">&gt;=</span> <span class="n">threshold</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>For now let’s put aside the Skype thing. Say we will find a strawberry in a photo of some fruits. Here is the photo of all the fruits (credit goes to medicalnewstoday.com).</p>
+
+<p><img src="http://i.imgur.com/WvJG9i1.jpg" alt="Fruits" /></p>
+
+<p>And the tiny little strawberry we will look for.</p>
+
+<p><img src="http://i.imgur.com/V3YYpTq.jpg" alt="Strawberry" /></p>
+
+<p>The following is my final code to find out the image and draw a rectangle over it.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">fruits</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"mixed-fruits.jpg"</span><span class="p">)</span>
+    <span class="n">strawberry</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"strawberry.jpg"</span><span class="p">)</span>
+    
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">has_image</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="n">strawberry</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">strawberry</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">h</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">w</span><span class="p">),</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">"Found the strawberry at (</span><span class="si">%</span><span class="s">d,</span><span class="si">%</span><span class="s">d)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">fruits</span><span class="p">)</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mh">0xFFFF</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Not found"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This is the result I got using the code I wrote.</p>
+
+<p><img src="http://i.imgur.com/IGToZqI.png" alt="Result" /></p>
+
+<p>That was some real fun. I hope someone out there will find this snippet helpful. :D</p>
+
+<blockquote>
+  <p>Anyway, you will find my Skype4Linux notifier project <a href="https://github.com/minhazul-haque/skype4linux-notifier">here</a>.</p>
+</blockquote>
+
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="7351100586"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+    </div>
+  </body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-57632461-7', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>

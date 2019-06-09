@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <meta name="description" content="Last post I wrote about Interfacing Javascript from Webview to native Android was about one way communication from Javascript to Android activity.
+
+Later...">
+  <meta name="author" content="Md. Minhazul Haque">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Bits",
+      "item": "https://bits.mdminhazulhaque.io/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "android",
+      "item": "https://bits.mdminhazulhaque.io/android"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Android-Javascript Bridge",
+      "item": "https://bits.mdminhazulhaque.io//android/android-javascript-bridge.html"
+    }]
+  }</script>
+  <title>Android-Javascript Bridge | Bits</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Inconsolata" rel="stylesheet">
+  <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/print.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190609">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <style>.blink{animation:blink 1s infinite}@keyframes blink{to{opacity:.0}}</style>
+</head>
+
+  <body>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+        Bits<span class="blink">_</span>
+        </a>
+      </h1>
+      <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p>
+      <p>Find me at ...
+      <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a>
+      <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a>
+      <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+      <br><a href="https://twitter.com/mdminhazulhaque"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+      <br><a href="https://www.instagram.com/md.minhazul.haque/"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+      </p>
+    </div>
+    <p>&copy; 2012 - 2019. All rights reserved.</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Android-Javascript Bridge</h1>
+  <hr>
+  <i class="fa fa-fw fa-calendar"></i>10 Feb 2015 <i class="fa fa-fw fa-tag"></i><a href="/android">android</a>
+  <hr>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="2958174403"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <p>Last post I wrote about <a href="http://blog.minhazulhaque.com/2015/02/interfacing-javascript-from-webview-to.html">Interfacing Javascript from Webview to native Android</a> was about one way communication from Javascript to Android activity.</p>
+
+<p>Later I tried a duplex communication between Activity and Javascript. That means -</p>
+
+<ul>
+  <li>Call Javascript methods from Android activity</li>
+  <li>Call Android activity methods from Javascript</li>
+</ul>
+
+<p>are possible.</p>
+
+<h3 id="android-to-javascript">Android to Javascript</h3>
+
+<p>In <code class="highlighter-rouge">MainActivity.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">"Hello!"</span><span class="o">;</span>
+<span class="n">webview</span><span class="o">.</span><span class="na">loadUrl</span><span class="o">(</span><span class="s">"javascript:setData(\""</span> <span class="o">+</span> <span class="n">data</span> <span class="o">+</span> <span class="s">"\");"</span><span class="o">);</span>
+</code></pre></div></div>
+<p>In <code class="highlighter-rouge">index.html</code></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">setData</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="javascript-to-android">Javascript to Android</h3>
+
+<p>In <code class="highlighter-rouge">MainActivity.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">JSInterface</span> <span class="o">{</span>
+    <span class="n">JSInterface</span><span class="o">()</span> <span class="o">{}</span>
+    <span class="nd">@JavascriptInterface</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getData</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">"Hello"</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">webview</span><span class="o">.</span><span class="na">addJavascriptInterface</span><span class="o">(</span><span class="k">new</span> <span class="n">JSInterface</span><span class="o">(),</span> <span class="s">"JSInterface"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>In <code class="highlighter-rouge">index.html</code></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSInterface</span><span class="p">.</span><span class="nx">getData</span><span class="p">();</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Here is a preview of my setup where a javacript function is called when a button is clicked, and the javascrip call activity’s function for current date
+string.</p>
+
+<p><img src="https://github.com/minhazul-haque/Android-Javascript-Bridge/raw/master/screen/apple.png" alt="Android-Javascript-Bridge" /></p>
+
+<p>Check my repository <a href="https://github.com/minhazul-haque/Android-Javascript-Bridge">Android-Javascript-Bridge</a> for full project source.</p>
+
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="7351100586"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+    </div>
+  </body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-57632461-7', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>
