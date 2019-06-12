@@ -6,11 +6,25 @@ My blog, built using [Jekyll](https://github.com/jekyll/jekyll).
 
 * Sidebar
 * Pagination
+* Breadcrumb Support (LD-JSON)
+* Use CDN for `font-awesome`
 
 ## Others
 
+    - jekyll-feed
+    - jekyll-sass-converter
+    - jekyll-sitemap
+    - jekyll-paginate
+    - jekyll-archives
+    
 * Used [Disqus](https://disqus.com) as comment hosting system
-* Auto `sitemap.xml` generator using [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
+* Auto `sitemap.xml` generator using `jekyll-sitemap`
+* Auto `atom.xml` generator using `jekyll-feed`
+* Auto category page generator using `jekyll-archives`
+* Auto pagination using `jekyll-paginate`
+* Auto CSS compilation using `jekyll-sass-converter`
+
+Use `gem install jekyll-{feed,sitemap,paginate,archives,sass-converter} --no-doc` to install all gems at a time.
 
 ## Hyde
 
