@@ -9,13 +9,15 @@ My blog, built using [Jekyll](https://github.com/jekyll/jekyll).
 * Breadcrumb Support (LD-JSON)
 * Use CDN for `font-awesome`
 
-## Others
+## Gems
 
 - jekyll-feed
 - jekyll-sass-converter
 - jekyll-sitemap
 - jekyll-paginate
 - jekyll-archives
+
+## Why
 
 * Used [Disqus](https://disqus.com) as comment hosting system
 * Auto `sitemap.xml` generator using `jekyll-sitemap`
