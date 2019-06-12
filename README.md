@@ -11,12 +11,12 @@ My blog, built using [Jekyll](https://github.com/jekyll/jekyll).
 
 ## Others
 
-    - jekyll-feed
-    - jekyll-sass-converter
-    - jekyll-sitemap
-    - jekyll-paginate
-    - jekyll-archives
-    
+- jekyll-feed
+- jekyll-sass-converter
+- jekyll-sitemap
+- jekyll-paginate
+- jekyll-archives
+
 * Used [Disqus](https://disqus.com) as comment hosting system
 * Auto `sitemap.xml` generator using `jekyll-sitemap`
 * Auto `atom.xml` generator using `jekyll-feed`
