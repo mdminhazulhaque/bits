@@ -6,6 +6,7 @@ title:                  'Bits'
 description:            'Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a>'
 url:                    'https://bits.mdminhazulhaque.io'
 paginate:               20
+destination:		./docs
 plugins:
     - jekyll-feed
     - jekyll-sass-converter
@@ -18,6 +19,9 @@ exclude:
     - poole
     - hyde
     - submodule.sh
+    - build.sh
+    - .sass-cache
+    - README.md
 jekyll-archives:
     enabled:
         - categories
