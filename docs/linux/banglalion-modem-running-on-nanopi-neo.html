@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <meta name="description" content="Recently I got a Nanopi Neo with Allwinner H3 SoC, 512MB RAM, 1 USB-A port and 1 Ethernet port. I am using Armbian as OS which is based on Debian.
+
+I did...">
+  <meta name="author" content="Md. Minhazul Haque">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Bits",
+      "item": "https://bits.mdminhazulhaque.io/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "linux",
+      "item": "https://bits.mdminhazulhaque.io/linux"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Banglalion Modem Running on NanoPi Neo",
+      "item": "https://bits.mdminhazulhaque.io//linux/banglalion-modem-running-on-nanopi-neo.html"
+    }]
+  }</script>
+  <title>Banglalion Modem Running on NanoPi Neo | Bits</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Inconsolata" rel="stylesheet">
+  <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/print.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190712">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}a.monospace{font-family:Inconsolata;}</style>
+</head>
+
+  <body>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a class="monospace" href="/">
+        Bits<span class="blink">_</span>
+        </a>
+      </h1>
+      <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p>
+      <p>Find me at ...
+      <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a>
+      <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a>
+      <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+      <br><a href="https://twitter.com/mdminhazulhaque"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+      <br><a href="https://www.instagram.com/md.minhazul.haque/"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+      </p>
+    </div>
+    <p>&copy; 2012 - 2019. All rights reserved.</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Banglalion Modem Running on NanoPi Neo</h1>
+  <hr>
+  <i class="fa fa-fw fa-calendar"></i>16 Aug 2016 <i class="fa fa-fw fa-tag"></i><a href="/linux">linux</a>
+  <hr>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="2958174403"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <p>Recently I got a <a href="http://www.friendlyarm.com/index.php?route=product/product&amp;product_id=132">Nanopi Neo</a> with Allwinner H3 SoC, 512MB RAM, 1 USB-A port and 1 Ethernet port. I am using <a href="http://www.armbian.com/">Armbian</a> as OS which is based on Debian.</p>
+
+<p>I did a test if it was possible to run Banglalion WiMAX devices on this platform. So I grabbed Beceem WiMAX API sources and built it using <code class="highlighter-rouge">gcc-linaro-5.2-2015.11-2-x86_64_arm-linux-gnueabihf</code> toolchain.</p>
+
+<p>First I had to build the Armbian kernel with <code class="highlighter-rouge">Staging</code> &gt; <code class="highlighter-rouge">BCM_WIMAX</code> module. Then I dumped the image into a microsd card, put it into my NanoPi Neo and booted up.</p>
+
+<p>I wasn’t sure which IP it got, so I ran <code class="highlighter-rouge">nmap</code> to find it out.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@minhaz-desktop:~# nmap -sn 10.42.0.1/24
+Starting Nmap 6.40 ( http://nmap.org ) at 2016-08-07 01:10 BDT
+Nmap scan report for 10.42.0.28
+Host is up (0.00027s latency).
+MAC Address: 46:A0:87:0F:06:B6 (Unknown)
+Nmap scan report for 10.42.0.1
+Host is up.
+Nmap done: 256 IP addresses (2 hosts up) scanned in 19.06 seconds
+</code></pre></div></div>
+
+<p>Then I logged into it. Checked its memory and CPU information.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@nanopineo:/# free -m
+             total       used       free     shared    buffers     cached
+Mem:           495         90        404          8          5         43
+-/+ buffers/cache:         42        453
+Swap:            0          0          0
+root@nanopineo:/# nproc 
+4
+root@nanopineo:/# lscpu 
+Architecture:          armv7l
+Byte Order:            Little Endian
+CPU(s):                4
+On-line CPU(s) list:   0-3
+Thread(s) per core:    1
+Core(s) per socket:    4
+Socket(s):             1
+CPU max MHz:           1200.0000
+CPU min MHz:           480.0000
+</code></pre></div></div>
+
+<p>I built the necessary library, daemons, clients etc which can be found at <a href="https://github.com/minhazul-haque/beceem-cscm-armv7/tree/master/bin">minhazul-haque/beceem-cscm-armv7</a>. Let’s install them.</p>
+
+<ul>
+  <li>Copy <code class="highlighter-rouge">libeap_supplicant.so</code>, <code class="highlighter-rouge">libengine_beceem.so</code> and <code class="highlighter-rouge">libxvi020.so</code> to <code class="highlighter-rouge">/lib</code></li>
+  <li>Copy <code class="highlighter-rouge">macxvi.cfg</code> and <code class="highlighter-rouge">macxvi200.bin</code> to <code class="highlighter-rouge">/lib/firmware</code></li>
+  <li>Copy <code class="highlighter-rouge">wimaxd</code> and <code class="highlighter-rouge">wimaxc</code> to <code class="highlighter-rouge">/usr/local/bin</code> as executable</li>
+  <li>Copy <code class="highlighter-rouge">wimaxd.conf</code> to <code class="highlighter-rouge">/etc</code> and change <code class="highlighter-rouge">UserIdentity</code>, <code class="highlighter-rouge">UserPassword</code> and <code class="highlighter-rouge">TTLSAnonymousIdentity</code> to your own config</li>
+  <li>Put <code class="highlighter-rouge">bilai.pem</code> to <code class="highlighter-rouge">/etc</code> (Use your head, ask questions or search the internet for it)</li>
+</ul>
+
+<p>Now let’s run the total setup.</p>
+
+<ul>
+  <li>Plug in the modem (obviously!)</li>
+  <li>Run <code class="highlighter-rouge">wimaxd -c /etc/wimaxd.conf</code></li>
+  <li>From another terminal, run <code class="highlighter-rouge">wimaxc connect 2600 10</code> to connect</li>
+  <li>If connection is established, run <code class="highlighter-rouge">dhclient eth1</code> to lease IP from the modem (assuming that eth1 is the WiMAX device)</li>
+</ul>
+
+<p>Here is a photo of my little buddy and the Bilai modem.</p>
+
+<p><img src="http://i.imgur.com/29qtGOw.jpg" alt="Banglalion Modem on ARM" /></p>
+
+<p>If you have any questions, ask below or open issue at the github repository.</p>
+
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="7351100586"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+    </div>
+  </body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-57632461-7', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>

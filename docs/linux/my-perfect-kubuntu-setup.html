@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <meta name="description" content="[Last Updated: Thursday, May 07, 2015] It has been 3 years since I started using Kubuntu as my primary OS. Here is a list of PPAs and packages I
+installe...">
+  <meta name="author" content="Md. Minhazul Haque">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Bits",
+      "item": "https://bits.mdminhazulhaque.io/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "linux",
+      "item": "https://bits.mdminhazulhaque.io/linux"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "My Perfect Kubuntu Setup",
+      "item": "https://bits.mdminhazulhaque.io//linux/my-perfect-kubuntu-setup.html"
+    }]
+  }</script>
+  <title>My Perfect Kubuntu Setup | Bits</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Inconsolata" rel="stylesheet">
+  <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/print.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190712">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}a.monospace{font-family:Inconsolata;}</style>
+</head>
+
+  <body>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a class="monospace" href="/">
+        Bits<span class="blink">_</span>
+        </a>
+      </h1>
+      <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p>
+      <p>Find me at ...
+      <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a>
+      <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a>
+      <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+      <br><a href="https://twitter.com/mdminhazulhaque"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+      <br><a href="https://www.instagram.com/md.minhazul.haque/"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+      </p>
+    </div>
+    <p>&copy; 2012 - 2019. All rights reserved.</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">My Perfect Kubuntu Setup</h1>
+  <hr>
+  <i class="fa fa-fw fa-calendar"></i>07 May 2015 <i class="fa fa-fw fa-tag"></i><a href="/linux">linux</a>
+  <hr>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="2958174403"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <p>[Last Updated: Thursday, May 07, 2015] It has been 3 years since I started using Kubuntu as my primary OS. Here is a list of PPAs and packages I
+installed. I also added some tweaks.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Code::Blocks</span>
+add-apt-repository ppa:damien-moore/codeblocks
+
+<span class="c"># fish shell v2</span>
+add-apt-repository ppa:fish-shell/release-2
+
+<span class="c"># Inkscape 0.93</span>
+add-apt-repository ppa:inkscape.dev/stable
+
+<span class="c"># Kubuntu 4.14</span>
+add-apt-repository ppa:kubuntu-ppa/backports
+
+<span class="c"># LibreOffice</span>
+add-apt-repository ppa:libreoffice/ppa
+
+<span class="c"># Screen Recorder</span>
+add-apt-repository ppa:maarten-baert/simplescreenrecorder
+
+<span class="c"># ffmpeg</span>
+add-apt-repository ppa:mc3man/trusty-media
+
+<span class="c"># Clementine Music Player</span>
+add-apt-repository ppa:me-davidsansome/clementine
+
+<span class="c"># Awesome Moka Icon Theme</span>
+add-apt-repository ppa:moka/daily
+
+<span class="c"># youtube-dl and other tools</span>
+add-apt-repository ppa:nilarimogard/webupd8
+
+<span class="c"># Qt5 and Ubuntu Dev Tools</span>
+add-apt-repository ppa:ubuntu-sdk-team/ppa
+
+<span class="c"># adb, fastboot etc</span>
+add-apt-repository ppa:ubuntu/android-tools
+
+<span class="c"># VLC Media Player</span>
+add-apt-repository ppa:videolan/stable-daily
+
+<span class="c"># Brackets Editor</span>
+add-apt-repository ppa:webupd8team/brackets
+
+<span class="c"># Oracle 8 JDK</span>
+add-apt-repository ppa:webupd8team/java
+
+<span class="c"># Mono Develop and Mono Library</span>
+<span class="nb">echo</span> <span class="s2">"deb http://download.mono-project.com/repo/debian wheezy main"</span> | <span class="nb">tee</span> /etc/apt/sources.list.d/mono-xamarin.list
+
+<span class="c"># Use apt-get install pkg-name</span>
+android-tools-adb <span class="c"># adb</span>
+android-tools-fastboot <span class="c"># fastboot</span>
+arduino <span class="c"># Official Arduino IDE</span>
+brackets <span class="c"># Brackets Editor</span>
+clementine <span class="c"># Clementine Music Player</span>
+cmake-qt-gui <span class="c"># CMake GUI</span>
+codeblocks <span class="c"># Code::Blocks IDE</span>
+ffmpeg <span class="c"># ffmpeg and ffplay CLI</span>
+fish <span class="c"># Fish Shell v2</span>
+fslint <span class="c"># Duplicate File Finder and Remover</span>
+geany <span class="c"># Lightweight IDE</span>
+gimp <span class="c"># Image Editor</span>
+git <span class="c"># Git Version Control</span>
+gnome-disk-utility <span class="c"># Disk Utility</span>
+gparted <span class="c"># Partition Manager</span>
+inkscape <span class="c"># SVG Editor</span>
+kcharselect <span class="c"># Character Pickup Tool</span>
+kcolorchooser <span class="c"># Color Picker</span>
+keepassx <span class="c"># Password Store App</span>
+krename <span class="c"># Batch Rename Tool</span>
+libqt[5] <span class="c"># All Qt5 Libraries</span>
+libreoffice <span class="c"># Office Suite</span>
+libsane-extras <span class="c"># Driver for Cannon Lide 110</span>
+light-themes <span class="c"># Ambiance and Radiance themes fro GTK Apps</span>
+moka-icon-theme <span class="c"># Cool Icon Theme for Ubuntu</span>
+mono-complete <span class="c"># Mono Libraries</span>
+monodevelop <span class="c"># Official Mono IDE</span>
+muon <span class="c"># Package Manager, Alternative to Synaptic</span>
+mysql-client <span class="c"># MySQL CLI</span>
+mysql-server <span class="c"># MySQL Sercer</span>
+nginx-light <span class="c"># Nginx Web Server</span>
+oracle-java8-installer <span class="c"># Oracle Java 8</span>
+php5-cli <span class="c"># PHP CLI Tool</span>
+php5-fpm <span class="c"># PHP FPM for Nginx</span>
+pinta <span class="c"># Paint Alternative</span>
+proftpd-basic <span class="c"># FTP Server</span>
+qt5-qmake <span class="c"># QMake Tool</span>
+qtcreator <span class="c"># Qt IDE</span>
+shutter <span class="c"># Screenshot and Editor</span>
+simplescreenrecorder <span class="c"># Great Screen Recorder</span>
+sqlitebrowser <span class="c"># SQLite Database Browser</span>
+unetbootin <span class="c"># Live USB Creator</span>
+unrar <span class="c"># RAR File Extractor</span>
+vlc <span class="c"># Media Player from VideoLAN</span>
+xclip <span class="c"># Commandline Clipboard Manager</span>
+youtube-dl   <span class="c"># All in One Video Downloader</span>
+
+<span class="c"># Use apt-get purge pkg-name</span>
+akregator <span class="c"># I prefer online Feed Reader</span>
+amarok <span class="c"># Clementine</span>
+command-not-found <span class="c"># I hate this app for no reason</span>
+dragonplayer <span class="c"># VLC</span>
+firefox <span class="c"># Google Chrome</span>
+java-common <span class="c"># Oracle JDK</span>
+k3b <span class="c"># I have no DVD drive</span>
+kaddressbook <span class="c"># Never used it</span>
+kde-telepathy <span class="c"># Never used any desktop IM</span>
+kmag <span class="c"># Unnecessary</span>
+kmail <span class="c"># Gmail Webinterface</span>
+kmousetool <span class="c"># Never used it</span>
+kontact <span class="c"># What?</span>
+korganizer <span class="c"># Meh!</span>
+krdc <span class="c"># VNC!</span>
+kwalletmanager <span class="c"># KeePassX</span>
+language-pack-en <span class="c"># Unnecessary</span>
+language-selector-common <span class="c"># Unnecessary 2</span>
+muon-discover <span class="c"># Unnecessary 3</span>
+muon-notifier <span class="c"># Unnecessary</span>
+muon-updater <span class="c"># I like to manually update packages</span>
+partitionmanager <span class="c"># GParted</span>
+quassel <span class="c"># wut?</span>
+sieveeditor <span class="c"># Nah</span>
+usb-creator-kde <span class="c"># unetbootin</span>
+
+<span class="c"># http://www.skype.com/en/download-skype/skype-for-linux/</span>
+dpkg <span class="nt">-i</span> skype_4.3.0.deb
+
+<span class="c"># https://www.teamviewer.com/en/download/linux.aspx</span>
+dpkg <span class="nt">-i</span> teamviewer_10.0.deb
+
+<span class="c"># http://www.google.com.bd/chrome/browser/thankyou.html?platform=linux</span>
+dpkg <span class="nt">-i</span> google-chrome-stable_current_amd64.deb
+
+<span class="c"># Edit /etc/fstab</span>
+<span class="c"># Details at http://blog.minhazulhaque.com/2015/01/fstab-optimization-for-ssd-and-ram.html</span>
+<span class="nb">echo</span> <span class="s2">"tmpfs /tmp        tmpfs defaults,noatime,mode=1777 0 0"</span> <span class="o">&gt;&gt;</span> /etc/fstab
+<span class="nb">echo</span> <span class="s2">"tmpfs /var/spool  tmpfs defaults,noatime,mode=1777 0 0"</span> <span class="o">&gt;&gt;</span> /etc/fstab
+<span class="nb">echo</span> <span class="s2">"tmpfs /var/tmp    tmpfs defaults,noatime,mode=1777 0 0"</span> <span class="o">&gt;&gt;</span> /etc/fstab
+<span class="nb">echo</span> <span class="s2">"tmpfs /var/log    tmpfs defaults,noatime,mode=0755 0 0"</span> <span class="o">&gt;&gt;</span> /etc/fstab
+
+<span class="c"># Kernel Options</span>
+<span class="c"># Disable SWAP</span>
+<span class="nb">echo</span> <span class="s2">"vm.swappiness=0"</span> <span class="o">&gt;&gt;</span> /etc/sysctl.conf
+<span class="nb">echo</span> <span class="s2">"vm.vfs_cache_pressure=100"</span> <span class="o">&gt;&gt;</span> /etc/sysctl.conf
+
+<span class="c"># Disable IPv6</span>
+<span class="nb">echo</span> <span class="s2">"net.ipv6.conf.all.disable_ipv6 = 1"</span> <span class="o">&gt;&gt;</span> /etc/sysctl.conf
+<span class="nb">echo</span> <span class="s2">"net.ipv6.conf.default.disable_ipv6 = 1"</span> <span class="o">&gt;&gt;</span> /etc/sysctl.conf
+<span class="nb">echo</span> <span class="s2">"net.ipv6.conf.lo.disable_ipv6 = 1"</span> <span class="o">&gt;&gt;</span> /etc/sysctl.conf
+
+<span class="c"># Remove annoying Java Desktop Shortcuts</span>
+<span class="nb">rm</span> /usr/share/applications/JB-<span class="k">*</span>
+<span class="nb">rm</span> /usr/share/applications/display.im6.desktop
+
+<span class="c"># Finally, remove bd_BN locale</span>
+<span class="nb">sed</span> <span class="nt">-i</span> s/bn_BD/en_US/g /etc/default/locale
+
+<span class="c"># Don't forget to reboot your pc</span>
+reboot
+</code></pre></div></div>
+
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="7351100586"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+    </div>
+  </body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-57632461-7', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>

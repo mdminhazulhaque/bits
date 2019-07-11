@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://bits.mdminhazulhaque.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bits.mdminhazulhaque.io/" rel="alternate" type="text/html" /><updated>2019-07-12T00:06:33+08:00</updated><id>https://bits.mdminhazulhaque.io/feed.xml</id><title type="html">Bits</title><subtitle>Random posts written by &lt;a href=&quot;https://mdminhazulhaque.io&quot;&gt;Md. Minhazul Haque&lt;/a&gt;</subtitle><entry><title type="html">Tweak your Bee IPTV Box with 3rd Party App and Launcher</title><link href="https://bits.mdminhazulhaque.io/android/tweak-your-bee-iptv-box-with-3rd-party-app-and-launcher.html" rel="alternate" type="text/html" title="Tweak your Bee IPTV Box with 3rd Party App and Launcher" /><published>2019-05-30T00:00:00+08:00</published><updated>2019-05-30T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/android/tweak-your-bee-iptv-box-with-3rd-party-app-and-launcher</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/android/tweak-your-bee-iptv-box-with-3rd-party-app-and-launcher.html">&lt;p&gt;Yesterday, I got a call from one of my colleagues (and also my neighbor) about how he messed up with his Android TV Box. He asked me if I could help him with that to make it &lt;strike&gt;great&lt;/strike&gt; useful again.&lt;/p&gt;
+
+&lt;p&gt;Basically he bought the box with a subscription long ago. After it got expired, the startup app kept complaining about the subscription. He did perform a factory reset which caused the box loose its realm. As a result, it was no way useful for him other than throwing it away or tweak it.&lt;/p&gt;
+
+&lt;p&gt;After I got the box in my hands, first thing I tried is looking for it’s model or chip number. I got &lt;code class=&quot;highlighter-rouge&quot;&gt;OTT TV BOX&lt;/code&gt; written at the bottom and &lt;code class=&quot;highlighter-rouge&quot;&gt;beeiptv&lt;/code&gt; on the top. Searching those keys gave me no idea, so I turned it on and plugged it into my TV.&lt;/p&gt;
+
+&lt;p&gt;The box booted real fast and the vendor-locked &lt;code class=&quot;highlighter-rouge&quot;&gt;beeiptv&lt;/code&gt; app appeared with error messages something like this. Not to mention, I made sure it had internet connection via Ethernet.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Failed connecting to middleware service A.B.C.D. Please check your internet connectivity or contact network admin.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Again, it gave me no clue. So I plugged in an USB mouse and manually checked the device status page. It revealed the build number, kernel version etc. I was laughing to see that the developer could only mod the &lt;code class=&quot;highlighter-rouge&quot;&gt;Model Number&lt;/code&gt;, nothing else.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/FI2bzOq.png&quot; alt=&quot;Device Info Bee IPTV&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Anyway, the board version &lt;code class=&quot;highlighter-rouge&quot;&gt;rk322x&lt;/code&gt; indicated that it uses Rockchip SoC. I had never worked with Rockchip, but they are damn famous for low cost STB and other IoT devices. I had an idea in my mind. I checked the &lt;code class=&quot;highlighter-rouge&quot;&gt;Developer Settings&lt;/code&gt; and found that the &lt;code class=&quot;highlighter-rouge&quot;&gt;USB Debugging&lt;/code&gt; option was already turned on. But I had no such cable that could connect the USB-Female port of the box to my computer’s similar one. So I kept looking for alternatives.&lt;/p&gt;
+
+&lt;p&gt;Long ago I used to work with Android when the &lt;code class=&quot;highlighter-rouge&quot;&gt;adb&lt;/code&gt; tool came handy. &lt;code class=&quot;highlighter-rouge&quot;&gt;adb&lt;/code&gt; can connect over the wifi also. So I though I should give it a try for the box too. Then I got the box’s IP from my router’s DHCP table. Then ran this command in the terminal.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;adb connect 192.168.0.122:5555 # adb uses this port by default
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Viola! It got connected. Another wonder was waiting for me. After trying &lt;code class=&quot;highlighter-rouge&quot;&gt;adb shell&lt;/code&gt; I typed &lt;code class=&quot;highlighter-rouge&quot;&gt;su&lt;/code&gt; and it worked too! That means I can do whatever I want with this box until it does. Yeee!!!&lt;/p&gt;
+
+&lt;p&gt;Okay back to the business. From the behaviors of the default, vendor-locked launcher app, I guessed it prohibits any other app to be used as a launcher. Plus there was no way to access the App Drawer. So I decided to get benefit from &lt;code class=&quot;highlighter-rouge&quot;&gt;adb&lt;/code&gt; again.&lt;/p&gt;
+
+&lt;p&gt;I downloaded 2 APK from the internet. You might ask why this specific two. Well, the box runs Android 4.4 which is way old than todays. So make sure you check the Android version compatibility before installing any app.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;com.swiftstreamz.live (For 3rd party live TV service)&lt;/li&gt;
+  &lt;li&gt;by.mediatech.home (For launcher/app drawer)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I used the command &lt;code class=&quot;highlighter-rouge&quot;&gt;adb install &amp;lt;apkfile&amp;gt;&lt;/code&gt;. Both of them got installed without any error. Then I tried starting the 3rd party TV app via adb.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;am start -e name Splash -n com.swiftstreamz.live/.MainActivity
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It worked! I could see the new app interface in my TV. This gave my confidence a boost. So I decided to start the launcer too.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;am start -e name Splash -n by.mediatech.home/.MainActivity
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After having success with installing and running those apps, I knew I had only one challenge left ahead of me.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Bypass the vendor-locked launcer and use the new one installed by me&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I googled around a bit and found that Android let’s you reset default launcher settings if you long tap the &lt;code class=&quot;highlighter-rouge&quot;&gt;Home&lt;/code&gt; button for 6 seconds. I did it and set the &lt;code class=&quot;highlighter-rouge&quot;&gt;TVHome&lt;/code&gt; app as default. When the launcher came, I could see all the applications installed in a row.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/eskp7sG.jpg&quot; alt=&quot;New TV Home App&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Before celebrating my success, I did some extra tweaks.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Disabled key press sound to make things faster&lt;/li&gt;
+  &lt;li&gt;Disabled autolock screen&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Disabled the following packages using &lt;code class=&quot;highlighter-rouge&quot;&gt;pm disable &amp;lt;pkg&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;com.android.htmlviewer&lt;/code&gt; # Won’t do any WebDev thingy&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;com.android.inputmethod.pinyin&lt;/code&gt; # Don’t need Chinese input&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;com.android.printspooler&lt;/code&gt; # Never going to print anything&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;com.android.providers.downloads.ui&lt;/code&gt; # Ugly download button&lt;/li&gt;
+      &lt;li&gt;`com.android.providers.userdictionary&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;com.android.stk&lt;/code&gt; # SIM Toolkit support&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;com.corpus.stb.beeiptv&lt;/code&gt; # So the vendor gets no chance to complain again&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;com.google.android.googlequicksearchbox&lt;/code&gt; # I always hated this search app&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;com.svox.pico&lt;/code&gt; # WTF&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;com.zidoo.ota.update&lt;/code&gt; # Update might reset all my hardwork, so be safe&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;com.zidoo.test&lt;/code&gt; # Seems suspicious&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Set the animation speed to 0x to boost performance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Finally, I restarted the box several times to see if the custom launcher appears after boot everytime. Also checked the streaming apps, YouTube apps too. All of them worked like a charm!&lt;/p&gt;</content><author><name></name></author><summary type="html">Yesterday, I got a call from one of my colleagues (and also my neighbor) about how he messed up with his Android TV Box. He asked me if I could help him with that to make it great useful again.</summary></entry><entry><title type="html">Authenticate Fluentd to Access BigQuery</title><link href="https://bits.mdminhazulhaque.io/linux/authenticate-fluentd-to-access-bigquery.html" rel="alternate" type="text/html" title="Authenticate Fluentd to Access BigQuery" /><published>2019-05-08T00:00:00+08:00</published><updated>2019-05-08T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/linux/authenticate-fluentd-to-access-bigquery</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/linux/authenticate-fluentd-to-access-bigquery.html">&lt;p&gt;Fluentd is a pretty good log collection and streaming solution for several platforms. You can easily stream your nginx logs to BigQuery via Fluentd.&lt;/p&gt;
+
+&lt;p&gt;There is a nicely written article on &lt;a href=&quot;https://cloud.google.com/solutions/real-time/fluentd-bigquery&quot;&gt;Analyzing logs in real time using Fluentd and BigQuery&lt;/a&gt; by Google. This guide has everything explained properly to get started with Fluentd-nginx-BigQuery.&lt;/p&gt;
+
+&lt;p&gt;I followed the whole process but ended up receiving the following error at &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/log/td-agent/td-agent.log&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2019-05-07 16:13:15 +0000 [error]: #0 tables.get API project_id=&quot;farm-rock-85697&quot; dataset=&quot;fluentd&quot; table=&quot;nginx_access&quot; code=403 message=&quot;accessDenied: Access Denied: Table farm-rock-85697:fluentd.nginx_access: The user 87674165174597-compute@developer.gserviceaccount.com does not have bigquery.tables.get permission for table farm-rock-85697:fluentd.nginx_access.&quot;
+2019-05-07 16:13:15 +0000 [warn]: #0 emit transaction failed: error_class=RuntimeError error=&quot;failed to fetch schema from bigquery&quot; location=&quot;/opt/td-agent/embedded/lib/ruby/gems/2.4.0/gems/fluent-plugin-bigquery-2.1.0/lib/fluent/plugin/out_bigquery_base.rb:190:in `fetch_schema'&quot; tag=&quot;nginx.access&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What I guessed was that Fluentd could not access BigQuery table on GCP. Obviously it could not anyway because I had not authenticated &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud&lt;/code&gt; in the VM. I tried authenticating &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud&lt;/code&gt; tool from &lt;code class=&quot;highlighter-rouge&quot;&gt;td-agent&lt;/code&gt; user but failed as &lt;code class=&quot;highlighter-rouge&quot;&gt;td-agent&lt;/code&gt; has no valid shell. Also I tried the same for &lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt;, but did not help.&lt;/p&gt;
+
+&lt;p&gt;Finally after one day of searching over the internet, I got some clue about putting JSON files in somewhere so the &lt;code class=&quot;highlighter-rouge&quot;&gt;fluent-plugin-bigquery&lt;/code&gt; can read it.&lt;/p&gt;
+
+&lt;p&gt;Go to &lt;a href=&quot;https://console.cloud.google.com/apis/credentials&quot;&gt;Google Cloud Platform &amp;gt; APIs &amp;amp; Services&lt;/a&gt;. Then click on &lt;code class=&quot;highlighter-rouge&quot;&gt;Credentials&lt;/code&gt; and hit on the &lt;code class=&quot;highlighter-rouge&quot;&gt;Create Credentials&lt;/code&gt; button. Choose &lt;code class=&quot;highlighter-rouge&quot;&gt;Service Account Key&lt;/code&gt; from the combo box. This will open a new page where you have to fill the credential name, roles etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Gbkrc6c.png&quot; alt=&quot;Credential-Page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now setup a name for this service, set correct access in Roles (i.e. BigQuery Insert) and select &lt;code class=&quot;highlighter-rouge&quot;&gt;JSON&lt;/code&gt; as type. Click &lt;code class=&quot;highlighter-rouge&quot;&gt;Create&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/uUXb2DZ.png&quot; alt=&quot;Role-Type-Page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After creating the credentials, you will be able to download the file. Now open up &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/td-agent/td-agent.conf&lt;/code&gt; in your VM and change the following lines.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  auth_method json_key
+  json_key /etc/td-agent/gcloud.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Not to mention that you must copy the newly downloaded JSON file to your VM as &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud.json&lt;/code&gt;. The whole &lt;code class=&quot;highlighter-rouge&quot;&gt;nginx.access&lt;/code&gt; block should look something similar to this.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;match nginx.access&amp;gt;
+
+  @type bigquery_insert
+
+  &amp;lt;buffer&amp;gt;
+   flush_interval 0.1
+    total_limit_size 10g
+    flush_thread_count 16
+  &amp;lt;/buffer&amp;gt;
+
+  auth_method json_key
+  json_key /etc/td-agent/gcloud.json
+
+  project &quot;farm-rock-85697:api-project-1587663&quot;
+  dataset nginx
+  tables www_imoney_my
+
+&amp;lt;/match&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now restart &lt;code class=&quot;highlighter-rouge&quot;&gt;td-agent&lt;/code&gt; using &lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl&lt;/code&gt; and check &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/log/td-agent/td-agent.log&lt;/code&gt;. You can see records are successfully being inserted into BigQuery if all the credentials, roles, project, dataset and table configuration is correct.&lt;/p&gt;</content><author><name></name></author><summary type="html">Fluentd is a pretty good log collection and streaming solution for several platforms. You can easily stream your nginx logs to BigQuery via Fluentd.</summary></entry><entry><title type="html">মালয়েশিয়ায় রিলোকেশন ৫ - লাইফস্টাইল টিপস</title><link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-life-style-tips.html" rel="alternate" type="text/html" title="মালয়েশিয়ায় রিলোকেশন ৫ - লাইফস্টাইল টিপস" /><published>2019-04-08T00:00:00+08:00</published><updated>2019-04-08T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/malaysia/malaysia-life-style-tips</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/malaysia/malaysia-life-style-tips.html">&lt;p&gt;প্রিয় পাঠক, এই পোস্টে চলে আসায় ধরে নিচ্ছি আপনারা সুন্দরমত মালয়েশিয়ায় চলে এসেছেন। এই পর্বে আপনাদের জন্য কিছু লাইফ স্টাইল টিপস নিয়ে লিখব। আশা করি আপনাদের সেগুলা কাজে লাগবে।&lt;/p&gt;
+
+&lt;h2 id=&quot;মাল্টি-এনট্রি-ভিসা-ও-ট্যাক্স-ফাইল&quot;&gt;মাল্টি এনট্রি ভিসা ও ট্যাক্স ফাইল&lt;/h2&gt;
+
+&lt;p&gt;মনে আছে এয়ারপোর্টের ইমিগ্রেশনের কথা? মালয়েশিয়ায় আপনি ঢুকেছেন সিংগেল এনট্রি পাস দিয়ে। এরপর আপনাকে দু সপ্তাহের মাঝে (কমবেশী হতে পারে) অবশ্যই &lt;a href=&quot;https://www.imi.gov.my/index.php/ms/&quot;&gt;পুত্রাজায়ার ইমিগ্রেশন অফিস&lt;/a&gt; থেকে পাসপোর্টে ১ বছর (বা বেশী) মেয়াদী মাল্টি এন্ট্রি ভিসা স্ট্যাম্পিং করে নিতে হবে। নইলে মালয়েশিয়া থেকে বের হওয়ার সময় বা পুনরায় ঢোকার সময় আপনি অবৈধ হিসেবে গণ্য হবেন। সাধারণত অফিসের HR রাই এই কাজগুলো করে থাকে। সুতরাং তাদের সাথে যোগাযোগ করে আপনার ও ডিপেন্ডেন্ট সবার পাসপোর্টে স্ট্যাম্পিং করে নিন। আরেকটা বিষয় হল ট্যাক্স। ৩৫০০ রিংগিতের উপরে (প্রায় ৭০০০০ টাকা) বেতন হলে ট্যাক্স বাধ্যতামূলক। এখানে ট্যাক্স ফাইল করতে হয় &lt;a href=&quot;http://www.hasil.gov.my/&quot;&gt;LHDN&lt;/a&gt; এর মাধ্যমে। আপনার অফিসের HR এর মাধ্যমে ট্যাক্স ফাইল খুলুন এবং আপনার রেফারেন্স নম্বর ও SG নম্বর সংরক্ষণ করুন। সেই সাথে প্রতি মাসে পে-স্লিপ বুঝে নিতে ভুলবেন না। পরবর্তীতে আপনার স্যালারীর ২৮% কাটা এমাউন্ট ফেরত পেতে এই কাগজগুলো প্রয়োজন হবে।&lt;/p&gt;
+
+&lt;h2 id=&quot;বাসা-ভাড়া-নেওয়া&quot;&gt;বাসা ভাড়া নেওয়া&lt;/h2&gt;
+
+&lt;p&gt;এখানে এসে আপনার প্রথম কাজ হবে বাসা ভাড়া নেওয়া। বাসা ভাড়া নিতে এই সাইটগুলায় ঢুঁ মারতে পারেন।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.iproperty.com.my&quot;&gt;iProperty&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.propertyguru.com.my/&quot;&gt;PropertyGuru&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mudah.my/&quot;&gt;Mudah&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.airbnb.com/a/Malaysia&quot;&gt;Airbnb&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;বাসা ভাড়া নেওয়ার সময় কিছু ক্যাটাগরি দেখবেন। সবচেয়ে জনপ্রিয় হল স্টুডিও, সার্ভিস রেসিডেন্ট এবং (ফার্নিশড/সেমিফার্নিশড/ননফার্নিশড) ফ্ল্যাট।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;স্টুডিও ফ্ল্যাট মানে হল একটা বা দুটা রুম মিলিয়ে বেডরুম, লিভিং রুম, সংযুক্ত কিচেন, এটাচড টয়লেট ইত্যাদি। সাধারণত ব্যাচেলরদের জন্য আদর্শ। এরকম ফ্ল্যাটের ভাড়া ৫০০-১০০০ রিংগিত হতে পারে।&lt;/li&gt;
+  &lt;li&gt;সার্ভিস রেসিডেন্ট মানে এগুলা মূলত কমার্শিয়াল বিল্ডিং এ স্পেসের অংশ, কিন্তু মডিফাই করে রেডিসেন্ট হিসাবে ভাড়া দেওয়া হয়। ফ্যামিলি নিয়ে থাকলে এমন ফ্ল্যাট ভাড়া না নেওয়াই ভাল হবে।&lt;/li&gt;
+  &lt;li&gt;বাকি থাকে নিচের তিনরকম ফ্ল্যাট।
+    &lt;ul&gt;
+      &lt;li&gt;ফার্নিশড মানে ফ্ল্যাটে বিছানা, সোফা, খাবার টেবিল, ফ্রিজ, টিভি, ওভেন, ব্লেন্ডার, ভ্যাকুয়াম ক্লিনার, রান্নার চুলা, বাসনপত্র, কাপবোর্ড, চেয়ার, বাল্ব ইত্যাদি সব থাকবে। এগুলার ভাড়া ১৫০০-২৫০০ রিংগিত পড়বে। এসব ক্ষেত্রে সাধারণত মেইনটেনেন্স বাড়িওয়ালাই নিজ খরচে করে দেয়।&lt;/li&gt;
+      &lt;li&gt;সেমিফার্নিশড মানে মেজর আসবাবপত্র যেমন শুধু বিছানা, সোফা, টেবিল এসব থাকবে। এগুলার ভাড়া আরেকটু কম হবে।&lt;/li&gt;
+      &lt;li&gt;ননফার্নিশড মানে তো বুঝেনই। ধূ ধূ মরুভূমি। ইউজারকে নিজে সব কিনে নিতে হবে। এসব বাসার ভাড়া বেশ কম হয়।&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;বাসা ভাড়া নেওয়ার সময় সাধারণত ২-৩ মাসের এডভান্সড দিতে হয়, সাথে ১২ মাসের চুক্তি। অনেকসময় মুলামুলি করতলে ৬ মাসের চুক্তিতে আসতে পারেন। চুক্তির আগে বাসা বদলালে আপনি এডভান্সের টাকা ফেরত পাবেন না। সুতরাং বুঝেশুনে চুক্তি করুন। বাসা ভাড়ার সাথে পার্কিং, অন্যান্য সার্ভিস চার্জ (লিফট, সুইমিং পুল, জিম, ইত্যাদি) যুক্ত কিনা জেনে নিন। ইউটিলিটি বিল আপনি নাকি বাড়িওয়ালা দিবে সেটাও ক্লিয়ার করে নিন।&lt;/p&gt;
+
+&lt;p&gt;বাসা ভাড়া নেওয়ার সময় সবচেয়ে গুরুত্বপূর্ণ দিক হল, কাছাকাছি MRT বা LRT স্টেশনের কাছে ভাড়া নেওয়া। তাহলে আপনি খুব সহজে কম সময়ে বাসা থেকে ট্রেন/বাসে উঠতে পারবেন। এ বিষয়ে বিস্তারিত পরের প্যারায় বলছি।&lt;/p&gt;
+
+&lt;h2 id=&quot;যাতায়াত-ব্যাবস্থা&quot;&gt;যাতায়াত ব্যাবস্থা&lt;/h2&gt;
+
+&lt;p&gt;যাতায়াতের দিক দিয়ে মালয়েশিয়ার রাস্তাঘাট, ট্রেইন লাইন বেশ উন্নত। এখানে প্রতিটা ট্রেইন স্টেশনের সাথে বাস স্টপেজ আছে। আবার প্রতিটা ট্রেন রুটের সাথে কানেক্টিং রুটও আছে। সুতরাং আপনার বাসা কুয়ালালুমপুর, বাংসার, কেলানা জায়া, টিটিডিআই, চেরাস, বুকিতবিংতাং, মন্ট কিয়ারা, দামানসারা ইত্যাদি যেখানেই হোক, আপনি খুব সহজে কানেক্টিং রুট ধরে এক জায়গা থেকে আরেক জায়গায় যেতে পারবেন।&lt;/p&gt;
+
+&lt;p&gt;এখানে ট্রেইন খুবই জনপ্রিয়। ট্রেনগুলা অটোমেটেড এবং মূলত তিনরকমের।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Mass_Rapid_Transit_(Malaysia)&quot;&gt;MRT&lt;/a&gt; - ইহা হল বেশ বড়সড় বগিওয়ালা, মাটির নিচ দিয়ে যাওয়া ট্রেইন। সুনগাই বুলহ থেকে কাজাং পর্যন্ত রুটে যাওয়া আসা করে। এগুলা ৭-১০ মিনিট পরপরই যায়।&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Rail_transport_in_Malaysia#Light_Rapid_Transit_(LRT)&quot;&gt;LRT&lt;/a&gt; - ইহা হল একটু হালকা মিডিয়াম সাইজের ট্রেন। জায়গা MRT এর চেয়ে কম থাকে। সাধারণত ৪-৭ মিনিট পরপর এই ট্রেনগুলা যায়। Kelana Jaya লাইন, Sri Petaling লাইন আর Ampang লাইন - এই তিন রুটে ট্রেইনগুলা নিয়মিত চলাচল করে।&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/KL_Monorail&quot;&gt;Monorail&lt;/a&gt; - এটা সিংগেল রেইলের উপর চলা ট্রেন। কুয়ালালুমপুর সেন্ট্র্রাল থেকে তিতিওয়াংসা পর্যন্ত এই একটি রুটে যায় এই ট্রেন।&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;কোন ট্রেন কই যায় তা জানতে নিচের লিংকে ক্লিক করে নেটওয়ার্ক ম্যাপ ডাউনলোড করে নিন।&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;http://mrt.com.my/images/kl-transit-map.jpg&quot;&gt;কুয়ালালুমপুর ট্রানজিট ম্যাপ ডাউনলোড&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;সাধারণত ট্রেনগুলায় ভ্রমণ করতে আপনি স্টেশনে গিয়ে টোকেন কিনে নিতে পারেন। টোকেন কেনা সময় সাপেক্ষ ব্যাপার। বিকল্প হিসেবে আপনি &lt;a href=&quot;https://www.touchngo.com.my/&quot;&gt;Touch ‘n Go কার্ড&lt;/a&gt; কিনে নিতে পারেন ও তাতে সুবিধামত ব্যালান্স এড করে নিতে পারেন। এটা একরকম NFC কার্ড। স্টেশনে ঢোকার বা বের হবার সময় টাচ করেই ঢুকতে বা বের হতে পারবেন। তাছাড়া TnG কার্ড ইউজ করলে আপনার ভাড়াও কিছুটা কম পড়বে।&lt;/p&gt;
+
+&lt;p&gt;ট্রেন ছাড়াও বাস ইউজ করতে পারেন। অনেক স্টেশন থেকে কিছু রুটে ফ্রি শাটল বাসও আছে। &lt;a href=&quot;https://moovitapp.com/&quot;&gt;Moovit&lt;/a&gt; এপ দিয়ে জেনে নিতে পারবেন কোন বাস কখন কই থেকে ছাড়ে। সাধারণত বেশীরভাগ বাসই ৩০ মিনিট পরপর বা ১ ঘন্টা পরপর একই রুটে সার্কুলার হয়ে ঘুরে (হাতিরঝিলের মত)। সাম্প্রতিক নিউজ অনুযায়ী বাসে আপনি আর ক্যাশ বা কয়েন ইউজ করতে পারবেন না। এজন্য আপনাকে TnG কার্ড ইউজ করতে হবে। বাসে চড়ার পর কার্ড ড্রাইভারের পাশের মেশিনে সোয়াইপ করে ঢুকবেন। স্টপেজ আসলে ড্রাইভার বাসের শেষের দিকের গেট খুলে দিবে। সেখানকার মেশিনে কার্ড সোয়াইপ করে বের হয়ে যাবেন। আর বাসে উঠার আগে জেনে নিবেন যে কোন কোন স্টপেজে বাস থামে। নইলে আপনি যতই চেচামেচি করেন, ড্রাইভার যেখানে সেখানে বাস থামাবেনা। তবে সাধারণত ১-২ কিমি পরপর রুটেই বাসগুলার স্টপেজ রয়েছে।&lt;/p&gt;
+
+&lt;h2 id=&quot;নামাজের-ব্যাবস্থা&quot;&gt;নামাজের ব্যাবস্থা&lt;/h2&gt;
+
+&lt;p&gt;মালয়েশিয়ায় প্রতিটা অফিস, শপিং মল, রেস্টুরেন্ট, হাসপাতাল, স্টেশন ইত্যাদিতে বা কাছাকাছি জায়গায় পুরুষ ও নারীদের জন্য আলাদা নামাজের ব্যবস্থা রয়েছে। মসজিদকে এখানে সুরাউ (Surau) বলা হয়।&lt;/p&gt;
+
+&lt;h2 id=&quot;সিম-কার্ড-কেনা&quot;&gt;সিম কার্ড কেনা&lt;/h2&gt;
+
+&lt;p&gt;মালয়েশিয়ায় মোবাইল অপারেটরগুলাতেই প্রত্যেকেই মাসে ৩০ রিংগিতের প্যাকেজ রিনিউ করতে হয়। বাংলাদেশের মত একবার রিচার্জ করলে ৬ মাস-১ বছর ভ্যালিডিটি ফ্রি এমন নয়। এমনকি বিল পে না করলে ১ মাস পর আপনি কোনরকম কল রিসিভ করতে পারবেন না। তবে এখানে অপারেটরগুলা ৩০ রিংগিতের বিনিময়ে আনলিমিটেড ইন্টারনেট, আনলিমিটেড {ফেসবুক, ইন্সটাগ্রাম, হোয়াটসআপ, ইমো, ইউটিউব, আইফ্লিক্স} ইত্যাদি, সেম অপারেটরে আনলিমিটেড মেসেজ ও কলিং ইত্যাদি সুবিধা দিয়ে থাকে। সিমকার্ড কেনার সময় শুধু ফিচার না দেখে কলিগ ও প্রতিবেশীদের কাছে জেনে নিতে পারেন আপনার অফিসও বাসায় কাছে কোন অপারেটরের নেটওয়ার্ক ভাল থাকে। কেননা শুধু ফিচার নয়, নেটওয়ার্ক ভাল থাকাও জরুরী। ব্যাক্তিগতভাবে আমি &lt;a href=&quot;https://www.u.com.my&quot;&gt;UMobile&lt;/a&gt; আর &lt;a href=&quot;https://www.maxis.com.my&quot;&gt;Maxis&lt;/a&gt; সাজেস্ট করব। অপারেটরদের তুলনামূলক বিশ্লেষণ দেখতে এই পোস্টটি পড়ে দেখতে পারেন - &lt;a href=&quot;https://www.imoney.my/articles/which-is-the-best-mobile-plan-in-malaysia&quot;&gt;Which Is The Best Mobile Plan In Malaysia?&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ইন্টারনেট-কানেকশন&quot;&gt;ইন্টারনেট কানেকশন&lt;/h2&gt;
+
+&lt;p&gt;এখানে ইন্টারনেট সার্ভিস প্রোভাইডার খুব কম। সরকারী কোম্পানি &lt;a href=&quot;https://www.time.com.my/&quot;&gt;Time&lt;/a&gt;, &lt;a href=&quot;https://unifi.com.my/&quot;&gt;Unifi&lt;/a&gt; আর &lt;a href=&quot;https://www.maxis.com.my/&quot;&gt;Maxis&lt;/a&gt; ই মূলত টপ আইএসপি হিসেবে পরিচিত। টাইম এর ১০০, ৫০০ ও ১০০০ এমবিপিএস সার্ভিস রয়েছে। সার্ভিস চার্জ ৯৯ রিংগিত/মাস থেকে শুরু। তবে যে কানেকশনই নিন না কেন, আপনাকে ৩০০ রিংগিত নন-রেসিডেন্ট-ডিপোজিট হিসেবে প্রথম মাসে জমা দিতে হবে। সাথে মিনিমাম ১২ মাসের কনট্রাক্ট তো আছেই। এর আগে কনট্রাক্ট ক্যানসেল করলে ৩০০-৫০০ রিংগিত জরিমানা দিতে হবে। আর প্যাকেজের দামের সাথে মাস শেষে ৬% ট্যাক্স যুক্ত হবে। আমার মতে ব্যাচেলর হলে Unifi বা Maxis পোর্টেবল ডিভাইস আর ফ্যামিলি (৩+ ইউজার) হলে Time ব্রডব্যান্ড নেওয়াই ভাল হবে। আর হ্যা, যদি অপটিক ফাইবার দিয়ে আপনার কানেকশন দেওয়া হয়, তাহলে কিছু কেবল খরচ আপনাকে পরিশোধ করতে হবে। এটা নির্ভর করছে আপনার বাসা থেকে নিকটস্থ অপটিক ফাইবার টার্মিনাল কতদূরে অবস্থিত সেটার উপর।&lt;/p&gt;
+
+&lt;h2 id=&quot;টিভি-সার্ভিস&quot;&gt;টিভি সার্ভিস&lt;/h2&gt;
+
+&lt;p&gt;এদেশে ইন্টারনেটের মত টিভি প্রোভাইডারও খুব লিমিটেড। মূলত &lt;a href=&quot;https://www.astro.com.my/&quot;&gt;Astro&lt;/a&gt;-ই সকল স্যাটেলাইট ডিশ, ডিভিআর, আইপিটিভি ইত্যাদি সেবা দেয়। এদের প্যাকেজে কিডজ, ইন্ডিয়ান, স্পোর্টস, ইসলামিক, মুভি ইত্যাদি ক্যাটাগরি সিলেক্ট করার অপশন রয়েছে। ডিশ নিতে চাইলে স্যাটেলাইট ও PVR এর জন্য খরচ দিতে হবে। সেই সাথে কনট্রাক্ট তো আছেই। বিকল্প হিসেবে &lt;a href=&quot;https://www.netflix.com/browse&quot;&gt;Netflix&lt;/a&gt; অথবা 
+&lt;a href=&quot;https://piay.iflix.com/&quot;&gt;Iflix&lt;/a&gt; ব্যাবহার করতে পারেন। মাসিক ১০-৫০ রিংগিতের মত খরচ পড়বে।&lt;/p&gt;
+
+&lt;h2 id=&quot;বাজার-সদাই&quot;&gt;বাজার সদাই&lt;/h2&gt;
+
+&lt;p&gt;নিত্যপ্রয়োজনীয় জিনিসপত্র বাজার করার জন্য মালয়েশিয়া জুড়ে &lt;a href=&quot;https://www.tesco.com.my/&quot;&gt;Tesco&lt;/a&gt; , &lt;a href=&quot;http://www.heromarket.com.my/&quot;&gt;HeroMarket&lt;/a&gt;, &lt;a href=&quot;https://www.giant.com.my/&quot;&gt;Giant&lt;/a&gt; ইত্যাদির চেইনশপ পাবেন। এরা মূলত আমাদের দেশের স্বপ্ন, মীনাবাজারের মতই। অনলাইনেও অর্ডার করে দিতে পারবেন এদের ওয়েবসাইট থেকে। খোঁজাখুজি করলে আপনার আশেপাশে দেশী দোকানও পেয়ে যেতে পারেন। সেখান থেকে দেশী মাছ, মুরগী, মাংস, মসলা, সবজি ইত্যাদি সহজেই কিনতে পারবেন।&lt;/p&gt;
+
+&lt;p&gt;যারা প্রথমবার বাজার করবেন, তাদের জন্য একটা সহজ লিস্ট করে দিচ্ছি। লিস্টটা মূলত আমি বহুদিন ধরে ব্যাবহার করে আসছি। এসব জিনিস যেকোন ফ্যামিলির জন্য খুবই কমন।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;কলা, আপেল, আঙুর ইত্যাদি ফল&lt;/li&gt;
+  &lt;li&gt;বেগুন, ঢেঁড়স, পটল, লালশাক, পুঁইশাক ইত্যাদি&lt;/li&gt;
+  &lt;li&gt;ফুলকপি, বাঁধাকপি, মিষ্টিকুমড়া, লাউ&lt;/li&gt;
+  &lt;li&gt;শসা, টমেটো, গাজর&lt;/li&gt;
+  &lt;li&gt;আলু, পেঁয়াজ, রসুন, আদা, কাঁচামরিচ&lt;/li&gt;
+  &lt;li&gt;চাল, ডাল, তেল, ডিম, চিনি, লবণ&lt;/li&gt;
+  &lt;li&gt;হলুদ, মরিচ, জিরা, ধনিয়া, গরম মসলা গুঁড়া&lt;/li&gt;
+  &lt;li&gt;ব্যাটারী (AA, AAA সাইজ), গ্যাস লাইটার&lt;/li&gt;
+  &lt;li&gt;রুটি, জুস, বিস্কুট, কোক, সেভেনআপ&lt;/li&gt;
+  &lt;li&gt;চা, কফি, গুঁড়া দুধ&lt;/li&gt;
+  &lt;li&gt;মাছ, মাংস, মুরগী&lt;/li&gt;
+  &lt;li&gt;সাবান, হ্যান্ডওয়াশ, শ্যাম্পু&lt;/li&gt;
+  &lt;li&gt;হারপিক, ডিশওয়াশার, ডিটারজেন্ট&lt;/li&gt;
+  &lt;li&gt;তেলাপোকা ও মশা মারা স্প্রে&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;আর হ্যা, এখানে পলিথিন ব্যাবহার নিরুৎসাহিত করার জন্য প্রতি পলিথিনে ২০ সেন (প্রায় ৪ টাকা) দাম রাখা হয়। শপিং করার পর ক্যাশিয়ার আপনাকে বলবে “Plastic?” অর্থাৎ আপনি জিনিসপত্র পলিথিনে নিবেন নাকি নিজস্ব ব্যাগে নিবেন তা জানতে চাইবে। এজন্য নিজস্ব ব্যাগ নিয়ে যাওয়া ভাল হবে।&lt;/p&gt;
+
+&lt;h2 id=&quot;খাবার-পানি&quot;&gt;খাবার পানি&lt;/h2&gt;
+
+&lt;p&gt;মালয়েশিয়ায় PureIT এর মত সহজ সলুশন আমি খুঁজে পাইনি। এখানে বিভিন্ন ব্র্যান্ডের সলুশন রয়েছে যার সেটআপ খরচ ৫০০-৩৫০০ রিংগিতের মত, কিছু ক্ষেত্রে তার চেয়েও বেশী। অল ইন ওয়ান ওয়াটার ফিল্টার (কেমিক্যাল মুক্ত করে) ও পিউরিফায়ার (জীবাণুমুক্ত করে) এর মাঝে &lt;a href=&quot;https://www.coway.com.my/&quot;&gt;Coway&lt;/a&gt;, &lt;a href=&quot;https://www.cuckoo.com.my/&quot;&gt;Cuckoo&lt;/a&gt; ইত্যাদি বেশ জনপ্রিয়।&lt;/p&gt;
+
+&lt;p&gt;একটু কম খরচের মাঝে নিতে চাইলে প্রচুর ডিসট্রিবিউটর পাবেন যারা আপনাকে সুবিধামত ৬ লিটার, ১০ লিটার বা ১৯ লিটারের RO Water (রিভার্স অসমোসিস) বোতল হোম ডেলিভারী দিয়ে যাবে। খরচ পড়বে প্রতি বোতল ৬-১২ রিংগিতের মত। এসব ক্ষেত্রে এসব প্রোভাইডারদের সাথে যোগাযোগ করতে পারেন- &lt;a href=&quot;https://www.compeer.my/&quot;&gt;Compeer&lt;/a&gt;, &lt;a href=&quot;http://kazoku.com.my/&quot;&gt;Kazoku&lt;/a&gt;, &lt;a href=&quot;https://www.jantzen.com.my/&quot;&gt;Jantzen&lt;/a&gt;, &lt;a href=&quot;https://www.happywater.my/&quot;&gt;HappyWater&lt;/a&gt;, &lt;a href=&quot;https://www.spritzer.com.my/&quot;&gt;Spritzer&lt;/a&gt;, &lt;a href=&quot;https://www.thewaterfilter.com.my/&quot;&gt;The Water Filter&lt;/a&gt;, &lt;a href=&quot;https://www.juzwater.com/&quot;&gt;JuzWater&lt;/a&gt; ইত্যাদি উল্লেখযোগ্য।&lt;/p&gt;
+
+&lt;h2 id=&quot;ব্যাংক-একাউন্ট&quot;&gt;ব্যাংক একাউন্ট&lt;/h2&gt;
+
+&lt;p&gt;মালয়েশিয়া থাকবেন, টাকাটুকা রাখার তো জায়গা লাগবে নাকি? আপনার ব্যাংক একাউন্টের জন্য রেকমেন্ডেশন অবশ্য আপনার অফিস থেকেই দিয়ে দিবে। আপনাকে শুধু কষ্ট করে ব্যাংকে যেতে হবে, পাসপোর্ট, অফার লেটার ও রেকমেন্ডেশন লেটার সহ। এজন্য আপনার পাসপোর্টে মাল্টিএন্ট্রি ভিসার স্টিকার থাকতে হবে। অনেক ব্যাংকে একাউন্ট খোলার সময় মিনিমাম ডিপোজিট করতে হয়। এটা ২৫০ রিংগিত বা কমবেশী হতে পারে। আবার আপনার ভিসা নাকি মাস্টারকার্ড প্রয়োজন সেটাও এপ্লিকেশন করার সময় আলোচনা করে নিতে পারেন। একাউন্ট খোলার পর অনলাইন ব্যাংকিং, ওভারসি ট্রানজাকশন (ডুয়াল কারেন্সি এনাবল করা) ইত্যাদি ঠিকমত বুঝে পেলেন কিনা চেক করে নিন। এখানে সহজেই শরীয়াহ ভিত্তিক একাউন্ট করতে পারবেন। শুধু একাউন্ট খেলার সময় ইসলামিক ব্যাংকিং অপশনে টিক দিলেই হবে। অনেক সময় ব্যাংক থেকে আপনাকে ক্রেডিট কার্ডের জন্য এপ্লাই করতে বলতে পারে। আমি সাজেস্ট করব মিনিমাম ৬ মাস স্যালারী পাবার পর এপ্লাই করতে। কেননা ফিনানশিয়াল হিস্টোরী ভাল না থাকলে আপনি ক্রেডিট কার্ড পাবেন না। আর একবার এপ্লিকেশন রিজেক্টেড হলে পরেরবার কার্ড পাবার সম্ভাবনা কমে যায়।&lt;/p&gt;
+
+&lt;h2 id=&quot;রেস্টুরেন্টে-খাওয়া&quot;&gt;রেস্টুরেন্টে খাওয়া&lt;/h2&gt;
+
+&lt;p&gt;মালয়েশিয়ায় প্রচুর রেস্টুরেন্ট পাবেন, তবে রেস্টুরেন্টে যাবার পূর্বে হালাল কিনা তা চেক করে নিতে পারেন। সাধারণত মালয়েশিয়ান, ইন্ডিয়ান, এরাবিয়ান, টার্কিশ ইত্যাদি রেস্টুরেন্টগুলা হালাল খাবারই সার্ভ করে। কিছু হালাল কোরিয়ান, চায়নিজ রেস্টুরেন্টও পাবেন খুঁজলে। নিচের লোকাল খাবার গুলা ট্রাই করে দেখতে পারেন।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;নাসি গরেং/Nasi Goreng (ঝাল ফ্রায়েড রাইস)&lt;/li&gt;
+  &lt;li&gt;নাসি লেমাক/Nasi Lemak (ভাত, শুটকি, চিলি সস, বাদাম ইত্যাদি)&lt;/li&gt;
+  &lt;li&gt;ম্যাগি গরেং/Maggi Goreng (মোটা ঝাল নুডলস টাইপ)&lt;/li&gt;
+  &lt;li&gt;ব্যানানা লিফ/Banana Leaf (কলাপাতায় ভাত, ডাল, সবজি, মাংস)&lt;/li&gt;
+  &lt;li&gt;নাসি কান্দার/Nasi Kandar (ভাত, মুরগি/মাংস সহ সস)&lt;/li&gt;
+  &lt;li&gt;সাটেই/Satay (মাংসের কাবাব)&lt;/li&gt;
+  &lt;li&gt;হাইনানিস চিকেন রাইস/Hainanese Chicken Rice (বিবিকিউ টাইপ মুরগি, ভাত আর স্যুপ)&lt;/li&gt;
+  &lt;li&gt;রোটি কানাই/Roti Canai (পাতলা রুটি, ডিম/বাটার দিয়ে ভাজা)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;এছাড়াও ইন্ডিয়ান রেস্টুরেন্টগুলায় বিরিনয়ানী ট্রাই করতে পারেন। এরাবিক রেস্টুরেন্টে ম্যান্ডি রাইস/চিকেন, শর্মা ইত্যাদি খেতে পারেন। তাছাড়া KFC তে চিকেন ফ্রাই, স্পাইসি চিকেন পাওয়া যাবে। Pizza Hut, Domino’s থেকে কাস্টমাইজড পিজা অর্ডার করতে পারেন।&lt;/p&gt;
+
+&lt;p&gt;সলিড খাবারের পাশাপাশি এই ড্রিংকসগুলাও আপনাদের ভাল লাগবে আশাকরি।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;তেহ তারিক/Teh Tarik (স্পেশাল চা)&lt;/li&gt;
+  &lt;li&gt;মাইলো/Milo (হরলিক্সের মত, বাট টেস্টি)&lt;/li&gt;
+  &lt;li&gt;চেন্দোলি/Cendol (নুডলস, বাদাম সহ ফালুদার মত ডেজার্ট)&lt;/li&gt;
+  &lt;li&gt;লিমাউ পানাস/Limau Panas (গরম লেবুর সরবত)&lt;/li&gt;
+  &lt;li&gt;বিভিন্ন ফলের জুস, কফি ও খেতে পারেন।&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ভাল কথা, এখানে প্রায় পানীয়তেই বরফ দেওয়া হয়। আপনি যদি বরফ না পছন্দ করেন, তাহলে ড্রিংকস নেওয়ার সময় বলে দিতে হবে।&lt;/p&gt;
+
+&lt;h2 id=&quot;অনলাইন-শপিং&quot;&gt;অনলাইন শপিং&lt;/h2&gt;
+
+&lt;p&gt;অনলাইন শপিং করতে কে না ভালবাসে? মালয়েশিয়ায় খুবই জনপ্রিয় অনলাইন শপিং প্লাটফর্মের মাঝে আছে &lt;a href=&quot;https://www.lazada.com.my/&quot;&gt;Lazada&lt;/a&gt;, &lt;a href=&quot;https://shopee.com.my/&quot;&gt;Shopee&lt;/a&gt;, &lt;a href=&quot;https://www.lelong.com.my/&quot;&gt;Lelong&lt;/a&gt;, &lt;a href=&quot;https://www.ikea.com/my/en/&quot;&gt;IKEA&lt;/a&gt; ইত্যাদি। তবে কেনাকাটা করার সময় প্রোডাক্টের রিভিউ, ডিমেনশন (দৈর্ঘ, প্রস্থ ও উচ্চতা), স্টোরের রেটিং ইত্যাদি দেখে নেওয়া ভাল হবে।&lt;/p&gt;
+
+&lt;h2 id=&quot;পাঠাও-উবার-ফুডপান্ডা&quot;&gt;পাঠাও, উবার, ফুডপান্ডা&lt;/h2&gt;
+
+&lt;p&gt;জ্বি, আমাদের মাঝে কেও কেও আছে যারা এত অলস যে কষ্ট করে রেস্টুরেন্টে না গিয়ে বাসায় বসেই অর্ডার করে খাবার পেতে চাই, তাইনা? এখানে ওইসব অলসদের জন্য রয়েছে &lt;a href=&quot;https://www.grab.com/my/food/&quot;&gt;GrabFood&lt;/a&gt;, &lt;a href=&quot;https://www.foodpanda.my&quot;&gt;FoodPanda&lt;/a&gt;, &lt;a href=&quot;https://order.kfcdelivery.ca/menu&quot;&gt;KFC Online&lt;/a&gt;, &lt;a href=&quot;https://www.pizzahut.com.my/&quot;&gt;PizzaHut&lt;/a&gt;, &lt;a href=&quot;https://www.dominos.com.my/&quot;&gt;Dominos&lt;/a&gt; ইত্যাদি। আর গাড়ি বুকিং এর জন্য &lt;a href=&quot;https://www.grab.com/my/&quot;&gt;Grab&lt;/a&gt; তো আছেই।&lt;/p&gt;
+
+&lt;h2 id=&quot;আরো-টিপস&quot;&gt;আরো টিপস&lt;/h2&gt;
+
+&lt;p&gt;যদিও এসব নিয়মকানুন এলাকাভিত্তিতে ও মানুষ টু মানুষ কমবেশী হয়, তবুও নিচের নিয়মগুলা পাবলিক প্লেসে (ট্রেন, বাস, অফিসে) মেনে চলতে পারেন।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ক্যাফে, লিফট, ট্রেন, বাস, ওয়াশরুম, এটিএম ইত্যাদি সকল জায়গায় লাইন ধরে দাঁড়ান। লাইনের আগে যাবার চেষ্টা না করাই ভাল।&lt;/li&gt;
+  &lt;li&gt;দৌড়ে নামতে চাইলে এসকেলেটরের ডানপাশ ও স্থির হয়ে দাঁড়িয়ে থাকতে চাইলে বামপাশ ব্যাবহার করুন।&lt;/li&gt;
+  &lt;li&gt;লিফটে ঢোকা বা বের হবার সময় অন্যদের আগে ঢুকতে বা বের হতে দিন। কলিগ বা পরিচিতদের জন্য প্রয়োজনে লিফটের দরজা হোল্ড করে রাখুন (বাটন দিয়ে, হাত দিয়ে নয়)&lt;/li&gt;
+  &lt;li&gt;পাবলিক প্লেসে জোরে কথা বলা স্কিপ করুন, এমনকি ফোনে কথা বা ভিডিওকল করতে হলে নেমে তারপর কথা বলুন।&lt;/li&gt;
+  &lt;li&gt;ট্রেন ও বাসে ওয়ার্কিং আওয়ারের শুরু ও শেষের দিকে প্রচুর ভীড় হয়। ঠেলাঠেলি না করে প্রয়োজনে পরের বাস বা ট্রেনে উঠুন।&lt;/li&gt;
+  &lt;li&gt;কর্মস্থল বা পাবলিক ট্রানজিটে নারীদের সম্মান করুন।&lt;/li&gt;
+  &lt;li&gt;রাস্তা পার হবার সময় জেব্রা ক্রসিং ব্যাবহার করুন।&lt;/li&gt;
+  &lt;li&gt;লোকাল রাজনীতি, বিভিন্ন স্টেটের রাজা/সুলতানদের নিয়ে মন্তব্য না করাটাই ভাল হবে।&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;আশা করি আপনাদের মালয়েশিয়ায় বসবাস শান্তিপূর্ণ হোক। আপনাদের যেকোন মতামত আমাকে কমেন্ট করে জানাতে পারেন। সেই সাথে আপনাদের অভিজ্ঞতাও শেয়ার করতে পারেন যেন অন্যেরা উপকৃত হয়। আল্লাহ সকলের মঙ্গল করুক। আমীন।&lt;/p&gt;</content><author><name></name></author><summary type="html">প্রিয় পাঠক, এই পোস্টে চলে আসায় ধরে নিচ্ছি আপনারা সুন্দরমত মালয়েশিয়ায় চলে এসেছেন। এই পর্বে আপনাদের জন্য কিছু লাইফ স্টাইল টিপস নিয়ে লিখব। আশা করি আপনাদের সেগুলা কাজে লাগবে।</summary></entry><entry><title type="html">মালয়েশিয়ায় রিলোকেশন গাইড</title><link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-full-guide.html" rel="alternate" type="text/html" title="মালয়েশিয়ায় রিলোকেশন গাইড" /><published>2019-04-08T00:00:00+08:00</published><updated>2019-04-08T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-full-guide</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-full-guide.html">&lt;p&gt;যারা মালয়েশিয়ায় রিলোকেট হতে চান, অথবা রিলোকেশন অফার পেয়েছেন কিন্তু কোথায় কখন কিভাবে কি করবেন এ সম্পর্কে কনফিউজড, তাদের জন্য এই ব্লগপোস্ট সিরিজ লিখলাম। শুধুমাত্র রিলোকেশনই নয়, মালয়েশিয়া ভ্রমণ কিংবা অন্য দেশে যারা রিলোকেট হতে যাচ্ছেন তারাও বেশ কিছু আইডিয়া পাবেন এই সিরিজ থেকে।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-preparation-apply-interview-etc.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ০ - রেজিউম প্রস্তুতি ও ইন্টারভিউ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-salary-negotiation-employment-pass.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-single-entry-visa-prep.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ২ - ভিসার জন্য এপ্লাই করা&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-last-minute-preparation.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ৩ - শেষ মুহুর্তের প্রস্তুতি&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-immigration.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ৪ - ইমিগ্রেশন&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-life-style-tips.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ৫ - লাইফস্টাইল টিপস&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;আপনারা চাইলে আপনাদের মতামত, অভিজ্ঞতাও শেয়ার করতে পারেন। ধন্যবাদ সবাইকে।&lt;/p&gt;</content><author><name></name></author><summary type="html">যারা মালয়েশিয়ায় রিলোকেট হতে চান, অথবা রিলোকেশন অফার পেয়েছেন কিন্তু কোথায় কখন কিভাবে কি করবেন এ সম্পর্কে কনফিউজড, তাদের জন্য এই ব্লগপোস্ট সিরিজ লিখলাম। শুধুমাত্র রিলোকেশনই নয়, মালয়েশিয়া ভ্রমণ কিংবা অন্য দেশে যারা রিলোকেট হতে যাচ্ছেন তারাও বেশ কিছু আইডিয়া পাবেন এই সিরিজ থেকে।</summary></entry><entry><title type="html">মালয়েশিয়ায় রিলোকেশন ৪ - ইমিগ্রেশন</title><link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-immigration.html" rel="alternate" type="text/html" title="মালয়েশিয়ায় রিলোকেশন ৪ - ইমিগ্রেশন" /><published>2019-04-06T00:00:00+08:00</published><updated>2019-04-06T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/malaysia/malaysia-immigration</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/malaysia/malaysia-immigration.html">&lt;blockquote&gt;
+  &lt;p&gt;পূর্ববর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-last-minute-preparation.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ৩ - শেষ মুহুর্তের প্রস্তুতি&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;মালয়েশিয়ান ভিসা পাওয়া ও কেনাকাটা শেষে এবার আকাশে উড়াল দেবার পালা। আগের পর্বেই ফ্লাইট বুকিং সম্পর্কে বলেছিলাম। এই পর্বে লিখব কিভাবে &lt;strong&gt;বিখ্যাত মালয়েশিয়ান&lt;/strong&gt; ইমিগ্রেশন পার হবেন।&lt;/p&gt;
+
+&lt;h2 id=&quot;চেকইন-ও-ফ্লাইট&quot;&gt;চেকইন ও ফ্লাইট&lt;/h2&gt;
+
+&lt;p&gt;যারা নিয়মিত বিমানে ভ্রমণ করেন তাদের জন্য নতুন করে কিছু বলার নেই। তবে যারা প্রথমবারের মত যাচ্ছেন, তাদের জন্য কিছু টিপস দেওয়া যেতে পারে। প্রথমত আপনার এয়ারলাইন্সের টার্মস এন্ড কন্ডিশনস বুঝে নিন। সেই সাথে লাগেজ পলিসি, নিষিদ্ধ আইটেমের লিস্ট জেনে নিন। চেকইন কাউন্টার কখন খুলে, সিট সিলেকশন আছে কিনা এসবও আগে থেকে ক্লিয়ার হয়ে নিতে পারেন। ইন্টারন্যাশনাল ফ্লাইটের জন্য মিনিমাম ৩-৪ ঘন্টা আগে এয়ারপোর্ট পৌঁছান ভাল। এর সাথে ঢাকার রাস্তার জ্যাম এড করে নিন। এয়ারপোর্টে পৌঁছে টার্মিনালে ঢুকতেও লম্বা লাইন থাকে অনেক সময়। চেকইন কাউন্টারেও লাইন থাকে প্রায়ই। এজন্য হাতে কয়েক ঘন্টা বাড়তি সময় রাখা বুদ্ধিমানের কাজ হবে।&lt;/p&gt;
+
+&lt;p&gt;আর বাংলাদেশের ইমিগ্রেশনে বেশ সময় লাগে। আছে ডিপার্চার কার্ড পূরণের ঝামেলা। ডিপার্চার কার্ড পূরণ করতে আপনার (ও সাথের সকল যাত্রীর) নাম ধাম সহ সকল তথ্য, পাসপোর্ট নম্বর, যে দেশে যাবেন সেখানকার এয়ারপোর্টের নাম, আপনার ভিসা নম্বর (পাসপোর্টে আছে) ইত্যাদি লাগে। আর হ্যা, সাথে করে একটা কলম নিয়ে যাবেন। আমি প্রবাসী কল্যান ডেস্ক, ইমিগ্রেশন এনট্রি, চেকইন কাউন্টারে খুজে কলম পাইনি। পরে বেশী দাম দিয়ে কিনতে হইছে। কলমটা পরে চেকড ব্যাগে দিয়ে দিতে পারেন কেননা কেবিন ব্যাগে কলমজাতীয় শার্প জিনিস নেওয়া নিষিদ্ধ। আমার সময় ইমিগ্রেশনে মালয়েশিয়ান ভিসা দেখে অনেক ঝামেলা করেছিল। তারা বলছিল যে প্রবাসী কল্যাণ সমিতির কার্ড ছাড়া চাকরির ভিসায় যেতে দিবেনা। পরে জেদ করার কারণে তাদের একজন সিনিয়র অফিসার এসে আমাকে ছাড়িয়ে দিলেন। উনি বললেন যে ডাক্তার, ইঞ্জিনিয়ার এদের জন্য কার্ডের প্রয়োজন নেই। সুতরাং এমন হয়রানি করা হলে মাথা ঠান্ডা রেখে ডীল করুন। আল্লাহ ভরসা। ইমিগ্রেশন পার হয়ে লাউঞ্জে বসে সময় কাটাতে পারেন। আপনার ফ্লাইট কোন গেট দিয়ে যেতে হবে সেটা বোর্ডিং পাস থেকে জেনে নিন। কিছু গেট পর্যন্ত যেতে ১০ মিনিট হাঁটতে হয়। সুতরাং আগে থেকে প্রিপারেশন রাখুন।&lt;/p&gt;
+
+&lt;p&gt;আর ফ্লাইটের সময় হালকা জামাকাপড় পড়তে পারেন, সাথে পাতলা সোয়েটার বা চাদর জাতীয় কাপড় নিতে পারেন কারণ ঘন্টাখানেক পর ঠান্ডা লাগতে পারে। ফ্লাইট চলাকালে বেশী করে পানি খাওয়া ভাল। তাতে ডিহাইড্রেশন হবেনা। বিশেষত বিমানের শুষ্ক বাতাসে অনেকের নাকে ও কানে সমস্যা হয়। পানি খেলে এমন পরিস্থিতি এভয়েড করা সম্ভব। ঢাকা টু কুয়ালালুমপুর ফ্লাইট টাইম সাধারণত সাড়ে তিন থেকে চার ঘন্টা লম্বা হয়। এজন্য নোটবুক বা ফোনে দুতিনটা মুভি, অডিওবুক রাখতে পারেন। নিতে পারেন প্রিয় কোন বইও। এতে বোরিং লাগবেনা। চাইলে দুতিন ঘন্টার ঘুমও দিয়ে দিতে পারেন। তাহলে জেট ল্যাগ কাটানো সহজ হবে। সেই সাথে নেমেই ফ্রেশ লাগবে। ফ্লাইট থেকে নামার আগে ফোনের ডেট/টাইম সেটিংস থেকে টাইমজোন বদলে Asia/KualaLumpur বা GMT+8 করে নিন।&lt;/p&gt;
+
+&lt;h2 id=&quot;মালয়েশিয়ান-ইমিগ্রেশনের-প্রস্তুতি&quot;&gt;মালয়েশিয়ান ইমিগ্রেশনের প্রস্তুতি&lt;/h2&gt;
+
+&lt;p&gt;এই টপিকের জন্য আলাদা একটা পোস্ট লেখা উচিত ছিল। তবুও সংক্ষেপে বর্ণনা করব। কুয়ালালুমপুর এয়ারপোর্ট আসলে পাশাপাশি ২টা এয়ারপোর্ট মিলে তৈরী। বাংলাদেশী কম পপুলার এয়ারলাইন্সগুলা সাধারণত KLIA2 তে ল্যান্ড করে। মালয়েশিয়ান এয়ারলাইন্স এরা ল্যান্ড করে KLIA তে। দুই এয়ারপোর্টের মাঝে অটোমেটিক ইলেকট্রিক ট্রেন দিয়ে ফ্রিতে যাতায়াত করা যায়। যদি আপনি KLIA তে নামেন, তাহলে ইমিগ্রেশন অফিস কাছেই পাবেন। যদি KLIA2 তে নামেন, তাহলে ট্রেনে করে ২ মিনিটে KLIA তে আসতে হবে। প্রয়োজনে লিফটে করে নিচের ফ্লোরে যাওয়া লাগতে পারে।&lt;/p&gt;
+
+&lt;p&gt;মালয়েশিয়ায় ঢুকতে হলে আপনাকে ইমিগ্রেশন পার হতে হবে। আগেই বলে রাখছি এই স্টেপটা বেশ যন্ত্রণাদায়ক। কিন্তু মাথা ঠান্ডা রেখে কাজ করলে আল্লাহর রহমতে কোন সমস্যা হবেনা। ইমিগ্রেশনের আগে কিছু কাজ করে নিন তাহলে উপকার হবে।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;পর্যাপ্ত পানি ও কিছু খাবার কিনে নিন। কেননা ইমিগ্রেশন পার হলে খাবারের দোকান তেমন নেই। রাতের বেলা বন্ধ থাকতে পারে।&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;এয়ারপোর্ট থেকে হোটেল বা বাসায় পৌঁছাতে ১-২ ঘন্টা লাগতে পারে। জ্যাম হলে আরো বেশী। সাথে বউ বা ছেলেমেয়ে থাকলে বেশী করে খাবার ও পানি কিনে ফেলুন।&lt;/li&gt;
+  &lt;li&gt;সিম কার্ড কিনে নিতে পারেন। সিম কিনতে পাসপোর্ট লাগবে। কেনার সাথে সাথে রিচার্জ ও একটিভেট হয়ে যাবে। তাহলে আপনি সুবিধামত ডাটা ইউজ করতে পারবেন।&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;কেনাকাটা শেষে একটু বিশ্রাম নিয়ে নিতে পারেন। ওয়াশরুমের কাজ থাকলে সেরে নিন কেননা ইমিগ্রেশন স্টেপটা বেশ লম্বা ও সময় সাপেক্ষ।&lt;/p&gt;
+
+&lt;h2 id=&quot;মালয়েশিয়ান-ইমিগ্রেশন&quot;&gt;মালয়েশিয়ান ইমিগ্রেশন&lt;/h2&gt;
+
+&lt;p&gt;অনেকের ধারণা থাকতে পারে যে ভ্যালিড মালয়েশিয়ান ভিসা থাকার পরেও কেন ইমিগ্রেশনে ঝামেলা হতে পারে। তাদের জন্য বলছি, ঢাকায় অবস্থিত মালয়েশিয়ান এমব্যাসি শুধুমাত্র ট্রাভেল পাস দিতে পারে। মাল্টি এনট্রি ভিসা আসলে মালয়েশিয়া এসে এখানকার ইমিগ্রেশন অফিস থেকে পাসপোর্টে স্ট্যাম্পিং করে নিতে হয়। এজন্য আপনি এমপ্লয়মেন্ট পাস নিয়ে গেলেও আপনাকে ইমিগ্রেশন ডিপার্টমেন্ট আটকাতে পারে। তবে যথাযথ চেকিং করার পর ছেড়ে দেয়। কাজেই ভয় পাওয়ার কিছু নেই।&lt;/p&gt;
+
+&lt;p&gt;বিমান থেকে নেমে দরকারী কাজ সেরে ইমিগ্রেশন কাউন্টারে চলে আসুন। এটা একটা বিশাল হলরুমের মত, পাশাপাশি প্রায় ৫০টা কাউন্টার। কোন কাউন্টারে কোন পাসপোর্ট নিয়ে দাঁড়াতে হবে তা লেখা থাকে। লাইন ধরে দাঁড়িয়ে যান। প্রতিটা ইমিগ্রেশন কাউন্টারের সামনে হলুদ লাইন দেওয়া থাকে। &lt;span style=&quot;color:red&quot;&gt;হলুদ লাইনের আগে কেও আসলে ইমিগ্রেশন পুলিশ ঝামেলা করতে পারে।&lt;/span&gt; কাজেই তাড়াহুড়া না করে ধীরে সুস্থে লাইনে দাঁড়ান। যখন আপনার সামনের জন পাসপোর্ট পেয়ে বেরিয়ে যাবে, তখন ইমিগ্রেশন পুলিশ ডাকলে আপনি সামনে যাবেন।&lt;/p&gt;
+
+&lt;p&gt;আপনার ভাগ্য ভাল হলে ইমিগ্রেশন পুলিশআপনার এমপ্লয়মেন্ট পাস-ওয়ালা সিংগেল এন্ট্রি ভিসা দেখেই ছেড়ে দিবে। তবে অনেক সময় (ইচ্ছা করেও হয়ত) তারা EP এর বিষয়টা বুঝেনা। তারা ট্রাভেল ভিসা মনে করে রিটার্ন টিকেট দেখতে চায়। সেক্ষেত্রে আপনাকে স্পেশাল ইমিগ্রেশন রুমে পাঠিয়ে দেওয়া হবে। অনেকের কাছেই এটা ছোটখাট হরর মুভির মত এক্সপেরিয়েন্স হবে। তবে বলছি, ঘাবড়াবেন না।&lt;/p&gt;
+
+&lt;p&gt;স্পেশাল ইমিগ্রেশন রুমটা বেশ ছোট, তবে এখানে বেশ কয়েকজন পুলিশ থাকে। সাধারণত জাল ভিসা, সন্দেহজনক ট্রাভেলার দেখলে তাদেরকে এই রুমে আনা হয়। আর এই রুমের পুলিশরাও সকলের সাথে একটু রাফ আচরণ করতে পারে। কয়েকটা টিপস দিচ্ছি, তাহলে আপনাকে কোনরকম ঝামেলা ছাড়াই রিলিজ করে দিবে।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;রুমে ঢুকে দেখবেন পাসপোর্ট রাখার একটা জায়গা আছে, সেখানে আপনার পাসপোর্ট সবার উপরে এবং আপনার স্ত্রী ও সন্তানদের পাসপোর্ট তার নিচে রাখুন&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;পাসপোর্টের সাথে আপনাদের সকলের বোর্ডিং পাস (বিমানের টিকেটের অর্ধেক অংশ) কখনোই রাখবেন না। প্রত্যেকের বোর্ডিং পাস আলাদা করে নিজ নিজ হাতে রাখুন।&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;শান্ত হয়ে অপেক্ষা করুন। আপনার পাসপোর্ট তোলা হলে আপনাকে ডাকা হবে।&lt;/li&gt;
+  &lt;li&gt;অপেক্ষা করতে করতে বারবার ইমিগ্রেশন পুলিশের সামনে গিয়ে ঘুরাঘুরি না করাই ভাল হবে। কেননা ভীড় ও চেচামেচি শুনলে তারা বিরক্ত হয়ে পাসপোর্টে সীল দেওয়া বন্ধ করে দিতে পারে।&lt;/li&gt;
+  &lt;li&gt;কেও রুম ছেড়ে না যাওয়াই ভাল হবে। কেননা আপনার নাম ডাকার পর মিস গেলে আবার কখন ডাকবে তা বলা যাচ্ছেনা।&lt;/li&gt;
+  &lt;li&gt;আপনার নাম ডাকা হলে শান্তভাবে তাদের সামনের চেয়ারে বসুন, যা যা প্রশ্ন করা হবে উত্তর দিন। বলুন যে আপনার EP (বা আপনার স্ত্রী সন্তানদের DP) রয়েছে। তখন তারা অনলাইনে আপনার বাকি ডকুমেন্টস চেক করবে।&lt;/li&gt;
+  &lt;li&gt;কোন ফ্লাইটে এসেছেন তা জানতে চাইতে পারে। বোর্ডিং পাস দেখান। স্পষ্টভাবে এয়ারলাইন্স ও ফ্লাইট নম্বর বলুন।&lt;/li&gt;
+  &lt;li&gt;রিটার্ন টিকেট দেখতে চাইলে বুঝিয়ে বলুন যে আপনি চাকরির ভিসায় এসেছেন এবং পারমানেন্টলি থাকবেন। অনেকসময় তারা ওয়ার্ক পারমিট ভিসা না বুঝেই রিজেক্ট করে দিতে চায়।&lt;/li&gt;
+  &lt;li&gt;আল্লাহর রহমতে সব ভালমত পার হলে ওরা ইমিগ্রেশন পাসের সীল দিয়ে দিবে। সাথে আরেকটা স্টিকার মেরে দিবে। সেটা হল মালয়েশিয়া ঢুকে ইমিগ্রেশন অফিস (পুত্রাজায়া) থেকে মাল্টিএনট্রি ভিসা স্ট্যাম্পিং করার জন্য। ভালমত চেক করে নিন যে আপনার এনট্রি ডেট ও স্টিকার মারা হল কিনা।&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;আপনার কাজ শেষে আপনার স্ত্রী ও সন্তানদের পাসপোর্টে ইমিগ্রেশন সীল করিয়ে নিন।&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ইমিগ্রেশন পুলিশের সামনে কনফিডেন্ট থাকলে এবং যা প্রশ্ন করা হয়েছে তা ঠিকমত ইংরেজীতে উত্তর দিলে কোনরকম সমস্যা হবেনা ইনশাআল্লাহ। ইমিগ্রেশন শেষে আপনি আবার আগের কাউন্টারে ফিরে যান। তখন তারা আপনাকে সহজেই যেতে দিবে। সব শেষে আপনি চলে আসবেন লাগেজ কালেক্ট করার হলে। এখানে কনভেয়ার বেল্টে সবার লাগেজ চলে আসে। ইমিগ্রেশনে কয়েক ঘন্টা দেরী হয় বলে অনেক সময় আপনার ব্যাগ কনভেয়ার বেল্ট থেকে নামিয়ে অন্য জায়গায় জড়ো করা থাকতে পারে। একটু খুঁজে দেখলেই পেয়ে যাবেন।&lt;/p&gt;
+
+&lt;p&gt;লাগেজ কালেক্ট করা শেষে আপনার কাজ হল এয়ারপোর্ট থেকে বের হওয়া। এখান থেকে গ্র্যাব ভাড়া করে কিংবা KLIA Ekspress এর ট্রেনে করে অথবা বাসে করে কুয়ালালুমপুর চলে আসতে পারেন। মূল শহর থেকে এয়ারপোর্ট প্রায় ৫০-৬০ কিমি  দূরে। ট্রেনে করে যেতে ৩০-৪৫ মিনিট আর গাড়িতে/বাসে করে গেলে ১-২ ঘন্টা লাগবে। কাজেই আবারো বলছি, পর্যাপ্ত পানি ও খাবার কিনে (বা খেয়ে) নিন।&lt;/p&gt;
+
+&lt;p&gt;আশা করি আপনারা ভালমতই ইমিগ্রেশন পার হয়ে যেতে পারবেন। এয়ারপোর্টের ঝামেলা শেষ করে চলে যান হোটেলে বা আত্মীয়ের বাসায় বা নিজের বাসায় (যদি রেন্ট নেওয়া হয়ে থাকে)। বাকি পর্বে টুকটাক মালয়েশিয়ান লাইফস্টাইল টিপস নিয়ে লিখব ইনশাআল্লাহ। শুভকামনা সবার জন্য।&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;পরবর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-life-style-tips.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ৫ - লাইফস্টাইল টিপস&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">পূর্ববর্তী পোস্ট মালয়েশিয়ায় রিলোকেশন ৩ - শেষ মুহুর্তের প্রস্তুতি</summary></entry><entry><title type="html">মালয়েশিয়ায় রিলোকেশন ৩ - শেষ মুহুর্তের প্রস্তুতি</title><link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-last-minute-preparation.html" rel="alternate" type="text/html" title="মালয়েশিয়ায় রিলোকেশন ৩ - শেষ মুহুর্তের প্রস্তুতি" /><published>2019-03-26T00:00:00+08:00</published><updated>2019-03-26T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-last-minute-preparation</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-last-minute-preparation.html">&lt;blockquote&gt;
+  &lt;p&gt;পূর্ববর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-single-entry-visa-prep.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ২ - ভিসার জন্য এপ্লাই করা&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;প্রিয় পাঠক, ধরে নিচ্ছি আপনার হাতে মালয়েশিয়ায় সিংগেল এন্ট্রি ভিসা রয়েছে। সাধারণত এই ভিসার মেয়াদ থাকে ৯০ দিন। অর্থাৎ আগামী ৩ মাসের মাঝে আপনাকে মালয়োশিয়া যেতে হবে। আপনার কোম্পানির HR এর সাথে যোগাযোগ করে জানিয়ে দিন আপনি কবে এনট্রি করবেন এবং কবে জয়েন করবেন। কেননা সেই অনুযায়ী আপনার থাকার ব্যাবস্থা করা হবে। সেই সাথে যত দ্রুত জয়েন করবেন, সেলারীও তত বেশী পাবেন। তবে মালয়েশিয়া পৌঁছে মিনিমাম ২-৩ দিন হাতে রাখা ভাল, কারণ নতুন জায়গায় গিয়ে রেস্টুরেন্ট চিনতে ও জরুরী জিনিসপত্র কিনতে আপনার সময় লাগবে। তাছাড়া মালয়েশিয়ায় বেশীরভাগ জায়গায়গ মাসের ২৫ তারিখে সেলারী দেওয়া হয়। সুতরাং আপনি ২০ বা ২২ তারিখে জয়েন করলে পরের মাসে বেতন পাবেন। সুতরাং সবদিক বিবেচনা করে সিদ্ধান্ত নিন কবে যেতে চান।&lt;/p&gt;
+
+&lt;h2 id=&quot;ফ্লাইট-বুকিং&quot;&gt;ফ্লাইট বুকিং&lt;/h2&gt;
+
+&lt;p&gt;মালয়েশিয়ায় শুধুমাত্র বিমানে যাওয়া যায় (ইমিগ্রেশনের জন্য)। সুতরাং আপনাকে ভিসা পাওয়া মাত্র সবার আগে বিমানের টিকেট কাটতে হবে। ঢাকা থেকে বিমান বাংলাদেশ, মালিন্দো এয়ার, এয়ার এশিয়া, ইউএসবাংলা এয়ারলাইন্স, মালয়েশিয়ান এয়ারলাইন্স ইত্যাদি এয়ারলাইন্স মালয়েশিয়ায় যায়। টিকেটের প্রাইস অনুযায়ী সুবিধামত টিকেট করে ফেলুন। যদি আপনার কোম্পানি আপনার ট্রাভেল এক্সপেন্সেস বহন করে, তাহলে টিকেট নিজেই অনলাইনে কাটতে পারেন। কেননা ট্রাভেল ইটিনারির কপি আপনার পরবর্তীতে ক্লেইম করার জন্য দরকার হবে। আর মালয়েশিয়ান ইমিগ্রেশনের ঝামেলা সহজে পার হতে চাইলে মালয়েশিয়ান এয়ারলাইন্স বা জনপ্রিয় কোন এয়ারলাইন্সের টিকেট কাটতে পারেন। এতে অযাচিত প্রশ্নবাণ থেকে মুক্তি পেতেও পারেন।&lt;/p&gt;
+
+&lt;p&gt;ঢাকা থেকে মালয়েশিয়া যেতে সময় লাগে প্রায় ৪ ঘন্টা। আর মালয়েশিয়ার টাইমজোন UTC+8. যদি আপনি মালয়েশিয়ায় গিয়ে সরাসরি হোটেলে উঠতে চান, তাহলে বাংলাদেশ সময় ভোরে বা সকাল ৮-৯টার দিকে টিকেট কাটতে পারেন। তাহলে দুপুর ১২টার দিকে মালয়েশিয়া পৌঁছে চেকইন করতে পারবেন। যদি আপনার বাসা ভাড়া নেওয়া থাকে, এবং সরাসরি বাসায় উঠতে চান, অথবা কোন আত্মীয়দের বাসায় উঠতে চান, তাহলে মালয়েশিয়ায় কখন পৌঁছাবেন সেটা বিবেচনা করে নিন। কেননা মাঝরাতে আপনি খুব বেশী গাড়ি, খাবারের রেস্টুরেন্ট খোলা পাবেন না। তবে এয়ারপোর্টে রাতের বেলায় পৌঁছালে ভীড় বেশ কম থাকে। যেহেতু ফ্লাইটের পুরা সময়টা একটু লম্বা, আপনার পায়ের সমস্যা বা হাঁটুর সমস্যা থাকলে Extra Legroom সহ সিট বুক করতে পারেন। ফলে বিমানে পায়ের কাছে বেশী জায়গা থাকবে ও একটুপরপর পা সোজা করতে পারবেন। চাইলে বিজনেস ক্লাসও কেটে ফেলতে পারেন।&lt;/p&gt;
+
+&lt;h2 id=&quot;কেনাকাটা&quot;&gt;কেনাকাটা&lt;/h2&gt;
+
+&lt;p&gt;বিদেশ যাওয়ার আগে সবাইই বেশ কিছু কেনাকাটা করে থাকে। আপনিও নিশ্চয়ই ব্যাতিক্রম হতে চান না। এবার কিছু টিপস দেই কি কি কিনবেন।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;কয়েক সেট ফর্মাল ড্রেস কিনে নিতে পারেন। আপনার অফিসের ড্রেসকোড জেনে নিন। যদি তারা ক্যাজুয়াল ড্রেস সাপোর্ট করে, তাহলে জিন্স, শার্ট, জুতা এসব কিনে নিতে পারেন দরকারমত। তবে খুব বেশী পরিমাণে না কিনলেও চলে কারণ মালয়েশিয়ায় বাংলাদেশের দামেই (বা কম দামে) ড্রেস কিনতে পাওয়া যায়।&lt;/li&gt;
+  &lt;li&gt;যেহেতু মালয়েশিয়া ট্রপিকাল আবহাওয়ার দেশ, এখানে দিনের বেলা ৩০-৩২ আর রাতে ২৬-২৮ ডিগ্রী সে: টেম্পারেচার থাকে। সুতরাং দুইরকম জামাকাপড় কিনলে ভাল হয়। দিনে ঢিলেঢালা জামা আর রাতে একটু গরম কাপড় নেওয়া ভাল।&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;মালয়েশিয়ায় যখন তখন বৃষ্টিপাত হয়। তাই ছাতা বাধ্যতামূলক। সবার জন্য এক সেট করে ছাতা নিয়ে নিতে পারেন।&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;মালয়েশিয়ায় সকল ইলেকট্রনিক ডিভাইস UK থ্রিপিন স্ট্যান্ডার্ড ফলো করে। আপনার ফোন চার্জার, ল্যাপটপ চার্জার, হেয়ার ড্রায়ার সহ যা কিছু আছে, সবগুলার জন্য একটা করে প্লাগ কনভার্টার কিনে নিন।&lt;/li&gt;
+  &lt;li&gt;এখানে বাংলাদেশের মত আলু, পেয়াঁজ, হলুদ গুঁড়া, মরিচ গুঁড়া ইত্যাদি সবই পাওয়া যায়। সুতরাং সেসব কিনে ব্যাগ ভারী না করাই ভাল হবে।&lt;/li&gt;
+  &lt;li&gt;গ্যাসট্রিকের ঔষধ, ওরস্যালাইন, ব্যাথার ঔষধ, এন্টিবায়োটিক, হাত কাটলে জরুরী মলম, ডেটল ক্রিম, নেবানল, স্যানিটারী প্যাড, কটন বাড, ব্যান্ডএইড ইত্যাদি অন্তত একমাসের জন্য নিয়ে নিতে পারেন।&lt;/li&gt;
+  &lt;li&gt;অল্প পরিমাণ শ্যাম্পু, ওয়াশিং পাউডার, দুতিনটা সাবান, হ্যান্ড ওয়াশ ইত্যাদি নিয়ে নিতে পারেন প্রথম এক সপ্তাহ চলার জন্য।&lt;/li&gt;
+  &lt;li&gt;বাইরে শেভ করা প্রেফার না করলে জিলেট মাক ৩ ও সেটার রিফিল ব্লেড কিনে নিতে পারেন।&lt;/li&gt;
+  &lt;li&gt;ফ্যামিলি সহ আসলে রান্নার জন্য ফ্রাইপ্যান, হাঁড়ি, খাবার প্লেট, গ্লাস সেট, চামচ, স্প্যাচুলা ইত্যাদি সাথে আনতে পারেন।&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;সিম কার্ড বের করার জন্য পিন, আপনার ফোনের সিম স্লট অনুযায়ী এক্সট্রা কনভার্টার লাগলে কিনে ফেলুন। এয়ারপোর্টে নেমেই এটা কাজে লাগবে।&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;উপরে যা যা বললাম এগুলা (ছাতা, ড্রেস বাদে) কোনভাবেই কেবিন ব্যাগ (যেটা বিমানের সিটের উপরের বাংকারে রাখা যায়) এ নেওয়া যাবেনা। এগুলা অবশ্যই চেকড ব্যাগে (যেটা কার্গো হিসেবে যায়) দিতে হবে। কেবিন ব্যাগে কোনভাবেই ধারাল কিছু (চামচ, কলম, রেজর ইত্যাদি) নেওয়া যাবেনা। এমনকি ভর্তি পানির বোতলও নয়। আর সবকিছু লাগেজে নেওয়ার পর ওজন করে নিন। কেননা ওভারওয়েট হলে প্রতি কেজি ১০০০-২০০০ টাকা করে ফি দিতে হবে যা খুবই বেশী। সাধারণত চেকড ব্যাগ হিসেবে ৩০-৪০ কেজি আর কেবিন ব্যাগ হিসেবে ৭-১০ কেজি নেওয়া যায়। অনেক এয়ারলাইন্সে ২-৩ টির বেশী ব্যাগ নেওয়া যায়না। আপনার আপনার ফ্লাইট টিকেট থেকে বা কাস্টমার কেয়ার থেকে ডিটেইলস জেনে নিন।&lt;/p&gt;
+
+&lt;h2 id=&quot;টেকনিকাল-ব্যাপার&quot;&gt;টেকনিকাল ব্যাপার&lt;/h2&gt;
+
+&lt;p&gt;মালয়েশিয়ায় যাবার পূর্বে ফোনে নিচের এপ গুলো ইন্সটল করে নিন। তাহলে ওখানে গিয়ে সুবিধা পাবেন।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.google.android.apps.maps&quot;&gt;Google Maps&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.google.android.apps.translate&quot;&gt;Google Translate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.andi.kamusmalay&quot;&gt;Malay - English Translator&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.grabtaxi.passenger&quot;&gt;Grab&lt;/a&gt; - ইহা মালয়েশিয়ার উবার/পাঠাও&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.tranzmate&quot;&gt;Moovit&lt;/a&gt; - গুগল ম্যাপসে সকল মালয়েশিয়ান রুটের ডিটেইলস সবসময় ঠিক দেখায়না। এটা দিয়ে মালয়েশিয়ান বাস, ট্রেনের রুট জানতে পারবেন।&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.xchanging.erla&quot;&gt;KLIA Ekspress&lt;/a&gt; - কুয়ালালুমপুর এয়ারপোর্ট থেকে কুয়ালালুমপুর শহরের ট্রেনের এপ, টিকেট কেটে QR কোড দিয়েই স্টেশনে ঢুকতে পারবেন।&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.skype.raider&quot;&gt;Skype&lt;/a&gt; | &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.whatsapp&quot;&gt;WhatsApp&lt;/a&gt; | &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.imo.android.imoim&quot;&gt;imo&lt;/a&gt; - এয়ারপোর্টে পৌঁছে বাসায় কথা বলার জন্য, যার যেটা প্রেফারড আরকি।&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;যারা বিদেশ থেকে বাংলাদেশে সরাসরি মোবাইল নম্বরে কল দিতে চান (ফিচার ফোন ইউজার), তাদের জন্য &lt;a href=&quot;https://secure.skype.com/calling-rates/Bangladesh?language=en&quot;&gt;Skype দিয়ে ৩ টাকা রেটে প্রতি মিনিট&lt;/a&gt; কথা বলতে পারেন। এটা ইউজ করার জন্য আপনি যাকে ফোন করবেন তার স্মার্টফোন থাকার প্রয়োজন নেই। জাস্ট রওনা দেওয়ার পূর্বে ক্রেডিট কার্ড দিয়ে আপনার স্কাইপ একাউন্টে ৫ ডলার রিচার্জ করে নিন। এয়ারপোর্টে নেমে ফ্রি ওয়াইফাই দিয়ে আপনি যেকোন নম্বরে ১৫০-২০০ মিনিট কথা বলতে পারবেন।&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;আর্থিক-প্রস্তুতি&quot;&gt;আর্থিক প্রস্তুতি&lt;/h2&gt;
+
+&lt;p&gt;মালয়েশিয়া এসে প্রথম মাস আপনাকে নিজ খরচে চলতে হবে কেননা সেলারী আপনি মাসের শেষে পাবেন। এমনকি PayDay এর আগে জয়েন করলেও ওই মাসের সেলারী পরের মাসে পাবার কথা। সুতরাং যথেষ্ট আর্থিক প্রস্তুতি নিয়ে আসা ভাল হবে। তার উপর এখানে এসেই শুরুতে আপনাকে নতুন অনেককিছু কিনতে হবে। যেমন নিত্যপ্রয়োজনীয় জিনিস, খাবার, রান্নার জিনিসপত্র, বালিশ-চাদর-কাঁথা ইত্যাদি। দেশ থেকে অনেক কিছুই কিনে আনতে পারেন যদি লাগেজ ওয়েট লিমিট ক্রস না করে। নইলে এখানে এসে কিনতে হবে।&lt;/p&gt;
+
+&lt;p&gt;এর সাথে নিচের বিষয়গুলি বিবেচনা করুন।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;স্টুডিও বা ফ্ল্যাট ভাড়া নিতে হলে ২-৩ মাসের ভাড়া এডভান্সড বুকিং দিতে হয়, সাথে রানিং মাসের ভাড়া দিয়ে উঠতে হয়। কাজেই আপনার বাসা ভাড়া ১৫০০ রিংগিত হলে আপনাকে অন্তত ৩০০০ রিংগিত এডভান্সড আর বাসায় উঠার দিনই ১৫০০ রিংগিত দিয়ে উঠতে হবে। এখানে সবকিছু পেপারওয়ার্কের মাধ্যমে করা হয়। পেপারওয়ার্কের ফি ৩০০-৫০০ রিংগিত। এরপর আছে পানি, বিদ্যুতের ডিপোজিট যেটা ৩০-১০০ রিংগিত হতে পারে। সুতরাং মিনিমাম ৭০০০-১০০০০ রিংগিত (দেড় থেকে দুই লাখ টাকা) আপনাকে সাথে রাখতে হবে, মালয়েশিয়ায় ঢোকার সময়ই।&lt;/li&gt;
+  &lt;li&gt;ইন্টারনেট কানেকশন নিতে হলে যারা নন-মালয়েশিয়ান, তাদের জন্য শুরুতেই ৩০০-৪০০ রিংগিত ডিপোজিট কেটে নিবে।&lt;/li&gt;
+  &lt;li&gt;ব্যাংক একাউন্ট খোলার সময় ২০০-৩০০ রিংগিত ইনিশিয়াল ডিপোজিট করা লাগতে পারে।&lt;/li&gt;
+  &lt;li&gt;প্রতিটি সিমকার্ড কেনার সময় ৩০ রিংগিত রিচার্জ করতে হবে, প্রতি মাসে। সুতরাং দুজনের জন্য সিম কেনার সময়ই ৩০x২ রিংগিত লাগবে শুধু এয়ারটাইম কিনতে, সাথে সিমের চার্জ ১০x২ রিংগিত তো আছেই।&lt;/li&gt;
+  &lt;li&gt;বাসায় নিজে রান্না করে খেলে পার পারসন মাসে ২০০-৩০০ রিংগিতে মোটামুটি খাবার খরচ হয়ে যাবে।&lt;/li&gt;
+  &lt;li&gt;অফিসে লাঞ্চ টাইমে বাইরে খেলে পার ডে ১০-২০ রিংগিত খরচ হতে পারে।&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;উপরের সবকিছু যাচাই করে হিসাব করে নিন আপনার কত খরচ হতে পারে এবং সেই পরিমাণ টাকা রিংগিত বা ডলারে কনভার্ট করে নিয়ে আসুন। এয়ারপোর্টে হ্যারাজমেন্ট থেকে বাঁচতে সোনালী ব্যাংক বা যেকোন বেসরকারী ব্যাংক থেকে কারেন্সি কনভার্ট করে পাসপোর্টে সীলসহ এনডোর্স করে নিন। ডলার করার চেয়ে সরাসরি রিংগিত করে আনতে পারেন। তাহলে মালয়েশিয়া এসে কনভার্ট করার ঝামেলা থেকে বেঁচে যাবেন। সেই সাথে আসার সাথে সাথেই জিনিসপত্র কেনাকাটা, সিমকার্ড কেনা ইত্যাদি করতে পারবেন। আর আপনার যদি বাংলাদেশী ক্রেডিট কার্ড থাকে, তাহলে পাসপোর্টে ১০০০-২০০০ ডলার এনডোর্স করে কারেন্সি কনভার্ট করে রাখতে পারেন। তাহলে মালয়েশিয়া এসে বিভিন্ন ডিজিটাল সার্ভিস (ফোন রিচার্জ, গ্র্যাবের বিল দেওয়া, নেটফ্লিক্সের বিল দেওয়া) ইত্যাদি করতে পারবেন।&lt;/p&gt;
+
+&lt;h2 id=&quot;কাগজপত্রের-প্রস্তুতি&quot;&gt;কাগজপত্রের প্রস্তুতি&lt;/h2&gt;
+
+&lt;p&gt;আমি বাংলাদেশ থেকে মালয়েশিয়া প্রবেশ পর্যন্ত কোন কাগজ প্রিন্ট করিনি। সবখানে সফট কপি (মোবাইলে পিডিএফ) দিয়ে কাজ চালিয়েছি। তবে আপনি চাইলে সবগুলার এককপি করে প্রিন্ট রাখতে পারেন। আটকে গেলে কাজে লাগবে। লিস্ট করে নিন কি কি নেওয়া উচিত।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;সকলের পাসপোর্টের ফটোকপি (ইনফরমেশন পেজ আর ভিসা পেজ)&lt;/li&gt;
+  &lt;li&gt;EP ও DP এর প্রিন্ট কপি&lt;/li&gt;
+  &lt;li&gt;ফ্লাইটের ইটিনারী অথবা PNR নম্বর&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;কোম্পানির অফার লেটার (জরুরী)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;এছাড়া নিচের জিনিসগুলো হাতের কাছে রাখতে পারেন (লিখিত বা ডিজিটাল ফর্ম)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;কোম্পানির নাম, ফোন নং ও এড্রেস&lt;/li&gt;
+  &lt;li&gt;যে হোটেল বা বাসায় উঠছেন তার নাম, ফোন নং ও এড্রেস&lt;/li&gt;
+  &lt;li&gt;আপনার সহ সকলের ভিসা নম্বর (পাসপোর্টে মালয়েশিয়ান ট্রাভেল পারমিট স্টিকারে থাকে)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ডিজিটাল-প্রস্তুতি&quot;&gt;ডিজিটাল প্রস্তুতি&lt;/h2&gt;
+
+&lt;p&gt;যেহেতু দেশের বাইরে আসছেন, কাজেই আপনার সিম কার্ড এখানে কাজ করবেনা এটাই স্বাভাবিক। তাই নিচের জিনিসগুলো আরেকবার চেক করে নিন।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;আপনার ব্যাংক একাউন্টের ইমেইল, অনলাইন লগিন ঠিক আছে কিনা দেখে নিন। OTP ও অন্যান্য জিনিস ইমেইলে ফরোয়ার্ড করা কিনা সেটা পারলে এনশিওর করুন। দরকার হলে আপনার ব্যাংকের এপ নামিয়ে লগিন করে নিন। তাহলে বাইরে গিয়েও আপনি পারচেজ ও অন্যান্য কাজ করতে পারবেন।&lt;/li&gt;
+  &lt;li&gt;আপনার ইমেইলের জন্য যদি এসএমএস বেজড টু ফ্যাক্টর অথেনটিকেশন থাকে তাহলে সাময়িকভাবে ডিজেবল করে নিতে পারেন। অথবা অফলাইন অথেনটিকেশন পিন সেট করে নিতে পারেন Google Authenticator বা Authy দিয়ে। একই বিষয় আপনার ফেসবুক, জিমেইল, লিংকডইন, গিটহাব, গিটল্যাব, এমাজন ইত্যাদি সব সার্ভিসের জন্য।&lt;/li&gt;
+  &lt;li&gt;রোমিং অন করে নিতে চাইলে জেনে নিন আপনার অপারেটর মালয়েশিয়ান কোন অপারেটরে রোমিং সাপোর্ট করে। যেমন গ্রামীণফোন কানেকশন এখানকার ডিজি দিয়ে রোমিং করা যায়। তবে এজন্য ১০-২০ হাজার টাকা ডিপোজিট ও কিছু লিগ্যাল ফর্ম পূরণের বিষয় আছে। বিস্তারিত জানতে টেলকোর কাস্টমার কেয়ারে যোগাযোগ করে নিন।&lt;/li&gt;
+  &lt;li&gt;কোম্পানির সাথে যোগাযোগের সকল মেইল, সকল চ্যাট যাতে ফোনে অফলাইনেও এভেইলেবল থাকে, সেজন্য সব সিংক বা ডাউনলোড করে রাখতে পারেন। বলা যায়না কখন কোন ইনফরমেশন দরকার হবে।&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;অনেক জ্ঞান দিয়ে ফেললাম। আপাতত এই পর্যন্তই। আরো কিছু মাথায় আসলে এড করে দিব। আপনারাও চাইলে সাজেশন দিতে পারেন কি কি করা উচিত। শুভকামনা রইল!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;পরবর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-immigration.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ৪ - ইমিগ্রেশন&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">পূর্ববর্তী পোস্ট মালয়েশিয়ায় রিলোকেশন ২ - ভিসার জন্য এপ্লাই করা</summary></entry><entry><title type="html">মালয়েশিয়ায় রিলোকেশন ০ - রেজিউম প্রস্তুতি ও ইন্টারভিউ</title><link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-preparation-apply-interview-etc.html" rel="alternate" type="text/html" title="মালয়েশিয়ায় রিলোকেশন ০ - রেজিউম প্রস্তুতি ও ইন্টারভিউ" /><published>2019-03-22T00:00:00+08:00</published><updated>2019-03-22T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-preparation-apply-interview-etc</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-preparation-apply-interview-etc.html">&lt;p&gt;রিলোকশেন কি সেটা মনে হয় না বললেও চলে। যারা জানেন না তাদের জন্য, এটা হল একরকম জব অফার যেখানে আপনাকে এক জায়গা থেকে অন্য জায়গায় গিয়ে (মূলত অন্য দেশে) জব করতে হবে এবং আপনার যাওয়া সহ যাবতীয় দায় দায়িত্ব আপনার কোম্পানি বহন করবে। কিছু ক্ষেত্রে কোম্পানিই আপনাকে যাবার খরচ, মালপত্র শিপমেন্ট খরচ এসবও দিয়ে থাকে। আর অনেক সময় রিলোকেশন উইথ ভিসা স্পন্সরশিপ বলে আরেকটি জব অফার থাকে সেখানে আপনাকে রিক্রুট করা কোম্পানিই আপনাকে ওই দেশে নিয়ে যাওয়ার সকল লিগ্যাল পেপারস, ভিসার এপ্লাই, ভিসার রিনিউ ইত্যাদি সকল দায়িত্ব পালন করবে। আমেরিকা, কানাডা, জার্মানী ইত্যাদি দেশে ভিসা স্পন্সরশিপ একটু কম থাকলেও সাউথ এশিয়ান ও আশেপাশের দেশগুলোয় খুঁজলেই প্রচুর রিলোকেশন অফার পাবেন যেখানে আপনার ভিসা কোম্পানিই স্পন্সর করবে। তো আমি গতমাসে এরকমই একটি কোম্পানি থেকে রিলোকেট হয়ে মালয়েশিয়া এসে চাকরি করছি। সবার সাথে আমার অভিজ্ঞতা ও টিপস শেয়ার করতেই এই ব্লগটি লেখা।&lt;/p&gt;
+
+&lt;h2 id=&quot;রেজিউম-তৈরী&quot;&gt;রেজিউম তৈরী&lt;/h2&gt;
+
+&lt;p&gt;রিলোকেশন অফারে এপ্লাই করার আগে সবার আগে নিজেকে প্রস্তুত করতে হবে। নানাভাবে নিজেকে প্রস্তুত করতে পারেন। মার্কেটে কি কি টেকনোলজি চলছে, কিসের চাহিদা বেশী এসবের ভিত্তিতে নিজেকে তৈরী করে নিতে পারেন। অর্জন করে নিতে পারেন কয়েকটি প্রফেশনাল সার্টিফিকেশন। তবে যেভাবেই নিজেকে প্রস্তুত করেন না কেন, আপনার রেজিউম বা সিভিতে যদি নিজেকে উপস্থাপন করতে না পারেন তাহলে কিন্তু আদতে কোন লাভ হবেনা। এমনকি আপনার চেনাপরিচিত কেও রেফার করলেও আপনাকে শর্টলিস্ট করার সম্ভাবনা কমে যাবে।&lt;/p&gt;
+
+&lt;p&gt;কয়েকদিন আগে জুনিয়রদের জন্য কিছু রেজিউম টিপস ফেসবুকে শেয়ার করেছিলাম। ভাবলাম সেটা এখানে লিখে দেই।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;নামের ক্যাপিটালাইজেশন ভুল থাকা&lt;/strong&gt;: সিভি দেখার সময় সবার আগেই চোখে এই জিনিসটা পড়বে। নাম ঠিকমত লেখাটা শুধু সিভি নয়, মেইল বডি, কভার লেটার, ইমেইলের একাউন্ট নাম সবক্ষেত্রেই জরুরী। অনেকে দেখা যায় সব লোয়ারকেস বা সবগুলা ক্যাপিটাল কেসে নাম লিখে। যথেষ্ট কারণ বা স্টাইল ছাড়া এমন লেখা অনুচিত।&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;বিভিন্ন অংশের ফন্ট সাইজের মাঝে সামঞ্জস্য না থাকা&lt;/strong&gt;: অনেকে দেখা যায় সিভির উপরে নাম ঠিকানা লিখেছে নরমাল ফন্টে (সাধারণত ৯ বা ১১), কিন্তু প্রজেক্টের নাম ও বর্ণনা লিখতে গিয়ে ১৪ ফন্ট সাইজ দিয়ে ফেলেছে। এগুলাও খুব খারাপ দেখায়। একটা ডকুমেন্টে ২-৩ রকমের বেশী সাইজ ইউজ করা উচিত না। একই সাথে অযথা বোল্ট, অযথা ইটালিক করারও প্রয়োজন নেই। করলেও যেন কনসিস্টেন্সি থাকে। যেমন সকল বছর বা প্রজেক্ট ইয়ার গুলো ইটালিক করা যেতে পারে। কিংবা সকল কোম্পানির নাম বোল্ড করা যেতে পারে।&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;বিভিন্ন টেকনোলজির নাম ভুল করা&lt;/strong&gt;: Javascript, Django, java, php, Mysql, Html, openGL, UBUNTU, MAC OS এগুলো সবগুলাই ভুল ক্যাপিটালাইজেশন। কেও একটা টেকনোলজি নিয়ে যদি ১ বছরও কাজ করে, তারপর বানান ভুল লিখবে এটা মানা যায়না। তার উপরে প্রোগ্রামিং এ স্ট্রিং এর কেস খুবই জরুরী জিনিস।&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;অনলাইনে থাকা স্যাম্পল টার্ম রিইউজ&lt;/strong&gt; করা: /where I can utilize my skills and potentiality efficiently/, /I have strong management skill/, /I can work under pressure/ এরকম টার্মগুলা খুবই পরিচিত। সেই সাথে যে প্রজেক্টে বা কোম্পানিতে কাজ করবেন, তার ম্যানেজার বা টিমলীড ছয়মাস বা একবছর পর বুঝবেন আপনি কতটা স্ট্রং বা কতটা প্রেশার নিতে পারেন। সুতরাং একটু ভেবে হলেও অবজেক্টিভ বা সামারি পার্টটুকু ভেবে সময় নিয়ে লিখা উচিত। এবং অবশ্যই কারো থেকে হুবহু কপি করে নয়।&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;অন্যের সিভি/রেজিউম ফরম্যাট কপি করা&lt;/strong&gt;: আজকাল সবারই সিভি/রেজিউম থাকে। তাই বলে সবার ফরম্যাট একই হবে এটাও হওয়া উচিত না। যেমন একজন এন্টারপ্রনার কিংবা একজন প্রোডাক্ট ম্যানেজারের সিভির ডিজাইন, আর একজন গ্রাফিক্স ডিজাইনার কিংবা মাল্টিমিডিয়া এক্সপার্টের সিভি এক হবেনা। তাই অন্ধভাবে অনুকরন না করাটাই ভাল হবে। আর অনুকরন করলেও বুদ্ধি খাটিয়ে অনুসরণ করা ভাল। যেমন কোন সিনিয়র ইঞ্জিনিয়ার যিনি মার্কেটে ১০ বছর ধরে কাজ করছেন, তিনি যে কারণে PHP/Java তে 5/5 স্কিল ক্লেইম করেন, সেটা সবার ক্ষেত্রে নাও সমান হতে পারে। সুতরাং তার সাথে কম্পেয়ার করে নিজেকে 4/5 স্টার দাবি করাটা বোকামিই।&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;অনলাইন পোর্টফোলিও&lt;/strong&gt;: আজকাল সবারই ব্লগ, ওয়েবসাইট থাকে। কিংবা এসব না থাকলেও গিটহাব, লিংকডইন তো থাকেই। অনেকে দেখা যায় সিভি পাঠানোর কয়েকদিন আগে গিটহাব রেপো খুলে সেখানে একই দিনে তার করা ১০-১৫টা প্রজেক্ট আপলোড করে সেটার লিংক দিয়ে দেয়। জিনিসটা এক দিক দিয়ে ভাল। আবার অসুবিধা হল, আপনারা যদি প্রজেক্ট মেইনটেইন না করেন, কিংবা প্রজেক্টের কোন ডকুমেন্টেশন কিংবা স্ক্রিণশট না থাকে, তাহলে প্রজেক্টটা কাজেই লাগবেনা। আর রিক্রুটারদের এত সময়ও থাকেনা যে আপনার কোডের ভিতরে গিয়ে চেক করবে। সুতরাং প্রজেক্ট করলে চেষ্টা করবেন সুন্দরমত README লেখার। সাথে স্যাম্পল কমান্ড/স্ক্রিণশটও দিতে পারেন। আর হ্যা, বাইনারি ফাইল, অবজেক্ট ফাইল, APK/IPK ফাইল রেখে রেপোজিটরী বানাবেন না। সিকিউরিটির কারণে হোক বা আলসেমির কারণে হোক, কেউই আপনার বাইনারি নামিয়ে ইন্সটল করে দেখবেনা। চেষ্টা করুন Sourceforge/Play Store/App Store এ পাবলিশ করার। আর যদি কোন প্রজেক্ট না-ই থাকে, তাহলে শুধু শুধু গিটহাব লিংক দেবার দরকার নেই। এটা অযথা বিরক্তির কারণ হতে পারে।&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;মার্জিন, এলাইনমেন্ট, প্যাডিং এর হিসাব না রাখা&lt;/strong&gt;: অনেকে দেখা যায় সিভি বানাতে গিয়ে ঠিকমত ফরম্যাট মেইনটেইন করেন না। তখন টেক্সট বক্স দিয়ে কাজ চালান। আর টেক্সটবক্স ডকুমেন্টের মূল মার্জিনের সাথে নাও মিলতে পারে। ফলে দেখা যায় লেখা একপাশে বেঁকে গেছে। কিংবা ১টা ওয়ার্ড পরের পেজে চলে গেছে। অথবা অনেকে দেখা যায় এজুকেশনাল ব্যাকগ্রাউন্ড লিখতে গিয়ে সাল, ভার্সিটির নাম, সিজিপিএ এইসব সমান কলাম দিয়ে লিখেছে। ফলে ভার্সিটির নাম ২-৩ লাইন হয়ে গেছে। অথচ সিজিপিএ বহাল তবিয়তে ২৫% পেজ নিয়ে বিদ্যমান। একটু চেষ্টা করলেই এইসব ভুল ঠিক করে ফেলা যায়।&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;পিডিএফ না দিয়ে শুধু ডক/ডকএক্স/জিপ পাঠানো&lt;/strong&gt;: সাধারণত পিডিএফ ফরম্যাটের ডকুমেন্টই সবচেয়ে বেশী চলে। তারপরেও যদি রিক্রুটার চায়, বা ফর্মের কাজ থাকে, তাহলে ডক ফাইল দিতে পারেন। তবে অনেক সময় দেখা যায় শুধু ডকএক্স ফাইল পাঠানো হয়েছে। এটাও বিরক্তির কারণ হতে পারে কারণ লেটেস্ট মাইক্রোসফট অফিস সবার পিসিতে নাও থাকতে পারে কিংবা ডকুমেন্ট কনভার্ট করতে গিয়ে সব ডিজাইন এলোমেলো হয়ে যেতে পারে। অনেকে দেখা যায় এক কাঠি সরেস। পিডিএফ এর উপর জিপ করে পাঠায়। এগুলা শুধু শুধু বিরক্তি তৈরী করে।&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;কোম্পানি ও টেকনোলজির নামের পার্থক্য বোঝা&lt;/strong&gt;: অনেকের সিভিতে লেখা হয় যে সে ওরাকলে এক্সপার্ট, কিংবা উইন্ডোজ এক্সপি/টেন এ এক্সপার্ট, অথবা লিনাক্সে এক্সপার্ট। বেশীরভাগ কোম্পানিরই একাধিক প্রোডাক্ট আছে। যেমন ওরাকল বললে ওরাকল ডাটাবেজ বুঝব, নাকি জাভা বুঝব, নাকি মাইএসকিউএল বুঝব? আবার লিনাক্স বললেও নেটওয়ার্কিং, সিকিউরিটি, এপ্লিকেশন, এমবেডেড, ইনফ্রাস্ট্রাকচার অনেকরকম সেকশন আছে। অনেকে দেখা যায় HTML, CSS এ এক্সপার্ট এইটা লিখে। এখন HTML, CSS দিয়ে মার্কেটে প্র-চু-র ফ্রেমওয়ার্ক। কোন স্পেসিফিক ফ্রেমওয়ার্ক হলে সেটার নাম মেনশন করা উচিত। একই ভাবে উইন্ডোজ প্লাটফর্মের ভেতরেও সি শার্প, WPF, .NET, ASP.NET, Driver Development, MFC সহ প্রচুর জিনিসপত্র আছে। উইন্ডোজ এক্সপি বা ১০ এ এক্সপার্ট মানে আমি এটাও ধরে নিতে পারি যে আপনি সেটআপ দিতে এক্সপার্ট। হাহা। আর হ্যা, IDE পারলেই যে সব পারা হয়ে যায় তা কিন্তু না। সুতরাং আপনি JetBrains বা VS এর সাথে পরিচিত মানেই যে আপনি এক্সপার্ট সেটা সবসময় ধরা হবেনা। সুতরাং খুবই স্পেসিফিক হওয়া ভাল।&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;সেমিনার ও কোর্সে অংশ নেওয়া&lt;/strong&gt;: এই পয়েন্টটা নিয়ে অনেকে আমার সাথে দ্বিমত হতে পারে। সেটা হল প্রায় সিভিতেই দেখি রোবোটিকস বা LICT এর কোর্স বা সেমিনারে অংশ নিয়েছে এইটা লেখা। ওয়েল, আমি পারসোনালি এরকম সিভি দেখলে সেমিনার পার্টটুকু স্কিপ করি। কেও কখনো সেমিনার বা বুটক্যাম্পে অংশ নিলেই ভাল প্রোগ্রামার হয়ে যাবে এটা সত্য না। তবে হ্যা, কেও এমন সেমিনার বা বুটক্যাম্পে গিয়ে যদি কিছু শিখে সেটার একটা পোর্টফোলিও বানাতে পারে, তাহলে অবশ্যই সেটা প্রশংসনীয়। তাই ১০টা সেমিনারে অংশ নিয়েছি টাইপ না লিখে ১টা সলিড প্রজেক্ট যেটা মেইনটেইন করা হয়, সুন্দর README আছে, এমন জিনিস সিভিতে দেওয়া ভাল।&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;মূলকথা হল, আপনার রেজিউম এমনভাবে তৈরী করুন যেন কম সময়ে, এক ঝলক তাকিয়েই রিক্রুটার বুঝে ফেলে আপনি কিসে এক্সপার্ট বা আপনার পটেনশিয়াল কোনদিকে স্ট্রং। এজন্য রেজিউম এক থেকে দুইপেজ হলেই ভাল হয়। এমন কিছু না করাই ভাল হবে যাতে রিক্রুটাররা বিরক্ত না হয়। আর হ্যাঁ, সঠিকভাবে আপনার যোগাযোগ নম্বর দিন, বিশেষ করে আপনার নাম, ফোন নম্বর, ইমেইল আর বাসার এড্রেস যেন ভুল না হয়। কেননা পরবর্তীতে আপনার সকল কনট্রাক্ট, ভিসা এপ্লিকেশন, ব্যাংক একাউন্ট ইত্যাদি এইসব নামেই তৈরী হবে।&lt;/p&gt;
+
+&lt;h2 id=&quot;ইন্টারভিউ-দেওয়া&quot;&gt;ইন্টারভিউ দেওয়া&lt;/h2&gt;
+
+&lt;p&gt;আপনার রেজিউম কেও রেফার করলে অথবা রিলোকেশন অফারে এপ্লাই করলে আপনাকে পছন্দ হলে আপনি কোম্পানির HR বা রিলেটেড যারা তাদের কাছ থেকে ইন্টারভিউ এর ডাক পাবেন। সাধারণত এসব ইন্টারভিউ কয়েক ধাপে হয়। প্রথম ধাপের ইন্টারভিউ সিম্পল ফোনকল (স্কাইপ বা হ্যাংআউট) এ হতে পারে, পরের ধাপে দুতিনজন টেকনিকাল ইন্টারভিউ হতে পারে যেখানে কোম্পানির সিনিয়র ইঞ্জিনিয়াররা আপনাকে যাচাই করবেন। তারা গ্রীণ সিগনাল দিলে আপনাকে নেওয়া হবে সিইও বা লীড পজিশনের যারা তাদের কাছে। তারা আপনার নন-টেকনিকাল বিষয়গুলা যাচাই করবেন, যেমন আপনার লীডারশিপ কেমন, আপনি কিভাবে একটা কাজ গুছাবেন, কিভাবে অণ্যকে প্রভাবিত করে কাজ আদায় করবেন। সেখানে মানুষ হিসেবে কেমন এটাও যাচাই করা হবে। সবশেষে যদি আপনাকে HR থেকে ডাকা হয় তাহলে বুঝবেন যে আপনাকে শর্টলিস্ট করা হয়েছে। মূলত এই লেভেলে আপনাকে স্যালারী ও কবে জয়েন করতে পারবেন এই ধরণের প্রশ্ন করা হবে। কাজেই কোন স্টেপে অবহেলা করবেন না। ইন্টারভিউ দেওয়ার সময় কিছু জিনিস খেয়াল রাখতে পারেন।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ইন্টারভিউ এর সময় ঠিকমত বুঝে নিন। কোম্পানি যে দেশের, সেখানকার আর আপনার টাইমজোন আলাদা হতে পারে। সুতরাং মিউচুয়ালি একটা সময় ঠিক করুন। পারলে আপনার দিকটা ফ্লেক্সিবল রাখুন কেননা ইন্টারভিউ নিলে সেটা কোম্পানির ওয়ার্কিং আওয়ারের মাঝেই নিবে। আপনি সেই অনুযায়ী প্রস্তুতি রাখবেন।&lt;/li&gt;
+  &lt;li&gt;ইন্টারভিউ অনলাইনে হলে দরকারী এপস (স্কাইপ বা গুগল হ্যাংআউট) ইন্সটল করে রাখুন। ভাল ইন্টারনেট কানেকশন রেডি রাখুন। হঠাৎ কানেকশন চলে গেলে যেন ব্যাকআপ থাকে সেজন্য মোবাইল ডাটা রেডি রাখতে পারেন।&lt;/li&gt;
+  &lt;li&gt;যদি ভিডিও ইন্টারভিউ হয়, তাহলে প্লিজ ফর্মাল ড্রেস পরে নিন। একই সাথে আপনার ব্যাকগ্রাউন্ড ক্লিন রাখুন (যদি বাসাবাড়ি হয়)। কখনোই বাড়ির বাইরে (মাঠে, ছাদে, রেস্টুরেন্টে) ইন্টারভিউ দিবেন না। আপনি অনলাইন থাকা অবস্থায় রুমে অযাচিত কেও না আসলেই ভাল হবে।&lt;/li&gt;
+  &lt;li&gt;ভিডিও কলের জন্য মোবাইল ফোন ব্যাবহার না করতে চাইলে ওয়েবক্যাম কিনে নিতে পারেন।&lt;/li&gt;
+  &lt;li&gt;ইন্টারভিউ চলাকালে যতটা সম্ভব রিল্যাক্সড থাকুন। যা প্রশ্ন করা হবে ঠিকমত উত্তর দিন। জানলে ব্যাখা করুন, না জানলে স্কিপ করুন। না জেনেও জানার ভান করবেন না। আর প্রয়োজন অনুযায়ী উত্তর দিন। আমরা সবকিছুতে বেশী বেশী বলতে চাই। এই অভ্যাস বাদ দিলে ভাল হবে।&lt;/li&gt;
+  &lt;li&gt;কথার মাঝে সরি, থ্যাংকস ইত্যাদি বলুন প্রয়োজন অনুযায়ী। বুঝতে না পারলে ভদ্রভাবে আবার প্রশ্ন করুন।&lt;/li&gt;
+  &lt;li&gt;ইন্টারভিউ শেষে HR কে মেইল দিয়ে জানিয়ে রাখতে পারেন তাহলে আপনাকে ফলো আপ করা সহজ হবে।&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;পরবর্তী পর্বে বলব কিভাবে বেতন ও অন্যান্য সুবিধা নিয়ে কোম্পানির সাথে দরকষাকষি করবেন। ভাল থাকুন সবাই।&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;পরবর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-salary-negotiation-employment-pass.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">রিলোকশেন কি সেটা মনে হয় না বললেও চলে। যারা জানেন না তাদের জন্য, এটা হল একরকম জব অফার যেখানে আপনাকে এক জায়গা থেকে অন্য জায়গায় গিয়ে (মূলত অন্য দেশে) জব করতে হবে এবং আপনার যাওয়া সহ যাবতীয় দায় দায়িত্ব আপনার কোম্পানি বহন করবে। কিছু ক্ষেত্রে কোম্পানিই আপনাকে যাবার খরচ, মালপত্র শিপমেন্ট খরচ এসবও দিয়ে থাকে। আর অনেক সময় রিলোকেশন উইথ ভিসা স্পন্সরশিপ বলে আরেকটি জব অফার থাকে সেখানে আপনাকে রিক্রুট করা কোম্পানিই আপনাকে ওই দেশে নিয়ে যাওয়ার সকল লিগ্যাল পেপারস, ভিসার এপ্লাই, ভিসার রিনিউ ইত্যাদি সকল দায়িত্ব পালন করবে। আমেরিকা, কানাডা, জার্মানী ইত্যাদি দেশে ভিসা স্পন্সরশিপ একটু কম থাকলেও সাউথ এশিয়ান ও আশেপাশের দেশগুলোয় খুঁজলেই প্রচুর রিলোকেশন অফার পাবেন যেখানে আপনার ভিসা কোম্পানিই স্পন্সর করবে। তো আমি গতমাসে এরকমই একটি কোম্পানি থেকে রিলোকেট হয়ে মালয়েশিয়া এসে চাকরি করছি। সবার সাথে আমার অভিজ্ঞতা ও টিপস শেয়ার করতেই এই ব্লগটি লেখা।</summary></entry><entry><title type="html">মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস</title><link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-salary-negotiation-employment-pass.html" rel="alternate" type="text/html" title="মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস" /><published>2019-03-22T00:00:00+08:00</published><updated>2019-03-22T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/malaysia/malaysia-salary-negotiation-employment-pass</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/malaysia/malaysia-salary-negotiation-employment-pass.html">&lt;blockquote&gt;
+  &lt;p&gt;পূর্ববর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-preparation-apply-interview-etc.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ০ - রেজিউম প্রস্তুতি ও ইন্টারভিউ&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;আগের পর্বে রিলোকেশন নিয়ে রেজিউম বিল্ড করা ও ইন্টারভিউ দেওয়া নিয়ে বেশ কিছু টিপস দিয়েছিলাম। তো ইন্টারভিউ ভালমত হলে আপনার স্যালারী আর সম্ভাব্য জয়েনিং ডেট জানতে চাওয়া হবে। সেই সাথে কিছু অতিরিক্ত তথ্যও চাইতে পারে যেমন বিবাহিত কিনা, সন্তান কয়টি ইত্যাদি। কেননা আপনি বিবাহিত হলে আপনার স্ত্রী ও সন্তান থাকলে তাদের ভিসাও কোম্পানিই প্রসেস করবে।&lt;/p&gt;
+
+&lt;p&gt;এবার আসি কি কি বিষয়ে কোম্পানির সাথে মুলামুলি করবেন।&lt;/p&gt;
+
+&lt;h2 id=&quot;দর-কষাকষি&quot;&gt;দর কষাকষি&lt;/h2&gt;
+
+&lt;p&gt;নিচের বিষয়গুলি যতটা সম্ভব প্রফেশনালি ও ভদ্রভাবে নেগোশিয়েট করে নিতে পারেন কোম্পানির HR এর সাথে।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;তাদের প্রপোজড স্যালারী কত, আপনার এক্সপেক্টেড স্যালারী কত&lt;/li&gt;
+  &lt;li&gt;বছরে ছুটি কয়দিন, সিক লিভ আর এনুয়াল লিভ ছাড়াও প্যাটারনিটি লিভ, কমপ্যাশনেট লিভ, স্টাডি/এক্সাম লিভ আছে কিনা&lt;/li&gt;
+  &lt;li&gt;প্রবেশন পিরিয়ড কতদিন, প্রবেশন পিরওডে ছুটি বা অন্যান্য সুবিধা কি কি কম&lt;/li&gt;
+  &lt;li&gt;হেলথ ইনসুরেন্স আছে কিনা, থাকলে লিমিট কত, স্পেশালিস্ট ডাক্তার দেখানো যাবে কিনা&lt;/li&gt;
+  &lt;li&gt;ট্রান্সপোর্ট সুবিধা আছে কিনা&lt;/li&gt;
+  &lt;li&gt;ওয়ার্কিং আওয়ার কয়টা থেকে কয়টা, ফ্লেক্সিবলিটি আছে কিনা, রিমোট অফিস করা যায় কিনা ইত্যাদি&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;এসবের বেশীরভাগই আপনি কোম্পানির পলিসিতে যেমন সেটা ছাড়া বদলাতে পারবেন না, বেতন আর প্রবেশন পিরিয়ড ছাড়া। সুতরাং এই ক্ষেত্রে মুলামুলি করতে হবে। বেতনের ব্যাপারে নির্দিষ্ট করে বলা কঠিন কেননা একেকজনের চাহিদা, লাইফস্টাইল, সেভিংস এর প্রবণতা একেকরকম। আবার বিভিন্ন দেশে, ও শহরের ভিত্তিতে খরচও কমবেশী হয়। সুতরাং বেতন কত চাইবেন সেটা আপনাকে নিজেকেই ঠিক করে নিতে হবে। তবে কিছু বিষয়ে আমি ধারণা দিতে পারি যা আপনার এক্সপেক্টেড স্যালারী হিসাব করতে সাহায্য করবে।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;মালয়েশিয়ায় স্কিলড ইমিগ্রেশন শুরু হয় ক্যাটাগরি-১ আর ক্যাটাগরি-২ ভিসা দিয়ে। ১ম ক্যাটাগরির জন্য মিনিমাম বেতন ১০,০০০ রিংগিত (২ লাখ টাকা প্রায়) আর ২য় ক্যাটাগরির জন্য ৫,০০০ রিংগিত (১ লাখ টাকা প্রায়)। কোম্পানিগুলা মূলত ৫,০০০ রিংগিতের নিচে বেতন দিয়ে কাউকে আনতে পারেনা। কাজেই আপনি অবশ্যই এর বেশী চাইবেন। তবে ১০,০০০ রিংগিত বেতন দিতে হলে ২ বছরের কনট্রাক্ট প্রয়োজন হবে যেটা সব কোম্পানি শুরুতেই কোন এমপ্লয়ীকে নাও দিতে চাইতে পারে।&lt;/li&gt;
+  &lt;li&gt;আপনি গুগল ম্যাপ, &lt;a href=&quot;https://www.expat.com/forum/viewforum.php?id=193&quot;&gt;Expat Malaysia&lt;/a&gt;, &lt;a href=&quot;https://www.iproperty.com.my&quot;&gt;iProperty&lt;/a&gt;, &lt;a href=&quot;https://www.propertyguru.com.my&quot;&gt;Propertyguru&lt;/a&gt; ইত্যাদি ওয়েবসাইট ঘেটে আপনার অফিসের আশেপাশে ও মিডিয়াম রেঞ্জের দূরে বাসাভাড়া কেমন তা চেক করে নিতে পারেন। এখানে সিংগেল থাকলে ১০০০-১৫০০ আর ফ্যামিলি সহ থাকলে ১৫০০-২৫০০ এর মাঝে মোটামুটি ভালই বাসা পাওয়া যেতে পারে (কুয়ালালুমপুর থেকে কিছু দূরে)। কুয়ালালুমপুর এর ভেতরে থাকতে চাইলে বাসা ভাড়া কিছুটা বাড়বে।&lt;/li&gt;
+  &lt;li&gt;মালয়েশিয়ায় খাবার আর ট্রান্সপোর্ট খরচ বাংলাদেশের চেয়েও কম মনে হয়েছে। সুতরাং দেশে যেমন খরচ হত ওইরকমই খরচ ধরে রাখতে পারেন। তবে শুরুতে রান্নাবান্না সহ কিছু জিনিস কিনতে বেশী কিছু খরচ হবে। প্রতি সপ্তাহে খাবার খরচ ১০০-২০০ রিংগিত লাগতে পারে যদি বাসাতেই সব রান্না করে খেতে চান। আর ট্রেন ও বাসভাড়ার জন্য মাসে ১০০-৩০০ রিংগিতের বেশী লাগার কথা না। তবে আপনার স্ত্রী ও ছেলেমেয়ে থাকলে খরচ বাড়বে।&lt;/li&gt;
+  &lt;li&gt;হেলথ ইনসুরেন্স যদি কোম্পানি না দেয় এবং স্ত্রী ও সন্তানদের নামেও হেলথ ইনসুরেন্স করাতে চান, তাহলে মাসিক কিস্তির টাকাটাও বিবেচনা করুন।&lt;/li&gt;
+  &lt;li&gt;যদি গাড়ি কিনতে চান, সেক্ষেত্রে পার্কিং ফি দিতে হবে (বাসা ও অফিসে মাসিক কিস্তিতে, অন্য সবখানে ইউসেজের উপর নির্ভর করে)&lt;/li&gt;
+  &lt;li&gt;ইন্টারনেট কানেকশনের জন্য মাসে ১০০-১৫০ রিংগিত, নেটফ্লিক্সের জন্য ৫০ রিংগিত, টিভি সার্ভিস নিলে ৮০-১৫০ রিংগিত, ইলেক্ট্রিসিটি বিলের জন্য ৪০-৫০ রিংগিত ধরে রাখতে পারেন।&lt;/li&gt;
+  &lt;li&gt;মাসে কয়বার বাইরে খাবেন সেটাও হিসাব করে নিন। মূলত ফুডচেইন স্টোরগুলো (কেএফসি, পিৎজাহাট, মিকডোনাল্ডস) গুলোতে পার পারসন ১৫-২০ এর নিচে ভাল কিছু পাওয়া কঠিন হবে।&lt;/li&gt;
+  &lt;li&gt;যদি বাংলাদেশে এসে ঘুরে যেতে চান তাহলে রাউন্ড ট্রিপ এয়ার ফেয়ার পড়বে ৭০০-১২০০ রিংগিতের ভেতর। বছরে কয়বার দেশে যেতে চান সেটাও হিসাব করে নিতে পারেন এই সুযোগে।&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;এবার বলি সবচেয়ে গুরুত্বপূর্ণ বিষয়। এই পোস্ট লেখা পর্যন্ত মালয়েশিয়ায় আসা সবার বেতন থেকে প্রথম ৬ মাস ২৮% কেটে রাখা হয় Non-resident Tax হিসেবে। বছর শেষে ট্যাক্স ফাইল করার পর আপনি এটা ফেরত পাবেন কিন্তু প্রথম ছয়মাস আপনাকে কম বেতনে চলতে হবে। আর হ্যা, যদি মাঝে দেশে থেকে ঘুরে আসেন, তাহলে এই রিফান্ড পেতে আরো সময় লাগবে কেননা মালয়েশিয়া থাকার ১৮০ দিন পূরণ হলেই আপনি এই এমাউন্ট ফেরত পাবার জন্য যোগ্য বিবেচিত হবেন।&lt;/p&gt;
+
+&lt;p&gt;তো হিসাব করে ফেলুন আপনার এক্সপেক্টেড স্যালারী। সেই সাথে প্রবেশন পিরিয়ড ৬ মাস থেকে কমিয়ে ৩ মাসও করে ফেলতে পারেন যদি পারেন। আর বাগিয়ে নিতে পারেন এক্সট্রা কিছু বেনিফিট, যেমন হেলথ ইনসুরেন্স। অনেক কোম্পানি আপনাকে রিলোকেশন এলাওয়েন্স দিতে পারে। এতে আপনি দেশ থেকে ওইদেশে যাবার সকল খরচ (বিমান, লাগেজ চার্জ, শিপিং খরচ) কোম্পানিই দিবে। অনেক কোম্পানি আবার প্রথম এক বা দু সপ্তাহ আপনার থাকার ব্যাবস্থা করে দিতে পারে নিজ খরচে। সুতরাং অফার একসেপ্ট করার আগে সবকিছু ক্লিয়ার করে নিন যাতে পরে কোনরকম ভুল বোঝাবুঝি না হয়। গুড লাক!&lt;/p&gt;
+
+&lt;h2 id=&quot;এমপ্লয়মেন্ট-পাস&quot;&gt;এমপ্লয়মেন্ট পাস&lt;/h2&gt;
+
+&lt;p&gt;মালয়েশিয়ায় আপনি এমপ্লয়মেন্ট পাস ছাড়া কোন জব করতে পারবেন না। এমপ্লয়মেন্ট পাসের সাথে আপনাকে দেওয়া হবে ১ বা ২ বছরের মাল্টিপল এনট্রি ভিসা। এই ভিসা না থাকলে আপনি ব্যাংক একাউন্ট, ইন্টারনেট কানেকশন, ডাক্তারি সেবা ইত্যাদি অনেক কিছুই পাবেন না। সুতরাং মালয়েশিয়ায় প্রবেশের পূর্বে আপনার নামে এমপ্লয়মেন্ট পাস আর আপনার স্ত্রী ও সন্তানদের নামে ডিপেন্ডেন্ট পাস পাশ হতে হবে মালয়েশিয়ান ইমিগ্রেশন ডিপার্টমেন্ট হতে। বিভিন্ন অর্গানাইজেশন থেকে এটা পাশ হয়। আমার ক্ষেত্রে করেছিল MDEC (Malaysia Digital Economy Corporation). MDEC যদি এপ্রুভাল না দেয়, আপনি বাংলাদেশ থেকে Visa With Reference (VDR) এর এপ্লাই করতে পারবেন না। সুতরাং মালয়েশিয়ায় পা রাখতে হলে এমপ্লয়মেন্ট পাস লাগবেই। কথা হল এটা কিভাবে পাবেন?&lt;/p&gt;
+
+&lt;p&gt;এমপ্লয়মেন্ট পাস এর জন্য এপ্লাই করতে পারে শুধুমাত্র মালয়েশিয়ান কোম্পানি। কাজেই আপনি বাংলাদেশে বসে আরামসে আপনার নেক্সট কোম্পানিকে ইমেইলের মাধ্যমে কিছু ডকুমেন্ট পাঠিয়ে দিলেই তারা এমপ্লয়মেন্ট পাস যোগাড় করে ফেলবে (যদি সব ভ্যালিড হয়)। দরকারী কাগজপত্র সাবমিট করার পর এমপ্লয়মেন্ট পাস পেতে সময় লাগে প্রায় ১০-১৫ দিন। আর এমপ্লয়মেন্ট পাস এর কপি হাতে পেয়ে ভিসার এপ্লাই করলে ভিসা পেতে সময় লাগে প্রায় ৮-১০ দিন। সুতরাং আপনি সকল কাগজপত্র আপনার কোম্পানিকে পাঠানোর পর মালয়েশিয়ায় পা রাখতে মিনিমাম ১ মাস লাগবেই।&lt;/p&gt;
+
+&lt;h2 id=&quot;দরকারী-কাগজপত্র&quot;&gt;দরকারী কাগজপত্র&lt;/h2&gt;
+
+&lt;p&gt;কি খুব সহজ মনে হচ্ছে তাইনা? যা করার সব তো মালয়েশিয়ান কোম্পানিই করছে। আপনি কি করবেন? হেহে। আপনাকে প্র-চু-র কাজ করতে হবে যা আগে কখনো করেন নি (যদি অন্য দেশে জব ভিসা নিয়ে না গিয়ে থাকেন)। আপনাকে বাংলাদেশ থেকে নিচের ডকুমেন্টগুলা প্রসেস করতে হবে।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;আপনার ব্যাচেলরস (বা শেষ শিক্ষাগত যোগ্যতার) সার্টিফিকেট (এইচএসসি ও এসএসসি’র প্রয়োজন নেই) এর সত্যায়িত কপি&lt;/li&gt;
+  &lt;li&gt;স্ত্রী সহ আসতে চাইলে আপনাদের বিয়ের বাংলা কাবিননামার ট্রান্সলেশন এবং ম্যারেজ সার্টিফিকেটের সত্যায়িত কপি (একাধিক স্ত্রী থাকলে জেনে নিন কি করতে হবে, ভিসায় সম্ভবত Array of Wives সাপোর্ট করেনা)&lt;/li&gt;
+  &lt;li&gt;সন্তানসহ আসতে চাইলে প্রত্যেকের বার্থ সার্টিফিকেটের সত্যায়িত কপি&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;এখানে একটু বলে রাখি। কাবিননামা ও বিবাহ সনদ এক জিনিস নয়। কাবিননামা হল প্রায় ২৫-২৬টা পয়েন্ট সহ লম্বা একটা সবুজ/নীল রঙের সরকারী ফর্ম যেটায় বর কনের পূর্ণ বিবরণের উল্লেখ থাকে। আর বিবাহ সনদ হল ১ পাতার একটা সার্টিফিকেট যেখানে শুধু বর কনের নাম, বিয়ের তারিখ ও তাদের ঠিকানা থাকে। এবার কিছু জিনিস বলছি যেগুলা খুবই জরুরী। নইলে আপনার এমপ্লয়মেন্ট পাস আর ডিপেন্ডেন্ট পাস (স্ত্রী ও সন্তানদের পারমিট) আটকে যেতে পারে।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;আপনার ব্যাচেলরস (বা শেষ শিক্ষাগত যোগ্যতার) সার্টিফিকেটের নাম ও পাসপোর্টের নাম যেন হুবহু একই হয়&lt;/li&gt;
+  &lt;li&gt;আপনার সার্টিফিকেটে বাবা মায়ের নাম যেন পাসপোর্টে তাঁদের নামের সাথে মিল থাকে&lt;/li&gt;
+  &lt;li&gt;আপনার স্ত্রীর নাম কাবিননামা ও ম্যারেজ সার্টিফিকেটে যেমন পাসপোর্টেও যেন হুবহু একই হয়&lt;/li&gt;
+  &lt;li&gt;ম্যারেজ সার্টিফিকেটে আপনার এড্রেস ও আপনার পাসপোর্টের স্থায়ী ঠিকানা যেন একই হয় (কাবিননামায় যেটাই থাকুক না কেন, ট্রান্সলেশন করার সময় ঠিক করে নিয়েন)&lt;/li&gt;
+  &lt;li&gt;কাবিননামা ও ম্যারেজ সার্টিফিকেটে যেন কোনভাবেই কোনরকম ভুল বানান না থাকে, কারণ ট্রান্সলেশন সাধারণত কাজী রেডি কিছু টেমপ্লেট থেকেই করে, ভুল হলে ইমিগ্রেশনে ডকুমেন্ট রিজেক্টেড হবে&lt;/li&gt;
+  &lt;li&gt;পারমিট পেতে সকলের পাসপোর্টের মেয়াদ মিনিমাম ১৪ মাস থাকতে হয়, কাজেই মেয়াদ কম থাকলে রিনিউ করিয়ে নিন&lt;/li&gt;
+  &lt;li&gt;সম্ভব হলে পাসপোর্টে Spouse বক্সে পরষ্পরের নাম বসিয়ে দিন, এতে ডিপেন্ডেন্ট পাস পাওয়া সহজ হবে (পাসপোর্ট এ স্বামী বা স্ত্রীর নাম এড/রিমুভ করতে পাসপোর্ট অফিসে কাবিননামা/ডিভোর্স লেটারের সত্যায়িত কপি জমা দিতে হয়)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;তো কি দাঁড়াল? স্ত্রী সহ রিলোকেশনে যেতে হলে আপনাকে রেডি করতে হবে - ২ জনের মেয়াদ সহ পাসপোর্টের স্ক্যান কপি (পুরো ৫০ পাতাই, সিংগেল ফাইলে পিডিএফ), আপনার ব্যাচেলরস (বা শেষ শিক্ষাগত যোগ্যতার) সত্যায়িত কপি, আপনাদের বিয়ের কাবিননামা (ইংরেজীতে বলে NIKAH NAMA) ও ম্যারেজ সার্টিফিকেটের সত্যায়িত কপি। পাসপোর্ট করা তো খুবই সহজ। ইমার্জেন্সিতে করলে অথবা দালাল ধরে করলে ৭-১৫ দিনেই পেয়ে যাবেন। কাবিননামা রিলেটেড জিনিস (ট্রান্সলেশন, সার্টিফিকেট ইসু) এগুলা আপনার কাজীই করবেন (টাকাপয়সা নিতে পারে)। এই সব ডকুমেন্টের মূল কপি পাওয়ার পর মূল ঝামেলা হল সত্যায়ন।&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ওয়ার্ক পারমিট ও ভিসার জন্য কেও কখনো কোনদিন মূল কপি চায়না। সুতরাং কোন এজেন্সি যদি মূল কপি চায় বা কোন কোম্পানি মূল কপি চাইলে সতর্ক থাকুন।&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;কাগজপত্র-সত্যায়ন&quot;&gt;কাগজপত্র সত্যায়ন&lt;/h2&gt;
+
+&lt;p&gt;সত্যায়ন করাটা প্রচুর কষ্টকর ও সময়ের ব্যাপার। তবে গুছিয়ে করলে এক থেকে দুসপ্তাহের বেশী সময় লাগবেনা। আর প্যারালালি করলে আরো কম সময় লাগবে।&lt;/p&gt;
+
+&lt;p&gt;সবার শুরুতে লাগবে আপনার ব্যাচেলরস (বা শেষ শিক্ষাগত যোগ্যতার) সার্টিফিকেটের True Copy. এটা পেতে আপনাকে ইউনিভার্সিটিতে যোগাযোগ করতে হবে। এটা পেতে হলে অবশ্যই আপনাকে ভার্সিটি থেকে সকল ক্রেডিট শেষ করে পাশ করতে হবে এবং ক্লিয়ারেন্স থাকতে হবে। বেশীরভাগ ক্ষেত্রেই ভার্সিটির শিক্ষা শাখা বা হায়ার স্টাডি বা ফরেন এজুকেশন ডিপার্টমেন্টগুলায় যোগাযোগ করলে তারা আপনাকে আপনার মূল সনদের কপি রেজিস্ট্রারার ও এক্সাম কনট্রোলারকে দিয়ে সত্যায়িত করিয়ে দিবে। এই কাজে ভার্সিটি অনুযায়ী পার পেজ কিছু ফি লাগে। সাথে স্পীড মানি এপ্লাই করলে আপনি ১ দিনেই সত্যায়িত মূল সনদ পেয়ে যাবেন। আবারো বলছি, আপনাকে মূল সনদের ফটোকপি সত্যায়িত করতে হবে, গ্রেডশিট বা অন্যান্য ডকুমেন্টস প্রয়োজন নেই।&lt;/p&gt;
+
+&lt;p&gt;নিকাহনামা ও ম্যারেজ সার্টিফিকেটের ট্রু কপি কাজীকে দিয়ে সত্যায়িত করে নিন। একটা জিনিস মাথায় রাখুন। ট্রু কপি পেলেও আপনার আসল বাংলা কাবিননামা কিছু জায়গায় প্রয়োজন হবে। কাজেই সব স্বযত্নে রাখুন।&lt;/p&gt;
+
+&lt;p&gt;এজুকেশনাল সার্টিফিকেটের ট্রু কপি পেয়ে চলে যান শিক্ষা মন্ত্রণালয়ে (শিক্ষা বোর্ড নয়)। সকাল ১০ টার আগেই যান। গিয়ে সোনালী সেবার ফর্ম পূরণ করে টাকা জমা দিয়ে লাইনে দাঁড়ান। ওরা জমা নিয়ে আপনাকে একটা স্লিপ দিবে। ওইদিন বিকালে বা পরদিন বিকালে স্লিপ দেখিয়ে পেপারস তুলে নিয়ে আসুন। দেখবেন শিক্ষা মন্ত্রণালয়ের একটা সীল দেওয়া হয়েছে তারিখ সহ। এই ডকুমেন্টটি নোটারাইজড থাকবে।&lt;/p&gt;
+
+&lt;p&gt;আর নিকাহনামা-ম্যারেজ সার্টিফিকেটের ট্রু কপি নিয়ে চলে যান আইন মন্ত্রণালয়ে। সেখানে গিয়ে একজন লাইসেন্সধারী ম্যাজিস্ট্রেটকে দিয়ে নিকাহনামা আর ম্যারেজ সার্টিফিকেট নোটারাইজড করে সীল নিয়ে নিন। নোটারী করার সময় মূল কপি দেখতে চাইবে। তখন বাংলা কাবিননামা দেখাবেন।&lt;/p&gt;
+
+&lt;p&gt;এবার নোটারাইজড এজুকেশন সার্টিফিকেট আর নোটারাইজড ম্যারেজ সার্টিফিকেট (নিকাহনামা রাখলে ভাল) নিয়ে চলে যান পররাষ্ট্র মন্ত্রণালয়ে (MoFA). সেখানে লাইনে দাঁড়িয়ে পেপারগুলা জমা দিন এবং স্লিপ নিয়ে আসুন। একই ভাবে পরদিন গিয়ে উঠিয়ে নিয়ে আসুন। এবার উঠানোর সময় দেখবেন বাংলাদেশের পররাষ্ট্র মন্ত্রণালয়ের কনসুলারের সাইন ও তারিখ সহ সিল দেওয়া হয়েছে। একই সাথে একটি সিরিয়াল নম্বর দেওয়া হয়েছে প্রতিটি কপিতে। যেমন A-52, বা T-77 এইরকম। ডকুমেন্টস উঠিয়ে আনার পর ভালমত খেয়াল করবেন যে এই সিরিয়াল নম্বরটা বসানো হয়েছৈ কিনা। কারণ পরবর্তী সত্যায়ন করতে এই সিরিয়াল নম্বরটি দরকার হবে।&lt;/p&gt;
+
+&lt;p&gt;যদি সরকারী মন্ত্রণালয়ে সত্যায়িত করার ঝামেলায় যেতে না চান, তাহলে ঢাকার ফার্মগেটে প্রচুর নোটারী ও ট্রান্সলেশন করার দোকান রয়েছে। এরা প্রায় সবাইই কিছু স্পীড মানির বিনিময়ে ৩-৪ দিনে সব মন্ত্রণালয়ে ঘুরে সত্যায়িত করে আপনাকে দিয়ে দিবে। আপনার ডকুমেন্টের সংখ্যার ভিত্তিতে পার পেজ ৫০০-২০০০ টাকাও নিতে পারে। দরদাম করে নিবেন। তবে আমি বলব খুব আর্জেন্ট না হলে আর ছুটির দিন না থাকলে নিজেই ৩-৪ দিনে সব করতে পারবেন। &lt;span style=&quot;color: #c2c6cc&quot;&gt;আর যদি স্পীড মানি এপ্লাই করতেই চান তাহলে মোশাররফ (+8801918054192) এই নম্বরে যোগাযোগ করতে পারেন।&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;এবার আপনার হাতে MoFA কতৃক সত্যায়িত ট্রু কপি আছে। আপনি ওই তিনটি ডকুমেন্ট নিয়ে চলে যান মালয়েশিয়ান এমব্যাসীতে। ডকুমেন্ট সত্যায়িত করতে ওরা কাগজ জমা নেয় দুপুর ২টা থেকে বিকাল ৫টার মাঝে। সত্যায়িত করতে প্রতি ডকুমেন্ট ৩০০ টাকা করে নিবে। টাকা জমা নিয়ে ওরা একটা স্লিপ দিবে যেখানে লেখা থাকবে আপনার ডকুমেন্ট কতটি এবং কয়দিন পর ফেরত দেওয়া হবে। সাধারণত ৫ ওয়ার্কিং ডে পরই ফেরত দেওয়া হয়। ফেরত নেওয়ার সময় দেখে নিন মালয়েশিয়ান এমব্যাসীর কনসুলার সাইন করেছেন কিনা। ভাল কথা, এটেস্টেশন সার্ভিসের জন্য এমব্যাসীতে পাসপোর্টের প্রয়োজন হয়না। যে কেউই আপনার হয়ে পেপারস জমা দেওয়া ও কালেক্ট করতে (স্লিপ থাকলে) পারবেন।&lt;/p&gt;
+
+&lt;p&gt;পেপারস তুলে আনার সময় আপনার কোম্পানির সাথে যোগাযোগ করে জেনে নিন কোন ঠিকানায় ডকুমেন্টস পাঠাতে হবে। মালয়েশিয়ান এমব্যাসি ডকুমেন্ট ফেরত দেয় একই সময়ে, দুপুর ২টা থেকে বিকাল ৫টার মাঝে। সুতরাং দুপুরে ডকুমেন্টস তুলে তখনই DHL ব FedEx দিয়ে তখনই মালয়েশিয়ায় পাঠিয়ে দিতে পারবেন। &lt;span style=&quot;color:red&quot;&gt;দেশের বাইরে ডকুমেন্ট পাঠাতে আপনার NID/Passport লাগবে।&lt;/span&gt; ফটোকপি করার প্রয়োজন নেই। ওরা স্ক্যান করে নিবে। সুতরাং মনে করে এগুলা সাথে রাখবেন। DHL এ ৫০০ গ্রাম পর্যন্ত ডকুমেন্ট পাঠাতে ৩৫০০-৪৫০০ টাকা নিবে। ইনসুরেন্স সহ পাঠানোর দরকার নেই। কারণ এগুলা মূল কাগজ নয়, জাস্ট এটেস্টেড ফটোকপি। ফেডেক্স নিয়ে আমার ধারণা নেই। তবে ডকুমেন্ট দ্রুত পৌঁছানোই ভাল। ডকুমেন্ট পাঠিয়ে দিয়ে বাসায় এসে নাকে তেল দিয়ে ঘুমান। কারণ বাকি কাজ মালয়েশিয়ান কোম্পানিই করবে। আপনি শুধু অপেক্ষা করবেন EP এপ্রুভ হওয়ার জন্য।&lt;/p&gt;
+
+&lt;p&gt;পরের পর্বে ভিসা এপ্লাই ও মালয়েশিয়া যাওয়া নিয়ে সাজেশন ও টিপস দেওয়া হবে। ততদিন সবাই সুস্থ থাকুন। শুভকামনা!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;পরবর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-single-entry-visa-prep.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ২ - ভিসার জন্য এপ্লাই করা&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">পূর্ববর্তী পোস্ট মালয়েশিয়ায় রিলোকেশন ০ - রেজিউম প্রস্তুতি ও ইন্টারভিউ</summary></entry><entry><title type="html">মালয়েশিয়ায় রিলোকেশন ২ - ভিসার জন্য এপ্লাই করা</title><link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-single-entry-visa-prep.html" rel="alternate" type="text/html" title="মালয়েশিয়ায় রিলোকেশন ২ - ভিসার জন্য এপ্লাই করা" /><published>2019-03-22T00:00:00+08:00</published><updated>2019-03-22T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/malaysia/malaysia-single-entry-visa-prep</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/malaysia/malaysia-single-entry-visa-prep.html">&lt;blockquote&gt;
+  &lt;p&gt;পূর্ববর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-salary-negotiation-employment-pass.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;আগের পর্বে লিখেছিলাম কিভাবে EP ও DP পাওয়ার ডকুমেন্টস রেডি করে পাঠাতে হবে। তো EP (এবং DP) পাওয়ার সাথে সাথে আপনার কোম্পানির HR আপনাকে জানিয়ে দিবে। আমার ক্ষেত্রে দুটা ডকুমেন্ট ছিল ডিজিটাল কপি। অর্থাৎ MDEC থেকে যে দুটা পিডিএফ ফাইল পাঠিয়েছিল, সেটা আমাকে মেইল করা হয়েছিল। EP আর DP পেয়ে গেলে আপনি মালয়েশিয়া যাবার প্রস্তুতি শুরু করে দিতে পারেন। সবার আগে যা করতে হবে তা হল মালয়েশিয়ায় সিংগেল এনট্রি ভিসার জন্য এপ্লাই করা।&lt;/p&gt;
+
+&lt;h2 id=&quot;সিংগেল-এনট্রি-ভিসার-এপ্লাই-করা&quot;&gt;সিংগেল এনট্রি ভিসার এপ্লাই করা&lt;/h2&gt;
+
+&lt;p&gt;ঢাকার মালয়েশিয়ান এমব্যাসি ভিসা এপ্লাই সহ সকল কার্যক্রম পরিচালিত করে তাদের এপ্রুভড এজেন্সীর মাধ্যমে। এমব্যাসির গেইটে দেখবেন এজেন্সীর লিস্ট রয়েছে। অনলাইনেও আপনি এই লিস্ট খুঁজে পাবেন। সেখান থেকে সুবিধাজনক কোন এজেন্সী নির্বাচন করুন ও তাদের সাথে যোগাযোগ করুন। চাকরির জন্য মালয়েশিয়া যেতে হলে VDR (Visa With Reference) টাইপ এপ্লিকেশন করতে হয়। এই এপ্লিকেশন করার জন্য নিচের জিনিসগুলো লাগবে।&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;আপনার EP ও আপনার স্ত্রীর (সন্তান থাকলে তাদের) DP&lt;/li&gt;
+  &lt;li&gt;সকলের মিনিমাম ১৪ মাস মেয়াদ ওয়ালা পাসপোর্ট (রিনিউ করা পাসপোর্ট হলে আগের সবগুলা পাসপোর্ট লাগবেই)&lt;/li&gt;
+  &lt;li&gt;প্রত্যেকের ২ কপি করে 35mmx50mm &lt;span style=&quot;color:red&quot;&gt;ল্যাব প্রিন্ট&lt;/span&gt; ছবি&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;আর কোন ডকুমেন্টের প্রয়োজন নেই। অনেক এজেন্সী না বুঝে আপনাকে রিটার্ন টিকেট কাটতে বলবে, এমনকি হোটেল বুকিং এর ইনভয়েসও চাইতে পারে। আমি বলছি রিটার্ন টিকেটের দরকার নেই কেননা আপনি তো মালয়েশিয়া গিয়ে একসপ্তাহ পর চলে আসবেন না যে রিটার্ন টিকেট ইত্যাদি লাগবে। আর রিটার্ন টিকেট ও হোটেল বুকিং লাগে টুরিস্ট ভিসায়, চাকরি করতে যাওয়ার ভিসায় নয়।&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;মালয়েশিয়ান এমব্যাসী কতৃক এপ্রুভড এজেন্সী &lt;a href=&quot;https://www.facebook.com/tayaf.int&quot;&gt;Tayaf International&lt;/a&gt; এর সজীব ভাই (+8801982741030) এর সাথে যোগাযোগ করতে পারেন। ভিসা এপ্লাই, টিকেট বুকিং সহ যাবতীয় কাজে উনি বেশ আন্তরিকভাবে সহায়তা করে থাকেন।&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;ভিসার-জন্য-ছবি-তোলা&quot;&gt;ভিসার জন্য ছবি তোলা&lt;/h2&gt;
+
+&lt;p&gt;মালয়েশিয়ান ভিসার স্ট্যান্ডার্ড সাইজ হল &lt;span style=&quot;color:red&quot;&gt;৫০ মিমি লম্বা ও ৩৫ মিমি চওড়া গ্লসি পেপার&lt;/span&gt; প্রিন্ট। এগুলাকে ল্যাব প্রিন্টও বলা হয়। সাধারণত ইংকজেট প্রিন্টার দিয়ে ৫ মিনিটে যেসব ডিজিটাল প্রিন্ট দেওয়া হয়, ওইগুলা ভিসার জন্য এপ্রুভড হবেনা আগেই বলে রাখছি। এজন্য সাজেস্ট করব কয়েকদিন আগেই সময় নিয়ে, ভাল প্রফেশনাল কোন স্টুডিও থেকে ছবি তুলে নিন এবং প্রিন্ট নিন। ছবি নেওয়ার সময় চেক করে নিন মাপ, ছবির কোয়ালিটি সব ঠিক আছে কিনা।&lt;/p&gt;
+
+&lt;p&gt;ছবি তোলার পর এজেন্সীকে আপনার পাসপোর্ট সহ বাকি সব ডকুমেন্টস দিয়ে দিন। এজেন্সী ওগুলা এমব্যাসীতে জমা দিয়ে আপনাকে একটা তারিখ বলবে যেদিন আপনার পাসপোর্ট তুলে আনা হবে। সাধারণত এইরকম ভিসা প্রসেস হতে ৫-৮ ওয়ার্কিং ডে সময় লাগে। সেই সাথে এজেন্সীর নিজেদের বাফারিং, প্রসেসিং এসব মিলিায়ে আরো ৩-৪ ওয়ার্কিং ডে এড করে রাখতে পারেন। ভিসার এপ্লাই করার পর আপনি ফ্লাইট ও কি কি জিনিসপত্র সাথে নিবেন এসবের লিস্ট করা শুরু করে দিন। কারণ আপনার হাতে খুব বেশী সময় থাকবেনা।&lt;/p&gt;
+
+&lt;p&gt;পরের পর্বে মালয়েশিয়া যাবার পূর্বে করণীয়, আর্থিক প্রস্তুতি ও ইমিগ্রেশন নিয়ে টিপস নিয়ে লিখব ইনশাআল্লাহ। ততদিন সবাই সুস্থ থাকুন। শুভকামনা!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;পরবর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-last-minute-preparation.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ৩ - শেষ মুহুর্তের প্রস্তুতি&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">পূর্ববর্তী পোস্ট মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস</summary></entry><entry><title type="html">Build a Voice Controlled SmartHome using openHAB and Alexa</title><link href="https://bits.mdminhazulhaque.io/linux/build-a-voice-controlled-smarthome-using-openhab-and-alexa.html" rel="alternate" type="text/html" title="Build a Voice Controlled SmartHome using openHAB and Alexa" /><published>2018-12-17T00:00:00+08:00</published><updated>2018-12-17T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/linux/build-a-voice-controlled-smarthome-using-openhab-and-alexa</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/linux/build-a-voice-controlled-smarthome-using-openhab-and-alexa.html">&lt;p&gt;The Amazon Alexa Marketplace has lots of third party SmartHome skills to start with. But why not  build your own SmartHome, right?&lt;/p&gt;
+
+&lt;p&gt;First thing is, you have to create some openHAB items with proper tagname, label and type. Here I have added 4 devices in &lt;code class=&quot;highlighter-rouge&quot;&gt;[Lighting]&lt;/code&gt; tag as &lt;code class=&quot;highlighter-rouge&quot;&gt;Switch&lt;/code&gt; item. This tagname is very important because Amazon Alexa API uses this tagname to export device list into Alexa’s SmartHome Discovery menu. I have used &lt;code class=&quot;highlighter-rouge&quot;&gt;exec1&lt;/code&gt; binding as output trigger of the items. The binding configuration is given as &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/ubuntu/mysmarthome.py %3$s %2$s&lt;/code&gt; which means it will call &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/ubuntu/mysmarthome.py&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;%3$s = Item's Programetic Name&lt;/code&gt; (not Label) and &lt;code class=&quot;highlighter-rouge&quot;&gt;%2$s = Item's State&lt;/code&gt;. Here is the complete item file.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Switch Bedroom_Fan &quot;Bedroom Fan&quot; [Lighting] {exec=&quot;&amp;gt;[*:/home/ubuntu/mysmarthome.py %3$s %2$s]&quot;}
+Switch Bedroom_Light &quot;Bedroom Light&quot; [Lighting] {exec=&quot;&amp;gt;[*:/home/ubuntu/mysmarthome.py %3$s %2$s]&quot;}
+Switch Livingroom_Fan &quot;Livingroom Fan&quot; [Lighting] {exec=&quot;&amp;gt;[*:/home/ubuntu/mysmarthome.py %3$s %2$s]&quot;}
+Switch Livingroom_Light &quot;Livingroom Light&quot; [Lighting] {exec=&quot;&amp;gt;[*:/home/ubuntu/mysmarthome.py %3$s %2$s]&quot;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After you are done with item file, install &lt;code class=&quot;highlighter-rouge&quot;&gt;openhabcloud&lt;/code&gt; binding, and then configure cloud service at &lt;code class=&quot;highlighter-rouge&quot;&gt;http://myopenhab.org&lt;/code&gt; using your openHAB’s UUID and secret. Once you are connected to &lt;code class=&quot;highlighter-rouge&quot;&gt;myopenhab&lt;/code&gt; you can see the previously added 4 items there. Now it’s time to configure Alexa SmartHome Service.&lt;/p&gt;
+
+&lt;p&gt;Assuming that your Alexa is ready to use, browse Skill Marketplace and search for &lt;code class=&quot;highlighter-rouge&quot;&gt;openHAB&lt;/code&gt;. Click &lt;code class=&quot;highlighter-rouge&quot;&gt;Enable Skill&lt;/code&gt; there.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/7xkeVyt.png&quot; alt=&quot;openHAB Skill&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After enabling the skill, it will redirect you to &lt;code class=&quot;highlighter-rouge&quot;&gt;myopenhab.org&lt;/code&gt; and prompt OAuth login. Select the &lt;code class=&quot;highlighter-rouge&quot;&gt;Allow&lt;/code&gt; button.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/HrMqflA.png&quot; alt=&quot;openHAB OAuth Page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If the credentials are correct, the Skill will be enabled and you will be prompted to &lt;code class=&quot;highlighter-rouge&quot;&gt;Discover Devices&lt;/code&gt; page. Proceed by clicking the button.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/UYGEX0v.png&quot; alt=&quot;openHAB Skill Discovery&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If the item file is properly configured, all devices with &lt;code class=&quot;highlighter-rouge&quot;&gt;Lighting&lt;/code&gt; tag will appear in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Devices&lt;/code&gt; menu. From now on, you can send commands to the items using Alexa’s Voice API. For example, saying &lt;code class=&quot;highlighter-rouge&quot;&gt;alexa, set bedroom light on&lt;/code&gt; will trigger openHAB’s REST API and eventually execute &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/ubuntu/mysmarthome.py Bedroom_Light ON&lt;/code&gt; at your local setup.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/eMWcmto.png&quot; alt=&quot;openHAB Devices&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is a simple log of openHAB runtime.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;16:42:14.078 [INFO ] [.io.openhabcloud.internal.CloudClient] - Connected to the openHAB Cloud service (UUID = ee0b4a46-82ce-4826-b6b6-e77461785df5, base URL = http://localhost:8080)
+16:42:18.260 [INFO ] [del.core.internal.ModelRepositoryImpl] - Loading model 'smarthome.items'
+16:42:19.906 [INFO ] [rthome.model.lsp.internal.ModelServer] - Started Language Server Protocol (LSP) service on port 5007
+16:42:20.925 [INFO ] [i.dashboard.internal.DashboardService] - Started Dashboard at http://1.2.3.4:8080
+16:42:20.933 [INFO ] [i.dashboard.internal.DashboardService] - Started Dashboard at https://1.2.3.4:8443
+16:43:38.335 [INFO ] [ab.core.service.AbstractActiveService] - Exec Refresh Service has been started
+16:47:57.690 [INFO ] [smarthome.event.ItemCommandEvent     ] - Item 'Bedroom_Light' received command ON
+16:47:57.725 [INFO ] [hab.binding.exec.internal.ExecBinding] - executed commandLine '/home/ubuntu/mysmarthome.py Bedroom_Light ON'
+16:48:09.639 [INFO ] [smarthome.event.ItemCommandEvent     ] - Item 'Livingroom_Light' received command ON
+16:48:09.653 [INFO ] [hab.binding.exec.internal.ExecBinding] - executed commandLine '/home/ubuntu/mysmarthome.py Livingroom_Light ON'
+16:48:34.923 [INFO ] [smarthome.event.ItemCommandEvent     ] - Item 'Bedroom_Fan' received command ON
+16:48:34.933 [INFO ] [hab.binding.exec.internal.ExecBinding] - executed commandLine '/home/ubuntu/mysmarthome.py Bedroom_Fan ON'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="linux" /><summary type="html">The Amazon Alexa Marketplace has lots of third party SmartHome skills to start with. But why not build your own SmartHome, right?</summary></entry></feed>

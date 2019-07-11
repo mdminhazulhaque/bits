@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <meta name="description" content="
+Download TL-MR3420 OpenWRT Firmware with relayd preinstalled from minhazul-haque/OpenWRT-TL-MR3420
+
+
+I have been using my TL-MR3420 (Version 2.2) router...">
+  <meta name="author" content="Md. Minhazul Haque">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Bits",
+      "item": "https://bits.mdminhazulhaque.io/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "openwrt",
+      "item": "https://bits.mdminhazulhaque.io/openwrt"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Turn TL-MR3420 into WiFi Repeater using OpenWRT",
+      "item": "https://bits.mdminhazulhaque.io//openwrt/turn-tl-mr3420-into-wifi-repeater-using-openwrt.html"
+    }]
+  }</script>
+  <title>Turn TL-MR3420 into WiFi Repeater using OpenWRT | Bits</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Inconsolata" rel="stylesheet">
+  <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/print.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190712">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}a.monospace{font-family:Inconsolata;}</style>
+</head>
+
+  <body>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a class="monospace" href="/">
+        Bits<span class="blink">_</span>
+        </a>
+      </h1>
+      <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p>
+      <p>Find me at ...
+      <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a>
+      <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a>
+      <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+      <br><a href="https://twitter.com/mdminhazulhaque"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+      <br><a href="https://www.instagram.com/md.minhazul.haque/"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+      </p>
+    </div>
+    <p>&copy; 2012 - 2019. All rights reserved.</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Turn TL-MR3420 into WiFi Repeater using OpenWRT</h1>
+  <hr>
+  <i class="fa fa-fw fa-calendar"></i>28 Sep 2016 <i class="fa fa-fw fa-tag"></i><a href="/openwrt">openwrt</a>
+  <hr>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="2958174403"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <div class="message">
+Download TL-MR3420 OpenWRT Firmware with relayd preinstalled from <a href="https://github.com/minhazul-haque/OpenWRT-TL-MR3420/tree/master/repeater">minhazul-haque/OpenWRT-TL-MR3420</a>
+</div>
+
+<p>I have been using my <a href="http://www.tp-link.com.bd/products/details/cat-14_TL-MR3420.html">TL-MR3420</a> (Version 2.2) router as a repeater for a month. The access point in my house is an Apple Airport which delivers pretty good signal even when there exists several obstacles (walls, doors) between the Airport and my WLAN card. But I badly needed a repeater for syncing files from/to my wireless devices. So I turned my old router into a WiFi repeater.</p>
+
+<p>First, let’s disable the firewall and DNS masquerading because we will be using a Bridged Repeater which will act exactly like the Airport I have been using as access point. First, install <code class="highlighter-rouge">relayd</code> which will get most of the job done for us.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/etc/init.d/firewall stop
+/etc/init.d/firewall disable
+/etc/init.d/dnsmasq stop
+/etc/init.d/dnsmasq disable
+opkg update <span class="c"># in case the feeds are outdated</span>
+opkg <span class="nb">install </span>relayd
+</code></pre></div></div>
+
+<p>Now configure <code class="highlighter-rouge">/etc/config/wireless</code> as the following.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># nano /etc/config/wireless</span>
+config wifi-device <span class="s1">'radio0'</span>
+    option <span class="nb">type</span> <span class="s1">'mac80211'</span>
+    option channel <span class="s1">'11'</span> <span class="c"># Same as source</span>
+    option hwmode <span class="s1">'802.11n'</span> <span class="c"># Use bgn if needed</span>
+    option path <span class="s1">'platform/ar934x_wmac'</span>
+    option htmode <span class="s1">'HT40-'</span> <span class="c"># 300MB/s</span>
+    option txpower <span class="s1">'30'</span>
+    option country <span class="s1">'BD'</span>
+    option noscan <span class="s1">'1'</span>
+
+config wifi-iface
+    option device <span class="s1">'radio0'</span>
+    option network <span class="s1">'wwan'</span>
+    option encryption <span class="s1">'psk2'</span>
+    option key <span class="s1">'12345678'</span>
+    option mode <span class="s1">'sta'</span>
+    option ssid <span class="s1">'source_ssid'</span>
+
+config wifi-iface
+    option device <span class="s1">'radio0'</span>
+    option network <span class="s1">'lan'</span>
+    option encryption <span class="s1">'psk2'</span>
+    option key <span class="s1">'87654321'</span>
+    option mode <span class="s1">'ap'</span>
+    option ssid <span class="s1">'repeater_ssid'</span>
+</code></pre></div></div>
+
+<p>Now let’s change <code class="highlighter-rouge">/etc/config/network</code> also. You have to be very careful in this step. Otherwise the repeater may not work, or even if it works, you may not get internet connectivity through it.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># nano /etc/config/network</span>
+config interface <span class="s1">'loopback'</span>
+    option ifname <span class="s1">'lo'</span>
+    option proto <span class="s1">'static'</span>
+    option ipaddr <span class="s1">'127.0.0.1'</span>
+    option netmask <span class="s1">'255.0.0.0'</span>
+
+config interface <span class="s1">'lan'</span>
+    option ifname <span class="s1">'eth0'</span>
+    option force_link <span class="s1">'1'</span>
+    option <span class="nb">type</span> <span class="s1">'bridge'</span>
+    option proto <span class="s1">'static'</span>
+    option ip6assign <span class="s1">'60'</span>
+    option ipaddr <span class="s1">'192.168.10.1'</span> <span class="c"># for relayd</span>
+    option gateway <span class="s1">'10.0.1.1'</span> <span class="c"># gateway of source</span>
+    option netmask <span class="s1">'255.255.255.0'</span>
+    option dns <span class="s1">'10.0.1.1'</span> <span class="c"># dns of source</span>
+
+config interface <span class="s1">'wwan'</span>
+    option proto <span class="s1">'static'</span>
+    option ipaddr <span class="s1">'10.0.1.254'</span> <span class="c"># any ip from source</span>
+    option netmask <span class="s1">'255.255.255.0'</span>
+    option gateway <span class="s1">'10.0.1.1'</span>
+
+config interface <span class="s1">'stabridge'</span>
+    option proto <span class="s1">'relay'</span>
+    option network <span class="s1">'lan wwan'</span>
+    option ipaddr <span class="s1">'10.0.1.254'</span>
+
+config switch
+    option name <span class="s1">'switch0'</span>
+    option reset <span class="s1">'1'</span>
+    option enable_vlan <span class="s1">'1'</span>
+
+config switch_vlan
+    option device <span class="s1">'switch0'</span>
+    option vlan <span class="s1">'1'</span>
+    option ports <span class="s1">'0 1 2 3 4'</span>
+</code></pre></div></div>
+
+<p>Note that I have used <code class="highlighter-rouge">10.0.1.254</code> which will be the repeater’s IP address. This is very important to set this IP correctly. Do not set IP address like <code class="highlighter-rouge">10.0.1.1</code> which is the gateway of the access point (!) or any other IP which is already reserved in the Airport (or any source WiFi access point). You can later <code class="highlighter-rouge">ssh</code> or <code class="highlighter-rouge">telnet</code> using the IP address of the <code class="highlighter-rouge">stabridge</code> device.</p>
+
+<p>Now, edit <code class="highlighter-rouge">/etc/config/dhcp</code> according to the following.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># nano /etc/config/dhcp</span>
+config dhcp <span class="s1">'lan'</span>
+    option interface <span class="s1">'lan'</span>
+    option start <span class="s1">'100'</span>
+    option limit <span class="s1">'150'</span>
+    option leasetime <span class="s1">'12h'</span>
+    option ignore <span class="s1">'1'</span>
+
+config dhcp <span class="s1">'wan'</span>
+    option interface <span class="s1">'wan'</span>
+    option ignore <span class="s1">'1'</span>
+</code></pre></div></div>
+
+<p>Now we are almost done. Now just enable <code class="highlighter-rouge">relayd</code> and reboot the router.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/etc/init.d/relayd <span class="nb">enable
+</span>reboot
+</code></pre></div></div>
+
+<p>After 15-30s of boot, you can see the new repeater SSID in the WiFi menu of your phone/computer. Connect to it and check if the internet works.</p>
+
+<p>If you fail, review the config files and keep trying. I suggest you to closely observe the config file because if you miss one single character, the WiFi may not start, or the internet connectivity might fall.</p>
+
+<p>Good luck!</p>
+
+<div class="message">
+Thanks to <a href="http://www.circuidipity.com/openwrt-bridged-repeater.html">Daniel Wayne Armstrong's post</a> for writing a nice post which really works and saved me from headache.
+</div>
+
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="7351100586"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+    </div>
+  </body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-57632461-7', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>
