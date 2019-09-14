@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://bits.mdminhazulhaque.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bits.mdminhazulhaque.io/" rel="alternate" type="text/html" /><updated>2019-07-12T00:06:33+08:00</updated><id>https://bits.mdminhazulhaque.io/feed.xml</id><title type="html">Bits</title><subtitle>Random posts written by &lt;a href=&quot;https://mdminhazulhaque.io&quot;&gt;Md. Minhazul Haque&lt;/a&gt;</subtitle><entry><title type="html">Tweak your Bee IPTV Box with 3rd Party App and Launcher</title><link href="https://bits.mdminhazulhaque.io/android/tweak-your-bee-iptv-box-with-3rd-party-app-and-launcher.html" rel="alternate" type="text/html" title="Tweak your Bee IPTV Box with 3rd Party App and Launcher" /><published>2019-05-30T00:00:00+08:00</published><updated>2019-05-30T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/android/tweak-your-bee-iptv-box-with-3rd-party-app-and-launcher</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/android/tweak-your-bee-iptv-box-with-3rd-party-app-and-launcher.html">&lt;p&gt;Yesterday, I got a call from one of my colleagues (and also my neighbor) about how he messed up with his Android TV Box. He asked me if I could help him with that to make it &lt;strike&gt;great&lt;/strike&gt; useful again.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://bits.mdminhazulhaque.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bits.mdminhazulhaque.io/" rel="alternate" type="text/html" /><updated>2019-09-14T23:16:27+08:00</updated><id>https://bits.mdminhazulhaque.io/feed.xml</id><title type="html">Bits</title><subtitle>Random posts written by &lt;a href=&quot;https://mdminhazulhaque.io&quot;&gt;Md. Minhazul Haque&lt;/a&gt;</subtitle><entry><title type="html">Create Breadcrumb in Jekyll</title><link href="https://bits.mdminhazulhaque.io/jekyll/create-breadcrumb-in-jekyll.html" rel="alternate" type="text/html" title="Create Breadcrumb in Jekyll" /><published>2019-09-14T00:00:00+08:00</published><updated>2019-09-14T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/jekyll/create-breadcrumb-in-jekyll</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/jekyll/create-breadcrumb-in-jekyll.html">&lt;p&gt;&lt;a href=&quot;https://developers.google.com/search/docs/data-types/breadcrumb&quot;&gt;Breadcrumb&lt;/a&gt; is a technique to show the level of your page so the user can browse any level directly, even from the Google search page. Also, the breadcrumb snippet must be put in the head tag of the HTML if you want to use the JSON-LD format.&lt;/p&gt;
+
+&lt;p&gt;My blog uses the URL pattern - &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;base&amp;gt;/&amp;lt;category&amp;gt;/&amp;lt;post&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;For example,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://bits.mdminhazulhaque.io&lt;/li&gt;
+  &lt;li&gt;http://bits.mdminhazulhaque.io/linux&lt;/li&gt;
+  &lt;li&gt;https://bits.mdminhazulhaque.io/linux/authenticate-fluentd-to-access-bigquery.html&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Now the challange is to generate a JSON file based on the page type or level. For my case,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Level 1: The home page use &lt;code class=&quot;highlighter-rouge&quot;&gt;layout: default&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Level 2: The category pages use &lt;code class=&quot;highlighter-rouge&quot;&gt;layout: category&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Level 3: The post pages use &lt;code class=&quot;highlighter-rouge&quot;&gt;layout: post&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In Jekyll, I did not find any easy method to generate breadcrumb. Also it was nowhere written how can I know the level of page. So I had to apply some trick. It was - to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;layout.type&lt;/code&gt; variable in &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/head.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here is my &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/head.html&lt;/code&gt; code that generates breadcrumb snippet (and title also) based on the page type.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;head&amp;gt;
+  &amp;lt;meta http-equiv=&quot;...&quot; content=&quot;...&quot;&amp;gt;
+  &amp;lt;meta name=&quot;...&quot; content=&quot;...&quot;&amp;gt;
+  &amp;lt;script type=&quot;application/ld+json&quot;&amp;gt;{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+  &quot;itemListElement&quot;: [
+    {
+      &quot;@type&quot;: &quot;ListItem&quot;,
+      &quot;position&quot;: 1,
+      &quot;name&quot;: &quot;Home&quot;,
+      &quot;item&quot;: &quot;https://bits.mdminhazulhaque.io/&quot;
+    },{
+      &quot;@type&quot;: &quot;ListItem&quot;,
+      &quot;position&quot;: 2,
+      &quot;name&quot;: &quot;jekyll&quot;,
+      &quot;item&quot;: &quot;https://bits.mdminhazulhaque.io/jekyll&quot;
+    },{
+      &quot;@type&quot;: &quot;ListItem&quot;,
+      &quot;position&quot;: 3,
+      &quot;name&quot;: &quot;Create Breadcrumb in Jekyll&quot;,
+      &quot;item&quot;: &quot;https://bits.mdminhazulhaque.io//jekyll/create-breadcrumb-in-jekyll.html&quot;
+    }]
+  }&amp;lt;/script&amp;gt;
+  &amp;lt;title&amp;gt;
+    
+        Create Breadcrumb in Jekyll
+     | Bits&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The result also looks as I expected.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/YCnUuyp.png&quot; alt=&quot;Breadcrumb using Jekyll&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The source code of my blog can be downloaded from &lt;a href=&quot;https://github.com/mdminhazulhaque/bits&quot;&gt;mdminhazulhaque/bits&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let me know if there is any better way to achieve this thing. Thanks.&lt;/p&gt;</content><author><name></name></author><summary type="html">Breadcrumb is a technique to show the level of your page so the user can browse any level directly, even from the Google search page. Also, the breadcrumb snippet must be put in the head tag of the HTML if you want to use the JSON-LD format.</summary></entry><entry><title type="html">Tweak your Bee IPTV Box with 3rd Party App and Launcher</title><link href="https://bits.mdminhazulhaque.io/android/tweak-your-bee-iptv-box-with-3rd-party-app-and-launcher.html" rel="alternate" type="text/html" title="Tweak your Bee IPTV Box with 3rd Party App and Launcher" /><published>2019-05-30T00:00:00+08:00</published><updated>2019-05-30T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/android/tweak-your-bee-iptv-box-with-3rd-party-app-and-launcher</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/android/tweak-your-bee-iptv-box-with-3rd-party-app-and-launcher.html">&lt;p&gt;Yesterday, I got a call from one of my colleagues (and also my neighbor) about how he messed up with his Android TV Box. He asked me if I could help him with that to make it &lt;strike&gt;great&lt;/strike&gt; useful again.&lt;/p&gt;
 
 &lt;p&gt;Basically he bought the box with a subscription long ago. After it got expired, the startup app kept complaining about the subscription. He did perform a factory reset which caused the box loose its realm. As a result, it was no way useful for him other than throwing it away or tweak it.&lt;/p&gt;
 
@@ -248,17 +311,17 @@
   &lt;li&gt;নাসি কান্দার/Nasi Kandar (ভাত, মুরগি/মাংস সহ সস)&lt;/li&gt;
   &lt;li&gt;সাটেই/Satay (মাংসের কাবাব)&lt;/li&gt;
   &lt;li&gt;হাইনানিস চিকেন রাইস/Hainanese Chicken Rice (বিবিকিউ টাইপ মুরগি, ভাত আর স্যুপ)&lt;/li&gt;
-  &lt;li&gt;রোটি কানাই/Roti Canai (পাতলা রুটি, ডিম/বাটার দিয়ে ভাজা)&lt;/li&gt;
+  &lt;li&gt;রোটি চানাই/Roti Canai (পাতলা রুটি, ডিম/বাটার দিয়ে ভাজা)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;এছাড়াও ইন্ডিয়ান রেস্টুরেন্টগুলায় বিরিনয়ানী ট্রাই করতে পারেন। এরাবিক রেস্টুরেন্টে ম্যান্ডি রাইস/চিকেন, শর্মা ইত্যাদি খেতে পারেন। তাছাড়া KFC তে চিকেন ফ্রাই, স্পাইসি চিকেন পাওয়া যাবে। Pizza Hut, Domino’s থেকে কাস্টমাইজড পিজা অর্ডার করতে পারেন।&lt;/p&gt;
+&lt;p&gt;এছাড়াও ইন্ডিয়ান, পাকিস্তানি, ইরানী রেস্টুরেন্টগুলায় বিরিনয়ানী ট্রাই করতে পারেন। এরাবিক রেস্টুরেন্টে ম্যান্ডি রাইস/চিকেন, শর্মা ইত্যাদি খেতে পারেন। তাছাড়া KFC তে চিকেন ফ্রাই, স্পাইসি চিকেন পাওয়া যাবে। Pizza Hut, Domino’s থেকে কাস্টমাইজড পিজা অর্ডার করতে পারেন।&lt;/p&gt;
 
 &lt;p&gt;সলিড খাবারের পাশাপাশি এই ড্রিংকসগুলাও আপনাদের ভাল লাগবে আশাকরি।&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;তেহ তারিক/Teh Tarik (স্পেশাল চা)&lt;/li&gt;
   &lt;li&gt;মাইলো/Milo (হরলিক্সের মত, বাট টেস্টি)&lt;/li&gt;
-  &lt;li&gt;চেন্দোলি/Cendol (নুডলস, বাদাম সহ ফালুদার মত ডেজার্ট)&lt;/li&gt;
+  &lt;li&gt;চেন্দোল/Cendol (নুডলস, বাদাম সহ ফালুদার মত ডেজার্ট)&lt;/li&gt;
   &lt;li&gt;লিমাউ পানাস/Limau Panas (গরম লেবুর সরবত)&lt;/li&gt;
   &lt;li&gt;বিভিন্ন ফলের জুস, কফি ও খেতে পারেন।&lt;/li&gt;
 &lt;/ul&gt;
@@ -627,46 +690,4 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;পরবর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-last-minute-preparation.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ৩ - শেষ মুহুর্তের প্রস্তুতি&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">পূর্ববর্তী পোস্ট মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস</summary></entry><entry><title type="html">Build a Voice Controlled SmartHome using openHAB and Alexa</title><link href="https://bits.mdminhazulhaque.io/linux/build-a-voice-controlled-smarthome-using-openhab-and-alexa.html" rel="alternate" type="text/html" title="Build a Voice Controlled SmartHome using openHAB and Alexa" /><published>2018-12-17T00:00:00+08:00</published><updated>2018-12-17T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/linux/build-a-voice-controlled-smarthome-using-openhab-and-alexa</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/linux/build-a-voice-controlled-smarthome-using-openhab-and-alexa.html">&lt;p&gt;The Amazon Alexa Marketplace has lots of third party SmartHome skills to start with. But why not  build your own SmartHome, right?&lt;/p&gt;
-
-&lt;p&gt;First thing is, you have to create some openHAB items with proper tagname, label and type. Here I have added 4 devices in &lt;code class=&quot;highlighter-rouge&quot;&gt;[Lighting]&lt;/code&gt; tag as &lt;code class=&quot;highlighter-rouge&quot;&gt;Switch&lt;/code&gt; item. This tagname is very important because Amazon Alexa API uses this tagname to export device list into Alexa’s SmartHome Discovery menu. I have used &lt;code class=&quot;highlighter-rouge&quot;&gt;exec1&lt;/code&gt; binding as output trigger of the items. The binding configuration is given as &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/ubuntu/mysmarthome.py %3$s %2$s&lt;/code&gt; which means it will call &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/ubuntu/mysmarthome.py&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;%3$s = Item's Programetic Name&lt;/code&gt; (not Label) and &lt;code class=&quot;highlighter-rouge&quot;&gt;%2$s = Item's State&lt;/code&gt;. Here is the complete item file.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Switch Bedroom_Fan &quot;Bedroom Fan&quot; [Lighting] {exec=&quot;&amp;gt;[*:/home/ubuntu/mysmarthome.py %3$s %2$s]&quot;}
-Switch Bedroom_Light &quot;Bedroom Light&quot; [Lighting] {exec=&quot;&amp;gt;[*:/home/ubuntu/mysmarthome.py %3$s %2$s]&quot;}
-Switch Livingroom_Fan &quot;Livingroom Fan&quot; [Lighting] {exec=&quot;&amp;gt;[*:/home/ubuntu/mysmarthome.py %3$s %2$s]&quot;}
-Switch Livingroom_Light &quot;Livingroom Light&quot; [Lighting] {exec=&quot;&amp;gt;[*:/home/ubuntu/mysmarthome.py %3$s %2$s]&quot;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;After you are done with item file, install &lt;code class=&quot;highlighter-rouge&quot;&gt;openhabcloud&lt;/code&gt; binding, and then configure cloud service at &lt;code class=&quot;highlighter-rouge&quot;&gt;http://myopenhab.org&lt;/code&gt; using your openHAB’s UUID and secret. Once you are connected to &lt;code class=&quot;highlighter-rouge&quot;&gt;myopenhab&lt;/code&gt; you can see the previously added 4 items there. Now it’s time to configure Alexa SmartHome Service.&lt;/p&gt;
-
-&lt;p&gt;Assuming that your Alexa is ready to use, browse Skill Marketplace and search for &lt;code class=&quot;highlighter-rouge&quot;&gt;openHAB&lt;/code&gt;. Click &lt;code class=&quot;highlighter-rouge&quot;&gt;Enable Skill&lt;/code&gt; there.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/7xkeVyt.png&quot; alt=&quot;openHAB Skill&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;After enabling the skill, it will redirect you to &lt;code class=&quot;highlighter-rouge&quot;&gt;myopenhab.org&lt;/code&gt; and prompt OAuth login. Select the &lt;code class=&quot;highlighter-rouge&quot;&gt;Allow&lt;/code&gt; button.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/HrMqflA.png&quot; alt=&quot;openHAB OAuth Page&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If the credentials are correct, the Skill will be enabled and you will be prompted to &lt;code class=&quot;highlighter-rouge&quot;&gt;Discover Devices&lt;/code&gt; page. Proceed by clicking the button.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/UYGEX0v.png&quot; alt=&quot;openHAB Skill Discovery&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If the item file is properly configured, all devices with &lt;code class=&quot;highlighter-rouge&quot;&gt;Lighting&lt;/code&gt; tag will appear in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Devices&lt;/code&gt; menu. From now on, you can send commands to the items using Alexa’s Voice API. For example, saying &lt;code class=&quot;highlighter-rouge&quot;&gt;alexa, set bedroom light on&lt;/code&gt; will trigger openHAB’s REST API and eventually execute &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/ubuntu/mysmarthome.py Bedroom_Light ON&lt;/code&gt; at your local setup.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/eMWcmto.png&quot; alt=&quot;openHAB Devices&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is a simple log of openHAB runtime.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;16:42:14.078 [INFO ] [.io.openhabcloud.internal.CloudClient] - Connected to the openHAB Cloud service (UUID = ee0b4a46-82ce-4826-b6b6-e77461785df5, base URL = http://localhost:8080)
-16:42:18.260 [INFO ] [del.core.internal.ModelRepositoryImpl] - Loading model 'smarthome.items'
-16:42:19.906 [INFO ] [rthome.model.lsp.internal.ModelServer] - Started Language Server Protocol (LSP) service on port 5007
-16:42:20.925 [INFO ] [i.dashboard.internal.DashboardService] - Started Dashboard at http://1.2.3.4:8080
-16:42:20.933 [INFO ] [i.dashboard.internal.DashboardService] - Started Dashboard at https://1.2.3.4:8443
-16:43:38.335 [INFO ] [ab.core.service.AbstractActiveService] - Exec Refresh Service has been started
-16:47:57.690 [INFO ] [smarthome.event.ItemCommandEvent     ] - Item 'Bedroom_Light' received command ON
-16:47:57.725 [INFO ] [hab.binding.exec.internal.ExecBinding] - executed commandLine '/home/ubuntu/mysmarthome.py Bedroom_Light ON'
-16:48:09.639 [INFO ] [smarthome.event.ItemCommandEvent     ] - Item 'Livingroom_Light' received command ON
-16:48:09.653 [INFO ] [hab.binding.exec.internal.ExecBinding] - executed commandLine '/home/ubuntu/mysmarthome.py Livingroom_Light ON'
-16:48:34.923 [INFO ] [smarthome.event.ItemCommandEvent     ] - Item 'Bedroom_Fan' received command ON
-16:48:34.933 [INFO ] [hab.binding.exec.internal.ExecBinding] - executed commandLine '/home/ubuntu/mysmarthome.py Bedroom_Fan ON'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="linux" /><summary type="html">The Amazon Alexa Marketplace has lots of third party SmartHome skills to start with. But why not build your own SmartHome, right?</summary></entry></feed>
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">পূর্ববর্তী পোস্ট মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস</summary></entry></feed>

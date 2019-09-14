@@ -43,7 +43,7 @@ i...">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/print.css">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190712">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190914">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}a.monospace{font-family:Inconsolata;}</style>
 </head>
@@ -97,15 +97,15 @@ i...">
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">WekaTest</span> <span class="o">{</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
 
-            <span class="n">Classifier</span> <span class="n">j48tree</span> <span class="o">=</span> <span class="k">new</span> <span class="n">J48</span><span class="o">();</span>
-            <span class="n">Instances</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Instances</span><span class="o">(</span><span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">"/home/minhaz/weka/data/diabetes.arff"</span><span class="o">)));</span>
+            <span class="nc">Classifier</span> <span class="n">j48tree</span> <span class="o">=</span> <span class="k">new</span> <span class="no">J48</span><span class="o">();</span>
+            <span class="nc">Instances</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Instances</span><span class="o">(</span><span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileReader</span><span class="o">(</span><span class="s">"/home/minhaz/weka/data/diabetes.arff"</span><span class="o">)));</span>
             <span class="kt">int</span> <span class="n">lastIndex</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="na">numAttributes</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
             
             <span class="n">train</span><span class="o">.</span><span class="na">setClassIndex</span><span class="o">(</span><span class="n">lastIndex</span><span class="o">);</span>
             
-            <span class="n">Instances</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Instances</span><span class="o">(</span><span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">"/home/minhaz/weka/data/diabetes-test.arff"</span><span class="o">)));</span>
+            <span class="nc">Instances</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Instances</span><span class="o">(</span><span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileReader</span><span class="o">(</span><span class="s">"/home/minhaz/weka/data/diabetes-test.arff"</span><span class="o">)));</span>
             <span class="n">test</span><span class="o">.</span><span class="na">setClassIndex</span><span class="o">(</span><span class="n">lastIndex</span><span class="o">);</span>
             
             <span class="n">j48tree</span><span class="o">.</span><span class="na">buildClassifier</span><span class="o">(</span><span class="n">train</span><span class="o">);</span>
@@ -113,8 +113,8 @@ i...">
             <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">test</span><span class="o">.</span><span class="na">numInstances</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
             
                     <span class="kt">double</span> <span class="n">index</span> <span class="o">=</span> <span class="n">j48tree</span><span class="o">.</span><span class="na">classifyInstance</span><span class="o">(</span><span class="n">test</span><span class="o">.</span><span class="na">instance</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
-                    <span class="n">String</span> <span class="n">className</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="na">attribute</span><span class="o">(</span><span class="n">lastIndex</span><span class="o">).</span><span class="na">value</span><span class="o">((</span><span class="kt">int</span><span class="o">)</span><span class="n">index</span><span class="o">);</span>
-                    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">className</span><span class="o">);</span>
+                    <span class="nc">String</span> <span class="n">className</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="na">attribute</span><span class="o">(</span><span class="n">lastIndex</span><span class="o">).</span><span class="na">value</span><span class="o">((</span><span class="kt">int</span><span class="o">)</span><span class="n">index</span><span class="o">);</span>
+                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">className</span><span class="o">);</span>
             <span class="o">}</span>
     <span class="o">}</span>
 <span class="o">}</span>

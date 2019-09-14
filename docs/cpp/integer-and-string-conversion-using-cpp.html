@@ -40,7 +40,7 @@ support f...">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/print.css">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190712">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190914">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}a.monospace{font-family:Inconsolata;}</style>
 </head>
@@ -91,7 +91,7 @@ support for <strong>to_string</strong> and other type conversions.</p>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
-<span class="n">string</span> <span class="n">to_str</span><span class="p">(</span><span class="n">T</span> <span class="n">str</span><span class="p">)</span>
+<span class="n">string</span> <span class="nf">to_str</span><span class="p">(</span><span class="n">T</span> <span class="n">str</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">stringstream</span> <span class="n">stream</span><span class="p">;</span>
     <span class="n">stream</span> <span class="o">&lt;&lt;</span> <span class="n">str</span><span class="p">;</span>
@@ -99,7 +99,7 @@ support for <strong>to_string</strong> and other type conversions.</p>
 <span class="p">}</span>
 
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
-<span class="kt">int</span> <span class="n">to_int</span><span class="p">(</span><span class="n">T</span> <span class="n">num</span><span class="p">)</span>
+<span class="kt">int</span> <span class="nf">to_int</span><span class="p">(</span><span class="n">T</span> <span class="n">num</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
     <span class="n">stringstream</span> <span class="n">stream</span><span class="p">;</span>
@@ -108,7 +108,7 @@ support for <strong>to_string</strong> and other type conversions.</p>
     <span class="k">return</span> <span class="n">val</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="n">string</span> <span class="n">s</span><span class="p">;</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">to_str</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span> <span class="c1">// int</span>

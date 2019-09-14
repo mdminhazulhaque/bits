@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/print.css">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190712">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190914">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}a.monospace{font-family:Inconsolata;}</style>
 </head>
@@ -87,19 +87,19 @@ annotations (Not @Java<strong>S</strong>criptInterface).</p>
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">JSInterface</span> <span class="o">{</span>
 <span class="o">...</span>
 <span class="nd">@JavascriptInterface</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">toastMe</span><span class="o">(</span><span class="n">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">mContext</span><span class="o">,</span> <span class="n">text</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">toastMe</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">mContext</span><span class="o">,</span> <span class="n">text</span><span class="o">,</span> <span class="nc">Toast</span><span class="o">.</span><span class="na">LENGTH_SHORT</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>Then attach the class name as the Webview’s JavascriptInterface.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">webview</span><span class="o">.</span><span class="na">addJavascriptInterface</span><span class="o">(</span><span class="k">new</span> <span class="n">JSInterface</span><span class="o">(</span><span class="k">this</span><span class="o">),</span> <span class="s">"JSInterface"</span><span class="o">);</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">webview</span><span class="o">.</span><span class="na">addJavascriptInterface</span><span class="o">(</span><span class="k">new</span> <span class="nc">JSInterface</span><span class="o">(</span><span class="k">this</span><span class="o">),</span> <span class="s">"JSInterface"</span><span class="o">);</span>
 </code></pre></div></div>
 
 <p>Call <code class="highlighter-rouge">JSInterface.toastMe(text)</code> from Webview’s Javascript instance.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">"I want to be toasted"</span><span class="p">;</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">I want to be toasted</span><span class="dl">"</span><span class="p">;</span>
 <span class="nx">JSInterface</span><span class="p">.</span><span class="nx">toastMe</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
 </code></pre></div></div>
 

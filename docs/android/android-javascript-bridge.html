@@ -40,7 +40,7 @@ Later...">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/print.css">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190712">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190914">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}a.monospace{font-family:Inconsolata;}</style>
 </head>
@@ -96,7 +96,7 @@ Later...">
 
 <p>In <code class="highlighter-rouge">MainActivity.java</code></p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">"Hello!"</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">"Hello!"</span><span class="o">;</span>
 <span class="n">webview</span><span class="o">.</span><span class="na">loadUrl</span><span class="o">(</span><span class="s">"javascript:setData(\""</span> <span class="o">+</span> <span class="n">data</span> <span class="o">+</span> <span class="s">"\");"</span><span class="o">);</span>
 </code></pre></div></div>
 <p>In <code class="highlighter-rouge">index.html</code></p>
@@ -111,14 +111,14 @@ Later...">
 <p>In <code class="highlighter-rouge">MainActivity.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">JSInterface</span> <span class="o">{</span>
-    <span class="n">JSInterface</span><span class="o">()</span> <span class="o">{}</span>
+    <span class="nc">JSInterface</span><span class="o">()</span> <span class="o">{}</span>
     <span class="nd">@JavascriptInterface</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getData</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getData</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="s">"Hello"</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
 
-<span class="n">webview</span><span class="o">.</span><span class="na">addJavascriptInterface</span><span class="o">(</span><span class="k">new</span> <span class="n">JSInterface</span><span class="o">(),</span> <span class="s">"JSInterface"</span><span class="o">);</span>
+<span class="n">webview</span><span class="o">.</span><span class="na">addJavascriptInterface</span><span class="o">(</span><span class="k">new</span> <span class="nc">JSInterface</span><span class="o">(),</span> <span class="s">"JSInterface"</span><span class="o">);</span>
 </code></pre></div></div>
 
 <p>In <code class="highlighter-rouge">index.html</code></p>

@@ -40,7 +40,7 @@ An easy update checker or remote information...">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/print.css">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190712">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190914">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}a.monospace{font-family:Inconsolata;}</style>
 </head>
@@ -87,42 +87,42 @@ An easy update checker or remote information...">
 
 <p>Here is a prototype.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kd">class</span> <span class="nc">UpdateChecker</span> <span class="kd">extends</span> <span class="n">AsyncTask</span><span class="o">&lt;</span><span class="n">Void</span><span class="o">,</span> <span class="n">Void</span><span class="o">,</span> <span class="n">Void</span><span class="o">&gt;</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kd">class</span> <span class="nc">UpdateChecker</span> <span class="kd">extends</span> <span class="nc">AsyncTask</span><span class="o">&lt;</span><span class="nc">Void</span><span class="o">,</span> <span class="nc">Void</span><span class="o">,</span> <span class="nc">Void</span><span class="o">&gt;</span> <span class="o">{</span>
 
     <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="n">Void</span> <span class="nf">doInBackground</span><span class="o">(</span><span class="n">Void</span><span class="o">...</span> <span class="n">params</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="nc">Void</span> <span class="nf">doInBackground</span><span class="o">(</span><span class="nc">Void</span><span class="o">...</span> <span class="n">params</span><span class="o">)</span> <span class="o">{</span>
 
-        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
-        <span class="n">DefaultHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultHttpClient</span><span class="o">();</span>
-        <span class="n">HttpGet</span> <span class="n">httpGet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpGet</span><span class="o">(</span><span class="s">"https://example.com/update.xml"</span><span class="o">);</span>
+        <span class="nc">String</span> <span class="n">response</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="nc">DefaultHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DefaultHttpClient</span><span class="o">();</span>
+        <span class="nc">HttpGet</span> <span class="n">httpGet</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HttpGet</span><span class="o">(</span><span class="s">"https://example.com/update.xml"</span><span class="o">);</span>
         <span class="k">try</span> <span class="o">{</span>
-            <span class="n">HttpResponse</span> <span class="n">execute</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="n">httpGet</span><span class="o">);</span>
-            <span class="n">InputStream</span> <span class="n">content</span> <span class="o">=</span> <span class="n">execute</span><span class="o">.</span><span class="na">getEntity</span><span class="o">().</span><span class="na">getContent</span><span class="o">();</span>
+            <span class="nc">HttpResponse</span> <span class="n">execute</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="n">httpGet</span><span class="o">);</span>
+            <span class="nc">InputStream</span> <span class="n">content</span> <span class="o">=</span> <span class="n">execute</span><span class="o">.</span><span class="na">getEntity</span><span class="o">().</span><span class="na">getContent</span><span class="o">();</span>
 
-            <span class="n">BufferedReader</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">InputStreamReader</span><span class="o">(</span><span class="n">content</span><span class="o">));</span>
-            <span class="n">String</span> <span class="n">line</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+            <span class="nc">BufferedReader</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="n">content</span><span class="o">));</span>
+            <span class="nc">String</span> <span class="n">line</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
             <span class="k">while</span> <span class="o">((</span><span class="n">line</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="na">readLine</span><span class="o">())</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
                 <span class="n">response</span> <span class="o">+=</span> <span class="n">line</span><span class="o">;</span>
             <span class="o">}</span>
 
             <span class="c1">// do some work with response string</span>
 
-            <span class="kd">final</span> <span class="n">String</span> <span class="n">finalNotificationText</span> <span class="o">=</span> <span class="s">"You have the latest update for this application"</span><span class="o">;</span>
+            <span class="kd">final</span> <span class="nc">String</span> <span class="n">finalNotificationText</span> <span class="o">=</span> <span class="s">"You have the latest update for this application"</span><span class="o">;</span>
 
-            <span class="n">runOnUiThread</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+            <span class="n">runOnUiThread</span><span class="o">(</span><span class="k">new</span> <span class="nc">Runnable</span><span class="o">()</span> <span class="o">{</span>
                 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-                    <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="n">finalNotificationText</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+                    <span class="nc">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="n">finalNotificationText</span><span class="o">,</span> <span class="nc">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
                 <span class="o">}</span>
             <span class="o">});</span>
 
-        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
 
-            <span class="n">runOnUiThread</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+            <span class="n">runOnUiThread</span><span class="o">(</span><span class="k">new</span> <span class="nc">Runnable</span><span class="o">()</span> <span class="o">{</span>
                 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-                    <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span>
+                    <span class="nc">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span>
                             <span class="s">"Unable to check for update\n"</span><span class="o">+</span>
                             <span class="s">"Perhaps you have no internet access"</span><span class="o">,</span>
-                            <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+                            <span class="nc">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
                 <span class="o">}</span>
             <span class="o">});</span>
         <span class="o">}</span>
@@ -133,8 +133,8 @@ An easy update checker or remote information...">
 
 <p>Wondering how to use this snippet into code? Simply call an instance of the class from Activity and wait for the result.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="s">"Checking for updates ..."</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
-<span class="n">UpdateChecker</span> <span class="n">myTask</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UpdateChecker</span><span class="o">();</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="s">"Checking for updates ..."</span><span class="o">,</span> <span class="nc">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+<span class="nc">UpdateChecker</span> <span class="n">myTask</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">UpdateChecker</span><span class="o">();</span>
 <span class="n">myTask</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
 </code></pre></div></div>
 

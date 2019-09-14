@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/print.css">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190712">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190914">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}a.monospace{font-family:Inconsolata;}</style>
 </head>
@@ -105,18 +105,18 @@
 
 <p>On successful Gist creation, the header will contain the status code <code class="highlighter-rouge">201 Created</code> and the URI of the Gist as <code class="highlighter-rouge">Location</code> header. The same thing can be achieved using Golang. Thanks to their nice HTTP POST library and easy to embed JSON buffer. Here is the code I wrote.</p>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
 
-</span><span class="k">import</span><span class="x"> </span><span class="p">(</span><span class="x">
-    </span><span class="s">"bytes"</span><span class="x">
-    </span><span class="s">"fmt"</span><span class="x">
-    </span><span class="s">"net/http"</span><span class="x">
-</span><span class="p">)</span><span class="x">
+<span class="k">import</span> <span class="p">(</span>
+    <span class="s">"bytes"</span>
+    <span class="s">"fmt"</span>
+    <span class="s">"net/http"</span>
+<span class="p">)</span>
 
-</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.github.com/gists"</span><span class="x">
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">url</span> <span class="o">:=</span> <span class="s">"https://api.github.com/gists"</span>
 
-    </span><span class="k">var</span><span class="x"> </span><span class="n">jsonStr</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="p">[]</span><span class="kt">byte</span><span class="p">(</span><span class="s">`{
+    <span class="k">var</span> <span class="n">jsonStr</span> <span class="o">=</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">(</span><span class="s">`{
                 "description": "A (secret) gist",
                 "public": false,
                 "files": {
@@ -124,28 +124,28 @@
                             "content": "String file contents"
                         }
                     }
-                }`</span><span class="p">)</span><span class="x">
+                }`</span><span class="p">)</span>
     
-    </span><span class="n">req</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span><span class="x"> </span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">bytes</span><span class="o">.</span><span class="n">NewBuffer</span><span class="p">(</span><span class="n">jsonStr</span><span class="p">))</span><span class="x">
-    </span><span class="n">req</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="s">"Authorization"</span><span class="p">,</span><span class="x"> </span><span class="s">"token cqlvwpl40z4ukj5fa495114a71895b5850bc29bd"</span><span class="p">)</span><span class="x"> </span><span class="c">// The token</span><span class="x">
-    </span><span class="n">req</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="s">"Content-Type"</span><span class="p">,</span><span class="x"> </span><span class="s">"application/json"</span><span class="p">)</span><span class="x">
+    <span class="n">req</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">NewRequest</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">bytes</span><span class="o">.</span><span class="n">NewBuffer</span><span class="p">(</span><span class="n">jsonStr</span><span class="p">))</span>
+    <span class="n">req</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="s">"Authorization"</span><span class="p">,</span> <span class="s">"token cqlvwpl40z4ukj5fa495114a71895b5850bc29bd"</span><span class="p">)</span> <span class="c">// The token</span>
+    <span class="n">req</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Set</span><span class="p">(</span><span class="s">"Content-Type"</span><span class="p">,</span> <span class="s">"application/json"</span><span class="p">)</span>
 
-    </span><span class="n">client</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="o">&amp;</span><span class="n">http</span><span class="o">.</span><span class="n">Client</span><span class="p">{}</span><span class="x">
-    </span><span class="n">resp</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">Do</span><span class="p">(</span><span class="n">req</span><span class="p">)</span><span class="x">
-    </span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
-        </span><span class="nb">panic</span><span class="p">(</span><span class="n">err</span><span class="p">)</span><span class="x">
-    </span><span class="p">}</span><span class="x">
-    </span><span class="k">defer</span><span class="x"> </span><span class="n">resp</span><span class="o">.</span><span class="n">Body</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span><span class="x">
+    <span class="n">client</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="n">http</span><span class="o">.</span><span class="n">Client</span><span class="p">{}</span>
+    <span class="n">resp</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">Do</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
+        <span class="nb">panic</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">defer</span> <span class="n">resp</span><span class="o">.</span><span class="n">Body</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span>
 
-    </span><span class="k">if</span><span class="x"> </span><span class="n">resp</span><span class="o">.</span><span class="n">Status</span><span class="x"> </span><span class="o">==</span><span class="x"> </span><span class="s">"201 Created"</span><span class="x"> </span><span class="p">{</span><span class="x">
-        </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Success"</span><span class="p">)</span><span class="x">
-        </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Go to the following address to access the secret gist"</span><span class="p">)</span><span class="x">
-        </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Get</span><span class="p">(</span><span class="s">"Location"</span><span class="p">))</span><span class="x">
-    </span><span class="p">}</span><span class="x"> </span><span class="k">else</span><span class="x"> </span><span class="p">{</span><span class="x">
-        </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Failed creating secret gist"</span><span class="p">)</span><span class="x">
-    </span><span class="p">}</span><span class="x">
-</span><span class="p">}</span><span class="x">
-</span></code></pre></div></div>
+    <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">Status</span> <span class="o">==</span> <span class="s">"201 Created"</span> <span class="p">{</span>
+        <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Success"</span><span class="p">)</span>
+        <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Go to the following address to access the secret gist"</span><span class="p">)</span>
+        <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">Header</span><span class="o">.</span><span class="n">Get</span><span class="p">(</span><span class="s">"Location"</span><span class="p">))</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Failed creating secret gist"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Hope that helps. Do you have a better workaround? Let me know in the comment box. :)</p>
 
