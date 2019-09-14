@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://bits.mdminhazulhaque.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bits.mdminhazulhaque.io/" rel="alternate" type="text/html" /><updated>2019-09-14T23:16:27+08:00</updated><id>https://bits.mdminhazulhaque.io/feed.xml</id><title type="html">Bits</title><subtitle>Random posts written by &lt;a href=&quot;https://mdminhazulhaque.io&quot;&gt;Md. Minhazul Haque&lt;/a&gt;</subtitle><entry><title type="html">Create Breadcrumb in Jekyll</title><link href="https://bits.mdminhazulhaque.io/jekyll/create-breadcrumb-in-jekyll.html" rel="alternate" type="text/html" title="Create Breadcrumb in Jekyll" /><published>2019-09-14T00:00:00+08:00</published><updated>2019-09-14T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/jekyll/create-breadcrumb-in-jekyll</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/jekyll/create-breadcrumb-in-jekyll.html">&lt;p&gt;&lt;a href=&quot;https://developers.google.com/search/docs/data-types/breadcrumb&quot;&gt;Breadcrumb&lt;/a&gt; is a technique to show the level of your page so the user can browse any level directly, even from the Google search page. Also, the breadcrumb snippet must be put in the head tag of the HTML if you want to use the JSON-LD format.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://bits.mdminhazulhaque.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bits.mdminhazulhaque.io/" rel="alternate" type="text/html" /><updated>2019-09-14T23:21:40+08:00</updated><id>https://bits.mdminhazulhaque.io/feed.xml</id><title type="html">Bits</title><subtitle>Random posts written by &lt;a href=&quot;https://mdminhazulhaque.io&quot;&gt;Md. Minhazul Haque&lt;/a&gt;</subtitle><entry><title type="html">Create Breadcrumb in Jekyll</title><link href="https://bits.mdminhazulhaque.io/jekyll/create-breadcrumb-in-jekyll.html" rel="alternate" type="text/html" title="Create Breadcrumb in Jekyll" /><published>2019-09-14T00:00:00+08:00</published><updated>2019-09-14T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/jekyll/create-breadcrumb-in-jekyll</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/jekyll/create-breadcrumb-in-jekyll.html">&lt;p&gt;&lt;a href=&quot;https://developers.google.com/search/docs/data-types/breadcrumb&quot;&gt;Breadcrumb&lt;/a&gt; is a technique to show the level of your page so the user can browse any level directly, even from the Google search page. Also, the breadcrumb snippet must be put in the head tag of the HTML if you want to use the JSON-LD format.&lt;/p&gt;
 
 &lt;p&gt;My blog uses the URL pattern - &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;base&amp;gt;/&amp;lt;category&amp;gt;/&amp;lt;post&amp;gt;&lt;/code&gt;.&lt;/p&gt;
 
@@ -33,23 +33,30 @@
       &quot;@type&quot;: &quot;ListItem&quot;,
       &quot;position&quot;: 1,
       &quot;name&quot;: &quot;Home&quot;,
-      &quot;item&quot;: &quot;https://bits.mdminhazulhaque.io/&quot;
-    },{
+      &quot;item&quot;: &quot;{{ site.url }}/&quot;
+    }{% if layout.type == &quot;category&quot; %},{
       &quot;@type&quot;: &quot;ListItem&quot;,
       &quot;position&quot;: 2,
-      &quot;name&quot;: &quot;jekyll&quot;,
-      &quot;item&quot;: &quot;https://bits.mdminhazulhaque.io/jekyll&quot;
+      &quot;name&quot;: &quot;{{ page.title }}&quot;,
+      &quot;item&quot;: &quot;{{ site.url }}/{{ page.title }}&quot;
+    }{% endif %}{% if layout.type == &quot;post&quot; %},{
+      &quot;@type&quot;: &quot;ListItem&quot;,
+      &quot;position&quot;: 2,
+      &quot;name&quot;: &quot;{{ page.categories }}&quot;,
+      &quot;item&quot;: &quot;{{ site.url }}/{{ page.categories }}&quot;
     },{
       &quot;@type&quot;: &quot;ListItem&quot;,
       &quot;position&quot;: 3,
-      &quot;name&quot;: &quot;Create Breadcrumb in Jekyll&quot;,
-      &quot;item&quot;: &quot;https://bits.mdminhazulhaque.io//jekyll/create-breadcrumb-in-jekyll.html&quot;
-    }]
+      &quot;name&quot;: &quot;{{ page.title }}&quot;,
+      &quot;item&quot;: &quot;{{ site.url }}/{{ page.url }}&quot;
+    }{% endif %}]
   }&amp;lt;/script&amp;gt;
   &amp;lt;title&amp;gt;
-    
-        Create Breadcrumb in Jekyll
-     | Bits&amp;lt;/title&amp;gt;
+    {% if layout.type == &quot;category&quot; %}
+        Posts tagged in #{{ page.title }}
+    {% else %}
+        {{ page.title }}
+    {% endif %} | {{ site.title }}&amp;lt;/title&amp;gt;
 &amp;lt;/head&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 

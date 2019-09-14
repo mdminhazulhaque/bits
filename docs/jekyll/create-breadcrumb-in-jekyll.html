@@ -114,23 +114,30 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://bits.mdminhazulhaque.io/"
-    },{
+      "item": "{{ site.url }}/"
+    }{% if layout.type == "category" %},{
       "@type": "ListItem",
       "position": 2,
-      "name": "jekyll",
-      "item": "https://bits.mdminhazulhaque.io/jekyll"
+      "name": "{{ page.title }}",
+      "item": "{{ site.url }}/{{ page.title }}"
+    }{% endif %}{% if layout.type == "post" %},{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ page.categories }}",
+      "item": "{{ site.url }}/{{ page.categories }}"
     },{
       "@type": "ListItem",
       "position": 3,
-      "name": "Create Breadcrumb in Jekyll",
-      "item": "https://bits.mdminhazulhaque.io//jekyll/create-breadcrumb-in-jekyll.html"
-    }]
+      "name": "{{ page.title }}",
+      "item": "{{ site.url }}/{{ page.url }}"
+    }{% endif %}]
   }&lt;/script&gt;
   &lt;title&gt;
-    
-        Create Breadcrumb in Jekyll
-     | Bits&lt;/title&gt;
+    {% if layout.type == "category" %}
+        Posts tagged in #{{ page.title }}
+    {% else %}
+        {{ page.title }}
+    {% endif %} | {{ site.title }}&lt;/title&gt;
 &lt;/head&gt;
 </code></pre></div></div>
 

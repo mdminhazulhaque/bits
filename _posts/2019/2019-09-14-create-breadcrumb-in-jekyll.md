@@ -24,6 +24,7 @@ In Jekyll, I did not find any easy method to generate breadcrumb. Also it was no
 
 Here is my `_includes/head.html` code that generates breadcrumb snippet (and title also) based on the page type.
 
+{% raw %}
 ```
 <head>
   <meta http-equiv="..." content="...">
@@ -62,6 +63,7 @@ Here is my `_includes/head.html` code that generates breadcrumb snippet (and tit
     {% endif %} | {{ site.title }}</title>
 </head>
 ```
+{% endraw %}
 
 The result also looks as I expected.
 
