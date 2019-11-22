@@ -25,6 +25,8 @@ As you can see, we have set a new URI endpoint at `/lua` and the path will be ro
 
 ```lua
 local pr = require "luci.http.protocol"
+-- since openwrt 19 try this
+-- local pr = require "luci.http"
 
 function handle_request(env)
     uhttpd.send("Status: 200 OK\r\n")
