@@ -43,7 +43,7 @@ Required Packages
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/print.css">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190927">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20200113">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}a.monospace{font-family:Inconsolata;}</style>
 </head>
@@ -66,7 +66,7 @@ Required Packages
       <br><a href="https://www.instagram.com/md.minhazul.haque/"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
       </p>
     </div>
-    <p>&copy; 2012 - 2019. All rights reserved.</p>
+    <p>&copy; 2012 - 2020. All rights reserved.</p>
   </div>
 </div>
 
@@ -105,7 +105,7 @@ Required Packages
 
 find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-name</span> <span class="s1">'*.cpp'</span> | <span class="k">while </span><span class="nb">read </span>CPPFILE
 <span class="k">do
-    </span><span class="nv">TITLE</span><span class="o">=</span><span class="k">$(</span><span class="nb">basename</span> <span class="nv">$CPPFILE</span> .cpp<span class="k">)</span>
+    </span><span class="nv">TITLE</span><span class="o">=</span><span class="si">$(</span><span class="nb">basename</span> <span class="nv">$CPPFILE</span> .cpp<span class="si">)</span>
     <span class="nb">echo</span> <span class="nv">$CPPFILE</span> | xargs enscript <span class="nt">--color</span><span class="o">=</span>1 <span class="nt">-C</span> <span class="nt">-Ecpp</span> <span class="nt">-B</span> <span class="nt">-t</span> <span class="nv">$TITLE</span> <span class="nt">-o</span> - | ps2pdf - <span class="nv">$TITLE</span>.pdf
 <span class="k">done</span>
 

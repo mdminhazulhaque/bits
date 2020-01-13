@@ -40,7 +40,7 @@ Most unix programs like wc, grep, awk supports pipe mode. Which means, external 
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/print.css">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20190927">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=20200113">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}a.monospace{font-family:Inconsolata;}</style>
 </head>
@@ -63,7 +63,7 @@ Most unix programs like wc, grep, awk supports pipe mode. Which means, external 
       <br><a href="https://www.instagram.com/md.minhazul.haque/"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
       </p>
     </div>
-    <p>&copy; 2012 - 2019. All rights reserved.</p>
+    <p>&copy; 2012 - 2020. All rights reserved.</p>
   </div>
 </div>
 
@@ -92,7 +92,7 @@ Most unix programs like wc, grep, awk supports pipe mode. Which means, external 
 <span class="k">if </span><span class="nb">read</span> <span class="nt">-t</span> 0
 <span class="k">then
     </span><span class="nb">echo</span> <span class="s2">"Running in pipe mode"</span>
-    <span class="nv">data</span><span class="o">=</span><span class="k">$(</span><span class="nb">cat</span><span class="k">)</span>
+    <span class="nv">data</span><span class="o">=</span><span class="si">$(</span><span class="nb">cat</span><span class="si">)</span>
     <span class="nb">echo</span> <span class="s2">"Data: </span><span class="nv">$data</span><span class="s2">"</span>
 <span class="k">else
     </span><span class="nb">echo</span> <span class="s2">"Running in normal mode"</span>
