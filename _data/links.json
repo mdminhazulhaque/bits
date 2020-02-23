@@ -29,12 +29,6 @@
     "title": "Twitter",
     "show": "true"
   },
-  "instagram": {
-    "href": "https://www.instagram.com/md.minhazul.haque/",
-    "icon": "fa-instagram",
-    "title": "Instagram",
-    "show": "true"
-  },
   "imdb": {
     "href": "http://www.imdb.com/user/ur39009218/ratings/",
     "icon": "fa-film",
