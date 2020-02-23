@@ -1,0 +1,275 @@
+[
+    {
+        "href":"https://github.com/mdminhazulhaque/esp32-mqtt-ir-remote",
+        "desc":"A simplest remote IR application that can turn on your aircon via MQTT message",
+        "title":"esp32-mqtt-ir-remote",
+        "tags":"python",
+        "year":"2019"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/flightaware-cli",
+        "desc":"Flight updates from FlightAware using commandline",
+        "title":"flightaware-cli",
+        "tags":"python",
+        "year":"2019"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/kakitangan-cli",
+        "desc":"CLI for Kakitangan app, the online HR Software for Malaysian businesses",
+        "title":"kakitangan-cli",
+        "tags":"python",
+        "year":"2019"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/youtube-dl-gui",
+        "desc":"Simple GUI for youtube-dl CLI",
+        "title":"youtube-dl-gui",
+        "tags":"python",
+        "year":"2019"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/bd-mrp-api",
+        "desc":"Bangladesh MRP Status Checker API",
+        "title":"bd-mrp-api",
+        "tags":"python",
+        "year":"2019"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/pyposlaju",
+        "desc":"Pos Laju (Malaysia) Tracking ID Checker",
+        "title":"pyposlaju",
+        "tags":"python",
+        "year":"2019"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/banglalionwimaxapi",
+        "desc":"Banglalion WiMAX API to get Account Information over HTTP",
+        "title":"banglalionwimaxapi",
+        "tags":"python",
+        "year":"2018"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/online-compiler",
+        "desc":"PHP based online compiler",
+        "title":"online-compiler",
+        "tags":"php",
+        "year":"2018"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/moSHquitto",
+        "desc":"SHell over Mosquitto",
+        "title":"moSHquitto",
+        "tags":"python,lua",
+        "year":"2017"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/TPLink-Router-CLI",
+        "desc":"An easy CLI tool to access TPLink Routers written in Python",
+        "title":"TPLink-Router-CLI",
+        "tags":"python",
+        "year":"2017"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/foreach",
+        "desc":"Read lines from file/stdin and execute them as command argument",
+        "title":"foreach",
+        "tags":"bash",
+        "year":"2016"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/beceem-cscm-armv7",
+        "desc":"Binary files for BCS250 WiMAX Devices on ARM",
+        "title":"beceem-cscm-armv7",
+        "tags":"c cpp",
+        "year":"2016"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/probhat.im",
+        "desc":"Online Probhat Keyboard",
+        "title":"probhat.im",
+        "tags":"html css js",
+        "year":"2016"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/Bilai-PnP-Gui",
+        "desc":"Cross platform GUI for Banglalion Hostless Modems",
+        "title":"Bilai-PnP-Gui",
+        "tags":".net qt",
+        "year":"2016"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/KTorrentBootstrapUI",
+        "desc":"KTorrent WebInterface with Bootstrap Theme",
+        "title":"KTorrentBootstrapUI",
+        "tags":"html css js",
+        "year":"2016"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/probhat-osx",
+        "desc":"Probhat keylayout for OS X",
+        "title":"Probhat",
+        "tags":"xml",
+        "year":"2016"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/ruet-thesis-template-latex",
+        "desc":"A LaTeX template for writing B.Sc. Undergraduate Thesis Report at RUET",
+        "title":"ruet-thesis-template-latex",
+        "tags":"latex",
+        "year":"2016"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/Easy-WiFi-Hotspot",
+        "desc":"An app to create, start and stop WiFi hosted network on Windows",
+        "title":"Easy-WiFi-Hotspot",
+        "tags":".net",
+        "year":"2016"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/Qtomato",
+        "desc":"A cross-platform app built using Qt5 to follow Pomodoro Technique",
+        "title":"Qtomato",
+        "tags":"qt",
+        "year":"2015"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/TIFFCapture",
+        "desc":"An OpenCV::VideoCapture like implementation for multi-directory TIFF media using libtiff",
+        "title":"TIFFCapture",
+        "tags":"opencv",
+        "year":"2015"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/SimpleScientificCalculator",
+        "desc":"A real simple scientific calculator written in Qt and Lepton",
+        "title":"SimpleScientificCalculator",
+        "tags":"qt",
+        "year":"2015"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/dpkg-deb-boilerplate",
+        "desc":"An easy to use boilerplate debuild project for building debian packages",
+        "title":"dpkg-deb-boilerplate",
+        "tags":"makefile",
+        "year":"2015"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/SpotDetectionOnLeaf",
+        "desc":"Detects Spot on Leaf using OpenCV",
+        "title":"SpotDetectionOnLeaf",
+        "tags":"opencv",
+        "year":"2015"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/fatigue-detection",
+        "desc":"A lousy Fatigue Detection program written in OpenCV using Eye Blinking",
+        "title":"fatigue-detection",
+        "tags":"opencv",
+        "year":"2015"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/adb-gui",
+        "desc":"Graphical frontend of Android Debug Bridge (adb) under development",
+        "title":"adb-gui",
+        "tags":"qt",
+        "year":"2015"
+    },
+    {
+        "href":"http://qt.howtocode.com.bd/",
+        "desc":"A book in Bangla on Qt Framework under development",
+        "title":"qt.howtocode.com.bd",
+        "tags":"markdown",
+        "year":"2015"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/pingpong",
+        "desc":"A ping pong game written in OpenGL",
+        "title":"PingPong",
+        "tags":"opengl",
+        "year":"2015"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/Reminder",
+        "desc":"A tiny timer for your desktop",
+        "title":"Reminder",
+        "tags":"qt",
+        "year":"2014"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/WiFlyControlPad",
+        "desc":"A controller for RN-171 WiFly module",
+        "title":"WiFlyControlPad",
+        "tags":"qt arduino",
+        "year":"2014"
+    },
+    {
+        "href":"https://bugzilla.gnome.org/show_bug.cgi?id=738743",
+        "desc":"Added Teletalk APN to gnome-networkmanager",
+        "title":"Gnome NetworkManager Patch",
+        "tags":"xml",
+        "year":"2014"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/qarducontrol",
+        "desc":"Arduino management software for PC",
+        "title":"QArduControl",
+        "tags":"qt arduino",
+        "year":"2014"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/QuickSMS",
+        "desc":"Fast template based SMS generator for Android",
+        "title":"QuickSMS",
+        "tags":"android",
+        "year":"2014"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/ProbhatKeyboard",
+        "desc":"Lightweight Android Bangla keyboard for Android",
+        "title":"ProbhatKeyboard",
+        "tags":"android",
+        "year":"2014"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/RemoteControl",
+        "desc":"Virtual touchpad for Android to control PC",
+        "title":"RemoteControl",
+        "tags":"android qt",
+        "year":"2014"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/CameraToMouse",
+        "desc":"OpenCV based object movement to mouse action",
+        "title":"CameraToMouse",
+        "tags":"opencv",
+        "year":"2013"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/technologybasic",
+        "desc":"Dictionary of 600+ tech-terms translations",
+        "title":"Technologybasic",
+        "tags":"plaintext",
+        "year":"2013"
+    },
+    {
+        "href":"https://lkml.org/lkml/2012/11/12/263",
+        "desc":"Updated bcm_wimax device product tree",
+        "title":"Linux Kernel Patch",
+        "tags":"c",
+        "year":"2012"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/sdn",
+        "desc":"A blog feed parser and notifier for PC",
+        "title":"sdn",
+        "tags":"qt",
+        "year":"2012"
+    },
+    {
+        "href":"https://github.com/mdminhazulhaque/wimaxcmgui1",
+        "desc":"Beceem WiMAX API Frontend",
+        "title":"wimaxcmgui",
+        "tags":"c qt",
+        "year":"2012"
+    }
+]

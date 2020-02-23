@@ -23,12 +23,6 @@
     "title": "LinkedIn",
     "show": "true"
   },
-  "twitter": {
-    "href": "https://twitter.com/mdminhazulhaque",
-    "icon": "fa-twitter",
-    "title": "Twitter",
-    "show": "true"
-  },
   "imdb": {
     "href": "http://www.imdb.com/user/ur39009218/ratings/",
     "icon": "fa-film",
