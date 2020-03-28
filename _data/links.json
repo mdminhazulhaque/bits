@@ -11,16 +11,16 @@
     "title": "Github",
     "show": "true"
   },
-  "stackexchange": {
-    "href": "https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts",
-    "icon": "fa-stack-exchange",
-    "title": "StackExchange",
-    "show": "true"
-  },
   "linkedin": {
     "href": "https://bd.linkedin.com/in/mdminhazulhaque",
     "icon": "fa-linkedin",
     "title": "LinkedIn",
+    "show": "true"
+  },
+  "stackexchange": {
+    "href": "https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts",
+    "icon": "fa-stack-exchange",
+    "title": "StackExchange",
     "show": "true"
   },
   "imdb": {
