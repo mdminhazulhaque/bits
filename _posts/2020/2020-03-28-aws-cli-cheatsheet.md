@@ -2,7 +2,7 @@
 layout: post
 title: AWS CLI Cheatsheet
 date: 2020-03-28
-categories: aws
+category: aws
 ---
 
 I heavily rely on CLI tools rather than GUI/Web interface. AWS CLI is a great tool to manage AWS resources across different accounts, regions and environments.

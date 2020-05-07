@@ -2,7 +2,7 @@
 layout: post
 title: "মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস"
 date: 2019-03-22
-categories: malaysia
+category: malaysia
 ---
 
 > পূর্ববর্তী পোস্ট [মালয়েশিয়ায় রিলোকেশন ০ - রেজিউম প্রস্তুতি ও ইন্টারভিউ](https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-preparation-apply-interview-etc.html)

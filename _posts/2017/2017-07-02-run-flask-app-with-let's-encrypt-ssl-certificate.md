@@ -2,7 +2,7 @@
 layout: post
 title: Run Flask App with Let's Encrypt SSL Certificate
 date: 2017-07-02
-categories: python
+category: python
 ---
 
 Flask supports serving in HTTPS mode when provided with valid certificate and key file. I have been using Let's Encrypt which automatically manages all the SSL keyfiles and certificates used on my server. I had troubles setting up preconfigured SSL keys and certificates with my Flask app. Although I had it figured out later.

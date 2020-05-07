@@ -2,7 +2,7 @@
 layout: post
 title: "মালয়েশিয়ায় রিলোকেশন ৪ - ইমিগ্রেশন"
 date: 2019-04-06
-categories: malaysia
+category: malaysia
 ---
 > পূর্ববর্তী পোস্ট [মালয়েশিয়ায় রিলোকেশন ৩ - শেষ মুহুর্তের প্রস্তুতি](https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-last-minute-preparation.html)
 

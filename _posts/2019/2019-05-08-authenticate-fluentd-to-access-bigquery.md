@@ -2,7 +2,7 @@
 layout: post
 title: Authenticate Fluentd to Access BigQuery
 date: 2019-05-08
-categories: linux
+category: linux
 ---
 Fluentd is a pretty good log collection and streaming solution for several platforms. You can easily stream your nginx logs to BigQuery via Fluentd.
 

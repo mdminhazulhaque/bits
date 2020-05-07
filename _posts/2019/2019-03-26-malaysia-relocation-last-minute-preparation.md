@@ -2,7 +2,7 @@
 layout: post
 title: "মালয়েশিয়ায় রিলোকেশন ৩ - শেষ মুহুর্তের প্রস্তুতি"
 date: 2019-03-26
-categories: malaysia
+category: malaysia
 ---
 > পূর্ববর্তী পোস্ট [মালয়েশিয়ায় রিলোকেশন ২ - ভিসার জন্য এপ্লাই করা](https://bits.mdminhazulhaque.io/malaysia/malaysia-single-entry-visa-prep.html)
 

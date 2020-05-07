@@ -2,7 +2,7 @@
 layout: post
 title: Tweak your Bee IPTV Box with 3rd Party App and Launcher
 date: 2019-05-30
-categories: android
+category: android
 ---
 Yesterday, I got a call from one of my colleagues (and also my neighbor) about how he messed up with his Android TV Box. He asked me if I could help him with that to make it <strike>great</strike> useful again.
 

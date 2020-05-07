@@ -2,7 +2,7 @@
 layout: post
 title: "মালয়েশিয়ায় রিলোকেশন ২ - ভিসার জন্য এপ্লাই করা"
 date: 2019-03-22
-categories: malaysia
+category: malaysia
 ---
 > পূর্ববর্তী পোস্ট [মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস](https://bits.mdminhazulhaque.io/malaysia/malaysia-salary-negotiation-employment-pass.html)
 
