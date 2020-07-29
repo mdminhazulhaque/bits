@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <meta name="description" content="I am a MySQL guy. I can query MySQL, BigQuery or SQL-like databases for my day to day business. Last week, I faced a challange where I needed to extract ...">
+  <meta name="author" content="Md. Minhazul Haque">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Bits",
+      "item": "https://bits.mdminhazulhaque.io/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "mongodb",
+      "item": "https://bits.mdminhazulhaque.io/mongodb"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "MongoDB for MySQL People",
+      "item": "https://bits.mdminhazulhaque.io//mongodb/mongodb-for-mysql-people.html"
+    }]
+  }</script>
+  <title>MongoDB for MySQL People | Bits</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/print.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=1">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}</style>
+</head>
+
+  <body>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a class="monospace" href="/">
+        Bits<span class="blink">_</span>
+        </a>
+      </h1>
+      <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p>
+      <p>Find me at ...
+      <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a>
+      <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+      <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a>
+      </p>
+    </div>
+    <p>&copy; 2012 - 2020. All rights reserved.</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">MongoDB for MySQL People</h1>
+  <hr>
+  <i class="fa fa-fw fa-calendar"></i>30 Jul 2020 <i class="fa fa-fw fa-tag"></i><a href="/mongodb">mongodb</a>
+  <hr>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="2958174403"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <p>I am a MySQL guy. I can query MySQL, BigQuery or SQL-like databases for my day to day business. Last week, I faced a challange where I needed to extract some information from a production MongoDB server that involves aggregation. I had no idea how MongoDB works or how to run CRUD operation on such database. So obviously, I spent my whole weekend in learning MongoDB. In this post I am going to share the MongoDB queries I learnt, and the equivalent MySQL queries as well.</p>
+
+<blockquote>
+  <p>I used MongoDB v3.6, for both daemon and cli, so some functions may not work with your current setup</p>
+</blockquote>
+
+<h2 id="populate-data-and-load-into-mongodb">Populate Data and Load into MongoDB</h2>
+
+<p>I used the following piece of code to scrapt my Github profile information into a single JSON file.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">username</span> <span class="o">=</span> <span class="s">'mdminhazulhaque'</span>
+<span class="n">repos</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">page</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="s">'page'</span><span class="p">,</span> <span class="n">page</span><span class="p">),</span>
+        <span class="p">(</span><span class="s">'type'</span><span class="p">,</span> <span class="s">'owner'</span><span class="p">),</span>
+        <span class="p">(</span><span class="s">'per_page'</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.github.com/users/{username}/repos'</span>\
+        <span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">),</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">single</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">():</span>
+        <span class="n">repos</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s">"name"</span><span class="p">:</span> <span class="n">single</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'name'</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+            <span class="s">"description"</span><span class="p">:</span> <span class="n">single</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'description'</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+            <span class="s">"created_at"</span><span class="p">:</span> <span class="n">single</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'created_at'</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+            <span class="s">"language"</span><span class="p">:</span> <span class="n">single</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'language'</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+            <span class="s">"stargazers_count"</span><span class="p">:</span> <span class="n">single</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'stargazers_count'</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="p">})</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">page</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"github.json"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">repos</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Then I loaded the JSON data into MongoDB using <code class="highlighter-rouge">mongoimport</code>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mongoimport <span class="nt">--db</span> <span class="nb">local</span> <span class="nt">--collection</span> repos <span class="nt">--drop</span> <span class="nt">--jsonArray</span> <span class="nt">--file</span> github.json 
+</code></pre></div></div>
+
+<p>One record from the <code class="highlighter-rouge">repo</code> collection looks like the following.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>mongo 127.0.0.1/local
+<span class="o">&gt;</span> db.repos.findOne<span class="o">()</span>
+<span class="o">{</span>
+        <span class="s2">"_id"</span> : ObjectId<span class="o">(</span><span class="s2">"5f1cfca24662cbc419b65e29"</span><span class="o">)</span>,
+        <span class="s2">"name"</span> : <span class="s2">"a-pdf-reader"</span>,
+        <span class="s2">"description"</span> : <span class="s2">"A poppler based pdf reader written in Qt4"</span>,
+        <span class="s2">"created_at"</span> : <span class="s2">"2012-10-07T20:44:48Z"</span>,
+        <span class="s2">"updated_at"</span> : <span class="s2">"2014-02-27T21:26:13Z"</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Let’s start playing with MongoDB.</p>
+
+<h2 id="select">SELECT</h2>
+
+<h3 id="select--from-repos">select * from repos</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.find<span class="o">({})</span>
+
+<span class="o">{</span> <span class="s2">"_id"</span> : ObjectId<span class="o">(</span><span class="s2">"5f1cfca24662cbc419b65e2a"</span><span class="o">)</span>, <span class="s2">"name"</span> : <span class="s2">"apt-sync"</span>, <span class="s2">"created_at"</span> : <span class="s2">"2017-11-19T04:57:23Z"</span>, <span class="s2">"language"</span> : <span class="s2">"Python"</span>, <span class="s2">"stargazers_count"</span> : 0 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : ObjectId<span class="o">(</span><span class="s2">"5f1cfca24662cbc419b65e2b"</span><span class="o">)</span>, <span class="s2">"name"</span> : <span class="s2">"aws-cli-cheatsheet"</span>, <span class="s2">"created_at"</span> : <span class="s2">"2020-02-27T16:38:21Z"</span>, <span class="s2">"language"</span> : null, <span class="s2">"stargazers_count"</span> : 52 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : ObjectId<span class="o">(</span><span class="s2">"5f1cfca24662cbc419b65e2c"</span><span class="o">)</span>, <span class="s2">"name"</span> : <span class="s2">"banglalion-wimax-mac"</span>, <span class="s2">"created_at"</span> : <span class="s2">"2015-02-25T19:15:48Z"</span>, <span class="s2">"language"</span> : <span class="s2">"HTML"</span>, <span class="s2">"stargazers_count"</span> : 0 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : ObjectId<span class="o">(</span><span class="s2">"5f1cfca24662cbc419b65e2d"</span><span class="o">)</span>, <span class="s2">"name"</span> : <span class="s2">"annoying-bn-text"</span>, <span class="s2">"created_at"</span> : <span class="s2">"2019-06-05T17:25:05Z"</span>, <span class="s2">"language"</span> : <span class="s2">"HTML"</span>, <span class="s2">"stargazers_count"</span> : 1 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : ObjectId<span class="o">(</span><span class="s2">"5f1cfca24662cbc419b65e2e"</span><span class="o">)</span>, <span class="s2">"name"</span> : <span class="s2">"banglalionwimaxapi"</span>, <span class="s2">"created_at"</span> : <span class="s2">"2018-10-16T13:03:53Z"</span>, <span class="s2">"language"</span> : <span class="s2">"Python"</span>, <span class="s2">"stargazers_count"</span> : 0 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : ObjectId<span class="o">(</span><span class="s2">"5f1cfca24662cbc419b65e2f"</span><span class="o">)</span>, <span class="s2">"name"</span> : <span class="s2">"bcm-wimax-dkms"</span>, <span class="s2">"created_at"</span> : <span class="s2">"2017-05-20T18:22:07Z"</span>, <span class="s2">"language"</span> : <span class="s2">"C"</span>, <span class="s2">"stargazers_count"</span> : 0 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : ObjectId<span class="o">(</span><span class="s2">"5f1cfca24662cbc419b65e30"</span><span class="o">)</span>, <span class="s2">"name"</span> : <span class="s2">"bd-mrp-api"</span>, <span class="s2">"created_at"</span> : <span class="s2">"2018-12-31T20:26:48Z"</span>, <span class="s2">"language"</span> : <span class="s2">"Python"</span>, <span class="s2">"stargazers_count"</span> : 1 <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="select-name-description-from-repos">select name, description from repos</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.find<span class="o">({}</span>, <span class="o">{</span>_id:0, name:1, description:1<span class="o">})</span>
+
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"a-pdf-reader"</span>, <span class="s2">"description"</span> : <span class="s2">"A poppler based pdf reader written in Qt4"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"apt-sync"</span>, <span class="s2">"description"</span> : <span class="s2">":gift: Sync APT installed package list across different machines"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"aws-cli-cheatsheet"</span>, <span class="s2">"description"</span> : <span class="s2">":cloud: AWS CLI + JQ = Make life easier"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"banglalion-wimax-mac"</span>, <span class="s2">"description"</span> : <span class="s2">":satellite: Banglalion WiMAX on Mac OS X"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"annoying-bn-text"</span>, <span class="s2">"description"</span> : <span class="s2">"Piss of your friends with awkwardly written Bengali text"</span> <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="select-name-description-from-repos-limit-2">select name, description from repos limit 2</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.aggregate<span class="o">([{</span><span class="nv">$project</span>:<span class="o">{</span>_id:0, name:1, description:1<span class="o">}}</span>, <span class="o">{</span><span class="nv">$limit</span>:5<span class="o">}])</span>
+
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"a-pdf-reader"</span>, <span class="s2">"description"</span> : <span class="s2">"A poppler based pdf reader written in Qt4"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"apt-sync"</span>, <span class="s2">"description"</span> : <span class="s2">":gift: Sync APT installed package list across different machines"</span> <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="select-name-description-from-repos-order-by-name">select name, description from repos order by name</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.find<span class="o">({}</span>, <span class="o">{</span>_id:0, name:1, description:1<span class="o">})</span>.sort<span class="o">({</span>name:1<span class="o">})</span>
+
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"Android-Javascript-Bridge"</span>, <span class="s2">"description"</span> : <span class="s2">"Android and Javascript two way communication"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"Android-JavascriptInterface-Sample"</span>, <span class="s2">"description"</span> : <span class="s2">"Call Java (Android) methods from Webview using Javascript"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"Bilai-PnP-Gui"</span>, <span class="s2">"description"</span> : <span class="s2">":cat2: GUI for Bilai PnP Modems"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"CPPad"</span>, <span class="s2">"description"</span> : <span class="s2">"Write and run C++ codes, instantly!"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"CSE10Routine"</span>, <span class="s2">"description"</span> : <span class="s2">"Tabbed routine app"</span> <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="select-name-stargazers_count-from-repos-order-by-stargazers_count-desc">select name, stargazers_count from repos order by stargazers_count desc</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.find<span class="o">({}</span>, <span class="o">{</span>_id:0, name:1, stargazers_count:1<span class="o">})</span>.sort<span class="o">({</span>stargazers_count:-1<span class="o">})</span>
+
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"aws-cli-cheatsheet"</span>, <span class="s2">"stargazers_count"</span> : 52 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"probhat-osx"</span>, <span class="s2">"stargazers_count"</span> : 23 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"PyQt-BPNN"</span>, <span class="s2">"stargazers_count"</span> : 22 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"foreach"</span>, <span class="s2">"stargazers_count"</span> : 14 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"html-table-to-json"</span>, <span class="s2">"stargazers_count"</span> : 12 <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="select-name-stargazers_count-from-repos-where-stargazers_count--20-order-by-stargazers_count">select name, stargazers_count from repos where stargazers_count &gt; 20 order by stargazers_count</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.find<span class="o">({</span> stargazers_count: <span class="o">{</span> <span class="nv">$gt</span>: 20<span class="o">}</span> <span class="o">}</span>, <span class="o">{</span>_id:0, name:1, stargazers_count:1<span class="o">})</span>.sort<span class="o">({</span>stargazers_count:-1<span class="o">})</span>
+
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"aws-cli-cheatsheet"</span>, <span class="s2">"stargazers_count"</span> : 52 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"probhat-osx"</span>, <span class="s2">"stargazers_count"</span> : 23 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"PyQt-BPNN"</span>, <span class="s2">"stargazers_count"</span> : 22 <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="select-name-stargazers_count-from-repos-where-language--python">select name, stargazers_count from repos where language = “Python”</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.find<span class="o">({</span> language: <span class="s2">"Python"</span> <span class="o">}</span>, <span class="o">{</span>_id:0, name:1, stargazers_count:1<span class="o">})</span>
+
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"apt-sync"</span>, <span class="s2">"stargazers_count"</span> : 0 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"banglalionwimaxapi"</span>, <span class="s2">"stargazers_count"</span> : 0 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"bd-mrp-api"</span>, <span class="s2">"stargazers_count"</span> : 1 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"flightaware-cli"</span>, <span class="s2">"stargazers_count"</span> : 0 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"html-table-to-json"</span>, <span class="s2">"stargazers_count"</span> : 12 <span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="select-name-description-from-repos-where-description-like-cli">select name, description from repos where description like “%cli%”</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.find<span class="o">({</span> description: /cli/i <span class="o">}</span>, <span class="o">{</span>_id:0, name:1, description:1<span class="o">})</span>
+
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"aws-cli-cheatsheet"</span>, <span class="s2">"description"</span> : <span class="s2">":cloud: AWS CLI + JQ = Make life easier"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"ClipMonitor"</span>, <span class="s2">"description"</span> : <span class="s2">"A tiny clip monitor app built with Qt5"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"foreach"</span>, <span class="s2">"description"</span> : <span class="s2">":repeat: Read lines from file/stdin and execute them as CLI argument"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"kakitangan-cli"</span>, <span class="s2">"description"</span> : <span class="s2">":briefcase: CLI for Kakitangan app, the online HR Software for Malaysian businesses"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"librs232"</span>, <span class="s2">"description"</span> : <span class="s2">":paperclip: RS232 Library in C"</span> <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="select-language-count-as-count-description-from-repos-group-by-language-order-by-count">select language, count(*) as count, description from repos group by language order by count</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.aggregate<span class="o">([{</span> <span class="nv">$group</span>: <span class="o">{</span> _id: <span class="s2">"</span><span class="nv">$language</span><span class="s2">"</span>, count: <span class="o">{</span> <span class="nv">$sum</span>: 1 <span class="o">}</span> <span class="o">}</span> <span class="o">}</span>,<span class="o">{</span> <span class="nv">$sort</span>: <span class="o">{</span> count: <span class="nt">-1</span> <span class="o">}</span> <span class="o">}])</span>
+
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"C++"</span>, <span class="s2">"count"</span> : 61 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"Python"</span>, <span class="s2">"count"</span> : 25 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"HTML"</span>, <span class="s2">"count"</span> : 12 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"Java"</span>, <span class="s2">"count"</span> : 12 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"Shell"</span>, <span class="s2">"count"</span> : 10 <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="select-language-sumstargazers_count-as-stars-description-from-repos-group-by-language-order-by-stars">select language, sum(stargazers_count) as stars, description from repos group by language order by stars</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.aggregate<span class="o">([{</span> <span class="nv">$group</span>: <span class="o">{</span> _id: <span class="s2">"</span><span class="nv">$language</span><span class="s2">"</span>, stars: <span class="o">{</span> <span class="nv">$sum</span>: <span class="s2">"</span><span class="nv">$stargazers_count</span><span class="s2">"</span> <span class="o">}</span> <span class="o">}</span> <span class="o">}</span>,<span class="o">{</span> <span class="nv">$sort</span>: <span class="o">{</span> stars: <span class="nt">-1</span> <span class="o">}</span> <span class="o">}])</span>
+
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"C++"</span>, <span class="s2">"stars"</span> : 72 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : null, <span class="s2">"stars"</span> : 52 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"Python"</span>, <span class="s2">"stars"</span> : 47 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"Shell"</span>, <span class="s2">"stars"</span> : 43 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"HTML"</span>, <span class="s2">"stars"</span> : 19 <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="select-name-substrcreated_at-0-4-as-created_at_year-from-repos-order-by-created_at_year-desc">select name, substr(created_at, 0, 4) as created_at_year from repos order by created_at_year desc</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.aggregate<span class="o">([{</span><span class="nv">$addFields</span>:<span class="o">{</span><span class="s2">"created_at_year"</span>:<span class="o">{</span><span class="nv">$substr</span>:[<span class="s2">"</span><span class="nv">$created_at</span><span class="s2">"</span>, 0, 4]<span class="o">}}}</span>, <span class="o">{</span><span class="nv">$project</span>: <span class="o">{</span>_id:0, name:1, created_at_year:1<span class="o">}}</span>, <span class="o">{</span><span class="nv">$sort</span>: <span class="o">{</span>created_at_year:-1<span class="o">}}])</span>
+
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"aws-cli-cheatsheet"</span>, <span class="s2">"created_at_year"</span> : <span class="s2">"2020"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"gitfolio"</span>, <span class="s2">"created_at_year"</span> : <span class="s2">"2020"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"messenger-bot"</span>, <span class="s2">"created_at_year"</span> : <span class="s2">"2020"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"urctl"</span>, <span class="s2">"created_at_year"</span> : <span class="s2">"2020"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"annoying-bn-text"</span>, <span class="s2">"created_at_year"</span> : <span class="s2">"2019"</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"esp32-mqtt-ir-remote"</span>, <span class="s2">"created_at_year"</span> : <span class="s2">"2019"</span> <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="select-substrcreated_at-0-4-as-year-count-as-count-from-repos-group-by-year-order-by-count-desc">select substr(created_at, 0, 4)) as year, count(*) as count from repos group by year order by count desc</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.aggregate<span class="o">([{</span><span class="nv">$addFields</span>:<span class="o">{</span><span class="s2">"created_at_year"</span>:<span class="o">{</span><span class="nv">$substr</span>:[<span class="s2">"</span><span class="nv">$created_at</span><span class="s2">"</span>, 0, 4]<span class="o">}}}</span>, <span class="o">{</span> <span class="nv">$group</span>: <span class="o">{</span> _id: <span class="s2">"</span><span class="nv">$created_at_year</span><span class="s2">"</span>, count: <span class="o">{</span> <span class="nv">$sum</span>: 1 <span class="o">}</span> <span class="o">}</span> <span class="o">}</span>,<span class="o">{</span> <span class="nv">$sort</span>: <span class="o">{</span> count: <span class="nt">-1</span> <span class="o">}</span> <span class="o">}])</span>
+
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"2015"</span>, <span class="s2">"count"</span> : 41 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"2016"</span>, <span class="s2">"count"</span> : 35 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"2012"</span>, <span class="s2">"count"</span> : 18 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"2014"</span>, <span class="s2">"count"</span> : 14 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"2013"</span>, <span class="s2">"count"</span> : 12 <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"_id"</span> : <span class="s2">"2019"</span>, <span class="s2">"count"</span> : 10 <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="select-name-unix_timestampstr_to_datecreated_at-y-m-dthmsz-from-repos">select name, unix_timestamp(str_to_date(created_at, ‘%Y-%M-%dT%h:%m:%sz’)) from repos</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.aggregate<span class="o">([{</span><span class="nv">$addFields</span>: <span class="o">{</span><span class="nb">date</span>: <span class="o">{</span> <span class="nv">$dateFromString</span>: <span class="o">{</span> dateString: <span class="s2">"</span><span class="nv">$created_at</span><span class="s2">"</span> <span class="o">}}}}</span>, <span class="o">{</span><span class="nv">$project</span>: <span class="o">{</span>_id:0, created_at_usec: <span class="o">{</span> <span class="nv">$subtract</span>: <span class="o">[</span> <span class="s2">"</span><span class="nv">$date</span><span class="s2">"</span>, new Date<span class="o">(</span><span class="s2">"1970-01-01"</span><span class="o">)</span> <span class="o">]</span> <span class="o">}</span>, name:1<span class="o">}}])</span>
+
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"a-pdf-reader"</span>, <span class="s2">"created_at_usec"</span> : NumberLong<span class="o">(</span><span class="s2">"1349642688000"</span><span class="o">)</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"apt-sync"</span>, <span class="s2">"created_at_usec"</span> : NumberLong<span class="o">(</span><span class="s2">"1511067443000"</span><span class="o">)</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"aws-cli-cheatsheet"</span>, <span class="s2">"created_at_usec"</span> : NumberLong<span class="o">(</span><span class="s2">"1582821501000"</span><span class="o">)</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"banglalion-wimax-mac"</span>, <span class="s2">"created_at_usec"</span> : NumberLong<span class="o">(</span><span class="s2">"1424891748000"</span><span class="o">)</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"annoying-bn-text"</span>, <span class="s2">"created_at_usec"</span> : NumberLong<span class="o">(</span><span class="s2">"1559755505000"</span><span class="o">)</span> <span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="delete">DELETE</h2>
+
+<h3 id="delete-from-repose-where-language--c">delete from repose where language = “C++”</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.remove<span class="o">({</span>language:<span class="s2">"C++"</span><span class="o">})</span>
+</code></pre></div></div>
+
+<h2 id="alter">ALTER</h2>
+
+<h3 id="alter-table-repos-drop-column-created_at">alter table repos drop column created_at</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.update<span class="o">({}</span>,<span class="o">{</span><span class="nv">$unset</span>:<span class="o">{</span>created_at:<span class="s2">""</span><span class="o">}})</span>
+</code></pre></div></div>
+
+<h3 id="alter-table-repos-insert-column-foo-int">alter table repos insert column foo int</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.update<span class="o">({}</span>, <span class="o">{</span><span class="nv">$set</span>: <span class="o">{</span>foo:0<span class="o">}}</span>, <span class="o">{</span>multi:1<span class="o">})</span>
+</code></pre></div></div>
+
+<p>That’s all for today. Feel free to share if any of the queries can be improved. Thanks for reading.</p>
+
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-9642838276352812"
+       data-ad-slot="7351100586"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+
+    </div>
+  </body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-57632461-7', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>
