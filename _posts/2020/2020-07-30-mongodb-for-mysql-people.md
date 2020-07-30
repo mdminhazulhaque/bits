@@ -61,7 +61,8 @@ $ mongo 127.0.0.1/local
         "name" : "a-pdf-reader",
         "description" : "A poppler based pdf reader written in Qt4",
         "created_at" : "2012-10-07T20:44:48Z",
-        "updated_at" : "2014-02-27T21:26:13Z"
+        "language" : "C++",
+        "stargazers_count": null
 }
 ```
 

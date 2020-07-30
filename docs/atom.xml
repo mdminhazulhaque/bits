@@ -4,7 +4,7 @@
  <title>Bits</title>
  <link href="https://bits.mdminhazulhaque.io/atom.xml" rel="self"/>
  <link href="https://bits.mdminhazulhaque.io/"/>
- <updated>2020-07-30T02:41:51+08:00</updated>
+ <updated>2020-07-30T16:31:08+08:00</updated>
  <id>https://bits.mdminhazulhaque.io</id>
  <author>
    <name></name>
@@ -72,7 +72,8 @@
         &lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;a-pdf-reader&quot;&lt;/span&gt;,
         &lt;span class=&quot;s2&quot;&gt;&quot;description&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;A poppler based pdf reader written in Qt4&quot;&lt;/span&gt;,
         &lt;span class=&quot;s2&quot;&gt;&quot;created_at&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;2012-10-07T20:44:48Z&quot;&lt;/span&gt;,
-        &lt;span class=&quot;s2&quot;&gt;&quot;updated_at&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;2014-02-27T21:26:13Z&quot;&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;language&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;C++&quot;&lt;/span&gt;,
+        &lt;span class=&quot;s2&quot;&gt;&quot;stargazers_count&quot;&lt;/span&gt;: null
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
