@@ -4,7 +4,7 @@
  <title>Bits</title>
  <link href="https://bits.mdminhazulhaque.io/atom.xml" rel="self"/>
  <link href="https://bits.mdminhazulhaque.io/"/>
- <updated>2020-07-30T16:31:08+08:00</updated>
+ <updated>2020-08-04T22:28:31+08:00</updated>
  <id>https://bits.mdminhazulhaque.io</id>
  <author>
    <name></name>
@@ -17,7 +17,7 @@
    <link href="https://bits.mdminhazulhaque.io/mongodb/mongodb-for-mysql-people.html"/>
    <updated>2020-07-30T00:00:00+08:00</updated>
    <id>https://bits.mdminhazulhaque.io/mongodb/mongodb-for-mysql-people</id>
-   <content type="html">&lt;p&gt;I am a MySQL guy. I can query MySQL, BigQuery or SQL-like databases for my day to day business. Last week, I faced a challange where I needed to extract some information from a production MongoDB server that involves aggregation. I had no idea how MongoDB works or how to run CRUD operation on such database. So obviously, I spent my whole weekend in learning MongoDB. In this post I am going to share the MongoDB queries I learnt, and the equivalent MySQL queries as well.&lt;/p&gt;
+   <content type="html">&lt;p&gt;I am a MySQL guy. I can query MySQL, BigQuery or SQL-like databases for my day to day business. Last week, I faced a challenge where I needed to extract some information from a production MongoDB server that involves aggregation. I had no idea how MongoDB works or how to run CRUD operation on such database. So obviously, I spent my whole weekend in learning MongoDB. In this post I am going to share the MongoDB queries I learnt, and the equivalent MySQL queries as well.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;I used MongoDB v3.6, for both daemon and cli, so some functions may not work with your current setup&lt;/p&gt;
@@ -25,7 +25,7 @@
 
 &lt;h2 id=&quot;populate-data-and-load-into-mongodb&quot;&gt;Populate Data and Load into MongoDB&lt;/h2&gt;
 
-&lt;p&gt;I used the following piece of code to scrapt my Github profile information into a single JSON file.&lt;/p&gt;
+&lt;p&gt;I used the following piece of code to scrap my Github profile information into a single JSON file.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;json&lt;/span&gt;

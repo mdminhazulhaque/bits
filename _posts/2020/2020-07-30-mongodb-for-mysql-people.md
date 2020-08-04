@@ -5,13 +5,13 @@ date: 2020-07-30
 categories: mongodb
 ---
 
-I am a MySQL guy. I can query MySQL, BigQuery or SQL-like databases for my day to day business. Last week, I faced a challange where I needed to extract some information from a production MongoDB server that involves aggregation. I had no idea how MongoDB works or how to run CRUD operation on such database. So obviously, I spent my whole weekend in learning MongoDB. In this post I am going to share the MongoDB queries I learnt, and the equivalent MySQL queries as well.
+I am a MySQL guy. I can query MySQL, BigQuery or SQL-like databases for my day to day business. Last week, I faced a challenge where I needed to extract some information from a production MongoDB server that involves aggregation. I had no idea how MongoDB works or how to run CRUD operation on such database. So obviously, I spent my whole weekend in learning MongoDB. In this post I am going to share the MongoDB queries I learnt, and the equivalent MySQL queries as well.
 
 > I used MongoDB v3.6, for both daemon and cli, so some functions may not work with your current setup
 
 ## Populate Data and Load into MongoDB
 
-I used the following piece of code to scrapt my Github profile information into a single JSON file.
+I used the following piece of code to scrap my Github profile information into a single JSON file.
 
 ```python
 import requests
