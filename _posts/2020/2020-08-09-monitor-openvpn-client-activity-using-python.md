@@ -4,9 +4,6 @@ title: Monitor OpenVPN Client Activity using Python
 date: 2020-08-09
 categories: linux
 ---
-
-## About OpenVPN
-
 Installing OpenVPN in your own server gives you two major benefits. First, you will have better privacy control. Second, no need to spend on `pay-per-user` thing. As long as the CPU can handle encryption/decryption, and the ethernet controller can handle the traffic, OpenVPN is a pretty good choice for providing VPN service to a small-sized team.
 
 ## OpenVPN Config

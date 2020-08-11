@@ -4,7 +4,7 @@
  <title>Bits</title>
  <link href="https://bits.mdminhazulhaque.io/atom.xml" rel="self"/>
  <link href="https://bits.mdminhazulhaque.io/"/>
- <updated>2020-08-09T00:55:46+08:00</updated>
+ <updated>2020-08-12T01:32:39+08:00</updated>
  <id>https://bits.mdminhazulhaque.io</id>
  <author>
    <name></name>
@@ -17,9 +17,7 @@
    <link href="https://bits.mdminhazulhaque.io/linux/monitor-openvpn-client-activity-using-python.html"/>
    <updated>2020-08-09T00:00:00+08:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/monitor-openvpn-client-activity-using-python</id>
-   <content type="html">&lt;h2 id=&quot;about-openvpn&quot;&gt;About OpenVPN&lt;/h2&gt;
-
-&lt;p&gt;Installing OpenVPN in your own server gives you two major benefits. First, you will have better privacy control. Second, no need to spend on &lt;code class=&quot;highlighter-rouge&quot;&gt;pay-per-user&lt;/code&gt; thing. As long as the CPU can handle encryption/decryption, and the ethernet controller can handle the traffic, OpenVPN is a pretty good choice for providing VPN service to a small-sized team.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Installing OpenVPN in your own server gives you two major benefits. First, you will have better privacy control. Second, no need to spend on &lt;code class=&quot;highlighter-rouge&quot;&gt;pay-per-user&lt;/code&gt; thing. As long as the CPU can handle encryption/decryption, and the ethernet controller can handle the traffic, OpenVPN is a pretty good choice for providing VPN service to a small-sized team.&lt;/p&gt;
 
 &lt;h2 id=&quot;openvpn-config&quot;&gt;OpenVPN Config&lt;/h2&gt;
 
