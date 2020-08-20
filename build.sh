@@ -1,14 +1,13 @@
 #!/bin/bash
 
-GH_PAGES=
+# get poole sass files
+cp -r poole/_sass .
+cp -r poole/styles.scss public/css/poole.scss
 
-jekyll build
-rm _site/CNAME
-rm _site/README
+# get hyde theme
+head -4 public/css/poole.scss > public/css/hyde.scss
+cat hyde/public/css/hyde.css >> public/css/hyde.scss
 
-cp -r _site/* $GH_PAGES/
-cd $GH_PAGES
-sed -i "s/http:\/\/localhost:4000/https:\/\/bits.mdminhazulhaque.io/g" docs/sitemap.xml
-git add .
-git commit -m "New files"
-git push -u origin gh-pages
+# get pygment theme
+# head -4 public/css/poole.scss > public/css/syntax.scss
+# cat pygments-css/default.css >> public/css/syntax.scss
