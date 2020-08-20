@@ -41,12 +41,20 @@
   <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=1">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}</style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
   <body>
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
+      <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="6343426856"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
       <h1>
         <a class="monospace" href="/">
         Bits<span class="blink">_</span>
@@ -69,14 +77,13 @@
   <hr>
   <i class="fa fa-fw fa-calendar"></i>30 Jul 2020 <i class="fa fa-fw fa-tag"></i><a href="/mongodb">mongodb</a>
   <hr>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="2958174403"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="2958174403"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <p>I am a MySQL guy. I can query MySQL, BigQuery or SQL-like databases for my day to day business. Last week, I faced a challenge where I needed to extract some information from a production MongoDB server that involves aggregation. I had no idea how MongoDB works or how to run CRUD operation on such database. So obviously, I spent my whole weekend in learning MongoDB. In this post I am going to share the MongoDB queries I learnt, and the equivalent MySQL queries as well.</p>
 
 <blockquote>
@@ -100,22 +107,22 @@
         <span class="p">(</span><span class="s">'type'</span><span class="p">,</span> <span class="s">'owner'</span><span class="p">),</span>
         <span class="p">(</span><span class="s">'per_page'</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
     <span class="p">)</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.github.com/users/{username}/repos'</span>\
-        <span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">),</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">single</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">():</span>
-        <span class="n">repos</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-            <span class="s">"name"</span><span class="p">:</span> <span class="n">single</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'name'</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
-            <span class="s">"description"</span><span class="p">:</span> <span class="n">single</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'description'</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
-            <span class="s">"created_at"</span><span class="p">:</span> <span class="n">single</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'created_at'</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
-            <span class="s">"language"</span><span class="p">:</span> <span class="n">single</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'language'</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
-            <span class="s">"stargazers_count"</span><span class="p">:</span> <span class="n">single</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'stargazers_count'</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.github.com/users/{username}/repos'</span>\
+        <span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">),</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">single</span> <span class="ow">in</span> <span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">():</span>
+        <span class="n">repos</span><span class="p">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s">"name"</span><span class="p">:</span> <span class="n">single</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'name'</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+            <span class="s">"description"</span><span class="p">:</span> <span class="n">single</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'description'</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+            <span class="s">"created_at"</span><span class="p">:</span> <span class="n">single</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'created_at'</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+            <span class="s">"language"</span><span class="p">:</span> <span class="n">single</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'language'</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+            <span class="s">"stargazers_count"</span><span class="p">:</span> <span class="n">single</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'stargazers_count'</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
         <span class="p">})</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">())</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
         <span class="k">break</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">page</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"github.json"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
-    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">repos</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">json</span><span class="p">.</span><span class="n">dump</span><span class="p">(</span><span class="n">repos</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Then I loaded the JSON data into MongoDB using <code class="highlighter-rouge">mongoimport</code>.</p>
@@ -183,6 +190,8 @@
 <span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"CPPad"</span>, <span class="s2">"description"</span> : <span class="s2">"Write and run C++ codes, instantly!"</span> <span class="o">}</span>
 <span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"CSE10Routine"</span>, <span class="s2">"description"</span> : <span class="s2">"Tabbed routine app"</span> <span class="o">}</span>
 </code></pre></div></div>
+
+<p><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9642838276352812" data-ad-slot="8294162148"></ins></p>
 
 <h3 id="select-name-stargazers_count-from-repos-order-by-stargazers_count-desc">select name, stargazers_count from repos order by stargazers_count desc</h3>
 
@@ -305,19 +314,14 @@
 <p>That’s all for today. Feel free to share if any of the queries can be improved. Thanks for reading.</p>
 
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="7351100586"></ins>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="7351100586"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+      (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>

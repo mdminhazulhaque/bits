@@ -41,12 +41,20 @@
   <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=1">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}</style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
   <body>
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
+      <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="6343426856"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
       <h1>
         <a class="monospace" href="/">
         Bits<span class="blink">_</span>
@@ -69,14 +77,13 @@
   <hr>
   <i class="fa fa-fw fa-calendar"></i>02 Jul 2017 <i class="fa fa-fw fa-tag"></i><a href="/python">python</a>
   <hr>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="2958174403"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="2958174403"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <p>Flask supports serving in HTTPS mode when provided with valid certificate and key file. I have been using Let’s Encrypt which automatically manages all the SSL keyfiles and certificates used on my server. I had troubles setting up preconfigured SSL keys and certificates with my Flask app. Although I had it figured out later.</p>
 
 <p>What you need to do is provide an <code class="highlighter-rouge">ssl_context</code> option with the Flask app which requires 2 things. One is the issued SSL certificate and the other is the key file. Let’s Encrypt puts them all in <code class="highlighter-rouge">/etc/letsencrypt/live/yourdomain.com</code>. So you need to find the correct one and set it up with Flask. Here is my setup.</p>
@@ -86,12 +93,12 @@
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
-<span class="o">@</span><span class="n">app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">'GET'</span><span class="p">])</span>
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">'GET'</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">serve</span><span class="p">():</span>
     <span class="k">return</span> <span class="s">"Hello world"</span><span class="p">,</span> <span class="mi">200</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">"0.0.0.0"</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">,</span> <span class="n">ssl_context</span><span class="o">=</span><span class="p">(</span><span class="s">'/etc/letsencrypt/live/mdminhazulhaque.io/fullchain.pem'</span><span class="p">,</span> <span class="s">'/etc/letsencrypt/live/mdminhazulhaque.io/privkey.pem'</span><span class="p">))</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">"0.0.0.0"</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">,</span> <span class="n">ssl_context</span><span class="o">=</span><span class="p">(</span><span class="s">'/etc/letsencrypt/live/mdminhazulhaque.io/fullchain.pem'</span><span class="p">,</span> <span class="s">'/etc/letsencrypt/live/mdminhazulhaque.io/privkey.pem'</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>As you can see, <code class="highlighter-rouge">fullchain.pem</code> is the certificate and <code class="highlighter-rouge">privkey.pem</code> is the keyfile. So I ran the above example and checked if the SSL is working with <code class="highlighter-rouge">openssl</code> tool.</p>
@@ -111,19 +118,14 @@ read:errno=0
 <p>I got <code class="highlighter-rouge">errno=0</code> which means Flask is working fine with SSL. :D</p>
 
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="7351100586"></ins>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="7351100586"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+      (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>

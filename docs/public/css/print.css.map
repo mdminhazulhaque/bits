@@ -8,5 +8,5 @@
 		"@media print {\n    .sidebar {\n        display: none !important;\n    }\n    .content {\n        margin: 0 auto;\n        width: 100%;\n        float: none;\n        display: initial;\n    }\n    .container {\n        width: 100%;\n        float: none;\n        display: initial;\n        padding-left: 1rem;\n        padding-right: 1rem;\n        margin: 0 auto;\n    }\n}\n"
 	],
 	"names": [],
-	"mappings": "AAAA,MAAM,CAAC,KAAK,CACR,AAAA,QAAQ,AAAC,CACL,OAAO,CAAE,eAAe,CAC3B,AACD,AAAA,QAAQ,AAAC,CACL,MAAM,CAAE,MAAM,CACd,KAAK,CAAE,IAAI,CACX,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,OAAO,CACnB,AACD,AAAA,UAAU,AAAC,CACP,KAAK,CAAE,IAAI,CACX,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,OAAO,CAChB,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,CACnB,MAAM,CAAE,MAAM,CACjB"
+	"mappings": "AAAA,MAAM,MACF,CAAA,AAAA,QAAQ,AAAC,CACL,OAAO,CAAE,eAAe,CAC3B,AACD,AAAA,QAAQ,AAAC,CACL,MAAM,CAAE,MAAM,CACd,KAAK,CAAE,IAAI,CACX,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,OAAO,CACnB,AACD,AAAA,UAAU,AAAC,CACP,KAAK,CAAE,IAAI,CACX,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,OAAO,CAChB,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,CACnB,MAAM,CAAE,MAAM,CACjB,CAdA"
 }

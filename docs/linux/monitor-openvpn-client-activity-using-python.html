@@ -41,12 +41,20 @@
   <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=1">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}</style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
   <body>
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
+      <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="6343426856"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
       <h1>
         <a class="monospace" href="/">
         Bits<span class="blink">_</span>
@@ -69,14 +77,13 @@
   <hr>
   <i class="fa fa-fw fa-calendar"></i>09 Aug 2020 <i class="fa fa-fw fa-tag"></i><a href="/linux">linux</a>
   <hr>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="2958174403"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="2958174403"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <p>Installing OpenVPN in your own server gives you two major benefits. First, you will have better privacy control. Second, no need to spend on <code class="highlighter-rouge">pay-per-user</code> thing. As long as the CPU can handle encryption/decryption, and the ethernet controller can handle the traffic, OpenVPN is a pretty good choice for providing VPN service to a small-sized team.</p>
 
 <h2 id="openvpn-config">OpenVPN Config</h2>
@@ -106,6 +113,8 @@ persist-key
 persist-tun
 verb 0
 </code></pre></div></div>
+
+<p><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9642838276352812" data-ad-slot="8294162148"></ins></p>
 
 <h2 id="openvpn-management-over-telnet">OpenVPN Management over Telnet</h2>
 
@@ -147,25 +156,25 @@ Client Alice: alice@mdminhazulhaque.io
 <span class="n">PRE_USERS</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="k">def</span> <span class="nf">alert</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">ip</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">F</span><span class="s">"*{user}* {state} from {ip}"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">F"*</span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s">* </span><span class="si">{</span><span class="n">state</span><span class="si">}</span><span class="s"> from </span><span class="si">{</span><span class="n">ip</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
     <span class="c1"># TODO You can call Slack or API Gateway here
 </span>    
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-    <span class="n">telnet</span> <span class="o">=</span> <span class="n">telnetlib</span><span class="o">.</span><span class="n">Telnet</span><span class="p">(</span><span class="n">HOST</span><span class="p">,</span><span class="n">PORT</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-    <span class="n">telnet</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">"status</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
-    <span class="n">output</span> <span class="o">=</span> <span class="n">telnet</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="s">"END</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">telnet</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">telnet</span> <span class="o">=</span> <span class="n">telnetlib</span><span class="p">.</span><span class="n">Telnet</span><span class="p">(</span><span class="n">HOST</span><span class="p">,</span><span class="n">PORT</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">telnet</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"status</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">telnet</span><span class="p">.</span><span class="n">read_until</span><span class="p">(</span><span class="s">"END</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">telnet</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
     
     <span class="n">CURR_USERS</span> <span class="o">=</span> <span class="p">{}</span>
     
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">output</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">RE_COMMON_NAME</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-            <span class="n">user</span><span class="p">,</span> <span class="n">realaddress</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">","</span><span class="p">)</span>
-            <span class="n">ip</span> <span class="o">=</span> <span class="n">realaddress</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">":"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">output</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="n">RE_COMMON_NAME</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+            <span class="n">user</span><span class="p">,</span> <span class="n">realaddress</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">","</span><span class="p">)</span>
+            <span class="n">ip</span> <span class="o">=</span> <span class="n">realaddress</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">":"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">CURR_USERS</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="n">ip</span>
     
-    <span class="n">connected</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">CURR_USERS</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">PRE_USERS</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-    <span class="n">disconnected</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">PRE_USERS</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">CURR_USERS</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">connected</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">CURR_USERS</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">PRE_USERS</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">disconnected</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">PRE_USERS</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">CURR_USERS</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span>
     
     <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">connected</span><span class="p">):</span>
         <span class="n">alert</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">CURR_USERS</span><span class="p">[</span><span class="n">user</span><span class="p">],</span> <span class="s">"connected"</span><span class="p">)</span>
@@ -174,7 +183,7 @@ Client Alice: alice@mdminhazulhaque.io
     
     <span class="n">PRE_USERS</span> <span class="o">=</span> <span class="n">CURR_USERS</span>    
     
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">INTERVAL</span><span class="p">)</span>
+    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">INTERVAL</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h2 id="the-result">The Result</h2>
@@ -195,19 +204,14 @@ bob@mdminhazulhaque.io disconnected from 186.110.104.190
 <p>You can simply override the <code class="highlighter-rouge">alert</code> function and call custom Slack or API Gateway URL using <code class="highlighter-rouge">requests</code>. Tada!</p>
 
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="7351100586"></ins>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="7351100586"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+      (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>

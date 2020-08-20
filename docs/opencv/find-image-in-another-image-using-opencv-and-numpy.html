@@ -41,12 +41,20 @@
   <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=1">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}</style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
   <body>
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
+      <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="6343426856"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
       <h1>
         <a class="monospace" href="/">
         Bits<span class="blink">_</span>
@@ -69,25 +77,24 @@
   <hr>
   <i class="fa fa-fw fa-calendar"></i>12 Jul 2017 <i class="fa fa-fw fa-tag"></i><a href="/opencv">opencv</a>
   <hr>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="2958174403"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="2958174403"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <p>Several days ago, I needed to catch new message notification from Skype4Linux. As far I know they do not provide any API (like dbus or HTTP API like Skype 4.3 native) to catch new message event. So I deciced to monitor the system tray of my desktop and look for the unread icon that Skype shows. Finally I had myself written a tiny Python script that serves the purpose.</p>
 
 <p>As a first step, I had to find a small image (24x24 pixels) in a large image (system tray, 400x60 pixels). OpenCV comes with a handy function named <code class="highlighter-rouge">matchTemplate</code> that provides a matrix of best match of a matrix in another matrix (there are several methods on doing this although). I took advantage of the function <code class="highlighter-rouge">where</code> of NumPy because it provides setting a threshold level of the match. So here is the <code class="highlighter-rouge">has_image</code> function I wrote.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">has_image</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="n">needle</span><span class="p">):</span>
-    <span class="n">haystack</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
-    <span class="n">needle</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">needle</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
-    <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">needle</span><span class="o">.</span><span class="n">shape</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">matchTemplate</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="n">needle</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">TM_CCOEFF_NORMED</span><span class="p">)</span>
+    <span class="n">haystack</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+    <span class="n">needle</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">needle</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+    <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">needle</span><span class="p">.</span><span class="n">shape</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">matchTemplate</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="n">needle</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">TM_CCOEFF_NORMED</span><span class="p">)</span>
     <span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.99</span>
-    <span class="n">loc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">res</span> <span class="o">&gt;=</span> <span class="n">threshold</span><span class="p">)</span>
+    <span class="n">loc</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">where</span><span class="p">(</span><span class="n">res</span> <span class="o">&gt;=</span> <span class="n">threshold</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">assert</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
         <span class="k">assert</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
@@ -107,16 +114,16 @@
 <p>The following is my final code to find out the image and draw a rectangle over it.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
-    <span class="n">fruits</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"mixed-fruits.jpg"</span><span class="p">)</span>
-    <span class="n">strawberry</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"strawberry.jpg"</span><span class="p">)</span>
+    <span class="n">fruits</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"mixed-fruits.jpg"</span><span class="p">)</span>
+    <span class="n">strawberry</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"strawberry.jpg"</span><span class="p">)</span>
     
     <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">has_image</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="n">strawberry</span><span class="p">)</span>
     
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">strawberry</span><span class="o">.</span><span class="n">shape</span>
-        <span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">h</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">w</span><span class="p">),</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">"Found the strawberry at (</span><span class="si">%</span><span class="s">d,</span><span class="si">%</span><span class="s">d)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">fruits</span><span class="p">)</span>
-        <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mh">0xFFFF</span><span class="p">)</span>
+        <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">strawberry</span><span class="p">.</span><span class="n">shape</span>
+        <span class="n">cv2</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">h</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">w</span><span class="p">),</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">cv2</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">"Found the strawberry at (%d,%d)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">fruits</span><span class="p">)</span>
+        <span class="n">cv2</span><span class="p">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mh">0xFFFF</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">print</span><span class="p">(</span><span class="s">"Not found"</span><span class="p">)</span>
 </code></pre></div></div>
@@ -132,19 +139,14 @@
 </blockquote>
 
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="7351100586"></ins>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="7351100586"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+      (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>

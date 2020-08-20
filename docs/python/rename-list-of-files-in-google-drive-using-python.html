@@ -41,12 +41,20 @@
   <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=1">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}</style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
   <body>
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
+      <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="6343426856"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
       <h1>
         <a class="monospace" href="/">
         Bits<span class="blink">_</span>
@@ -69,14 +77,13 @@
   <hr>
   <i class="fa fa-fw fa-calendar"></i>07 Jun 2016 <i class="fa fa-fw fa-tag"></i><a href="/python">python</a>
   <hr>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="2958174403"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="2958174403"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <p>Here is a code snippet I wrote months ago to rename a thousand files using Google Drive Python API. Please note that you need to set the scope to <code class="highlighter-rouge">https://www.googleapis.com/auth/drive</code> so the API call can commit changes to your drive. You need to authorize the app first. Run the script, it will open a browser session, allow access to Drive. Then you will be able to download <code class="highlighter-rouge">credentials.json</code> from Google Drive Developer Console website.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
@@ -91,7 +98,7 @@
 
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">argparse</span>
-    <span class="n">flags</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="p">[</span><span class="n">tools</span><span class="o">.</span><span class="n">argparser</span><span class="p">])</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="p">[</span><span class="n">tools</span><span class="p">.</span><span class="n">argparser</span><span class="p">]).</span><span class="n">parse_args</span><span class="p">()</span>
 <span class="k">except</span> <span class="nb">ImportError</span><span class="p">:</span>
     <span class="n">flags</span> <span class="o">=</span> <span class="bp">None</span>
 
@@ -100,32 +107,32 @@
 <span class="n">APPLICATION_NAME</span> <span class="o">=</span> <span class="s">'Drive API Python Quickstart'</span>
 
 <span class="k">def</span> <span class="nf">get_credentials</span><span class="p">():</span>
-    <span class="n">home_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">'~'</span><span class="p">)</span>
-    <span class="n">credential_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">home_dir</span><span class="p">,</span> <span class="s">'.credentials'</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">credential_dir</span><span class="p">):</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">credential_dir</span><span class="p">)</span>
-    <span class="n">credential_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">credential_dir</span><span class="p">,</span>
+    <span class="n">home_dir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">'~'</span><span class="p">)</span>
+    <span class="n">credential_dir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">home_dir</span><span class="p">,</span> <span class="s">'.credentials'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">exists</span><span class="p">(</span><span class="n">credential_dir</span><span class="p">):</span>
+        <span class="n">os</span><span class="p">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">credential_dir</span><span class="p">)</span>
+    <span class="n">credential_path</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">credential_dir</span><span class="p">,</span>
                                    <span class="s">'credentials.json'</span><span class="p">)</span>
 
-    <span class="n">store</span> <span class="o">=</span> <span class="n">oauth2client</span><span class="o">.</span><span class="nb">file</span><span class="o">.</span><span class="n">Storage</span><span class="p">(</span><span class="n">credential_path</span><span class="p">)</span>
-    <span class="n">credentials</span> <span class="o">=</span> <span class="n">store</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">credentials</span> <span class="ow">or</span> <span class="n">credentials</span><span class="o">.</span><span class="n">invalid</span><span class="p">:</span>
-        <span class="n">flow</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">flow_from_clientsecrets</span><span class="p">(</span><span class="n">CLIENT_SECRET_FILE</span><span class="p">,</span> <span class="n">SCOPES</span><span class="p">)</span>
-        <span class="n">flow</span><span class="o">.</span><span class="n">user_agent</span> <span class="o">=</span> <span class="n">APPLICATION_NAME</span>
+    <span class="n">store</span> <span class="o">=</span> <span class="n">oauth2client</span><span class="p">.</span><span class="nb">file</span><span class="p">.</span><span class="n">Storage</span><span class="p">(</span><span class="n">credential_path</span><span class="p">)</span>
+    <span class="n">credentials</span> <span class="o">=</span> <span class="n">store</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">credentials</span> <span class="ow">or</span> <span class="n">credentials</span><span class="p">.</span><span class="n">invalid</span><span class="p">:</span>
+        <span class="n">flow</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">flow_from_clientsecrets</span><span class="p">(</span><span class="n">CLIENT_SECRET_FILE</span><span class="p">,</span> <span class="n">SCOPES</span><span class="p">)</span>
+        <span class="n">flow</span><span class="p">.</span><span class="n">user_agent</span> <span class="o">=</span> <span class="n">APPLICATION_NAME</span>
         <span class="k">if</span> <span class="n">flags</span><span class="p">:</span>
-            <span class="n">credentials</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">run_flow</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span> <span class="n">store</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+            <span class="n">credentials</span> <span class="o">=</span> <span class="n">tools</span><span class="p">.</span><span class="n">run_flow</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span> <span class="n">store</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span> <span class="c1"># Needed only for compatibility with Python 2.6
-</span>            <span class="n">credentials</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span> <span class="n">store</span><span class="p">)</span>
+</span>            <span class="n">credentials</span> <span class="o">=</span> <span class="n">tools</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span> <span class="n">store</span><span class="p">)</span>
         <span class="k">print</span><span class="p">(</span><span class="s">'Storing credentials to '</span> <span class="o">+</span> <span class="n">credential_path</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">credentials</span>
     
 <span class="k">def</span> <span class="nf">rename_file</span><span class="p">(</span><span class="n">service</span><span class="p">,</span> <span class="n">file_id</span><span class="p">,</span> <span class="n">new_title</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="nb">file</span> <span class="o">=</span> <span class="p">{</span><span class="s">'title'</span><span class="p">:</span> <span class="n">new_title</span><span class="p">}</span>
-        <span class="n">updated_file</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">files</span><span class="p">()</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span>
+        <span class="n">updated_file</span> <span class="o">=</span> <span class="n">service</span><span class="p">.</span><span class="n">files</span><span class="p">().</span><span class="n">patch</span><span class="p">(</span>
                 <span class="n">fileId</span><span class="o">=</span><span class="n">file_id</span><span class="p">,</span>
                 <span class="n">body</span><span class="o">=</span><span class="nb">file</span><span class="p">,</span>
-                <span class="n">fields</span><span class="o">=</span><span class="s">'title'</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+                <span class="n">fields</span><span class="o">=</span><span class="s">'title'</span><span class="p">).</span><span class="n">execute</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">updated_file</span>
     <span class="k">except</span><span class="p">:</span>
         <span class="k">print</span><span class="p">(</span><span class="s">'An error occurred'</span><span class="p">)</span>
@@ -140,10 +147,10 @@
             <span class="n">param</span> <span class="o">=</span> <span class="p">{}</span>
             <span class="k">if</span> <span class="n">page_token</span><span class="p">:</span>
                 <span class="n">param</span><span class="p">[</span><span class="s">'pageToken'</span><span class="p">]</span> <span class="o">=</span> <span class="n">page_token</span>
-            <span class="n">children</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">children</span><span class="p">()</span><span class="o">.</span><span class="nb">list</span><span class="p">(</span><span class="n">folderId</span><span class="o">=</span><span class="n">folder_id</span><span class="p">,</span> <span class="o">**</span><span class="n">param</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-            <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'items'</span><span class="p">,</span> <span class="p">[]):</span>
-                <span class="n">files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">[</span><span class="s">'id'</span><span class="p">])</span>
-            <span class="n">page_token</span> <span class="o">=</span> <span class="n">children</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'nextPageToken'</span><span class="p">)</span>
+            <span class="n">children</span> <span class="o">=</span> <span class="n">service</span><span class="p">.</span><span class="n">children</span><span class="p">().</span><span class="nb">list</span><span class="p">(</span><span class="n">folderId</span><span class="o">=</span><span class="n">folder_id</span><span class="p">,</span> <span class="o">**</span><span class="n">param</span><span class="p">).</span><span class="n">execute</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'items'</span><span class="p">,</span> <span class="p">[]):</span>
+                <span class="n">files</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">[</span><span class="s">'id'</span><span class="p">])</span>
+            <span class="n">page_token</span> <span class="o">=</span> <span class="n">children</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'nextPageToken'</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">page_token</span><span class="p">:</span>
                 <span class="k">break</span>
         <span class="k">except</span><span class="p">:</span>
@@ -153,14 +160,14 @@
     
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">credentials</span> <span class="o">=</span> <span class="n">get_credentials</span><span class="p">()</span>
-    <span class="n">http</span> <span class="o">=</span> <span class="n">credentials</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="n">httplib2</span><span class="o">.</span><span class="n">Http</span><span class="p">())</span>
-    <span class="n">service</span> <span class="o">=</span> <span class="n">discovery</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="s">'drive'</span><span class="p">,</span> <span class="s">'v2'</span><span class="p">,</span> <span class="n">http</span><span class="o">=</span><span class="n">http</span><span class="p">)</span>
+    <span class="n">http</span> <span class="o">=</span> <span class="n">credentials</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="n">httplib2</span><span class="p">.</span><span class="n">Http</span><span class="p">())</span>
+    <span class="n">service</span> <span class="o">=</span> <span class="n">discovery</span><span class="p">.</span><span class="n">build</span><span class="p">(</span><span class="s">'drive'</span><span class="p">,</span> <span class="s">'v2'</span><span class="p">,</span> <span class="n">http</span><span class="o">=</span><span class="n">http</span><span class="p">)</span>
     
     <span class="k">for</span> <span class="n">fileid</span> <span class="ow">in</span> <span class="n">list_files_in_folder</span><span class="p">(</span><span class="n">service</span><span class="p">,</span> <span class="s">'0BwaM3xCs0Uh4NXd4OU9kb3pjRlk'</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="nb">file</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">files</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">fileId</span><span class="o">=</span><span class="n">fileid</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-            <span class="k">if</span><span class="p">(</span><span class="nb">file</span><span class="p">[</span><span class="s">'title'</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'Copy of '</span><span class="p">)):</span>
-                <span class="n">new_title</span> <span class="o">=</span> <span class="nb">file</span><span class="p">[</span><span class="s">'title'</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'Copy of '</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span>
+            <span class="nb">file</span> <span class="o">=</span> <span class="n">service</span><span class="p">.</span><span class="n">files</span><span class="p">().</span><span class="n">get</span><span class="p">(</span><span class="n">fileId</span><span class="o">=</span><span class="n">fileid</span><span class="p">).</span><span class="n">execute</span><span class="p">()</span>
+            <span class="k">if</span><span class="p">(</span><span class="nb">file</span><span class="p">[</span><span class="s">'title'</span><span class="p">].</span><span class="n">startswith</span><span class="p">(</span><span class="s">'Copy of '</span><span class="p">)):</span>
+                <span class="n">new_title</span> <span class="o">=</span> <span class="nb">file</span><span class="p">[</span><span class="s">'title'</span><span class="p">].</span><span class="n">replace</span><span class="p">(</span><span class="s">'Copy of '</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span>
                 <span class="n">rename_file</span><span class="p">(</span><span class="n">service</span><span class="p">,</span> <span class="n">fileid</span><span class="p">,</span> <span class="n">new_title</span><span class="p">)</span>
         <span class="k">except</span><span class="p">:</span>
             <span class="k">print</span><span class="p">(</span><span class="s">'An error occurred'</span><span class="p">)</span>
@@ -170,19 +177,14 @@
 </code></pre></div></div>
 
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="7351100586"></ins>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="7351100586"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+      (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>

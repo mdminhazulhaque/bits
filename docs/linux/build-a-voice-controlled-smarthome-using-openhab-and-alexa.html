@@ -43,12 +43,20 @@ First thing is, you h...">
   <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=1">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}</style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
   <body>
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
+      <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="6343426856"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
       <h1>
         <a class="monospace" href="/">
         Bits<span class="blink">_</span>
@@ -71,14 +79,13 @@ First thing is, you h...">
   <hr>
   <i class="fa fa-fw fa-calendar"></i>17 Dec 2018 <i class="fa fa-fw fa-tag"></i><a href="/linux">linux</a>
   <hr>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="2958174403"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="2958174403"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <p>The Amazon Alexa Marketplace has lots of third party SmartHome skills to start with. But why not  build your own SmartHome, right?</p>
 
 <p>First thing is, you have to create some openHAB items with proper tagname, label and type. Here I have added 4 devices in <code class="highlighter-rouge">[Lighting]</code> tag as <code class="highlighter-rouge">Switch</code> item. This tagname is very important because Amazon Alexa API uses this tagname to export device list into Alexa’s SmartHome Discovery menu. I have used <code class="highlighter-rouge">exec1</code> binding as output trigger of the items. The binding configuration is given as <code class="highlighter-rouge">/home/ubuntu/mysmarthome.py %3$s %2$s</code> which means it will call <code class="highlighter-rouge">/home/ubuntu/mysmarthome.py</code> with <code class="highlighter-rouge">%3$s = Item's Programetic Name</code> (not Label) and <code class="highlighter-rouge">%2$s = Item's State</code>. Here is the complete item file.</p>
@@ -124,19 +131,14 @@ Switch Livingroom_Light "Livingroom Light" [Lighting] {exec="&gt;[*:/home/ubuntu
 </code></pre></div></div>
 
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="7351100586"></ins>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="7351100586"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+      (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>

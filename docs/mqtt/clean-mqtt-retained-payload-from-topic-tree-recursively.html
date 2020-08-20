@@ -45,12 +45,20 @@ f...">
   <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=1">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}</style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
   <body>
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
+      <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="6343426856"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
       <h1>
         <a class="monospace" href="/">
         Bits<span class="blink">_</span>
@@ -73,14 +81,13 @@ f...">
   <hr>
   <i class="fa fa-fw fa-calendar"></i>27 Apr 2017 <i class="fa fa-fw fa-tag"></i><a href="/mqtt">mqtt</a>
   <hr>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="2958174403"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="2958174403"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <p>I believe you are trying to clean retained messages from topics like the following by only providing the topic prefix <code class="highlighter-rouge">foo/</code>.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>foo/bar
@@ -102,16 +109,16 @@ foo/this/is/a/long/nested/topic
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">paho.mqtt.client</span> <span class="k">as</span> <span class="n">mqtt</span>
 
-<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">on_message</span><span class="p">(</span><span class="n">mqttc</span><span class="p">,</span> <span class="n">userdata</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">start</span>
-    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">payload</span> <span class="o">==</span> <span class="s">""</span> <span class="p">:</span>
-        <span class="k">print</span> <span class="s">"Cleaned"</span><span class="p">,</span> <span class="n">msg</span><span class="o">.</span><span class="n">topic</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">msg</span><span class="p">.</span><span class="n">payload</span> <span class="o">==</span> <span class="s">""</span> <span class="p">:</span>
+        <span class="k">print</span> <span class="s">"Cleaned"</span><span class="p">,</span> <span class="n">msg</span><span class="p">.</span><span class="n">topic</span>
         <span class="k">return</span>
     
-    <span class="n">mqttc</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">topic</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">mqttc</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">topic</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">argv</span><span class="p">):</span>
     <span class="n">host</span> <span class="o">=</span> <span class="s">"hostname"</span>
@@ -124,41 +131,36 @@ foo/this/is/a/long/nested/topic
     <span class="k">if</span> <span class="n">topic</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
         <span class="k">print</span><span class="p">(</span><span class="s">"You must provide a topic to clear.</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
         <span class="n">print_usage</span><span class="p">()</span>
-        <span class="n">sys</span><span class="o">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
         
-    <span class="n">mqttc</span> <span class="o">=</span> <span class="n">mqtt</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
-    <span class="n">mqttc</span><span class="o">.</span><span class="n">on_message</span> <span class="o">=</span> <span class="n">on_message</span>
+    <span class="n">mqttc</span> <span class="o">=</span> <span class="n">mqtt</span><span class="p">.</span><span class="n">Client</span><span class="p">()</span>
+    <span class="n">mqttc</span><span class="p">.</span><span class="n">on_message</span> <span class="o">=</span> <span class="n">on_message</span>
     
     <span class="k">if</span> <span class="n">username</span><span class="p">:</span>
-        <span class="n">mqttc</span><span class="o">.</span><span class="n">username_pw_set</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+        <span class="n">mqttc</span><span class="p">.</span><span class="n">username_pw_set</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
 
-    <span class="n">mqttc</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
-    <span class="n">mqttc</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">topic</span> <span class="o">+</span> <span class="s">"/#"</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">mqttc</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+    <span class="n">mqttc</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">topic</span> <span class="o">+</span> <span class="s">"/#"</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
     
     <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-        <span class="n">mqttc</span><span class="o">.</span><span class="n">loop</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="p">:</span>
-            <span class="n">mqttc</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
+        <span class="n">mqttc</span><span class="p">.</span><span class="n">loop</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="p">:</span>
+            <span class="n">mqttc</span><span class="p">.</span><span class="n">disconnect</span><span class="p">()</span>
             <span class="k">break</span>
         
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="n">main</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 </code></pre></div></div>
 
   <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;height:90px"
-       data-ad-client="ca-pub-9642838276352812"
-       data-ad-slot="7351100586"></ins>
+    style="display:block"
+    data-ad-client="ca-pub-9642838276352812"
+    data-ad-slot="7351100586"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+
   <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+      (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
