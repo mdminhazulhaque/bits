@@ -21,7 +21,6 @@ exclude:
     - build.sh
     - .sass-cache
     - README.md
-    - CNAME
 jekyll-archives:
     enabled:
         - categories
