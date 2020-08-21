@@ -1,88 +1,4 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <meta name="theme-color" content="#000000">
-  <meta name="msapplication-navbutton-color" content="#000000">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
-  <meta name="description" content="Flask supports serving in HTTPS mode when provided with valid certificate and key file. I have been using Let’s Encrypt which automatically manages all t...">
-  <meta name="author" content="Md. Minhazul Haque">
-  <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Bits",
-      "item": "https://bits.mdminhazulhaque.io/"
-    },{
-      "@type": "ListItem",
-      "position": 2,
-      "name": "python",
-      "item": "https://bits.mdminhazulhaque.io/python"
-    },{
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Run Flask App with Let's Encrypt SSL Certificate",
-      "item": "https://bits.mdminhazulhaque.io//python/run-flask-app-with-let's-encrypt-ssl-certificate.html"
-    }]
-  }</script>
-  <title>Run Flask App with Let's Encrypt SSL Certificate | Bits</title>
-  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-  <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/hyde.css">
-  <link rel="stylesheet" href="/public/css/print.css">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=1">
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-  <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}</style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-</head>
-
-  <body>
-    <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1>
-        <a class="monospace" href="/">
-        Bits<span class="blink">_</span>
-        </a>
-      </h1>
-      <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p>
-      <p>Find me at ...
-      <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a>
-      <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
-      <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a>
-      </p>
-    </div>
-    <p>&copy; 2012 - 2020. All rights reserved.</p>
-  </div>
-</div>
-
-    <div class="content container">
-      <div class="post">
-  <h1 class="post-title">Run Flask App with Let's Encrypt SSL Certificate</h1>
-  <hr>
-  <i class="fa fa-fw fa-calendar"></i>02 Jul 2017 <i class="fa fa-fw fa-tag"></i><a href="/python">python</a>
-  <hr>
-  <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-9642838276352812"
-    data-ad-slot="2958174403"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
-  <p>Flask supports serving in HTTPS mode when provided with valid certificate and key file. I have been using Let’s Encrypt which automatically manages all the SSL keyfiles and certificates used on my server. I had troubles setting up preconfigured SSL keys and certificates with my Flask app. Although I had it figured out later.</p>
-
-<p>What you need to do is provide an <code class="highlighter-rouge">ssl_context</code> option with the Flask app which requires 2 things. One is the issued SSL certificate and the other is the key file. Let’s Encrypt puts them all in <code class="highlighter-rouge">/etc/letsencrypt/live/yourdomain.com</code>. So you need to find the correct one and set it up with Flask. Here is my setup.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
+<!DOCTYPE html> <html lang="en-us"> <head> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <meta name="theme-color" content="#000000"> <meta name="msapplication-navbutton-color" content="#000000"> <meta name="apple-mobile-web-app-status-bar-style" content="#000000"> <meta name="description" content="Flask supports serving in HTTPS mode when provided with valid certificate and key file. I have been using Let’s Encrypt which automatically manages all t..."> <meta name="author" content="Md. Minhazul Haque"> <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Bits", "item": "https://bits.mdminhazulhaque.io/" },{ "@type": "ListItem", "position": 2, "name": "python", "item": "https://bits.mdminhazulhaque.io/python" },{ "@type": "ListItem", "position": 3, "name": "Run Flask App with Let's Encrypt SSL Certificate", "item": "https://bits.mdminhazulhaque.io//python/run-flask-app-with-let's-encrypt-ssl-certificate.html" }] }</script> <title>Run Flask App with Let's Encrypt SSL Certificate | Bits</title> <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css"> <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> <link rel="stylesheet" href="/public/css/poole.css"> <link rel="stylesheet" href="/public/css/hyde.css"> <link rel="stylesheet" href="/public/css/print.css"> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png"> <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=1"> <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}</style> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> </head> <body> <div class="sidebar"> <div class="container sidebar-sticky"> <div class="sidebar-about"> <h1> <a class="monospace" href="/"> Bits<span class="blink">_</span> </a> </h1> <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p> <p>Find me at ... <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a> <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a> <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a> </p> </div> <p>&copy; 2012 - 2020. All rights reserved.</p> </div> </div> <div class="content container"> <div class="post"> <h1 class="post-title">Run Flask App with Let's Encrypt SSL Certificate</h1> <hr> <i class="fa fa-fw fa-calendar"></i>02 Jul 2017 <i class="fa fa-fw fa-tag"></i><a href="/python">python</a> <hr> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9642838276352812" data-ad-slot="2958174403" data-ad-format="auto" data-full-width-responsive="true"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> <p>Flask supports serving in HTTPS mode when provided with valid certificate and key file. I have been using Let’s Encrypt which automatically manages all the SSL keyfiles and certificates used on my server. I had troubles setting up preconfigured SSL keys and certificates with my Flask app. Although I had it figured out later.</p> <p>What you need to do is provide an <code class="highlighter-rouge">ssl_context</code> option with the Flask app which requires 2 things. One is the issued SSL certificate and the other is the key file. Let’s Encrypt puts them all in <code class="highlighter-rouge">/etc/letsencrypt/live/yourdomain.com</code>. So you need to find the correct one and set it up with Flask. Here is my setup.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
@@ -93,52 +9,12 @@
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
     <span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">"0.0.0.0"</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">,</span> <span class="n">ssl_context</span><span class="o">=</span><span class="p">(</span><span class="s">'/etc/letsencrypt/live/mdminhazulhaque.io/fullchain.pem'</span><span class="p">,</span> <span class="s">'/etc/letsencrypt/live/mdminhazulhaque.io/privkey.pem'</span><span class="p">))</span>
-</code></pre></div></div>
-
-<p>As you can see, <code class="highlighter-rouge">fullchain.pem</code> is the certificate and <code class="highlighter-rouge">privkey.pem</code> is the keyfile. So I ran the above example and checked if the SSL is working with <code class="highlighter-rouge">openssl</code> tool.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl s_client <span class="nt">-quiet</span> <span class="nt">-connect</span> mdminhazulhaque.io:8080
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>depth=2 O = Digital Signature Trust Co., CN = DST Root CA X3
+</code></pre></div></div> <p>As you can see, <code class="highlighter-rouge">fullchain.pem</code> is the certificate and <code class="highlighter-rouge">privkey.pem</code> is the keyfile. So I ran the above example and checked if the SSL is working with <code class="highlighter-rouge">openssl</code> tool.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl s_client <span class="nt">-quiet</span> <span class="nt">-connect</span> mdminhazulhaque.io:8080
+</code></pre></div></div> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>depth=2 O = Digital Signature Trust Co., CN = DST Root CA X3
 verify return:1
 depth=1 C = US, O = Let's Encrypt, CN = Let's Encrypt Authority X3
 verify return:1
 depth=0 CN = mdminhazulhaque.io
 verify return:1
 read:errno=0
-</code></pre></div></div>
-
-<p>I got <code class="highlighter-rouge">errno=0</code> which means Flask is working fine with SSL. :D</p>
-
-  <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-9642838276352812"
-    data-ad-slot="7351100586"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-  (function() {	
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;	
-    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';	
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);	
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-
-
-    </div>
-  </body>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-57632461-7', 'auto');
-  ga('send', 'pageview');
-</script>
-</html>
+</code></pre></div></div> <p>I got <code class="highlighter-rouge">errno=0</code> which means Flask is working fine with SSL. :D</p> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9642838276352812" data-ad-slot="7351100586" data-ad-format="auto" data-full-width-responsive="true"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> <div id="disqus_thread"></div> <script type="text/javascript"> (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> </div> </div> </body> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-57632461-7', 'auto'); ga('send', 'pageview'); </script> </html>

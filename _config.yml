@@ -27,3 +27,12 @@ jekyll-archives:
     layout: category
     permalinks:
         category: /:name/index.html
+compress_html:
+  clippings: []
+  comments: []
+  endings: []
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []

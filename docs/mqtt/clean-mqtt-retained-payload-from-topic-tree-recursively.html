@@ -1,101 +1,9 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <meta name="theme-color" content="#000000">
-  <meta name="msapplication-navbutton-color" content="#000000">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
-  <meta name="description" content="I believe you are trying to clean retained messages from topics like the following by only providing the topic prefix foo/.
-
-foo/bar
-foo/bar/sensordata
-f...">
-  <meta name="author" content="Md. Minhazul Haque">
-  <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Bits",
-      "item": "https://bits.mdminhazulhaque.io/"
-    },{
-      "@type": "ListItem",
-      "position": 2,
-      "name": "mqtt",
-      "item": "https://bits.mdminhazulhaque.io/mqtt"
-    },{
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Clean MQTT Retained Payload from Topic Tree Recursively",
-      "item": "https://bits.mdminhazulhaque.io//mqtt/clean-mqtt-retained-payload-from-topic-tree-recursively.html"
-    }]
-  }</script>
-  <title>Clean MQTT Retained Payload from Topic Tree Recursively | Bits</title>
-  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-  <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/hyde.css">
-  <link rel="stylesheet" href="/public/css/print.css">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=1">
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-  <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}</style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-</head>
-
-  <body>
-    <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1>
-        <a class="monospace" href="/">
-        Bits<span class="blink">_</span>
-        </a>
-      </h1>
-      <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p>
-      <p>Find me at ...
-      <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a>
-      <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
-      <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a>
-      </p>
-    </div>
-    <p>&copy; 2012 - 2020. All rights reserved.</p>
-  </div>
-</div>
-
-    <div class="content container">
-      <div class="post">
-  <h1 class="post-title">Clean MQTT Retained Payload from Topic Tree Recursively</h1>
-  <hr>
-  <i class="fa fa-fw fa-calendar"></i>27 Apr 2017 <i class="fa fa-fw fa-tag"></i><a href="/mqtt">mqtt</a>
-  <hr>
-  <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-9642838276352812"
-    data-ad-slot="2958174403"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
-  <p>I believe you are trying to clean retained messages from topics like the following by only providing the topic prefix <code class="highlighter-rouge">foo/</code>.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>foo/bar
+<!DOCTYPE html> <html lang="en-us"> <head> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <meta name="theme-color" content="#000000"> <meta name="msapplication-navbutton-color" content="#000000"> <meta name="apple-mobile-web-app-status-bar-style" content="#000000"> <meta name="description" content="I believe you are trying to clean retained messages from topics like the following by only providing the topic prefix foo/. foo/bar foo/bar/sensordata f..."> <meta name="author" content="Md. Minhazul Haque"> <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Bits", "item": "https://bits.mdminhazulhaque.io/" },{ "@type": "ListItem", "position": 2, "name": "mqtt", "item": "https://bits.mdminhazulhaque.io/mqtt" },{ "@type": "ListItem", "position": 3, "name": "Clean MQTT Retained Payload from Topic Tree Recursively", "item": "https://bits.mdminhazulhaque.io//mqtt/clean-mqtt-retained-payload-from-topic-tree-recursively.html" }] }</script> <title>Clean MQTT Retained Payload from Topic Tree Recursively | Bits</title> <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> <link href="https://mdminhazulhaque.github.io/solaimanlipi/css/solaimanlipi.css" rel="stylesheet" type="text/css"> <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> <link rel="stylesheet" href="/public/css/poole.css"> <link rel="stylesheet" href="/public/css/hyde.css"> <link rel="stylesheet" href="/public/css/print.css"> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon.png"> <link rel="icon" type="image/x-icon" href="/public/favicon.ico?v=1"> <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> <style>.blink{animation:blink 1s infinite;}@keyframes blink{to{opacity:.0}}</style> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> </head> <body> <div class="sidebar"> <div class="container sidebar-sticky"> <div class="sidebar-about"> <h1> <a class="monospace" href="/"> Bits<span class="blink">_</span> </a> </h1> <p class="lead">Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a></p> <p>Find me at ... <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a> <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a> <br><a href="https://stackexchange.com/users/1348058/md-minhazul-haque?tab=accounts"><i class="fa fa-fw fa-stack-exchange"></i> StackExchange</a> </p> </div> <p>&copy; 2012 - 2020. All rights reserved.</p> </div> </div> <div class="content container"> <div class="post"> <h1 class="post-title">Clean MQTT Retained Payload from Topic Tree Recursively</h1> <hr> <i class="fa fa-fw fa-calendar"></i>27 Apr 2017 <i class="fa fa-fw fa-tag"></i><a href="/mqtt">mqtt</a> <hr> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9642838276352812" data-ad-slot="2958174403" data-ad-format="auto" data-full-width-responsive="true"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> <p>I believe you are trying to clean retained messages from topics like the following by only providing the topic prefix <code class="highlighter-rouge">foo/</code>.</p> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>foo/bar
 foo/bar/sensordata
 foo/bar/temperature
 foo/whatever
 foo/this/is/a/long/nested/topic
-</code></pre></div></div>
-
-<p>Well I got an workaround. The trick is simple. Subscribe to topics using wildcard, then put a timer in <code class="highlighter-rouge">on_message</code> method. Everytime a message arrives at <code class="highlighter-rouge">on_message</code> function, send NULL byte to that topic. Also update the timer previously taken.</p>
-
-<p>If no message arrives in a threshold amount of time, stop MQTT loop and exit the program.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/python
+</code></pre></div></div> <p>Well I got an workaround. The trick is simple. Subscribe to topics using wildcard, then put a timer in <code class="highlighter-rouge">on_message</code> method. Everytime a message arrives at <code class="highlighter-rouge">on_message</code> function, send NULL byte to that topic. Also update the timer previously taken.</p> <p>If no message arrives in a threshold amount of time, stop MQTT loop and exit the program.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/python
 </span>
 <span class="c1"># Written by Minhaz [mdminhazulhaque.io]
 </span>
@@ -144,36 +52,4 @@ foo/this/is/a/long/nested/topic
         
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
     <span class="n">main</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-</code></pre></div></div>
-
-  <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-9642838276352812"
-    data-ad-slot="7351100586"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-  (function() {	
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;	
-    dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js';	
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);	
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-
-
-    </div>
-  </body>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-57632461-7', 'auto');
-  ga('send', 'pageview');
-</script>
-</html>
+</code></pre></div></div> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9642838276352812" data-ad-slot="7351100586" data-ad-format="auto" data-full-width-responsive="true"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> <div id="disqus_thread"></div> <script type="text/javascript"> (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = 'https://bitsfromminhaz.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> </div> </div> </body> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-57632461-7', 'auto'); ga('send', 'pageview'); </script> </html>
