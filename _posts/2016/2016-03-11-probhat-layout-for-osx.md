@@ -42,7 +42,7 @@ Then enter your password so the installer script can copy the necessary files to
 ## Contribute
 
 <div class="message">
-Send bugfixes or commits to <a href="https://github.com/mdminhazulhaque/probhat-osx">minhazul-haque/probhat-osx</a>
+Send bugfixes or commits to <a href="https://github.com/mdminhazulhaque/probhat-osx">mdminhazulhaque/probhat-osx</a>
 </div>
 
 ## License

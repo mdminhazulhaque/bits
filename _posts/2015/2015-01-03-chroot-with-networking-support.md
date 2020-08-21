@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "`chroot` with Networking Support"
+title: "Use chroot with Networking Support"
 date: 2015-01-03 00:05:00
 category: linux
 ---

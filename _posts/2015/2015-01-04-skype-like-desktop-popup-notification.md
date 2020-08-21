@@ -29,4 +29,4 @@ to manage the popup from being closed on button press.
 
 ![Popup](http://i.imgur.com/Ie7tE3S.png)
 
-Check my [DesktopPopup](https://github.com/minhazul-haque/DesktopPopup) on Github for more detailed example.
+Check my [DesktopPopup](https://github.com/mdminhazulhaque/DesktopPopup) on Github for more detailed example.

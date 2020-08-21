@@ -6,7 +6,7 @@ category: kde
 ---
 
 <div class="message">
-Grab the Bootstrap Skin from <a href="https://github.com/minhazul-haque/KTorrentBootstrapUI">minhazul-haque/KTorrentBootstrapUI</a>
+Grab the Bootstrap Skin from <a href="https://github.com/mdminhazulhaque/KTorrentBootstrapUI">mdminhazulhaque/KTorrentBootstrapUI</a>
 </div>
 
 I have been using KTorrent, one awesome BitTorrent client for KDE, for almost 4 years. KTorrent comes with a plugin named WebInterface which makes it possible to see the list of torrents, control them and add torrents from remote network.
@@ -15,8 +15,8 @@ The skins (aka themes) for WebInterface are not good enough for people like me w
 
 I named it `KTorrentBootstrapUI`. Here is a screenshot of how it looks from desktop browser.
 
-![Bootstrap Skin Desktop](https://raw.githubusercontent.com/minhazul-haque/KTorrentBootstrapUI/master/img/desktop_all_torrent.png)
+![Bootstrap Skin Desktop](https://raw.githubusercontent.com/mdminhazulhaque/KTorrentBootstrapUI/master/img/desktop_all_torrent.png)
 
 And on mobile ...
 
-![Bootstrap Skin Mobile](https://raw.githubusercontent.com/minhazul-haque/KTorrentBootstrapUI/master/img/mobile_all_torrent.png)
+![Bootstrap Skin Mobile](https://raw.githubusercontent.com/mdminhazulhaque/KTorrentBootstrapUI/master/img/mobile_all_torrent.png)

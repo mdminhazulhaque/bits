@@ -55,6 +55,6 @@ alert(data);
 Here is a preview of my setup where a javacript function is called when a button is clicked, and the javascrip call activity's function for current date
 string.
 
-![Android-Javascript-Bridge](https://github.com/minhazul-haque/Android-Javascript-Bridge/raw/master/screen/apple.png)
+![Android-Javascript-Bridge](https://github.com/mdminhazulhaque/Android-Javascript-Bridge/raw/master/screen/apple.png)
 
-Check my repository [Android-Javascript-Bridge](https://github.com/minhazul-haque/Android-Javascript-Bridge) for full project source.
+Check my repository [Android-Javascript-Bridge](https://github.com/mdminhazulhaque/Android-Javascript-Bridge) for full project source.

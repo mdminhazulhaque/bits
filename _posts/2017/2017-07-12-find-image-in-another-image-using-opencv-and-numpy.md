@@ -58,4 +58,4 @@ This is the result I got using the code I wrote.
 
 That was some real fun. I hope someone out there will find this snippet helpful. :D
 
-> Anyway, you will find my Skype4Linux notifier project [here](https://github.com/minhazul-haque/skype4linux-notifier).
+> Anyway, you will find my Skype4Linux notifier project [here](https://github.com/mdminhazulhaque/skype4linux-notifier).

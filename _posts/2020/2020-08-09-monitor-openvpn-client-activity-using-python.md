@@ -58,6 +58,8 @@ Client Alice: alice@mdminhazulhaque.io
 
 Which means, the client names must be unique because OpenVPN uses the client name to map DHCP IP Addresses for remote users.
 
+<div>{% include ad_article.html %}</div>
+
 ## Run the Script!
 
 Well, now we know the common name. It could be `mdminhazulhaque.io`, or `example.com` or `server` or anything. We need to amend the `RE_COMMON_NAME` regex and put the correct value there. Once done, upload the script to the OpenVPN server and run it using `python3`.

@@ -6,7 +6,7 @@ category: openwrt
 ---
 
 <div class="message">
-Download TL-MR3420 OpenWRT Firmware with relayd preinstalled from <a href="https://github.com/minhazul-haque/OpenWRT-TL-MR3420/tree/master/repeater">minhazul-haque/OpenWRT-TL-MR3420</a>
+Download TL-MR3420 OpenWRT Firmware with relayd preinstalled from <a href="https://github.com/mdminhazulhaque/OpenWRT-TL-MR3420/tree/master/repeater">mdminhazulhaque/OpenWRT-TL-MR3420</a>
 </div>
 
 I have been using my [TL-MR3420](http://www.tp-link.com.bd/products/details/cat-14_TL-MR3420.html) (Version 2.2) router as a repeater for a month. The access point in my house is an Apple Airport which delivers pretty good signal even when there exists several obstacles (walls, doors) between the Airport and my WLAN card. But I badly needed a repeater for syncing files from/to my wireless devices. So I turned my old router into a WiFi repeater.
@@ -52,6 +52,8 @@ config wifi-iface
     option mode 'ap'
     option ssid 'repeater_ssid'
 ```
+
+<div>{% include ad_article.html %}</div>
 
 Now let's change `/etc/config/network` also. You have to be very careful in this step. Otherwise the repeater may not work, or even if it works, you may not get internet connectivity through it.
 

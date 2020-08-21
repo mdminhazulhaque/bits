@@ -10,4 +10,4 @@ I found a workaround which makes it possible to run all previous devices (ZTE AX
 
 Click here to read the guide, screenshots and videos.
 
-[Run Banglalion WiMAX devices on Mac OS X 64bit](http://minhazul-haque.github.io/banglalion-wimax-mac/)
+[Run Banglalion WiMAX devices on Mac OS X 64bit](http://mdminhazulhaque.github.io/banglalion-wimax-mac/)

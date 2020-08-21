@@ -33,8 +33,8 @@ JSInterface.toastMe(text);
 
 Here is a screenshot of the whole thing.
 
-![Android-JavascriptInterface](https://github.com/minhazul-haque/Android-JavascriptInterface-Sample/raw/master/screen/toast.png)
+![Android-JavascriptInterface](https://github.com/mdminhazulhaque/Android-JavascriptInterface-Sample/raw/master/screen/toast.png)
 
 I used the text from webview to show as Toast using native Java.
 
-Get the complete project source from my Github repository [Android-JavascriptInterface-Sample](https://github.com/minhazul-haque/Android-JavascriptInterface-Sample).
+Get the complete project source from my Github repository [Android-JavascriptInterface-Sample](https://github.com/mdminhazulhaque/Android-JavascriptInterface-Sample).

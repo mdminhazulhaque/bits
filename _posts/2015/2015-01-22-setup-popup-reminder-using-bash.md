@@ -6,7 +6,7 @@ category: linux
 ---
 Well, who doesn't forget the milk on the stove while working on computer? I do.
 
-There are bunch of applications and desktop widgets to do the reminder thing for you. Even I wrote a C++ application to remind me things which is uploaded [here](https://github.com/minhazul-haque/Reminder). But being a minimalist user, I like to cut short the list of applications I use.
+There are bunch of applications and desktop widgets to do the reminder thing for you. Even I wrote a C++ application to remind me things which is uploaded [here](https://github.com/mdminhazulhaque/Reminder). But being a minimalist user, I like to cut short the list of applications I use.
 
 Minutes ago an idea just came into my mind that I could use bash and kdialog/zenity to setup such reminder. The sleep command is built in for all Linux/Mac OSs. Here is what I did to setup a minimal reminder popup in minutes.
 

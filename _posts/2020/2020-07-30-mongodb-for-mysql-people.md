@@ -139,6 +139,8 @@ Let's start playing with MongoDB.
 { "name" : "PyQt-BPNN", "stargazers_count" : 22 }
 ```
 
+<div>{% include ad_article.html %}</div>
+
 ### select name, stargazers_count from repos where language = "Python"
 
 ```bash

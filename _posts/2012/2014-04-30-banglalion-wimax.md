@@ -14,11 +14,11 @@ category: linux
 
 লিনাক্স থেকে বাংলালায়ন মডেম চালাতে হলে লাগবে আন-অফিশিয়াল প্যাকেজ যা সম্পূর্ণ বিনামুল্যে নিচের লিংক থেকে পাওয়া যাবে। সেই সাথে অ্যাপলিকেশনটির সর্বশেষ রিলিজ ও বাগ রিপোর্ট সাবমিটের কাজটিও নিম্নের ওয়েব সাইট থেকে করা যাবে। উল্লেখ্য, যাদের ZTE AX226 বা WU216 মডেম তারা **banglalion-wimax-for-linux-1.0.0-ax226-wu216** এবং যাদের পুরনো U211 মডেলের মডেম তারা **banglalion-wimax-for-linux-1.0.0-u211** ফাইলটি ডাউনলোড করবেন।
 
-*   [AX226 বা WU216 মডেমের জন্য](https://github.com/minhazul-haque/wimaxcmgui/raw/master/installer/banglalion-wimax-for-linux-1.0.0-ax226-wu216)
-*   [U211 মডেমের জন্য](https://github.com/minhazul-haque/wimaxcmgui/raw/master/installer/banglalion-wimax-for-linux-1.0.0-u211)
-*   [ZTE AX226 এর ডিভাইস আইডি বদলানোর সফটওয়্যারের লিংক](https://github.com/minhazul-haque/wimaxcmgui/raw/master/beceem-control-panel/beceem-control-panel.exe)
-*   [অ্যাপ্লিকেশন সোর্স কোড](https://github.com/minhazul-haque/wimaxcmgui/tree/master/src)
-*   [অফলাইন হেল্প গাইড](https://github.com/minhazul-haque/wimaxcmgui/raw/master/help.pdf)
+*   [AX226 বা WU216 মডেমের জন্য](https://github.com/mdminhazulhaque/wimaxcmgui/raw/master/installer/banglalion-wimax-for-linux-1.0.0-ax226-wu216)
+*   [U211 মডেমের জন্য](https://github.com/mdminhazulhaque/wimaxcmgui/raw/master/installer/banglalion-wimax-for-linux-1.0.0-u211)
+*   [ZTE AX226 এর ডিভাইস আইডি বদলানোর সফটওয়্যারের লিংক](https://github.com/mdminhazulhaque/wimaxcmgui/raw/master/beceem-control-panel/beceem-control-panel.exe)
+*   [অ্যাপ্লিকেশন সোর্স কোড](https://github.com/mdminhazulhaque/wimaxcmgui/tree/master/src)
+*   [অফলাইন হেল্প গাইড](https://github.com/mdminhazulhaque/wimaxcmgui/raw/master/help.pdf)
 
 সফটওয়্যারটি জিএনইউ জিপিএল ভার্শন ৩ লাইসেন্সের অধীনে বের করা হয়েছে। লাইসেন্সের কপি পাওয়া যাবে [এই লিংকে।](http://www.gnu.org/licenses/gpl-3.0.txt)
 

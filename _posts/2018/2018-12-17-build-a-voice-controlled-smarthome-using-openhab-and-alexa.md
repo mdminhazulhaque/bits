@@ -30,6 +30,8 @@ If the credentials are correct, the Skill will be enabled and you will be prompt
 
 ![openHAB Skill Discovery](https://i.imgur.com/UYGEX0v.png)
 
+<div>{% include ad_article.html %}</div>
+
 If the item file is properly configured, all devices with `Lighting` tag will appear in the `Devices` menu. From now on, you can send commands to the items using Alexa's Voice API. For example, saying `alexa, set bedroom light on` will trigger openHAB's REST API and eventually execute `/home/ubuntu/mysmarthome.py Bedroom_Light ON` at your local setup.
 
 ![openHAB Devices](https://i.imgur.com/eMWcmto.png)

@@ -42,5 +42,5 @@ Basically the boilerplate does
 Yup, you surely can. Check out [Debian Policy Manual](https://www.debian.org/doc/debian-policy/) and you are good to go.
 
 <div class="well">
-  Browse the project <i class="icon-github"></i> <a href="https://github.com/minhazul-haque/dpkg-deb-boilerplate">dpkg-deb-boilerplate</a>
+  Browse the project <i class="icon-github"></i> <a href="https://github.com/mdminhazulhaque/dpkg-deb-boilerplate">dpkg-deb-boilerplate</a>
 </div>

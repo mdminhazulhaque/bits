@@ -13,6 +13,6 @@ Seems like their example is not working for me. So I created a demo program whic
 
 Here is the preview of my demo app.
 
-![image](https://raw.githubusercontent.com/minhazul-haque/WinTaskbarExample/master/preview.gif)
+![image](https://raw.githubusercontent.com/mdminhazulhaque/WinTaskbarExample/master/preview.gif)
 
-You can browse and download the complete project from [Github/minhazul-haque](https://github.com/minhazul-haque/WinTaskbarExample).
+You can browse and download the complete project from [Github/mdminhazulhaque](https://github.com/mdminhazulhaque/WinTaskbarExample).

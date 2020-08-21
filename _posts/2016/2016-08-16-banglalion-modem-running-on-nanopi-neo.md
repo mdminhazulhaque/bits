@@ -46,7 +46,7 @@ CPU max MHz:           1200.0000
 CPU min MHz:           480.0000
 ```
 
-I built the necessary library, daemons, clients etc which can be found at [minhazul-haque/beceem-cscm-armv7](https://github.com/minhazul-haque/beceem-cscm-armv7/tree/master/bin). Let's install them.
+I built the necessary library, daemons, clients etc which can be found at [mdminhazulhaque/beceem-cscm-armv7](https://github.com/mdminhazulhaque/beceem-cscm-armv7/tree/master/bin). Let's install them.
 
 * Copy `libeap_supplicant.so`, `libengine_beceem.so` and `libxvi020.so` to `/lib`
 * Copy `macxvi.cfg` and `macxvi200.bin` to `/lib/firmware`
