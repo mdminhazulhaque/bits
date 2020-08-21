@@ -4,7 +4,7 @@
  <title>Bits</title>
  <link href="https://bits.mdminhazulhaque.io/atom.xml" rel="self"/>
  <link href="https://bits.mdminhazulhaque.io/"/>
- <updated>2020-08-21T15:24:06+08:00</updated>
+ <updated>2020-08-21T15:56:02+08:00</updated>
  <id>https://bits.mdminhazulhaque.io</id>
  <author>
    <name></name>
@@ -47,10 +47,6 @@ persist-tun
 verb 0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
-&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
-&lt;/div&gt;
-
 &lt;h2 id=&quot;openvpn-management-over-telnet&quot;&gt;OpenVPN Management over Telnet&lt;/h2&gt;
 
 &lt;p&gt;In order to access the telnet management console, the following line has to be added in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/openvpn/server.conf&lt;/code&gt;. Also the &lt;code class=&quot;highlighter-rouge&quot;&gt;openvpn.service&lt;/code&gt; must be reloaded for the change to take effect.&lt;/p&gt;
@@ -71,6 +67,10 @@ Client Alice: alice@mdminhazulhaque.io
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Which means, the client names must be unique because OpenVPN uses the client name to map DHCP IP Addresses for remote users.&lt;/p&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;run-the-script&quot;&gt;Run the Script!&lt;/h2&gt;
 
@@ -252,10 +252,6 @@ bob@mdminhazulhaque.io disconnected from 186.110.104.190
 &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;CSE10Routine&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;description&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;Tabbed routine app&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
-&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
-&lt;/div&gt;
-
 &lt;h3 id=&quot;select-name-stargazers_count-from-repos-order-by-stargazers_count-desc&quot;&gt;select name, stargazers_count from repos order by stargazers_count desc&lt;/h3&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; db.repos.find&lt;span class=&quot;o&quot;&gt;({}&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;_id:0, name:1, stargazers_count:1&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;.sort&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;stargazers_count:-1&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
@@ -275,6 +271,10 @@ bob@mdminhazulhaque.io disconnected from 186.110.104.190
 &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;probhat-osx&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;stargazers_count&quot;&lt;/span&gt; : 23 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;PyQt-BPNN&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;stargazers_count&quot;&lt;/span&gt; : 22 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;select-name-stargazers_count-from-repos-where-language--python&quot;&gt;select name, stargazers_count from repos where language = “Python”&lt;/h3&gt;
 
@@ -645,7 +645,7 @@ internal-prod  internal-dev.cluster-b6da07d35.ap-southeast-1.rds.amazonaws.com
 
 &lt;h4 id=&quot;list-of-db-instances&quot;&gt;List of DB Instances&lt;/h4&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws rds describe-db-instances | jq &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.DBInstances[] | .DBInstanceIdentifier+&quot; &quot;+.DBInstanceClass+&quot; &quot;+.Endpoint.Address'&lt;/span&gt;
-backend-dev   db.t3.medium  backend-prod.b6da07d35.ap-southeast-1.rds.amazonaws.com
+backend-dev   db.t3.medifum  backend-prod.b6da07d35.ap-southeast-1.rds.amazonaws.com
 internal-dev  db.t2.micro   internal-dev.b6da07d35.ap-southeast-1.rds.amazonaws.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -658,10 +658,6 @@ aws rds describe-db-snapshots &lt;span class=&quot;nt&quot;&gt;--db-snapshot-ide
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws rds create-db-cluster-snapshot &lt;span class=&quot;nt&quot;&gt;--db-cluster-snapshot-identifier&lt;/span&gt; backend-prod-snapshot-0002 &lt;span class=&quot;nt&quot;&gt;--db-cluster-identifier&lt;/span&gt; backend-prod
 aws rds describe-db-cluster-snapshots &lt;span class=&quot;nt&quot;&gt;--db-cluster-snapshot-identifier&lt;/span&gt; backend-prod-snapshot-0002 &lt;span class=&quot;nt&quot;&gt;--db-cluster-identifier&lt;/span&gt; backend-prod
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
-&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;elasticache&quot;&gt;ElastiCache&lt;/h2&gt;
 
@@ -728,6 +724,10 @@ arn:aws:lambda:function:marketing-promo-sqs-function   arn:aws:sqs:promo-input-m
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws lambda get-function &lt;span class=&quot;nt&quot;&gt;--function-name&lt;/span&gt; DynamoToSQS | jq &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; .Code.Location
 https://awslambda-ap-se-1-tasks.s3.ap-southeast-1.amazonaws.com/snapshots/987654321/backend-api-function-1fda0de7-a751-4586-bf64-5601a410c170
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;cloudwatch&quot;&gt;Cloudwatch&lt;/h2&gt;
 
@@ -1101,6 +1101,10 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
 
 &lt;p&gt;Viola! It got connected. Another wonder was waiting for me. After trying &lt;code class=&quot;highlighter-rouge&quot;&gt;adb shell&lt;/code&gt; I typed &lt;code class=&quot;highlighter-rouge&quot;&gt;su&lt;/code&gt; and it worked too! That means I can do whatever I want with this box until it does. Yeee!!!&lt;/p&gt;
 
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;p&gt;Okay back to the business. From the behaviors of the default, vendor-locked launcher app, I guessed it prohibits any other app to be used as a launcher. Plus there was no way to access the App Drawer. So I decided to get benefit from &lt;code class=&quot;highlighter-rouge&quot;&gt;adb&lt;/code&gt; again.&lt;/p&gt;
 
 &lt;p&gt;I downloaded 2 APK from the internet. You might ask why this specific two. Well, the box runs Android 4.4 which is way old than todays. So make sure you check the Android version compatibility before installing any app.&lt;/p&gt;
@@ -1342,6 +1346,10 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
 
 &lt;p&gt;আর হ্যা, এখানে পলিথিন ব্যাবহার নিরুৎসাহিত করার জন্য প্রতি পলিথিনে ২০ সেন (প্রায় ৪ টাকা) দাম রাখা হয়। শপিং করার পর ক্যাশিয়ার আপনাকে বলবে “Plastic?” অর্থাৎ আপনি জিনিসপত্র পলিথিনে নিবেন নাকি নিজস্ব ব্যাগে নিবেন তা জানতে চাইবে। এজন্য নিজস্ব ব্যাগ নিয়ে যাওয়া ভাল হবে।&lt;/p&gt;
 
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;খাবার-পানি&quot;&gt;খাবার পানি&lt;/h2&gt;
 
 &lt;p&gt;মালয়েশিয়ায় PureIT এর মত সহজ সলুশন আমি খুঁজে পাইনি। এখানে বিভিন্ন ব্র্যান্ডের সলুশন রয়েছে যার সেটআপ খরচ ৫০০-৩৫০০ রিংগিতের মত, কিছু ক্ষেত্রে তার চেয়েও বেশী। অল ইন ওয়ান ওয়াটার ফিল্টার (কেমিক্যাল মুক্ত করে) ও পিউরিফায়ার (জীবাণুমুক্ত করে) এর মাঝে &lt;a href=&quot;https://www.coway.com.my/&quot;&gt;Coway&lt;/a&gt;, &lt;a href=&quot;https://www.cuckoo.com.my/&quot;&gt;Cuckoo&lt;/a&gt; ইত্যাদি বেশ জনপ্রিয়।&lt;/p&gt;
@@ -1441,6 +1449,10 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
 
 &lt;p&gt;কেনাকাটা শেষে একটু বিশ্রাম নিয়ে নিতে পারেন। ওয়াশরুমের কাজ থাকলে সেরে নিন কেননা ইমিগ্রেশন স্টেপটা বেশ লম্বা ও সময় সাপেক্ষ।&lt;/p&gt;
 
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;মালয়েশিয়ান-ইমিগ্রেশন&quot;&gt;মালয়েশিয়ান ইমিগ্রেশন&lt;/h2&gt;
 
 &lt;p&gt;অনেকের ধারণা থাকতে পারে যে ভ্যালিড মালয়েশিয়ান ভিসা থাকার পরেও কেন ইমিগ্রেশনে ঝামেলা হতে পারে। তাদের জন্য বলছি, ঢাকায় অবস্থিত মালয়েশিয়ান এমব্যাসি শুধুমাত্র ট্রাভেল পাস দিতে পারে। মাল্টি এনট্রি ভিসা আসলে মালয়েশিয়া এসে এখানকার ইমিগ্রেশন অফিস থেকে পাসপোর্টে স্ট্যাম্পিং করে নিতে হয়। এজন্য আপনি এমপ্লয়মেন্ট পাস নিয়ে গেলেও আপনাকে ইমিগ্রেশন ডিপার্টমেন্ট আটকাতে পারে। তবে যথাযথ চেকিং করার পর ছেড়ে দেয়। কাজেই ভয় পাওয়ার কিছু নেই।&lt;/p&gt;
@@ -1530,6 +1542,10 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
   &lt;p&gt;যারা বিদেশ থেকে বাংলাদেশে সরাসরি মোবাইল নম্বরে কল দিতে চান (ফিচার ফোন ইউজার), তাদের জন্য &lt;a href=&quot;https://secure.skype.com/calling-rates/Bangladesh?language=en&quot;&gt;Skype দিয়ে ৩ টাকা রেটে প্রতি মিনিট&lt;/a&gt; কথা বলতে পারেন। এটা ইউজ করার জন্য আপনি যাকে ফোন করবেন তার স্মার্টফোন থাকার প্রয়োজন নেই। জাস্ট রওনা দেওয়ার পূর্বে ক্রেডিট কার্ড দিয়ে আপনার স্কাইপ একাউন্টে ৫ ডলার রিচার্জ করে নিন। এয়ারপোর্টে নেমে ফ্রি ওয়াইফাই দিয়ে আপনি যেকোন নম্বরে ১৫০-২০০ মিনিট কথা বলতে পারবেন।&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;আর্থিক-প্রস্তুতি&quot;&gt;আর্থিক প্রস্তুতি&lt;/h2&gt;
 
 &lt;p&gt;মালয়েশিয়া এসে প্রথম মাস আপনাকে নিজ খরচে চলতে হবে কেননা সেলারী আপনি মাসের শেষে পাবেন। এমনকি PayDay এর আগে জয়েন করলেও ওই মাসের সেলারী পরের মাসে পাবার কথা। সুতরাং যথেষ্ট আর্থিক প্রস্তুতি নিয়ে আসা ভাল হবে। তার উপর এখানে এসেই শুরুতে আপনাকে নতুন অনেককিছু কিনতে হবে। যেমন নিত্যপ্রয়োজনীয় জিনিস, খাবার, রান্নার জিনিসপত্র, বালিশ-চাদর-কাঁথা ইত্যাদি। দেশ থেকে অনেক কিছুই কিনে আনতে পারেন যদি লাগেজ ওয়েট লিমিট ক্রস না করে। নইলে এখানে এসে কিনতে হবে।&lt;/p&gt;
@@ -1611,6 +1627,10 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
 &lt;blockquote&gt;
   &lt;p&gt;মালয়েশিয়ান এমব্যাসী কতৃক এপ্রুভড এজেন্সী &lt;a href=&quot;https://www.facebook.com/tayaf.int&quot;&gt;Tayaf International&lt;/a&gt; এর সজীব ভাই (+8801982741030) এর সাথে যোগাযোগ করতে পারেন। ভিসা এপ্লাই, টিকেট বুকিং সহ যাবতীয় কাজে উনি বেশ আন্তরিকভাবে সহায়তা করে থাকেন।&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;ভিসার-জন্য-ছবি-তোলা&quot;&gt;ভিসার জন্য ছবি তোলা&lt;/h2&gt;
 
@@ -1703,6 +1723,10 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
   &lt;p&gt;ওয়ার্ক পারমিট ও ভিসার জন্য কেও কখনো কোনদিন মূল কপি চায়না। সুতরাং কোন এজেন্সি যদি মূল কপি চায় বা কোন কোম্পানি মূল কপি চাইলে সতর্ক থাকুন।&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;কাগজপত্র-সত্যায়ন&quot;&gt;কাগজপত্র সত্যায়ন&lt;/h2&gt;
 
 &lt;p&gt;সত্যায়ন করাটা প্রচুর কষ্টকর ও সময়ের ব্যাপার। তবে গুছিয়ে করলে এক থেকে দুসপ্তাহের বেশী সময় লাগবেনা। আর প্যারালালি করলে আরো কম সময় লাগবে।&lt;/p&gt;
@@ -1759,6 +1783,10 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
 
 &lt;p&gt;মূলকথা হল, আপনার রেজিউম এমনভাবে তৈরী করুন যেন কম সময়ে, এক ঝলক তাকিয়েই রিক্রুটার বুঝে ফেলে আপনি কিসে এক্সপার্ট বা আপনার পটেনশিয়াল কোনদিকে স্ট্রং। এজন্য রেজিউম এক থেকে দুইপেজ হলেই ভাল হয়। এমন কিছু না করাই ভাল হবে যাতে রিক্রুটাররা বিরক্ত না হয়। আর হ্যাঁ, সঠিকভাবে আপনার যোগাযোগ নম্বর দিন, বিশেষ করে আপনার নাম, ফোন নম্বর, ইমেইল আর বাসার এড্রেস যেন ভুল না হয়। কেননা পরবর্তীতে আপনার সকল কনট্রাক্ট, ভিসা এপ্লিকেশন, ব্যাংক একাউন্ট ইত্যাদি এইসব নামেই তৈরী হবে।&lt;/p&gt;
 
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;ইন্টারভিউ-দেওয়া&quot;&gt;ইন্টারভিউ দেওয়া&lt;/h2&gt;
 
 &lt;p&gt;আপনার রেজিউম কেও রেফার করলে অথবা রিলোকেশন অফারে এপ্লাই করলে আপনাকে পছন্দ হলে আপনি কোম্পানির HR বা রিলেটেড যারা তাদের কাছ থেকে ইন্টারভিউ এর ডাক পাবেন। সাধারণত এসব ইন্টারভিউ কয়েক ধাপে হয়। প্রথম ধাপের ইন্টারভিউ সিম্পল ফোনকল (স্কাইপ বা হ্যাংআউট) এ হতে পারে, পরের ধাপে দুতিনজন টেকনিকাল ইন্টারভিউ হতে পারে যেখানে কোম্পানির সিনিয়র ইঞ্জিনিয়াররা আপনাকে যাচাই করবেন। তারা গ্রীণ সিগনাল দিলে আপনাকে নেওয়া হবে সিইও বা লীড পজিশনের যারা তাদের কাছে। তারা আপনার নন-টেকনিকাল বিষয়গুলা যাচাই করবেন, যেমন আপনার লীডারশিপ কেমন, আপনি কিভাবে একটা কাজ গুছাবেন, কিভাবে অণ্যকে প্রভাবিত করে কাজ আদায় করবেন। সেখানে মানুষ হিসেবে কেমন এটাও যাচাই করা হবে। সবশেষে যদি আপনাকে HR থেকে ডাকা হয় তাহলে বুঝবেন যে আপনাকে শর্টলিস্ট করা হয়েছে। মূলত এই লেভেলে আপনাকে স্যালারী ও কবে জয়েন করতে পারবেন এই ধরণের প্রশ্ন করা হবে। কাজেই কোন স্টেপে অবহেলা করবেন না। ইন্টারভিউ দেওয়ার সময় কিছু জিনিস খেয়াল রাখতে পারেন।&lt;/p&gt;
@@ -1809,6 +1837,10 @@ Switch Livingroom_Light &quot;Livingroom Light&quot; [Lighting] {exec=&quot;&amp
 &lt;p&gt;If the credentials are correct, the Skill will be enabled and you will be prompted to &lt;code class=&quot;highlighter-rouge&quot;&gt;Discover Devices&lt;/code&gt; page. Proceed by clicking the button.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/UYGEX0v.png&quot; alt=&quot;openHAB Skill Discovery&quot; /&gt;&lt;/p&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;p&gt;If the item file is properly configured, all devices with &lt;code class=&quot;highlighter-rouge&quot;&gt;Lighting&lt;/code&gt; tag will appear in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Devices&lt;/code&gt; menu. From now on, you can send commands to the items using Alexa’s Voice API. For example, saying &lt;code class=&quot;highlighter-rouge&quot;&gt;alexa, set bedroom light on&lt;/code&gt; will trigger openHAB’s REST API and eventually execute &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/ubuntu/mysmarthome.py Bedroom_Light ON&lt;/code&gt; at your local setup.&lt;/p&gt;
 
@@ -1938,6 +1970,10 @@ Intel:5
 
 &lt;p&gt;From the debug log, I found that the chip model is Qualcomm Atheros QCA9533-BL3A and it was connected to 32MB DRAM and 4 MB SPI Flash. I searched in the DD-WRT forum and found that the model is a rebranded version of TP Link TL-WR841ND v10. So I decided to use a firmware which was built for TL-WR841ND. I failed again because the product information in the firmware header was mismatched. But, I am glad that a user named &lt;code class=&quot;highlighter-rouge&quot;&gt;ian5142c&lt;/code&gt; from &lt;a href=&quot;https://www.dd-wrt.com/phpBB2/viewtopic.php?p=1107635&quot;&gt;DD-WRT forum&lt;/a&gt; uploaded a firmware with the correct header info for that model.&lt;/p&gt;
 
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;p&gt;I had to install TFTP server in my Linux PC and ran it via &lt;code class=&quot;highlighter-rouge&quot;&gt;xinetd&lt;/code&gt;. Here is the config file located at &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/xinetd.d/tftp&lt;/code&gt; -&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;service tftp
@@ -2058,7 +2094,7 @@ disable         &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; no
 &lt;p&gt;That was some real fun. I hope someone out there will find this snippet helpful. :D&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Anyway, you will find my Skype4Linux notifier project &lt;a href=&quot;https://github.com/minhazul-haque/skype4linux-notifier&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;Anyway, you will find my Skype4Linux notifier project &lt;a href=&quot;https://github.com/mdminhazulhaque/skype4linux-notifier&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
  </entry>
@@ -2149,6 +2185,10 @@ read:errno=0
   &lt;li&gt;একাধিক ফিংগারপ্রিন্ট সেট করা যায়।&lt;/li&gt;
   &lt;li&gt;64GB মডেলে ইউজারস্পেসে 54 গিগাবাইট স্পেস এভেইলেবল থাকে।&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;mi-5-এর-খারাপ-দিক&quot;&gt;MI 5 এর খারাপ দিক&lt;/h2&gt;
 
@@ -2381,6 +2421,10 @@ add-apt-repository ppa:virtualbox/ppa
 add-apt-repository ppa:webupd8team/java
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;p&gt;I want 32bit apps to run on my stystem too. So I did the following thing.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dpkg &lt;span class=&quot;nt&quot;&gt;--add-architecture&lt;/span&gt; i386
@@ -2585,7 +2629,7 @@ VBoxManage storageattach &lt;span class=&quot;nv&quot;&gt;$VMNAME&lt;/span&gt; &
    <updated>2016-09-28T00:00:00+08:00</updated>
    <id>https://bits.mdminhazulhaque.io/openwrt/turn-tl-mr3420-into-wifi-repeater-using-openwrt</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
-Download TL-MR3420 OpenWRT Firmware with relayd preinstalled from &lt;a href=&quot;https://github.com/minhazul-haque/OpenWRT-TL-MR3420/tree/master/repeater&quot;&gt;minhazul-haque/OpenWRT-TL-MR3420&lt;/a&gt;
+Download TL-MR3420 OpenWRT Firmware with relayd preinstalled from &lt;a href=&quot;https://github.com/mdminhazulhaque/OpenWRT-TL-MR3420/tree/master/repeater&quot;&gt;mdminhazulhaque/OpenWRT-TL-MR3420&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;I have been using my &lt;a href=&quot;http://www.tp-link.com.bd/products/details/cat-14_TL-MR3420.html&quot;&gt;TL-MR3420&lt;/a&gt; (Version 2.2) router as a repeater for a month. The access point in my house is an Apple Airport which delivers pretty good signal even when there exists several obstacles (walls, doors) between the Airport and my WLAN card. But I badly needed a repeater for syncing files from/to my wireless devices. So I turned my old router into a WiFi repeater.&lt;/p&gt;
@@ -2629,6 +2673,10 @@ config wifi-iface
     option mode &lt;span class=&quot;s1&quot;&gt;'ap'&lt;/span&gt;
     option ssid &lt;span class=&quot;s1&quot;&gt;'repeater_ssid'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Now let’s change &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/config/network&lt;/code&gt; also. You have to be very careful in this step. Otherwise the repeater may not work, or even if it works, you may not get internet connectivity through it.&lt;/p&gt;
 
@@ -2751,7 +2799,7 @@ CPU max MHz:           1200.0000
 CPU min MHz:           480.0000
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;I built the necessary library, daemons, clients etc which can be found at &lt;a href=&quot;https://github.com/minhazul-haque/beceem-cscm-armv7/tree/master/bin&quot;&gt;minhazul-haque/beceem-cscm-armv7&lt;/a&gt;. Let’s install them.&lt;/p&gt;
+&lt;p&gt;I built the necessary library, daemons, clients etc which can be found at &lt;a href=&quot;https://github.com/mdminhazulhaque/beceem-cscm-armv7/tree/master/bin&quot;&gt;mdminhazulhaque/beceem-cscm-armv7&lt;/a&gt;. Let’s install them.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Copy &lt;code class=&quot;highlighter-rouge&quot;&gt;libeap_supplicant.so&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;libengine_beceem.so&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;libxvi020.so&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;/lib&lt;/code&gt;&lt;/li&gt;
@@ -3032,6 +3080,10 @@ Hello there, this is another test message.
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;p&gt;I know this is not so memory efficient, but it gets the job done, right? Well, let’s use this function for detecting incoming SMS events from SIM900A serial data.&lt;/p&gt;
 
@@ -3357,7 +3409,7 @@ Hello there, this is another test message.
    <updated>2016-03-22T00:00:00+08:00</updated>
    <id>https://bits.mdminhazulhaque.io/kde/bootstrap-skin-for-ktorrent-webinterface</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
-Grab the Bootstrap Skin from &lt;a href=&quot;https://github.com/minhazul-haque/KTorrentBootstrapUI&quot;&gt;minhazul-haque/KTorrentBootstrapUI&lt;/a&gt;
+Grab the Bootstrap Skin from &lt;a href=&quot;https://github.com/mdminhazulhaque/KTorrentBootstrapUI&quot;&gt;mdminhazulhaque/KTorrentBootstrapUI&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;I have been using KTorrent, one awesome BitTorrent client for KDE, for almost 4 years. KTorrent comes with a plugin named WebInterface which makes it possible to see the list of torrents, control them and add torrents from remote network.&lt;/p&gt;
@@ -3366,11 +3418,11 @@ Grab the Bootstrap Skin from &lt;a href=&quot;https://github.com/minhazul-haque/
 
 &lt;p&gt;I named it &lt;code class=&quot;highlighter-rouge&quot;&gt;KTorrentBootstrapUI&lt;/code&gt;. Here is a screenshot of how it looks from desktop browser.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/minhazul-haque/KTorrentBootstrapUI/master/img/desktop_all_torrent.png&quot; alt=&quot;Bootstrap Skin Desktop&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mdminhazulhaque/KTorrentBootstrapUI/master/img/desktop_all_torrent.png&quot; alt=&quot;Bootstrap Skin Desktop&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And on mobile …&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/minhazul-haque/KTorrentBootstrapUI/master/img/mobile_all_torrent.png&quot; alt=&quot;Bootstrap Skin Mobile&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mdminhazulhaque/KTorrentBootstrapUI/master/img/mobile_all_torrent.png&quot; alt=&quot;Bootstrap Skin Mobile&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -3487,7 +3539,7 @@ Grab the Bootstrap Skin from &lt;a href=&quot;https://github.com/minhazul-haque/
 &lt;h2 id=&quot;contribute&quot;&gt;Contribute&lt;/h2&gt;
 
 &lt;div class=&quot;message&quot;&gt;
-Send bugfixes or commits to &lt;a href=&quot;https://github.com/mdminhazulhaque/probhat-osx&quot;&gt;minhazul-haque/probhat-osx&lt;/a&gt;
+Send bugfixes or commits to &lt;a href=&quot;https://github.com/mdminhazulhaque/probhat-osx&quot;&gt;mdminhazulhaque/probhat-osx&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
@@ -3696,6 +3748,10 @@ brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;qt-creator
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;দেখেই বোঝা যাচ্ছে যে ফাংশনে ভাগ করে দেওয়ার ফলে &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; ফাংশনে কোডের পরিমাণ কমে গেছে। সেই সাথে অপারেশনগুলো ফাংশনে ভাগ করায় একটি অপারেশনের সাথে অন্য অপারেশনের সম্পর্ক নেই এবং ডাটার এনক্যাপসুলেশন ভাল হয়েছে।&lt;/p&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;keep-functions-short&quot;&gt;Keep functions short&lt;/h2&gt;
 
@@ -4143,7 +4199,7 @@ it nicely.&lt;/p&gt;
 &lt;p&gt;Yup, you surely can. Check out &lt;a href=&quot;https://www.debian.org/doc/debian-policy/&quot;&gt;Debian Policy Manual&lt;/a&gt; and you are good to go.&lt;/p&gt;
 
 &lt;div class=&quot;well&quot;&gt;
-  Browse the project &lt;i class=&quot;icon-github&quot;&gt;&lt;/i&gt; &lt;a href=&quot;https://github.com/minhazul-haque/dpkg-deb-boilerplate&quot;&gt;dpkg-deb-boilerplate&lt;/a&gt;
+  Browse the project &lt;i class=&quot;icon-github&quot;&gt;&lt;/i&gt; &lt;a href=&quot;https://github.com/mdminhazulhaque/dpkg-deb-boilerplate&quot;&gt;dpkg-deb-boilerplate&lt;/a&gt;
 &lt;/div&gt;
 </content>
  </entry>
@@ -4360,9 +4416,9 @@ Windows Taskbar icon.&lt;/p&gt;
 
 &lt;p&gt;Here is the preview of my demo app.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/minhazul-haque/WinTaskbarExample/master/preview.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/mdminhazulhaque/WinTaskbarExample/master/preview.gif&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;You can browse and download the complete project from &lt;a href=&quot;https://github.com/minhazul-haque/WinTaskbarExample&quot;&gt;Github/minhazul-haque&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can browse and download the complete project from &lt;a href=&quot;https://github.com/mdminhazulhaque/WinTaskbarExample&quot;&gt;Github/mdminhazulhaque&lt;/a&gt;.&lt;/p&gt;
 </content>
  </entry>
  
@@ -4447,6 +4503,10 @@ REJECT: 01101
 REJECT: 10010
 REJECT: 1100010001110
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Regular expression that will accept three or four words:&lt;/p&gt;
 
@@ -4662,7 +4722,7 @@ rm -rf /System/Library/Fonts/ヒ*
 
 &lt;p&gt;Click here to read the guide, screenshots and videos.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://minhazul-haque.github.io/banglalion-wimax-mac/&quot;&gt;Run Banglalion WiMAX devices on Mac OS X 64bit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://mdminhazulhaque.github.io/banglalion-wimax-mac/&quot;&gt;Run Banglalion WiMAX devices on Mac OS X 64bit&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -5076,9 +5136,9 @@ RGBA: eeddccaa
 &lt;p&gt;Here is a preview of my setup where a javacript function is called when a button is clicked, and the javascrip call activity’s function for current date
 string.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/minhazul-haque/Android-Javascript-Bridge/raw/master/screen/apple.png&quot; alt=&quot;Android-Javascript-Bridge&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/mdminhazulhaque/Android-Javascript-Bridge/raw/master/screen/apple.png&quot; alt=&quot;Android-Javascript-Bridge&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Check my repository &lt;a href=&quot;https://github.com/minhazul-haque/Android-Javascript-Bridge&quot;&gt;Android-Javascript-Bridge&lt;/a&gt; for full project source.&lt;/p&gt;
+&lt;p&gt;Check my repository &lt;a href=&quot;https://github.com/mdminhazulhaque/Android-Javascript-Bridge&quot;&gt;Android-Javascript-Bridge&lt;/a&gt; for full project source.&lt;/p&gt;
 </content>
  </entry>
  
@@ -5113,11 +5173,11 @@ annotations (Not @Java&lt;strong&gt;S&lt;/strong&gt;criptInterface).&lt;/p&gt;
 
 &lt;p&gt;Here is a screenshot of the whole thing.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/minhazul-haque/Android-JavascriptInterface-Sample/raw/master/screen/toast.png&quot; alt=&quot;Android-JavascriptInterface&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/mdminhazulhaque/Android-JavascriptInterface-Sample/raw/master/screen/toast.png&quot; alt=&quot;Android-JavascriptInterface&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I used the text from webview to show as Toast using native Java.&lt;/p&gt;
 
-&lt;p&gt;Get the complete project source from my Github repository &lt;a href=&quot;https://github.com/minhazul-haque/Android-JavascriptInterface-Sample&quot;&gt;Android-JavascriptInterface-Sample&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Get the complete project source from my Github repository &lt;a href=&quot;https://github.com/mdminhazulhaque/Android-JavascriptInterface-Sample&quot;&gt;Android-JavascriptInterface-Sample&lt;/a&gt;.&lt;/p&gt;
 </content>
  </entry>
  
@@ -5389,7 +5449,7 @@ YouTube.system.apk
    <id>https://bits.mdminhazulhaque.io/linux/setup-popup-reminder-using-bash</id>
    <content type="html">&lt;p&gt;Well, who doesn’t forget the milk on the stove while working on computer? I do.&lt;/p&gt;
 
-&lt;p&gt;There are bunch of applications and desktop widgets to do the reminder thing for you. Even I wrote a C++ application to remind me things which is uploaded &lt;a href=&quot;https://github.com/minhazul-haque/Reminder&quot;&gt;here&lt;/a&gt;. But being a minimalist user, I like to cut short the list of applications I use.&lt;/p&gt;
+&lt;p&gt;There are bunch of applications and desktop widgets to do the reminder thing for you. Even I wrote a C++ application to remind me things which is uploaded &lt;a href=&quot;https://github.com/mdminhazulhaque/Reminder&quot;&gt;here&lt;/a&gt;. But being a minimalist user, I like to cut short the list of applications I use.&lt;/p&gt;
 
 &lt;p&gt;Minutes ago an idea just came into my mind that I could use bash and kdialog/zenity to setup such reminder. The sleep command is built in for all Linux/Mac OSs. Here is what I did to setup a minimal reminder popup in minutes.&lt;/p&gt;
 
@@ -5626,7 +5686,7 @@ to manage the popup from being closed on button press.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Ie7tE3S.png&quot; alt=&quot;Popup&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Check my &lt;a href=&quot;https://github.com/minhazul-haque/DesktopPopup&quot;&gt;DesktopPopup&lt;/a&gt; on Github for more detailed example.&lt;/p&gt;
+&lt;p&gt;Check my &lt;a href=&quot;https://github.com/mdminhazulhaque/DesktopPopup&quot;&gt;DesktopPopup&lt;/a&gt; on Github for more detailed example.&lt;/p&gt;
 </content>
  </entry>
  
@@ -5937,7 +5997,7 @@ which was drawn using OpenGL with exact ratio (10:6).&lt;/p&gt;
  </entry>
  
  <entry>
-   <title>`chroot` with Networking Support</title>
+   <title>Use chroot with Networking Support</title>
    <link href="https://bits.mdminhazulhaque.io/linux/chroot-with-networking-support.html"/>
    <updated>2015-01-03T08:05:00+08:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/chroot-with-networking-support</id>
@@ -6988,11 +7048,11 @@ characters because standard keyboards don’t have the AND, OR etc sign.&lt;/p&g
 &lt;p&gt;লিনাক্স থেকে বাংলালায়ন মডেম চালাতে হলে লাগবে আন-অফিশিয়াল প্যাকেজ যা সম্পূর্ণ বিনামুল্যে নিচের লিংক থেকে পাওয়া যাবে। সেই সাথে অ্যাপলিকেশনটির সর্বশেষ রিলিজ ও বাগ রিপোর্ট সাবমিটের কাজটিও নিম্নের ওয়েব সাইট থেকে করা যাবে। উল্লেখ্য, যাদের ZTE AX226 বা WU216 মডেম তারা &lt;strong&gt;banglalion-wimax-for-linux-1.0.0-ax226-wu216&lt;/strong&gt; এবং যাদের পুরনো U211 মডেলের মডেম তারা &lt;strong&gt;banglalion-wimax-for-linux-1.0.0-u211&lt;/strong&gt; ফাইলটি ডাউনলোড করবেন।&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/minhazul-haque/wimaxcmgui/raw/master/installer/banglalion-wimax-for-linux-1.0.0-ax226-wu216&quot;&gt;AX226 বা WU216 মডেমের জন্য&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/minhazul-haque/wimaxcmgui/raw/master/installer/banglalion-wimax-for-linux-1.0.0-u211&quot;&gt;U211 মডেমের জন্য&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/minhazul-haque/wimaxcmgui/raw/master/beceem-control-panel/beceem-control-panel.exe&quot;&gt;ZTE AX226 এর ডিভাইস আইডি বদলানোর সফটওয়্যারের লিংক&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/minhazul-haque/wimaxcmgui/tree/master/src&quot;&gt;অ্যাপ্লিকেশন সোর্স কোড&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/minhazul-haque/wimaxcmgui/raw/master/help.pdf&quot;&gt;অফলাইন হেল্প গাইড&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/mdminhazulhaque/wimaxcmgui/raw/master/installer/banglalion-wimax-for-linux-1.0.0-ax226-wu216&quot;&gt;AX226 বা WU216 মডেমের জন্য&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/mdminhazulhaque/wimaxcmgui/raw/master/installer/banglalion-wimax-for-linux-1.0.0-u211&quot;&gt;U211 মডেমের জন্য&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/mdminhazulhaque/wimaxcmgui/raw/master/beceem-control-panel/beceem-control-panel.exe&quot;&gt;ZTE AX226 এর ডিভাইস আইডি বদলানোর সফটওয়্যারের লিংক&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/mdminhazulhaque/wimaxcmgui/tree/master/src&quot;&gt;অ্যাপ্লিকেশন সোর্স কোড&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/mdminhazulhaque/wimaxcmgui/raw/master/help.pdf&quot;&gt;অফলাইন হেল্প গাইড&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;সফটওয়্যারটি জিএনইউ জিপিএল ভার্শন ৩ লাইসেন্সের অধীনে বের করা হয়েছে। লাইসেন্সের কপি পাওয়া যাবে &lt;a href=&quot;http://www.gnu.org/licenses/gpl-3.0.txt&quot;&gt;এই লিংকে।&lt;/a&gt;&lt;/p&gt;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://bits.mdminhazulhaque.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bits.mdminhazulhaque.io/" rel="alternate" type="text/html" /><updated>2020-08-21T15:24:06+08:00</updated><id>https://bits.mdminhazulhaque.io/feed.xml</id><title type="html">Bits</title><subtitle>Random posts written by &lt;a href=&quot;https://mdminhazulhaque.io&quot;&gt;Md. Minhazul Haque&lt;/a&gt;</subtitle><entry><title type="html">Monitor OpenVPN Client Activity using Python</title><link href="https://bits.mdminhazulhaque.io/linux/monitor-openvpn-client-activity-using-python.html" rel="alternate" type="text/html" title="Monitor OpenVPN Client Activity using Python" /><published>2020-08-09T00:00:00+08:00</published><updated>2020-08-09T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/linux/monitor-openvpn-client-activity-using-python</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/linux/monitor-openvpn-client-activity-using-python.html">&lt;p&gt;Installing OpenVPN in your own server gives you two major benefits. First, you will have better privacy control. Second, no need to spend on &lt;code class=&quot;highlighter-rouge&quot;&gt;pay-per-user&lt;/code&gt; thing. As long as the CPU can handle encryption/decryption, and the ethernet controller can handle the traffic, OpenVPN is a pretty good choice for providing VPN service to a small-sized team.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://bits.mdminhazulhaque.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bits.mdminhazulhaque.io/" rel="alternate" type="text/html" /><updated>2020-08-21T15:56:02+08:00</updated><id>https://bits.mdminhazulhaque.io/feed.xml</id><title type="html">Bits</title><subtitle>Random posts written by &lt;a href=&quot;https://mdminhazulhaque.io&quot;&gt;Md. Minhazul Haque&lt;/a&gt;</subtitle><entry><title type="html">Monitor OpenVPN Client Activity using Python</title><link href="https://bits.mdminhazulhaque.io/linux/monitor-openvpn-client-activity-using-python.html" rel="alternate" type="text/html" title="Monitor OpenVPN Client Activity using Python" /><published>2020-08-09T00:00:00+08:00</published><updated>2020-08-09T00:00:00+08:00</updated><id>https://bits.mdminhazulhaque.io/linux/monitor-openvpn-client-activity-using-python</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/linux/monitor-openvpn-client-activity-using-python.html">&lt;p&gt;Installing OpenVPN in your own server gives you two major benefits. First, you will have better privacy control. Second, no need to spend on &lt;code class=&quot;highlighter-rouge&quot;&gt;pay-per-user&lt;/code&gt; thing. As long as the CPU can handle encryption/decryption, and the ethernet controller can handle the traffic, OpenVPN is a pretty good choice for providing VPN service to a small-sized team.&lt;/p&gt;
 
 &lt;h2 id=&quot;openvpn-config&quot;&gt;OpenVPN Config&lt;/h2&gt;
 
@@ -28,10 +28,6 @@ persist-tun
 verb 0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
-&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
-&lt;/div&gt;
-
 &lt;h2 id=&quot;openvpn-management-over-telnet&quot;&gt;OpenVPN Management over Telnet&lt;/h2&gt;
 
 &lt;p&gt;In order to access the telnet management console, the following line has to be added in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/openvpn/server.conf&lt;/code&gt;. Also the &lt;code class=&quot;highlighter-rouge&quot;&gt;openvpn.service&lt;/code&gt; must be reloaded for the change to take effect.&lt;/p&gt;
@@ -52,6 +48,10 @@ Client Alice: alice@mdminhazulhaque.io
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Which means, the client names must be unique because OpenVPN uses the client name to map DHCP IP Addresses for remote users.&lt;/p&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;run-the-script&quot;&gt;Run the Script!&lt;/h2&gt;
 
@@ -224,10 +224,6 @@ bob@mdminhazulhaque.io disconnected from 186.110.104.190
 &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;CSE10Routine&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;description&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;Tabbed routine app&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
-&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
-&lt;/div&gt;
-
 &lt;h3 id=&quot;select-name-stargazers_count-from-repos-order-by-stargazers_count-desc&quot;&gt;select name, stargazers_count from repos order by stargazers_count desc&lt;/h3&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; db.repos.find&lt;span class=&quot;o&quot;&gt;({}&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;_id:0, name:1, stargazers_count:1&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;.sort&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;stargazers_count:-1&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
@@ -247,6 +243,10 @@ bob@mdminhazulhaque.io disconnected from 186.110.104.190
 &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;probhat-osx&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;stargazers_count&quot;&lt;/span&gt; : 23 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;PyQt-BPNN&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;stargazers_count&quot;&lt;/span&gt; : 22 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;select-name-stargazers_count-from-repos-where-language--python&quot;&gt;select name, stargazers_count from repos where language = “Python”&lt;/h3&gt;
 
@@ -608,7 +608,7 @@ internal-prod  internal-dev.cluster-b6da07d35.ap-southeast-1.rds.amazonaws.com
 
 &lt;h4 id=&quot;list-of-db-instances&quot;&gt;List of DB Instances&lt;/h4&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws rds describe-db-instances | jq &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.DBInstances[] | .DBInstanceIdentifier+&quot; &quot;+.DBInstanceClass+&quot; &quot;+.Endpoint.Address'&lt;/span&gt;
-backend-dev   db.t3.medium  backend-prod.b6da07d35.ap-southeast-1.rds.amazonaws.com
+backend-dev   db.t3.medifum  backend-prod.b6da07d35.ap-southeast-1.rds.amazonaws.com
 internal-dev  db.t2.micro   internal-dev.b6da07d35.ap-southeast-1.rds.amazonaws.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -621,10 +621,6 @@ aws rds describe-db-snapshots &lt;span class=&quot;nt&quot;&gt;--db-snapshot-ide
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws rds create-db-cluster-snapshot &lt;span class=&quot;nt&quot;&gt;--db-cluster-snapshot-identifier&lt;/span&gt; backend-prod-snapshot-0002 &lt;span class=&quot;nt&quot;&gt;--db-cluster-identifier&lt;/span&gt; backend-prod
 aws rds describe-db-cluster-snapshots &lt;span class=&quot;nt&quot;&gt;--db-cluster-snapshot-identifier&lt;/span&gt; backend-prod-snapshot-0002 &lt;span class=&quot;nt&quot;&gt;--db-cluster-identifier&lt;/span&gt; backend-prod
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
-&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;elasticache&quot;&gt;ElastiCache&lt;/h2&gt;
 
@@ -691,6 +687,10 @@ arn:aws:lambda:function:marketing-promo-sqs-function   arn:aws:sqs:promo-input-m
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws lambda get-function &lt;span class=&quot;nt&quot;&gt;--function-name&lt;/span&gt; DynamoToSQS | jq &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; .Code.Location
 https://awslambda-ap-se-1-tasks.s3.ap-southeast-1.amazonaws.com/snapshots/987654321/backend-api-function-1fda0de7-a751-4586-bf64-5601a410c170
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;cloudwatch&quot;&gt;Cloudwatch&lt;/h2&gt;
 
@@ -1046,6 +1046,10 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
 
 &lt;p&gt;Viola! It got connected. Another wonder was waiting for me. After trying &lt;code class=&quot;highlighter-rouge&quot;&gt;adb shell&lt;/code&gt; I typed &lt;code class=&quot;highlighter-rouge&quot;&gt;su&lt;/code&gt; and it worked too! That means I can do whatever I want with this box until it does. Yeee!!!&lt;/p&gt;
 
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;p&gt;Okay back to the business. From the behaviors of the default, vendor-locked launcher app, I guessed it prohibits any other app to be used as a launcher. Plus there was no way to access the App Drawer. So I decided to get benefit from &lt;code class=&quot;highlighter-rouge&quot;&gt;adb&lt;/code&gt; again.&lt;/p&gt;
 
 &lt;p&gt;I downloaded 2 APK from the internet. You might ask why this specific two. Well, the box runs Android 4.4 which is way old than todays. So make sure you check the Android version compatibility before installing any app.&lt;/p&gt;
@@ -1249,6 +1253,10 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
 
 &lt;p&gt;আর হ্যা, এখানে পলিথিন ব্যাবহার নিরুৎসাহিত করার জন্য প্রতি পলিথিনে ২০ সেন (প্রায় ৪ টাকা) দাম রাখা হয়। শপিং করার পর ক্যাশিয়ার আপনাকে বলবে “Plastic?” অর্থাৎ আপনি জিনিসপত্র পলিথিনে নিবেন নাকি নিজস্ব ব্যাগে নিবেন তা জানতে চাইবে। এজন্য নিজস্ব ব্যাগ নিয়ে যাওয়া ভাল হবে।&lt;/p&gt;
 
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;খাবার-পানি&quot;&gt;খাবার পানি&lt;/h2&gt;
 
 &lt;p&gt;মালয়েশিয়ায় PureIT এর মত সহজ সলুশন আমি খুঁজে পাইনি। এখানে বিভিন্ন ব্র্যান্ডের সলুশন রয়েছে যার সেটআপ খরচ ৫০০-৩৫০০ রিংগিতের মত, কিছু ক্ষেত্রে তার চেয়েও বেশী। অল ইন ওয়ান ওয়াটার ফিল্টার (কেমিক্যাল মুক্ত করে) ও পিউরিফায়ার (জীবাণুমুক্ত করে) এর মাঝে &lt;a href=&quot;https://www.coway.com.my/&quot;&gt;Coway&lt;/a&gt;, &lt;a href=&quot;https://www.cuckoo.com.my/&quot;&gt;Cuckoo&lt;/a&gt; ইত্যাদি বেশ জনপ্রিয়।&lt;/p&gt;
@@ -1350,6 +1358,10 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
 
 &lt;p&gt;কেনাকাটা শেষে একটু বিশ্রাম নিয়ে নিতে পারেন। ওয়াশরুমের কাজ থাকলে সেরে নিন কেননা ইমিগ্রেশন স্টেপটা বেশ লম্বা ও সময় সাপেক্ষ।&lt;/p&gt;
 
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;মালয়েশিয়ান-ইমিগ্রেশন&quot;&gt;মালয়েশিয়ান ইমিগ্রেশন&lt;/h2&gt;
 
 &lt;p&gt;অনেকের ধারণা থাকতে পারে যে ভ্যালিড মালয়েশিয়ান ভিসা থাকার পরেও কেন ইমিগ্রেশনে ঝামেলা হতে পারে। তাদের জন্য বলছি, ঢাকায় অবস্থিত মালয়েশিয়ান এমব্যাসি শুধুমাত্র ট্রাভেল পাস দিতে পারে। মাল্টি এনট্রি ভিসা আসলে মালয়েশিয়া এসে এখানকার ইমিগ্রেশন অফিস থেকে পাসপোর্টে স্ট্যাম্পিং করে নিতে হয়। এজন্য আপনি এমপ্লয়মেন্ট পাস নিয়ে গেলেও আপনাকে ইমিগ্রেশন ডিপার্টমেন্ট আটকাতে পারে। তবে যথাযথ চেকিং করার পর ছেড়ে দেয়। কাজেই ভয় পাওয়ার কিছু নেই।&lt;/p&gt;
@@ -1429,6 +1441,10 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
 &lt;blockquote&gt;
   &lt;p&gt;যারা বিদেশ থেকে বাংলাদেশে সরাসরি মোবাইল নম্বরে কল দিতে চান (ফিচার ফোন ইউজার), তাদের জন্য &lt;a href=&quot;https://secure.skype.com/calling-rates/Bangladesh?language=en&quot;&gt;Skype দিয়ে ৩ টাকা রেটে প্রতি মিনিট&lt;/a&gt; কথা বলতে পারেন। এটা ইউজ করার জন্য আপনি যাকে ফোন করবেন তার স্মার্টফোন থাকার প্রয়োজন নেই। জাস্ট রওনা দেওয়ার পূর্বে ক্রেডিট কার্ড দিয়ে আপনার স্কাইপ একাউন্টে ৫ ডলার রিচার্জ করে নিন। এয়ারপোর্টে নেমে ফ্রি ওয়াইফাই দিয়ে আপনি যেকোন নম্বরে ১৫০-২০০ মিনিট কথা বলতে পারবেন।&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;div&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-9642838276352812&quot; data-ad-slot=&quot;8294162148&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;আর্থিক-প্রস্তুতি&quot;&gt;আর্থিক প্রস্তুতি&lt;/h2&gt;
 

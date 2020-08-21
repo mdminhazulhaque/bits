@@ -185,10 +185,6 @@
 <span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"CSE10Routine"</span>, <span class="s2">"description"</span> : <span class="s2">"Tabbed routine app"</span> <span class="o">}</span>
 </code></pre></div></div>
 
-<div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9642838276352812" data-ad-slot="8294162148"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
 <h3 id="select-name-stargazers_count-from-repos-order-by-stargazers_count-desc">select name, stargazers_count from repos order by stargazers_count desc</h3>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> db.repos.find<span class="o">({}</span>, <span class="o">{</span>_id:0, name:1, stargazers_count:1<span class="o">})</span>.sort<span class="o">({</span>stargazers_count:-1<span class="o">})</span>
@@ -208,6 +204,10 @@
 <span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"probhat-osx"</span>, <span class="s2">"stargazers_count"</span> : 23 <span class="o">}</span>
 <span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"PyQt-BPNN"</span>, <span class="s2">"stargazers_count"</span> : 22 <span class="o">}</span>
 </code></pre></div></div>
+
+<div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9642838276352812" data-ad-slot="8294162148"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
 <h3 id="select-name-stargazers_count-from-repos-where-language--python">select name, stargazers_count from repos where language = “Python”</h3>
 

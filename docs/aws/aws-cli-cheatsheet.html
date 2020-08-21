@@ -340,7 +340,7 @@ internal-prod  internal-dev.cluster-b6da07d35.ap-southeast-1.rds.amazonaws.com
 
 <h4 id="list-of-db-instances">List of DB Instances</h4>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws rds describe-db-instances | jq <span class="nt">-r</span> <span class="s1">'.DBInstances[] | .DBInstanceIdentifier+" "+.DBInstanceClass+" "+.Endpoint.Address'</span>
-backend-dev   db.t3.medium  backend-prod.b6da07d35.ap-southeast-1.rds.amazonaws.com
+backend-dev   db.t3.medifum  backend-prod.b6da07d35.ap-southeast-1.rds.amazonaws.com
 internal-dev  db.t2.micro   internal-dev.b6da07d35.ap-southeast-1.rds.amazonaws.com
 </code></pre></div></div>
 
@@ -353,10 +353,6 @@ aws rds describe-db-snapshots <span class="nt">--db-snapshot-identifier</span> b
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws rds create-db-cluster-snapshot <span class="nt">--db-cluster-snapshot-identifier</span> backend-prod-snapshot-0002 <span class="nt">--db-cluster-identifier</span> backend-prod
 aws rds describe-db-cluster-snapshots <span class="nt">--db-cluster-snapshot-identifier</span> backend-prod-snapshot-0002 <span class="nt">--db-cluster-identifier</span> backend-prod
 </code></pre></div></div>
-
-<div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9642838276352812" data-ad-slot="8294162148"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 
 <h2 id="elasticache">ElastiCache</h2>
 
@@ -423,6 +419,10 @@ arn:aws:lambda:function:marketing-promo-sqs-function   arn:aws:sqs:promo-input-m
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws lambda get-function <span class="nt">--function-name</span> DynamoToSQS | jq <span class="nt">-r</span> .Code.Location
 https://awslambda-ap-se-1-tasks.s3.ap-southeast-1.amazonaws.com/snapshots/987654321/backend-api-function-1fda0de7-a751-4586-bf64-5601a410c170
 </code></pre></div></div>
+
+<div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9642838276352812" data-ad-slot="8294162148"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
 <h2 id="cloudwatch">Cloudwatch</h2>
 
