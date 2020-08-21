@@ -5,16 +5,12 @@ type: index
 ---
 <div class="posts">
   {% for post in paginator.posts %}
-    {% capture currentyear %}{{ post.date | date: "%Y" }}{% endcapture %}
-    {% if currentyear != year %}
-        {% unless forloop.first %}
-        {% endunless %}
-        <h1>{{ currentyear }}</h1>
-        <hr>
-        {% capture year %}{{ currentyear }}{% endcapture %}
+    {% capture m %}{{ forloop.index0 | modulo:5 }}{% endcapture %}
+    {% if m == '0' and forloop.index0 > 0 %}
+    {% include ad_feed.html %}
     {% endif %}
-    <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <span class="post-date"><i class="fa fa-fw fa-calendar"></i> {{ post.date | date_to_string }} <i class="fa fa-fw fa-tag"></i> <a style="color:#9a9a9a;" href="/{{ post.categories }}">{{ post.categories }}</a></span>
+    <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p><span class="post-date"><i class="fa fa-fw fa-calendar"></i> {{ post.date | date_to_string }} <i class="fa fa-fw fa-tag"></i> <a style="color:#9a9a9a;" href="/{{ post.categories }}">{{ post.categories }}</a></span></p>
   {% endfor %}
 </div>
 <div class="pagination">
