@@ -7,8 +7,9 @@
         </a>
       </h1>
       <p class="lead">{{ site.description }}</p>
-      <p>Find me at ...{% for link in site.data.links %}{% if link.last.show == "true" and link.last.title != "Blog" %}
-      <br><a href="{{ link.last.href }}"><i class="fa fa-fw {{ link.last.icon }}"></i> {{ link.last.title }}</a>{% endif %}{% endfor %}
+      <p>Find me at ...
+        <br><a href="https://github.com/mdminhazulhaque"><i class="fa fa-fw fa-github"></i> Github</a>
+        <br><a href="https://bd.linkedin.com/in/mdminhazulhaque"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
       </p>
     </div>
     <p>&copy; 2012 - {{ site.time | date: '%Y' }}. All rights reserved.</p>
