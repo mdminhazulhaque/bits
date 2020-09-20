@@ -3,7 +3,7 @@ highlighter:            rouge
 permalink:              /:categories/:title.html
 relative_permalinks:    false
 title:                  'Bits'
-description:            'Random posts written by <a href="https://mdminhazulhaque.io">Md. Minhazul Haque</a>'
+description:            'Random posts written by <a href="https://mdminhazulhaque.io">Minhaz</a>'
 url:                    'https://bits.mdminhazulhaque.io'
 paginate:               20
 destination:            ./docs
@@ -13,6 +13,7 @@ plugins:
     - jekyll-sitemap
     - jekyll-paginate
     - jekyll-archives
+    - jekyll-admin
 sass:
     style: compressed
 exclude:
