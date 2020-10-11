@@ -4,7 +4,7 @@
  <title>Bits</title>
  <link href="https://bits.mdminhazulhaque.io/atom.xml" rel="self"/>
  <link href="https://bits.mdminhazulhaque.io/"/>
- <updated>2020-09-22T11:23:42+08:00</updated>
+ <updated>2020-10-11T15:55:44+06:00</updated>
  <id>https://bits.mdminhazulhaque.io</id>
  <author>
    <name></name>
@@ -15,7 +15,7 @@
  <entry>
    <title>মালয়েশিয়ায় রিলোকেশন ৬ - ট্যাক্স বিষয়ক</title>
    <link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-tax-related.html"/>
-   <updated>2020-09-20T21:16:18+08:00</updated>
+   <updated>2020-09-20T21:16:18+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/malaysia/malaysia-tax-related</id>
    <content type="html">&lt;p&gt;প্রিয় পাঠক, মালয়েশিয়ায় আসা এবং চাকরি শুরু করার পর সবার একটা কমন প্রশ্ন থাকে। সেটা হল নন-রেসিডেন্ট হিসেবে প্রথম ৬ মাস যে অতিরিক্ত টাকা কেটে নিয়েছে সেটা কবে ফেরত দেওয়া হবে। ফেরত দিলেও কিভাবে, কত টাকা ফেরত দিবে ইত্যাদি প্রশ্ন তো থেকেই যায়। তো এই পর্বে চলুন দেখে নিই কিভাবে আপনি বছর শেষে ট্যাক্স ফাইল করবেন এবং রিফান্ড ক্লেইম করবেন।&lt;/p&gt;
 
@@ -90,7 +90,7 @@
  <entry>
    <title>Monitor OpenVPN Client Activity using Python</title>
    <link href="https://bits.mdminhazulhaque.io/linux/monitor-openvpn-client-activity-using-python.html"/>
-   <updated>2020-08-09T00:00:00+08:00</updated>
+   <updated>2020-08-09T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/monitor-openvpn-client-activity-using-python</id>
    <content type="html">&lt;p&gt;Installing OpenVPN in your own server gives you two major benefits. First, you will have better privacy control. Second, no need to spend on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pay-per-user&lt;/code&gt; thing. As long as the CPU can handle encryption/decryption, and the ethernet controller can handle the traffic, OpenVPN is a pretty good choice for providing VPN service to a small-sized team.&lt;/p&gt;
 
@@ -219,7 +219,7 @@ bob@mdminhazulhaque.io disconnected from 186.110.104.190
  <entry>
    <title>MongoDB for MySQL People</title>
    <link href="https://bits.mdminhazulhaque.io/mongodb/mongodb-for-mysql-people.html"/>
-   <updated>2020-07-30T00:00:00+08:00</updated>
+   <updated>2020-07-30T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/mongodb/mongodb-for-mysql-people</id>
    <content type="html">&lt;p&gt;I am a MySQL guy. I can query MySQL, BigQuery or SQL-like databases for my day to day business. Last week, I faced a challenge where I needed to extract some information from a production MongoDB server that involves aggregation. I had no idea how MongoDB works or how to run CRUD operation on such database. So obviously, I spent my whole weekend in learning MongoDB. In this post I am going to share the MongoDB queries I learnt, and the equivalent MySQL queries as well.&lt;/p&gt;
 
@@ -458,7 +458,7 @@ bob@mdminhazulhaque.io disconnected from 186.110.104.190
  <entry>
    <title>AWS CLI Cheatsheet</title>
    <link href="https://bits.mdminhazulhaque.io/aws/aws-cli-cheatsheet.html"/>
-   <updated>2020-03-28T00:00:00+08:00</updated>
+   <updated>2020-03-28T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/aws/aws-cli-cheatsheet</id>
    <content type="html">&lt;p&gt;I heavily rely on CLI tools rather than GUI/Web interface. AWS CLI is a great tool to manage AWS resources across different accounts, regions and environments.&lt;/p&gt;
 
@@ -1073,7 +1073,7 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
  <entry>
    <title>Create Breadcrumb in Jekyll</title>
    <link href="https://bits.mdminhazulhaque.io/jekyll/create-breadcrumb-in-jekyll.html"/>
-   <updated>2019-09-14T00:00:00+08:00</updated>
+   <updated>2019-09-14T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/jekyll/create-breadcrumb-in-jekyll</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;https://developers.google.com/search/docs/data-types/breadcrumb&quot;&gt;Breadcrumb&lt;/a&gt; is a technique to show the level of your page so the user can browse any level directly, even from the Google search page. Also, the breadcrumb snippet must be put in the head tag of the HTML if you want to use the JSON-LD format.&lt;/p&gt;
 
@@ -1152,7 +1152,7 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
  <entry>
    <title>Tweak your Bee IPTV Box with 3rd Party App and Launcher</title>
    <link href="https://bits.mdminhazulhaque.io/android/tweak-your-bee-iptv-box-with-3rd-party-app-and-launcher.html"/>
-   <updated>2019-05-30T00:00:00+08:00</updated>
+   <updated>2019-05-30T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/android/tweak-your-bee-iptv-box-with-3rd-party-app-and-launcher</id>
    <content type="html">&lt;p&gt;Yesterday, I got a call from one of my colleagues (and also my neighbor) about how he messed up with his Android TV Box. He asked me if I could help him with that to make it &lt;strike&gt;great&lt;/strike&gt; useful again.&lt;/p&gt;
 
@@ -1245,7 +1245,7 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
  <entry>
    <title>Authenticate Fluentd to Access BigQuery</title>
    <link href="https://bits.mdminhazulhaque.io/linux/authenticate-fluentd-to-access-bigquery.html"/>
-   <updated>2019-05-08T00:00:00+08:00</updated>
+   <updated>2019-05-08T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/authenticate-fluentd-to-access-bigquery</id>
    <content type="html">&lt;p&gt;Fluentd is a pretty good log collection and streaming solution for several platforms. You can easily stream your nginx logs to BigQuery via Fluentd.&lt;/p&gt;
 
@@ -1304,7 +1304,7 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
  <entry>
    <title>মালয়েশিয়ায় রিলোকেশন গাইড</title>
    <link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-full-guide.html"/>
-   <updated>2019-04-08T00:00:00+08:00</updated>
+   <updated>2019-04-08T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-full-guide</id>
    <content type="html">&lt;p&gt;যারা মালয়েশিয়ায় রিলোকেট হতে চান, অথবা রিলোকেশন অফার পেয়েছেন কিন্তু কোথায় কখন কিভাবে কি করবেন এ সম্পর্কে কনফিউজড, তাদের জন্য এই ব্লগপোস্ট সিরিজ লিখলাম। শুধুমাত্র রিলোকেশনই নয়, মালয়েশিয়া ভ্রমণ কিংবা অন্য দেশে যারা রিলোকেট হতে যাচ্ছেন তারাও বেশ কিছু আইডিয়া পাবেন এই সিরিজ থেকে।&lt;/p&gt;
 
@@ -1325,7 +1325,7 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
  <entry>
    <title>মালয়েশিয়ায় রিলোকেশন ৫ - লাইফস্টাইল টিপস</title>
    <link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-life-style-tips.html"/>
-   <updated>2019-04-08T00:00:00+08:00</updated>
+   <updated>2019-04-08T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/malaysia/malaysia-life-style-tips</id>
    <content type="html">&lt;p&gt;প্রিয় পাঠক, এই পোস্টে চলে আসায় ধরে নিচ্ছি আপনারা সুন্দরমত মালয়েশিয়ায় চলে এসেছেন। এই পর্বে আপনাদের জন্য কিছু লাইফ স্টাইল টিপস নিয়ে লিখব। আশা করি আপনাদের সেগুলা কাজে লাগবে।&lt;/p&gt;
 
@@ -1500,7 +1500,7 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
  <entry>
    <title>মালয়েশিয়ায় রিলোকেশন ৪ - ইমিগ্রেশন</title>
    <link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-immigration.html"/>
-   <updated>2019-04-06T00:00:00+08:00</updated>
+   <updated>2019-04-06T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/malaysia/malaysia-immigration</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;পূর্ববর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-last-minute-preparation.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ৩ - শেষ মুহুর্তের প্রস্তুতি&lt;/a&gt;&lt;/p&gt;
@@ -1573,7 +1573,7 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
  <entry>
    <title>মালয়েশিয়ায় রিলোকেশন ৩ - শেষ মুহুর্তের প্রস্তুতি</title>
    <link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-last-minute-preparation.html"/>
-   <updated>2019-03-26T00:00:00+08:00</updated>
+   <updated>2019-03-26T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-last-minute-preparation</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;পূর্ববর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-single-entry-visa-prep.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ২ - ভিসার জন্য এপ্লাই করা&lt;/a&gt;&lt;/p&gt;
@@ -1687,7 +1687,7 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
  <entry>
    <title>মালয়েশিয়ায় রিলোকেশন ২ - ভিসার জন্য এপ্লাই করা</title>
    <link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-single-entry-visa-prep.html"/>
-   <updated>2019-03-22T00:00:00+08:00</updated>
+   <updated>2019-03-22T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/malaysia/malaysia-single-entry-visa-prep</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;পূর্ববর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-salary-negotiation-employment-pass.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস&lt;/a&gt;&lt;/p&gt;
@@ -1733,7 +1733,7 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
  <entry>
    <title>মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস</title>
    <link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-salary-negotiation-employment-pass.html"/>
-   <updated>2019-03-22T00:00:00+08:00</updated>
+   <updated>2019-03-22T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/malaysia/malaysia-salary-negotiation-employment-pass</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;পূর্ববর্তী পোস্ট &lt;a href=&quot;https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-preparation-apply-interview-etc.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ০ - রেজিউম প্রস্তুতি ও ইন্টারভিউ&lt;/a&gt;&lt;/p&gt;
@@ -1843,7 +1843,7 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
  <entry>
    <title>মালয়েশিয়ায় রিলোকেশন ০ - রেজিউম প্রস্তুতি ও ইন্টারভিউ</title>
    <link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-preparation-apply-interview-etc.html"/>
-   <updated>2019-03-22T00:00:00+08:00</updated>
+   <updated>2019-03-22T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/malaysia/malaysia-relocation-preparation-apply-interview-etc</id>
    <content type="html">&lt;p&gt;রিলোকশেন কি সেটা মনে হয় না বললেও চলে। যারা জানেন না তাদের জন্য, এটা হল একরকম জব অফার যেখানে আপনাকে এক জায়গা থেকে অন্য জায়গায় গিয়ে (মূলত অন্য দেশে) জব করতে হবে এবং আপনার যাওয়া সহ যাবতীয় দায় দায়িত্ব আপনার কোম্পানি বহন করবে। কিছু ক্ষেত্রে কোম্পানিই আপনাকে যাবার খরচ, মালপত্র শিপমেন্ট খরচ এসবও দিয়ে থাকে। আর অনেক সময় রিলোকেশন উইথ ভিসা স্পন্সরশিপ বলে আরেকটি জব অফার থাকে সেখানে আপনাকে রিক্রুট করা কোম্পানিই আপনাকে ওই দেশে নিয়ে যাওয়ার সকল লিগ্যাল পেপারস, ভিসার এপ্লাই, ভিসার রিনিউ ইত্যাদি সকল দায়িত্ব পালন করবে। আমেরিকা, কানাডা, জার্মানী ইত্যাদি দেশে ভিসা স্পন্সরশিপ একটু কম থাকলেও সাউথ এশিয়ান ও আশেপাশের দেশগুলোয় খুঁজলেই প্রচুর রিলোকেশন অফার পাবেন যেখানে আপনার ভিসা কোম্পানিই স্পন্সর করবে। তো আমি গতমাসে এরকমই একটি কোম্পানি থেকে রিলোকেট হয়ে মালয়েশিয়া এসে চাকরি করছি। সবার সাথে আমার অভিজ্ঞতা ও টিপস শেয়ার করতেই এই ব্লগটি লেখা।&lt;/p&gt;
 
@@ -1898,7 +1898,7 @@ aws iam attach-group-policy &lt;span class=&quot;nt&quot;&gt;--group-name&lt;/sp
  <entry>
    <title>Build a Voice Controlled SmartHome using openHAB and Alexa</title>
    <link href="https://bits.mdminhazulhaque.io/linux/build-a-voice-controlled-smarthome-using-openhab-and-alexa.html"/>
-   <updated>2018-12-17T00:00:00+08:00</updated>
+   <updated>2018-12-17T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/build-a-voice-controlled-smarthome-using-openhab-and-alexa</id>
    <content type="html">&lt;p&gt;The Amazon Alexa Marketplace has lots of third party SmartHome skills to start with. But why not  build your own SmartHome, right?&lt;/p&gt;
 
@@ -1954,7 +1954,7 @@ Switch Livingroom_Light &quot;Livingroom Light&quot; [Lighting] {exec=&quot;&amp
  <entry>
    <title>Join Data Files based on Keys using Bash</title>
    <link href="https://bits.mdminhazulhaque.io/linux/join-data-files-based-on-keys-using-bash.html"/>
-   <updated>2018-12-14T00:00:00+08:00</updated>
+   <updated>2018-12-14T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/join-data-files-based-on-keys-using-bash</id>
    <content type="html">&lt;p&gt;I was looking for a *nix tool that takes two or more input files and joins them like SQL JOIN statement does. And I was not surprised at all. I found &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;join&lt;/code&gt;.&lt;/p&gt;
 
@@ -2010,7 +2010,7 @@ Intel:5
  <entry>
    <title>Forward Router's Web Panel using SSH</title>
    <link href="https://bits.mdminhazulhaque.io/linux/forward-routers-web-panel-using-ssh.html"/>
-   <updated>2018-12-14T00:00:00+08:00</updated>
+   <updated>2018-12-14T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/forward-routers-web-panel-using-ssh</id>
    <content type="html">&lt;p&gt;Forwarding SSH is a very common practice for those who have limited access to Public IPs to their home network. It is possible to enable reverse proxy other ports/services inside the same network as the remote unit is.&lt;/p&gt;
 
@@ -2025,7 +2025,7 @@ Intel:5
  <entry>
    <title>Run openHAB as root on Ubuntu</title>
    <link href="https://bits.mdminhazulhaque.io/linux/run-openhab-as-root-on-ubuntu.html"/>
-   <updated>2018-11-06T00:00:00+08:00</updated>
+   <updated>2018-11-06T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/run-openhab-as-root-on-ubuntu</id>
    <content type="html">&lt;p&gt;Although running openHAB as root is a massive security risk, and should not be a good practice to do, it might come handy for solving permission issues related to serial read/write, or executing special commands like sudo or apt.&lt;/p&gt;
 
@@ -2045,7 +2045,7 @@ Intel:5
  <entry>
    <title>Successful Installation of DD-WRT for TL-WR845N</title>
    <link href="https://bits.mdminhazulhaque.io/ddwrt/successful-installation-of-dd-wrt-for-tl-wr845n.html"/>
-   <updated>2018-05-16T00:00:00+08:00</updated>
+   <updated>2018-05-16T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/ddwrt/successful-installation-of-dd-wrt-for-tl-wr845n</id>
    <content type="html">&lt;p&gt;Several days ago I got my home router burnt due to the frequent thunderstorms. Luckily, only the WAN port of the router was damaged. So I decided to use the switch interface as WAN. I knew how to configure the switch as WAN on OpenWRT. Unfortunately there was no modded firmware for this model. I searched over the internet and tried flashing some firmwares. But none of them worked. Moreover, latest models from TP-Link does not support flashing 3rd party firmware from the WebUI.&lt;/p&gt;
 
@@ -2099,7 +2099,7 @@ disable         &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; no
  <entry>
    <title>Install Avro on Kubuntu 16.04</title>
    <link href="https://bits.mdminhazulhaque.io/linux/install-avro-on-kubuntu-16-04.html"/>
-   <updated>2018-01-30T00:00:00+08:00</updated>
+   <updated>2018-01-30T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/install-avro-on-kubuntu-16-04</id>
    <content type="html">&lt;p&gt;Installing Avro on Linux has become pretty much easy these days. Thanks to &lt;a href=&quot;http://linux.omicronlab.com/ubuntu_14.04.html&quot;&gt;this&lt;/a&gt; blog post by Omicron Lab. But there are many users out there who failed successfully to configure Avro with ibus, specially on non-Ubuntu distros. Because Kubuntu (or other non-GNOME distros) does not use ibus as IME. So I found an workaround.&lt;/p&gt;
 
@@ -2129,7 +2129,7 @@ disable         &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; no
  <entry>
    <title>Find An Image in Another Image using OpenCV and NumPy</title>
    <link href="https://bits.mdminhazulhaque.io/opencv/find-image-in-another-image-using-opencv-and-numpy.html"/>
-   <updated>2017-07-12T00:00:00+08:00</updated>
+   <updated>2017-07-12T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/opencv/find-image-in-another-image-using-opencv-and-numpy</id>
    <content type="html">&lt;p&gt;Several days ago, I needed to catch new message notification from Skype4Linux. As far I know they do not provide any API (like dbus or HTTP API like Skype 4.3 native) to catch new message event. So I deciced to monitor the system tray of my desktop and look for the unread icon that Skype shows. Finally I had myself written a tiny Python script that serves the purpose.&lt;/p&gt;
 
@@ -2190,7 +2190,7 @@ disable         &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; no
  <entry>
    <title>Run Flask App with Let's Encrypt SSL Certificate</title>
    <link href="https://bits.mdminhazulhaque.io/python/run-flask-app-with-let's-encrypt-ssl-certificate.html"/>
-   <updated>2017-07-02T00:00:00+08:00</updated>
+   <updated>2017-07-02T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/python/run-flask-app-with-let's-encrypt-ssl-certificate</id>
    <content type="html">&lt;p&gt;Flask supports serving in HTTPS mode when provided with valid certificate and key file. I have been using Let’s Encrypt which automatically manages all the SSL keyfiles and certificates used on my server. I had troubles setting up preconfigured SSL keys and certificates with my Flask app. Although I had it figured out later.&lt;/p&gt;
 
@@ -2230,7 +2230,7 @@ read:errno=0
  <entry>
    <title>Xiaomi MI 5 রিভিউ</title>
    <link href="https://bits.mdminhazulhaque.io/phones/xiaomi-mi-5-review.html"/>
-   <updated>2017-05-19T00:00:00+08:00</updated>
+   <updated>2017-05-19T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/phones/xiaomi-mi-5-review</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/XccX3Pe.jpg&quot; alt=&quot;Xiaomi MI 5 Photo by Minhaz&quot; /&gt;&lt;/p&gt;
 
@@ -2328,7 +2328,7 @@ read:errno=0
  <entry>
    <title>Increase Jenkins Session Timeout Value on Ubuntu</title>
    <link href="https://bits.mdminhazulhaque.io/jenkins/increase-jenkins-session-timeout-value-on-ubuntu.html"/>
-   <updated>2017-04-30T00:00:00+08:00</updated>
+   <updated>2017-04-30T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/jenkins/increase-jenkins-session-timeout-value-on-ubuntu</id>
    <content type="html">&lt;p&gt;I know it’s annoying when you are logged out of your own local system withing a short period of time, right? You can set a custom Session Timeout value for Jenkins so you will not be kicked out of your system frequently. Simple open the following file in editor.&lt;/p&gt;
 
@@ -2347,7 +2347,7 @@ read:errno=0
  <entry>
    <title>Clean MQTT Retained Payload from Topic Tree Recursively</title>
    <link href="https://bits.mdminhazulhaque.io/mqtt/clean-mqtt-retained-payload-from-topic-tree-recursively.html"/>
-   <updated>2017-04-27T00:00:00+08:00</updated>
+   <updated>2017-04-27T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/mqtt/clean-mqtt-retained-payload-from-topic-tree-recursively</id>
    <content type="html">&lt;p&gt;I believe you are trying to clean retained messages from topics like the following by only providing the topic prefix &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;foo/&lt;/code&gt;.&lt;/p&gt;
 
@@ -2418,7 +2418,7 @@ foo/this/is/a/long/nested/topic
  <entry>
    <title>Connect to WiFi using nmcli</title>
    <link href="https://bits.mdminhazulhaque.io/linux/connect-to-wifi-using-nmcli.html"/>
-   <updated>2017-02-25T00:00:00+08:00</updated>
+   <updated>2017-02-25T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/connect-to-wifi-using-nmcli</id>
    <content type="html">&lt;p&gt;These days SoC with WiFi chip are very cheap and there exists lots of headless Linux OS for these machines. For example, Orange Pi Zero costs less than 10 US dollars.&lt;/p&gt;
 
@@ -2456,7 +2456,7 @@ Device &lt;span class=&quot;s1&quot;&gt;'wlan0'&lt;/span&gt; successfully activa
  <entry>
    <title>My Kubuntu 16.04 LTS Post Install Tweaks</title>
    <link href="https://bits.mdminhazulhaque.io/linux/my-kubuntu-16.04-lts-post-install-tweaks.html"/>
-   <updated>2017-02-24T00:00:00+08:00</updated>
+   <updated>2017-02-24T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/my-kubuntu-16.04-lts-post-install-tweaks</id>
    <content type="html">&lt;p&gt;It has been almost 4 years since I am using Kubuntu in a row. Months ago I updated my primary OS to Kubuntu 16.04.1 LTS. In this post I am going to share some of my tweaks which I do right after installing any Kubuntu release.&lt;/p&gt;
 
@@ -2575,7 +2575,7 @@ ufw allow ftp
  <entry>
    <title>Dolphin Plugin: Copy File List</title>
    <link href="https://bits.mdminhazulhaque.io/kde/dolphin-plugin-copy-file-list.html"/>
-   <updated>2017-02-24T00:00:00+08:00</updated>
+   <updated>2017-02-24T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/kde/dolphin-plugin-copy-file-list</id>
    <content type="html">&lt;p&gt;The following KServiceMenu comes handy if you frequently need to copy the list of files in an specific folder. Simple put the following lines to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.local/share/kservices5/copy-file-list.desktop&lt;/code&gt; and reload Dolphin.&lt;/p&gt;
 
@@ -2599,7 +2599,7 @@ X-KDE-Priority=TopLevel
  <entry>
    <title>Run Custom Lua Script as CGI with uhttpd</title>
    <link href="https://bits.mdminhazulhaque.io/openwrt/run-custom-lua-script-as-cgi-with-uhttpd.html"/>
-   <updated>2016-11-26T00:00:00+08:00</updated>
+   <updated>2016-11-26T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/openwrt/run-custom-lua-script-as-cgi-with-uhttpd</id>
    <content type="html">&lt;p&gt;uhttpd is a lightweight HTTP web server that supports running Lua scripts as CGI. It is possible to create custom REST API or any other callback using Lua functionality of uhttpd. All you need to do is to put a script somewhere in your filesystem that has one &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;handle_request&lt;/code&gt; function, and tweak some UCI configs. Let me tell you more.&lt;/p&gt;
 
@@ -2656,7 +2656,7 @@ uci commit uhttpd
  <entry>
    <title>OpenWRT inside VirtualBox with Internet Connectivity from Host Machine</title>
    <link href="https://bits.mdminhazulhaque.io/openwrt/openwrt-on-virtualbox-with-internet-connectivity-from-host-machine.html"/>
-   <updated>2016-11-26T00:00:00+08:00</updated>
+   <updated>2016-11-26T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/openwrt/openwrt-on-virtualbox-with-internet-connectivity-from-host-machine</id>
    <content type="html">&lt;p&gt;Last week I tried to run OpenWRT inside a VM and had a lot of troubles before being successful. So I thought that I should write a post about it.&lt;/p&gt;
 
@@ -2716,7 +2716,7 @@ VBoxManage storageattach &lt;span class=&quot;nv&quot;&gt;$VMNAME&lt;/span&gt; &
  <entry>
    <title>Turn TL-MR3420 into WiFi Repeater using OpenWRT</title>
    <link href="https://bits.mdminhazulhaque.io/openwrt/turn-tl-mr3420-into-wifi-repeater-using-openwrt.html"/>
-   <updated>2016-09-28T00:00:00+08:00</updated>
+   <updated>2016-09-28T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/openwrt/turn-tl-mr3420-into-wifi-repeater-using-openwrt</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
 Download TL-MR3420 OpenWRT Firmware with relayd preinstalled from &lt;a href=&quot;https://github.com/mdminhazulhaque/OpenWRT-TL-MR3420/tree/master/repeater&quot;&gt;mdminhazulhaque/OpenWRT-TL-MR3420&lt;/a&gt;
@@ -2849,7 +2849,7 @@ Thanks to &lt;a href=&quot;http://www.circuidipity.com/openwrt-bridged-repeater.
  <entry>
    <title>Banglalion Modem Running on NanoPi Neo</title>
    <link href="https://bits.mdminhazulhaque.io/linux/banglalion-modem-running-on-nanopi-neo.html"/>
-   <updated>2016-08-16T00:00:00+08:00</updated>
+   <updated>2016-08-16T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/banglalion-modem-running-on-nanopi-neo</id>
    <content type="html">&lt;p&gt;Recently I got a &lt;a href=&quot;http://www.friendlyarm.com/index.php?route=product/product&amp;amp;product_id=132&quot;&gt;Nanopi Neo&lt;/a&gt; with Allwinner H3 SoC, 512MB RAM, 1 USB-A port and 1 Ethernet port. I am using &lt;a href=&quot;http://www.armbian.com/&quot;&gt;Armbian&lt;/a&gt; as OS which is based on Debian.&lt;/p&gt;
 
@@ -2920,7 +2920,7 @@ CPU min MHz:           480.0000
  <entry>
    <title>Setup TeXstudio on Linux and macOS</title>
    <link href="https://bits.mdminhazulhaque.io/tex/setup-texstudio-on-linux-and-macos.html"/>
-   <updated>2016-07-25T00:00:00+08:00</updated>
+   <updated>2016-07-25T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/tex/setup-texstudio-on-linux-and-macos</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.texstudio.org/&quot;&gt;TeXstudio&lt;/a&gt; is a great integrated writing environment for creating LaTeX documents. TeXstudio needs local latex distribution in order to compile and preview documents.&lt;/p&gt;
 
@@ -2955,7 +2955,7 @@ sudo tlmgr install subfiles multirow multicolumn makecell tocloft appendix tocbi
  <entry>
    <title>Convert Number between Banlga and English in PHP</title>
    <link href="https://bits.mdminhazulhaque.io/php/convert-number-between-banlga-and-english-in-php.html"/>
-   <updated>2016-06-29T00:00:00+08:00</updated>
+   <updated>2016-06-29T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/php/convert-number-between-banlga-and-english-in-php</id>
    <content type="html">&lt;p&gt;Here is my solution that can convert Bangla number into English, and English number into Bangla.&lt;/p&gt;
 
@@ -2990,7 +2990,7 @@ sudo tlmgr install subfiles multirow multicolumn makecell tocloft appendix tocbi
  <entry>
    <title>Copy File from Dropbox to Google Drive</title>
    <link href="https://bits.mdminhazulhaque.io/python/copy-file-from-dropbox-to-google-drive.html"/>
-   <updated>2016-06-16T00:00:00+08:00</updated>
+   <updated>2016-06-16T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/python/copy-file-from-dropbox-to-google-drive</id>
    <content type="html">&lt;p&gt;What you’ll need&lt;/p&gt;
 
@@ -3121,7 +3121,7 @@ sudo tlmgr install subfiles multirow multicolumn makecell tocloft appendix tocbi
  <entry>
    <title>Receive SMS from SIM900A Kit using Arduino</title>
    <link href="https://bits.mdminhazulhaque.io/arduino/receive-sms-from-sim900a-kit-using-arduino.html"/>
-   <updated>2016-06-09T00:00:00+08:00</updated>
+   <updated>2016-06-09T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/arduino/receive-sms-from-sim900a-kit-using-arduino</id>
    <content type="html">&lt;p&gt;Sending SMS through SIM900A Kit is quite easy. You just need to turn on text based composition mode, write the text and send 0x1a. Here is an example. Note that SIM900A is an instance of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SoftwareSerial&lt;/code&gt; class connected via Serial interface of the Arduino.&lt;/p&gt;
 
@@ -3256,7 +3256,7 @@ Hello there, this is another test message.
  <entry>
    <title>Rename List of Files in Google Drive using Python</title>
    <link href="https://bits.mdminhazulhaque.io/python/rename-list-of-files-in-google-drive-using-python.html"/>
-   <updated>2016-06-07T00:00:00+08:00</updated>
+   <updated>2016-06-07T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/python/rename-list-of-files-in-google-drive-using-python</id>
    <content type="html">&lt;p&gt;Here is a code snippet I wrote months ago to rename a thousand files using Google Drive Python API. Please note that you need to set the scope to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://www.googleapis.com/auth/drive&lt;/code&gt; so the API call can commit changes to your drive. You need to authorize the app first. Run the script, it will open a browser session, allow access to Drive. Then you will be able to download &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;credentials.json&lt;/code&gt; from Google Drive Developer Console website.&lt;/p&gt;
 
@@ -3355,7 +3355,7 @@ Hello there, this is another test message.
  <entry>
    <title>Create Batch Directories in Google Drive using Ruby</title>
    <link href="https://bits.mdminhazulhaque.io/ruby/create-batch-directories-in-google-drive-using-ruby.html"/>
-   <updated>2016-06-07T00:00:00+08:00</updated>
+   <updated>2016-06-07T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/ruby/create-batch-directories-in-google-drive-using-ruby</id>
    <content type="html">&lt;p&gt;Here is a code snippet I wrote months ago to create several directories using Google Drive Ruby API. Please note that you need to set the scope to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://www.googleapis.com/auth/drive&lt;/code&gt; so the API call can commit changes to your drive. You need to authorize the app first. Run the script, it will open a browser session, allow access to Drive. Then you will be able to download &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;credentials.json&lt;/code&gt; from Google Drive Developer Console website.&lt;/p&gt;
 
@@ -3421,7 +3421,7 @@ Hello there, this is another test message.
  <entry>
    <title>Create (Secret) Gist using Go</title>
    <link href="https://bits.mdminhazulhaque.io/golang/create-gist-using-go.html"/>
-   <updated>2016-04-30T00:00:00+08:00</updated>
+   <updated>2016-04-30T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/golang/create-gist-using-go</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;https://developer.github.com/v3/gists/&quot;&gt;Github Gists API&lt;/a&gt; provides easy functionalities to create (and manage) Gists using simple API call. A simpliest workaround would be using cURL’s POST request with JSON parameters.&lt;/p&gt;
 
@@ -3498,7 +3498,7 @@ Hello there, this is another test message.
  <entry>
    <title>Bootstrap Skin for KTorrent WebInterface</title>
    <link href="https://bits.mdminhazulhaque.io/kde/bootstrap-skin-for-ktorrent-webinterface.html"/>
-   <updated>2016-03-22T00:00:00+08:00</updated>
+   <updated>2016-03-22T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/kde/bootstrap-skin-for-ktorrent-webinterface</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
 Grab the Bootstrap Skin from &lt;a href=&quot;https://github.com/mdminhazulhaque/KTorrentBootstrapUI&quot;&gt;mdminhazulhaque/KTorrentBootstrapUI&lt;/a&gt;
@@ -3521,7 +3521,7 @@ Grab the Bootstrap Skin from &lt;a href=&quot;https://github.com/mdminhazulhaque
  <entry>
    <title>FTP Daemon Management Script for OS X</title>
    <link href="https://bits.mdminhazulhaque.io/osx/ftp-daemon-management-script-for-osx.html"/>
-   <updated>2016-03-20T00:00:00+08:00</updated>
+   <updated>2016-03-20T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/osx/ftp-daemon-management-script-for-osx</id>
    <content type="html">&lt;p&gt;OS X comes with a handy, built-in FTP Server located at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/libexec/ftpd&lt;/code&gt; which can be easily started from commandline. I prefer it to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pureftpd&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;proftpd&lt;/code&gt;.&lt;/p&gt;
 
@@ -3573,7 +3573,7 @@ esac
  <entry>
    <title>Probhat Layout for OS X</title>
    <link href="https://bits.mdminhazulhaque.io/osx/probhat-layout-for-osx.html"/>
-   <updated>2016-03-11T00:00:00+08:00</updated>
+   <updated>2016-03-11T00:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/osx/probhat-layout-for-osx</id>
    <content type="html">&lt;p&gt;The Probhat layout is redesigned by &lt;a href=&quot;http://www.ankurbangla.org&quot;&gt;Ankur&lt;/a&gt;. Most of the Linux distro are including this layout with their latest releases. And it has been real easy using Probhat on Windows using Avro.&lt;/p&gt;
 
@@ -3643,7 +3643,7 @@ Send bugfixes or commits to &lt;a href=&quot;https://github.com/mdminhazulhaque/
  <entry>
    <title>Create N-Dimensional Vector with Preset Values in C++</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/n-dimensional-vector-in-cpp.html"/>
-   <updated>2016-01-14T09:33:00+08:00</updated>
+   <updated>2016-01-14T07:33:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/n-dimensional-vector-in-cpp</id>
    <content type="html">&lt;p&gt;A simple 2D vector can be initialized with preset values using fill constructor.&lt;/p&gt;
 
@@ -3709,7 +3709,7 @@ Send bugfixes or commits to &lt;a href=&quot;https://github.com/mdminhazulhaque/
  <entry>
    <title>OpenCV3 with Qt5 on Mac OS X</title>
    <link href="https://bits.mdminhazulhaque.io/mac/opencv-qt-osx.html"/>
-   <updated>2016-01-12T20:37:00+08:00</updated>
+   <updated>2016-01-12T18:37:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/mac/opencv-qt-osx</id>
    <content type="html">&lt;p&gt;Qt Creator is a great IDE to work with C++ projects and libraries. I have always been using Ubuntu for projects and research works. Almost all libraries can be found in Ubuntu repository. Recently, I had to configure OpenCV on Mac OS X. I was using Qt5 prebuilt binaries downloaded from &lt;a href=&quot;http://www.qt.io/download-open-source/&quot;&gt;qt.io&lt;/a&gt;. The copies of OpenCV libraries came from &lt;a href=&quot;http://brew.sh/&quot;&gt;brew&lt;/a&gt;. When I added OpenCV flags to Qt project file, I got the following error message.&lt;/p&gt;
 
@@ -3759,7 +3759,7 @@ brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;qt-creator
  <entry>
    <title>সি++ প্রোগ্রামিং টিপস: পর্ব ১</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/programming-tips-1.html"/>
-   <updated>2015-10-11T11:51:00+08:00</updated>
+   <updated>2015-10-11T09:51:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/programming-tips-1</id>
    <content type="html">&lt;p&gt;আজকাল পড়াশোনার কাজে হোক, রিসার্চের কাজে হোক, জীবন চালাতে হোক প্রোগ্রামিং একটা অবিচ্ছেদ্য অংশ হয়ে গেছে।  তবে প্রোগ্রামিং মানে শুধু ল্যাংগুয়েজের সিনট্যাক্স জেনে Hello World প্রিন্ট করা নয়, প্রোগ্রামিং মানে একটা কনসেপ্ট, একটা প্যারাডাইম, একটা আর্ট। কাজেই প্রোগ্রামিং শিখতে হলে কোডিং এর বাইরেও নিয়ম, শৃঙ্খলা, স্টাইল, বিন্যাস শেখা দরকার। এসবের কম্বিনেশনে প্রোগ্রামিং হয়ে উঠবে একটি শিল্প।&lt;/p&gt;
 
@@ -3991,7 +3991,7 @@ brew cask &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;qt-creator
  <entry>
    <title>Weka: Train and Test Datasets using Java</title>
    <link href="https://bits.mdminhazulhaque.io/ml/weka-train-test-using-java.html"/>
-   <updated>2015-10-11T11:09:00+08:00</updated>
+   <updated>2015-10-11T09:09:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/ml/weka-train-test-using-java</id>
    <content type="html">&lt;p&gt;A simple Java code to load ARFF datasets into &lt;a href=&quot;http://www.cs.waikato.ac.nz/ml/weka/&quot;&gt;Weka&lt;/a&gt;, train using J48 classifier and test random patterns.&lt;/p&gt;
 
@@ -4079,7 +4079,7 @@ tested_negative
  <entry>
    <title>Convert CPP to PDF with Syntax Highlighting</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/convert-cpp-to-pdf-with-syntax-highlighting.html"/>
-   <updated>2015-09-09T10:02:00+08:00</updated>
+   <updated>2015-09-09T08:02:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/convert-cpp-to-pdf-with-syntax-highlighting</id>
    <content type="html">&lt;p&gt;I just had converted a bunch of CPP files to PDF with Syntax Highlighting. I think it will be helpful to share how I did that.&lt;/p&gt;
 
@@ -4121,7 +4121,7 @@ find &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quo
  <entry>
    <title>Integer and String Conversion using C++ Generics</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/integer-and-string-conversion-using-cpp.html"/>
-   <updated>2015-07-01T06:10:00+08:00</updated>
+   <updated>2015-07-01T04:10:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/integer-and-string-conversion-using-cpp</id>
    <content type="html">&lt;p&gt;I have created some template functions for string to int and int to string
 conversion. The &lt;strong&gt;typename&lt;/strong&gt; keyword came real handy. Although C++11 has
@@ -4190,7 +4190,7 @@ support for &lt;strong&gt;to_string&lt;/strong&gt; and other type conversions.&l
  <entry>
    <title>MacOSX Cleanup Script</title>
    <link href="https://bits.mdminhazulhaque.io/mac/macosx-cleanup-script.html"/>
-   <updated>2015-06-29T13:40:00+08:00</updated>
+   <updated>2015-06-29T11:40:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/mac/macosx-cleanup-script</id>
    <content type="html">&lt;p&gt;Recently I had been running out of space on my Mac. Then I downloaded some
 apps for cleaning up caches and log files. Most of them are premium apps. So I
@@ -4215,7 +4215,7 @@ those files/dirs. ;) Here is what I have been using.&lt;/p&gt;
  <entry>
    <title>Cut string between two XML nodes using GREP</title>
    <link href="https://bits.mdminhazulhaque.io/linux/grep-cut-string-between-two-xml-nodes.html"/>
-   <updated>2015-06-29T13:34:00+08:00</updated>
+   <updated>2015-06-29T11:34:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/grep-cut-string-between-two-xml-nodes</id>
    <content type="html">&lt;p&gt;Say you want to extract some string between two patterns. GREP’s Perl
 integration does a nice job to perform such match.&lt;/p&gt;
@@ -4248,7 +4248,7 @@ it nicely.&lt;/p&gt;
  <entry>
    <title>An Easy to Use Boilerplate 'debuild' Project</title>
    <link href="https://bits.mdminhazulhaque.io/linux/dpkg-deb-boilerplate.html"/>
-   <updated>2015-06-29T13:27:00+08:00</updated>
+   <updated>2015-06-29T11:27:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/dpkg-deb-boilerplate</id>
    <content type="html">&lt;p&gt;“dpkg-deb-boilerplate” is an easy to use boilerplate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;debuild&lt;/code&gt; project for building debian package using &lt;a href=&quot;https://launchpad.net&quot;&gt;Lanuchpad&lt;/a&gt; or other services.&lt;/p&gt;
 
@@ -4300,7 +4300,7 @@ it nicely.&lt;/p&gt;
  <entry>
    <title>My Perfect Kubuntu Setup</title>
    <link href="https://bits.mdminhazulhaque.io/linux/my-perfect-kubuntu-setup.html"/>
-   <updated>2015-05-07T17:31:00+08:00</updated>
+   <updated>2015-05-07T15:31:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/my-perfect-kubuntu-setup</id>
    <content type="html">&lt;p&gt;[Last Updated: Thursday, May 07, 2015] It has been 3 years since I started using Kubuntu as my primary OS. Here is a list of PPAs and packages I
 installed. I also added some tweaks.&lt;/p&gt;
@@ -4470,7 +4470,7 @@ reboot
  <entry>
    <title>[Solved] Google Play Accessible Using Mobile Data, Fails Over WiFi</title>
    <link href="https://bits.mdminhazulhaque.io/android/google-play-error-921-solved.html"/>
-   <updated>2015-04-26T09:25:00+08:00</updated>
+   <updated>2015-04-26T07:25:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/android/google-play-error-921-solved</id>
    <content type="html">&lt;p&gt;Accessing Google Play Store from Android phones and getting the error message “connection timed out” - this is a very common issue for Android users. There are TONS of threads out there regarding this problem.&lt;/p&gt;
 
@@ -4498,7 +4498,7 @@ ifconfig wlan0 mtu 1400 up
  <entry>
    <title>Qt 5 Windows Taskbar Progress Indicator</title>
    <link href="https://bits.mdminhazulhaque.io/qt/qt-5-windows-taskbar-progress-indicator.html"/>
-   <updated>2015-04-18T09:03:00+08:00</updated>
+   <updated>2015-04-18T07:03:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/qt/qt-5-windows-taskbar-progress-indicator</id>
    <content type="html">&lt;p&gt;Qt 5.2 has built in support for indicating progress and other states in
 Windows Taskbar icon.&lt;/p&gt;
@@ -4518,7 +4518,7 @@ Windows Taskbar icon.&lt;/p&gt;
  <entry>
    <title>Some Regex Examples</title>
    <link href="https://bits.mdminhazulhaque.io/regex/some-regex-examples.html"/>
-   <updated>2015-04-10T11:41:00+08:00</updated>
+   <updated>2015-04-10T09:41:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/regex/some-regex-examples</id>
    <content type="html">&lt;p&gt;Regular expression for any binary string:&lt;/p&gt;
 
@@ -4709,7 +4709,7 @@ REJECT: 110110111
  <entry>
    <title>Dolphin Plugin: Copy as path</title>
    <link href="https://bits.mdminhazulhaque.io/linux/dolphin-plugin-copy-as-path.html"/>
-   <updated>2015-03-05T22:21:00+08:00</updated>
+   <updated>2015-03-05T20:21:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/dolphin-plugin-copy-as-path</id>
    <content type="html">&lt;p&gt;I was missing the feature of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Copy File Path&lt;/code&gt; in Dolphin (KDE File Manager). So I created one by myself. You need &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xclip&lt;/code&gt; installed for this.&lt;/p&gt;
 
@@ -4753,7 +4753,7 @@ X-KDE-Priority=TopLevel
  <entry>
    <title>Remove Unnecessary Fonts from Mac OS X</title>
    <link href="https://bits.mdminhazulhaque.io/mac/remove-unnecessary-fonts-from-mac-os-x.html"/>
-   <updated>2015-03-02T23:22:00+08:00</updated>
+   <updated>2015-03-02T21:22:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/mac/remove-unnecessary-fonts-from-mac-os-x</id>
    <content type="html">&lt;p&gt;Months ago I got a Macbook Air with Mac OS X Yosemite installed.&lt;/p&gt;
 
@@ -4808,7 +4808,7 @@ rm -rf /System/Library/Fonts/ヒ*
  <entry>
    <title>Banglalion WiMAX devices on Mac OS X Yosemite Success</title>
    <link href="https://bits.mdminhazulhaque.io/mac/banglalion-wimax-devices-on-mac-os-x.html"/>
-   <updated>2015-02-28T20:59:00+08:00</updated>
+   <updated>2015-02-28T18:59:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/mac/banglalion-wimax-devices-on-mac-os-x</id>
    <content type="html">&lt;p&gt;Few days ago I found out that Banglalion WiMAX modems do not work after Mac OS X upgrade, or in 64bit mode.&lt;/p&gt;
 
@@ -4823,7 +4823,7 @@ rm -rf /System/Library/Fonts/ヒ*
  <entry>
    <title>One-liner to Get IP Address of Interface</title>
    <link href="https://bits.mdminhazulhaque.io/linux/one-liner-to-get-ip-address-of-interface.html"/>
-   <updated>2015-02-24T01:26:00+08:00</updated>
+   <updated>2015-02-23T23:26:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/one-liner-to-get-ip-address-of-interface</id>
    <content type="html">&lt;p&gt;The following command is enough for extract IP address from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ifconfig&lt;/code&gt; command. It uses field separator “:” and “ “ (space) to cut the line into words.&lt;/p&gt;
 
@@ -4835,7 +4835,7 @@ rm -rf /System/Library/Fonts/ヒ*
  <entry>
    <title>Crucial M500 SSD Firmware Update Issue</title>
    <link href="https://bits.mdminhazulhaque.io/ssd/crucial-m500-ssd-firmware-update-issue.html"/>
-   <updated>2015-02-24T00:57:00+08:00</updated>
+   <updated>2015-02-23T22:57:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/ssd/crucial-m500-ssd-firmware-update-issue</id>
    <content type="html">&lt;p&gt;Yesterday I got a Crucial M500 240GB SSD with firmware revision MU03.&lt;/p&gt;
 
@@ -4857,7 +4857,7 @@ rm -rf /System/Library/Fonts/ヒ*
  <entry>
    <title>Samsung 840 PRO SSD Low IOPS Fix</title>
    <link href="https://bits.mdminhazulhaque.io/ssd/samsung-840-pro-ssd-low-iops-fix.html"/>
-   <updated>2015-02-23T23:36:00+08:00</updated>
+   <updated>2015-02-23T21:36:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/ssd/samsung-840-pro-ssd-low-iops-fix</id>
    <content type="html">&lt;p&gt;I have been using Samsung 840 PRO SSD for the last few months. It is an amazing SSD with blazing speed and responsiveness. It takes 2-3 seconds to boot my Kubuntu or Windows system.&lt;/p&gt;
 
@@ -4886,7 +4886,7 @@ rm -rf /System/Library/Fonts/ヒ*
  <entry>
    <title>Handle Interrupt Signal in C/C++</title>
    <link href="https://bits.mdminhazulhaque.io/c/handle-interrupt-signal-in-cc.html"/>
-   <updated>2015-02-21T22:27:00+08:00</updated>
+   <updated>2015-02-21T20:27:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/c/handle-interrupt-signal-in-cc</id>
    <content type="html">&lt;p&gt;Keyboard shortcut like Ctrl+C is used to pass SIGTERM event to program.&lt;/p&gt;
 
@@ -4939,7 +4939,7 @@ you cannot stop me by pressing ctrl+c
  <entry>
    <title>Forget freopen, Use std::rdbuf to Redirect cin and cout</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/forget-freopen-use-stdrdbuf-to-redirect.html"/>
-   <updated>2015-02-20T11:26:00+08:00</updated>
+   <updated>2015-02-20T09:26:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/forget-freopen-use-stdrdbuf-to-redirect</id>
    <content type="html">&lt;p&gt;C-style legacy codes should not be written inside a C++ program.&lt;/p&gt;
 
@@ -5009,7 +5009,7 @@ golden_ratio = 1.61803
  <entry>
    <title>Use stringstream to Read Input Values from string</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/use-stringstream-to-read-input-values.html"/>
-   <updated>2015-02-20T09:39:00+08:00</updated>
+   <updated>2015-02-20T07:39:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/use-stringstream-to-read-input-values</id>
    <content type="html">&lt;p&gt;In C++, &lt;strong&gt;cin&lt;/strong&gt; and &lt;strong&gt;cout&lt;/strong&gt; is used to take standard input and output respectively from console. For debugging or testing, executing program and provide console input repeatedly might seem boring to anyone.&lt;/p&gt;
 
@@ -5140,7 +5140,7 @@ a_line = the quick brown fox jumps over the lazy dog
  <entry>
    <title>Calculate ARGB/RGBA from Raw Color and Alpha Value</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/calculate-argbrgba-from-raw-color-and.html"/>
-   <updated>2015-02-16T19:03:00+08:00</updated>
+   <updated>2015-02-16T17:03:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/calculate-argbrgba-from-raw-color-and</id>
    <content type="html">&lt;p&gt;RGBA or ARGB colors are created from 3 primary color values (RGB) and 1 value called alpha, combined into a single 32bit unsigned integer.&lt;/p&gt;
 
@@ -5179,7 +5179,7 @@ RGBA: eeddccaa
  <entry>
    <title>Android-Javascript Bridge</title>
    <link href="https://bits.mdminhazulhaque.io/android/android-javascript-bridge.html"/>
-   <updated>2015-02-10T11:05:00+08:00</updated>
+   <updated>2015-02-10T09:05:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/android/android-javascript-bridge</id>
    <content type="html">&lt;p&gt;Last post I wrote about &lt;a href=&quot;http://blog.minhazulhaque.com/2015/02/interfacing-javascript-from-webview-to.html&quot;&gt;Interfacing Javascript from Webview to native Android&lt;/a&gt; was about one way communication from Javascript to Android activity.&lt;/p&gt;
 
@@ -5239,7 +5239,7 @@ string.&lt;/p&gt;
  <entry>
    <title>Interfacing Javascript from Webview to native Android</title>
    <link href="https://bits.mdminhazulhaque.io/android/interfacing-javascript-from-webview-to.html"/>
-   <updated>2015-02-10T06:41:00+08:00</updated>
+   <updated>2015-02-10T04:41:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/android/interfacing-javascript-from-webview-to</id>
    <content type="html">&lt;p&gt;Native methods can be called from a Webview using JavaScript. To add a interface to webview, the method &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;addJavascriptInterface&lt;/code&gt; can be used. Here is an example.&lt;/p&gt;
 
@@ -5278,7 +5278,7 @@ annotations (Not @Java&lt;strong&gt;S&lt;/strong&gt;criptInterface).&lt;/p&gt;
  <entry>
    <title>Root Samsung Galaxy ACE NXT (SM-G313HZ)</title>
    <link href="https://bits.mdminhazulhaque.io/android/root-samsung-galaxy-ace-nxt-sm-g313hz.html"/>
-   <updated>2015-01-31T01:06:00+08:00</updated>
+   <updated>2015-01-30T23:06:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/android/root-samsung-galaxy-ace-nxt-sm-g313hz</id>
    <content type="html">&lt;p&gt;I purchased Samsung Galaxy ACE NXT (SM-G313HZ) two months ago and went through several failed attempt to root the phone. Odin is used a lot to root such phones but I was missing a custom recovery.&lt;/p&gt;
 
@@ -5339,7 +5339,7 @@ annotations (Not @Java&lt;strong&gt;S&lt;/strong&gt;criptInterface).&lt;/p&gt;
  <entry>
    <title>Samsung ACE NXT (SM-G313HZ) Bloatware List</title>
    <link href="https://bits.mdminhazulhaque.io/android/samsung-ace-nxt-sm-g313hz-bloatware-list.html"/>
-   <updated>2015-01-30T21:53:00+08:00</updated>
+   <updated>2015-01-30T19:53:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/android/samsung-ace-nxt-sm-g313hz-bloatware-list</id>
    <content type="html">&lt;p&gt;I have been using Samsung Galaxy ACE NXT (which is also known as Samsung Galaxy V in some regions) for the last 3 months. It is an entry level
 smartphone with 3G, Dual Sim, and Android 4.4.&lt;/p&gt;
@@ -5414,7 +5414,7 @@ YouTube.system.apk
  <entry>
    <title>Shuffle Items of an Array in C</title>
    <link href="https://bits.mdminhazulhaque.io/c/shuffle-items-of-array-in-c.html"/>
-   <updated>2015-01-23T04:16:00+08:00</updated>
+   <updated>2015-01-23T02:16:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/c/shuffle-items-of-array-in-c</id>
    <content type="html">&lt;p&gt;C does not come up with C++ like shuffle or random_shuffle templates. So an easy trick to shuffle the items of an array could be -&lt;/p&gt;
 
@@ -5539,7 +5539,7 @@ YouTube.system.apk
  <entry>
    <title>Setup A Popup Reminder Using Bash</title>
    <link href="https://bits.mdminhazulhaque.io/linux/setup-popup-reminder-using-bash.html"/>
-   <updated>2015-01-22T23:40:00+08:00</updated>
+   <updated>2015-01-22T21:40:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/setup-popup-reminder-using-bash</id>
    <content type="html">&lt;p&gt;Well, who doesn’t forget the milk on the stove while working on computer? I do.&lt;/p&gt;
 
@@ -5575,7 +5575,7 @@ minhaz:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&
  <entry>
    <title>Extract Attachments from RAW Email</title>
    <link href="https://bits.mdminhazulhaque.io/others/extract-attachments-from-raw-email.html"/>
-   <updated>2015-01-22T19:02:00+08:00</updated>
+   <updated>2015-01-22T17:02:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/others/extract-attachments-from-raw-email</id>
    <content type="html">&lt;p&gt;I couldn’t download any attachment from Gmail for the last couple of days. The problem might be with my ISP or my router’s MTU who knows. So I tried to download the attachments embedded in the RAW email.&lt;/p&gt;
 
@@ -5602,7 +5602,7 @@ minhaz@minhaz-desktop ~/download&amp;gt;
  <entry>
    <title>Bash: Regexp for MAC Address Validation</title>
    <link href="https://bits.mdminhazulhaque.io/linux/bash-regexp-for-mac-address-validation.html"/>
-   <updated>2015-01-09T16:16:00+08:00</updated>
+   <updated>2015-01-09T14:16:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/bash-regexp-for-mac-address-validation</id>
    <content type="html">&lt;p&gt;MAC Address aka HWAddress is a unique identifier assigned to network interfaces.&lt;/p&gt;
 
@@ -5646,7 +5646,7 @@ minhaz@minhaz-desktop ~/download&amp;gt;
  <entry>
    <title>Bash: Check If Script is Running through Pipe</title>
    <link href="https://bits.mdminhazulhaque.io/linux/bash-check-if-script-is-running-through.html"/>
-   <updated>2015-01-09T15:54:00+08:00</updated>
+   <updated>2015-01-09T13:54:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/bash-check-if-script-is-running-through</id>
    <content type="html">&lt;p&gt;Bash scripts can be run directly with arguments, or through pipes.&lt;/p&gt;
 
@@ -5691,7 +5691,7 @@ Pipe Data: Hello World
  <entry>
    <title>Round a Number in a Bash Script</title>
    <link href="https://bits.mdminhazulhaque.io/linux/round-number-in-bash-script.html"/>
-   <updated>2015-01-09T15:27:00+08:00</updated>
+   <updated>2015-01-09T13:27:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/round-number-in-bash-script</id>
    <content type="html">&lt;p&gt;Bash only evaluates expressions with non-floating point numbers. So there is no built-in function for rounding up or down floating point numbers.&lt;/p&gt;
 
@@ -5755,7 +5755,7 @@ the following approach can be followed.&lt;/p&gt;
  <entry>
    <title>Skype-like Desktop Popup Notification in Qt</title>
    <link href="https://bits.mdminhazulhaque.io/qt/skype-like-desktop-popup-notification.html"/>
-   <updated>2015-01-04T13:50:00+08:00</updated>
+   <updated>2015-01-04T11:50:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/qt/skype-like-desktop-popup-notification</id>
    <content type="html">&lt;p&gt;Qt has no popup desktop notification applet by default. As Qt is highly customizable and almost all widgets are inherited from QWidget, so a custom QWidget can be used as desktop popup applet.&lt;/p&gt;
 
@@ -5787,7 +5787,7 @@ to manage the popup from being closed on button press.&lt;/p&gt;
  <entry>
    <title>Split C++ String by Single Character Delimiter</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/split-c-string-by-single-character.html"/>
-   <updated>2015-01-03T12:51:00+08:00</updated>
+   <updated>2015-01-03T10:51:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/split-c-string-by-single-character</id>
    <content type="html">&lt;p&gt;A string can be sliced into a vector of strings by invoking the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;std::getline&lt;/code&gt; method.&lt;/p&gt;
 
@@ -5841,7 +5841,7 @@ eum
  <entry>
    <title>Android AsyncTask Example</title>
    <link href="https://bits.mdminhazulhaque.io/android/android-asynctask-example.html"/>
-   <updated>2015-01-03T12:44:00+08:00</updated>
+   <updated>2015-01-03T10:44:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/android/android-asynctask-example</id>
    <content type="html">&lt;p&gt;AsyncTask is a great API to perform background operations and without manipulating threads and/or handlers.&lt;/p&gt;
 
@@ -5905,7 +5905,7 @@ eum
  <entry>
    <title>Make Arduino IDE Prettier</title>
    <link href="https://bits.mdminhazulhaque.io/linux/make-arduino-ide-prettier.html"/>
-   <updated>2015-01-03T12:25:00+08:00</updated>
+   <updated>2015-01-03T10:25:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/make-arduino-ide-prettier</id>
    <content type="html">&lt;p&gt;Arduino IDE is written in Java and it looks ugly as the default Look And Feel
 (GTKLookAndFeel) sucks on Ubuntu or similar systems.&lt;/p&gt;
@@ -5932,7 +5932,7 @@ java &lt;span class=&quot;nt&quot;&gt;-Dswing&lt;/span&gt;.defaultlaf&lt;span cl
  <entry>
    <title>/etc/fstab Optimization for SSD and RAM</title>
    <link href="https://bits.mdminhazulhaque.io/linux/fstab-optimization-for-ssd-and-ram.html"/>
-   <updated>2015-01-03T12:15:00+08:00</updated>
+   <updated>2015-01-03T10:15:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/fstab-optimization-for-ssd-and-ram</id>
    <content type="html">&lt;p&gt;I have been using &lt;strong&gt;Samsung 840 Pro SSD&lt;/strong&gt; with &lt;strong&gt;8GB 1600MHz DDR3&lt;/strong&gt; memory
 module.&lt;/p&gt;
@@ -5965,7 +5965,7 @@ tmpfs     /var/log    tmpfs defaults,noatime,mode=0755   0  0
  <entry>
    <title>Color Text in Windows Console</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/color-text-in-windows-console.html"/>
-   <updated>2015-01-03T09:42:00+08:00</updated>
+   <updated>2015-01-03T07:42:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/color-text-in-windows-console</id>
    <content type="html">&lt;p&gt;Coloring texts in a console isn’t a great idea cause GUI widgets are preferable. But some people find it useful while scripting or creating a console application.&lt;/p&gt;
 
@@ -6022,7 +6022,7 @@ tmpfs     /var/log    tmpfs defaults,noatime,mode=0755   0  0
  <entry>
    <title>Draw the Flag of Bangladesh with OpenGL</title>
    <link href="https://bits.mdminhazulhaque.io/opengl/draw-flag-of-bangladesh-with-opengl.html"/>
-   <updated>2015-01-03T08:21:00+08:00</updated>
+   <updated>2015-01-03T06:21:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/opengl/draw-flag-of-bangladesh-with-opengl</id>
    <content type="html">&lt;p&gt;Recently I became interested with OpenGL again. Here is a flag of Bangladesh
 which was drawn using OpenGL with exact ratio (10:6).&lt;/p&gt;
@@ -6093,7 +6093,7 @@ which was drawn using OpenGL with exact ratio (10:6).&lt;/p&gt;
  <entry>
    <title>Use chroot with Networking Support</title>
    <link href="https://bits.mdminhazulhaque.io/linux/chroot-with-networking-support.html"/>
-   <updated>2015-01-03T08:05:00+08:00</updated>
+   <updated>2015-01-03T06:05:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/chroot-with-networking-support</id>
    <content type="html">&lt;p&gt;Google says,&lt;/p&gt;
 
@@ -6144,7 +6144,7 @@ execute chroot.&lt;/p&gt;
  <entry>
    <title>Bash One-liner to Set GRUB Timeout</title>
    <link href="https://bits.mdminhazulhaque.io/linux/bash-one-liner-to-set-grub-timeout.html"/>
-   <updated>2015-01-03T07:55:00+08:00</updated>
+   <updated>2015-01-03T05:55:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/bash-one-liner-to-set-grub-timeout</id>
    <content type="html">&lt;p&gt;To set GRUB timeout to 5 seconds, use this command.&lt;/p&gt;
 
@@ -6172,7 +6172,7 @@ examlple,&lt;/p&gt;
  <entry>
    <title>Create custom functions for Fish</title>
    <link href="https://bits.mdminhazulhaque.io/linux/create-custom-functions-for-fish.html"/>
-   <updated>2015-01-03T05:54:00+08:00</updated>
+   <updated>2015-01-03T03:54:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/create-custom-functions-for-fish</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://ridiculousfish.com/shell/&quot;&gt;Fish&lt;/a&gt; has become my favorite shell for the last several months. Most lovely features of it are - auto-complete, auto- capitalization and colorful text. I use fish shell as my default shell with &lt;a href=&quot;http://konsole.kde.org/&quot;&gt;Konsole&lt;/a&gt; on my KDE 4.10 desktop.&lt;/p&gt;
 
@@ -6229,7 +6229,7 @@ Status Legend:
  <entry>
    <title>Increase and decrease a number between two min and max values</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/increase-and-decrease-number-between.html"/>
-   <updated>2015-01-03T05:46:00+08:00</updated>
+   <updated>2015-01-03T03:46:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/increase-and-decrease-number-between</id>
    <content type="html">&lt;p&gt;Increasing and decreasing a number between two bounds is rather important in most cases. I used it mostly in OpenGL scenes to render objects from min to
 max value and from max to min. The algorithm is quite simple. Shortly,&lt;/p&gt;
@@ -6414,7 +6414,7 @@ visual effort for better understanding. We change&lt;/p&gt;
  <entry>
    <title>OpenGL Write Bitmap Text with Color</title>
    <link href="https://bits.mdminhazulhaque.io/opengl/opengl-write-bitmap-text-with-color.html"/>
-   <updated>2015-01-03T05:43:00+08:00</updated>
+   <updated>2015-01-03T03:43:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/opengl/opengl-write-bitmap-text-with-color</id>
    <content type="html">&lt;p&gt;OpenGL does not provide support for fonts, and hence does not provide support
 for “text”. But GLUT supports bitmap text with a limited number of fonts. The
@@ -6561,7 +6561,7 @@ code to draw the whole scene is,&lt;/p&gt;
  <entry>
    <title>Some words about Qt DOM Node, Element and Attribute</title>
    <link href="https://bits.mdminhazulhaque.io/qt/some-words-about-qt-dom-node-element-and-attribute.html"/>
-   <updated>2015-01-03T05:41:00+08:00</updated>
+   <updated>2015-01-03T03:41:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/qt/some-words-about-qt-dom-node-element-and-attribute</id>
    <content type="html">&lt;h2 id=&quot;add-instruction-node&quot;&gt;Add Instruction Node&lt;/h2&gt;
 
@@ -6715,7 +6715,7 @@ there.&lt;/p&gt;
  <entry>
    <title>Stop QThread properly</title>
    <link href="https://bits.mdminhazulhaque.io/qt/stop-qthread-properly.html"/>
-   <updated>2015-01-02T13:20:00+08:00</updated>
+   <updated>2015-01-02T11:20:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/qt/stop-qthread-properly</id>
    <content type="html">&lt;p&gt;Are you annoyed with this message? When you try to terminate a thread while
 quitting the main application thread, and this weird message appears after the
@@ -6739,7 +6739,7 @@ qApp-&amp;gt;quit();
  <entry>
    <title>ArchLinux: Cannot download any package on Raspberry Pi</title>
    <link href="https://bits.mdminhazulhaque.io/linux/archlinux-cannot-download-any-package.html"/>
-   <updated>2014-11-13T07:08:00+08:00</updated>
+   <updated>2014-11-13T05:08:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/archlinux-cannot-download-any-package</id>
    <content type="html">&lt;p&gt;Many of you out there must have encountered this weird problem - cannot download or synchronize or update AUR database. Pinging any website shows success but whenever you run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pacman -Syyy&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pacman -Su&lt;/code&gt; the following errors occur.&lt;/p&gt;
 
@@ -6779,7 +6779,7 @@ aur                  67.9 KiB  67.7K/s 00:01 [###############] 100%
  <entry>
    <title>Sort A Vector Of Pairs Based On First Or Second Element</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/sort-vector-of-pairs-based-on-first-or-second-element.html"/>
-   <updated>2012-11-12T22:04:00+08:00</updated>
+   <updated>2012-11-12T20:04:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/sort-vector-of-pairs-based-on-first-or-second-element</id>
    <content type="html">&lt;p&gt;Any vector can be sorted using STL of C++. In fact, templates like vector,
 list etc have function sort() inline. But when sorting a vector of pairs based
@@ -6836,7 +6836,7 @@ modify this to change sorting order.&lt;/p&gt;
  <entry>
    <title>Driver for ICatch PC Camera for Windows 7</title>
    <link href="https://bits.mdminhazulhaque.io/others/driver-for-icatch-pc-camera-for-windows-7.html"/>
-   <updated>2012-09-21T08:44:00+08:00</updated>
+   <updated>2012-09-21T06:44:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/others/driver-for-icatch-pc-camera-for-windows-7</id>
    <content type="html">&lt;p&gt;Atlast I found a solution to make a very old webcam work on Windows 7 x64. This is a webcam I found from my friend.&lt;/p&gt;
 
@@ -6876,7 +6876,7 @@ on Windows 8 also!).&lt;/p&gt;
  <entry>
    <title>Find and Replace All Occurrences in a C++ String</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/find-and-replace-all-occurrences-in-cpp-string.html"/>
-   <updated>2012-09-20T16:00:00+08:00</updated>
+   <updated>2012-09-20T14:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/find-and-replace-all-occurrences-in-cpp-string</id>
    <content type="html">&lt;p&gt;I am familiar with QString and always use its overloaded functions like
 replace(), remove() etc. It has automatic regex detection and very suitable
@@ -6987,7 +6987,7 @@ replace: hello world
  <entry>
    <title>Convert QByteArray to Unicode QString</title>
    <link href="https://bits.mdminhazulhaque.io/qt/convert-qbytearray-to-unicode-qstring.html"/>
-   <updated>2012-07-23T01:16:00+08:00</updated>
+   <updated>2012-07-22T23:16:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/qt/convert-qbytearray-to-unicode-qstring</id>
    <content type="html">&lt;p&gt;I was working with a networking based application. But when I requested data
 with QNetworkAccessManager, I got the reply text like this one.&lt;/p&gt;
@@ -7016,7 +7016,7 @@ use them as QString. I just did the following:&lt;/p&gt;
  <entry>
    <title>Tautology/Contradiction Expression Verification</title>
    <link href="https://bits.mdminhazulhaque.io/cpp/tautology-contradiction-expression.html"/>
-   <updated>2012-07-16T01:49:00+08:00</updated>
+   <updated>2012-07-15T23:49:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/cpp/tautology-contradiction-expression</id>
    <content type="html">&lt;p&gt;Tautology is a logical expression which is always true for any values of its
 variables. On the other hand, contradiction is a logical expression which is
@@ -7129,7 +7129,7 @@ characters because standard keyboards don’t have the AND, OR etc sign.&lt;/p&g
  <entry>
    <title>উবুন্টু ১২.০৪ সহ অন্যান্য ডিস্ট্রিবিউশনের জন্য গ্রাফিকাল ওয়াইম্যাক্স কানেকশন ম্যানেজার</title>
    <link href="https://bits.mdminhazulhaque.io/linux/banglalion-wimax.html"/>
-   <updated>2012-04-30T20:00:00+08:00</updated>
+   <updated>2012-04-30T18:00:00+06:00</updated>
    <id>https://bits.mdminhazulhaque.io/linux/banglalion-wimax</id>
    <content type="html">&lt;p&gt;গতবছরের সেপ্টেম্বর মাসের ৫ তারিখে বাংলাদেশে লিনাক্সের প্রচার ও প্রসারে নতুন একটি দিক উন্মোচিত হয়। সেটা হল বাংলালায়ন কোম্পানির তিনটি ডিভাইস লিনাক্সের ৩২বিট প্লাটফর্মে চালানো সম্ভব হয়। তারপর জনসাধারণের জন্য যেসব প্যাকেজ (৪টি) রিলিজ করা হয় সেগুলো শুধুমাত্র উবুন্টু/সমমানের ডেবিয়ান ডিস্ট্রিবিউশনের জন্য প্রযোজ্য ছিল। তার পরবর্তী ৬-৭ মাসে প্রচুর ইউজার ফীডব্যাক, সাজেশন, ট্রিক ইত্যাদি পর্যালোচনা করে পুরো সিস্টেমটি কমান্ডলাইন ও পাসওয়ার্ডের ঝামেলা থেকে সরিয়ে পুরো গ্রাফিকাল প্রোজেক্টে নেওয়া হয়েছে। সেই সাথে যুক্ত হয়েছে উবুন্টু বাদে আরো কয়েকটি ডিস্ট্রিবিউশনের জন্য সাপোর্ট যেন ইউজার নিজের পছন্দমত এনভায়রনমেন্টে কাজ করার সুযোগ পায়। প্রোজেক্টটি সম্পুর্ণ ওপেন সোর্স এবং ফ্রি (এবং অবশ্যই নন-কমার্শিয়াল)। পরবর্তীতে এর সাথে আরো কিছু ফিচার যুক্ত করার ইচ্ছা রয়েছে আমাদের। এখন গ্রাফিকাল ওয়াইম্যাক্স কানেকশন ম্যানেজারের ডাউনলোড, ইন্সটল করার নিয়ম, ব্যবহার ইত্যাদি সম্পর্কে বলছি।&lt;/p&gt;
 
