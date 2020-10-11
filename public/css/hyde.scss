@@ -35,8 +35,19 @@
  * Update the foundational and global aspects of the page.
  */
 
+@font-face {
+  font-family: 'SolaimanLipi';
+  src: url('/public/fonts/SolaimanLipi.eot');
+  src: url('/public/fonts/SolaimanLipi.woff') format('woff'),
+       url('/public/fonts/SolaimanLipi.ttf') format('truetype'),
+       url('/public/fonts/SolaimanLipi.svg#SolaimanLipiNormal') format('svg'),
+       url('/public/fonts/SolaimanLipi.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
-  font-family: "Ubuntu", "Hind Siliguri", Arial, sans-serif;
+  font-family: "Ubuntu", "SolaimanLipi", Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
