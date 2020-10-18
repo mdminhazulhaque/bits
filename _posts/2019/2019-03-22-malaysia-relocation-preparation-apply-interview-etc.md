@@ -41,4 +41,4 @@ category: malaysia
 
 পরবর্তী পর্বে বলব কিভাবে বেতন ও অন্যান্য সুবিধা নিয়ে কোম্পানির সাথে দরকষাকষি করবেন। ভাল থাকুন সবাই।
 
-> পরবর্তী পোস্ট [মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস](https://bits.mdminhazulhaque.io/malaysia/malaysia-salary-negotiation-employment-pass.html)
+> পরবর্তী পোস্ট [মালয়েশিয়ায় রিলোকেশন ১ - কোম্পানির সাথে দর কষাকষি ও এমপ্লয়মেন্ট পাস](/malaysia/malaysia-salary-negotiation-employment-pass.html)

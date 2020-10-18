@@ -10,8 +10,8 @@ My blog uses the URL pattern - `<base>/<category>/<post>`.
 
 For example,
 
-1. http://bits.mdminhazulhaque.io
-2. http://bits.mdminhazulhaque.io/linux
+1. https://bits.mdminhazulhaque.io
+2. https://bits.mdminhazulhaque.io/linux
 3. https://bits.mdminhazulhaque.io/linux/authenticate-fluentd-to-access-bigquery.html
 
 Now the challange is to generate a JSON file based on the page type or level. For my case,
