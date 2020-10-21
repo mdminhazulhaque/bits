@@ -14,6 +14,6 @@ category: malaysia
 * [মালয়েশিয়ায় রিলোকেশন ৪ - ইমিগ্রেশন](/malaysia/malaysia-immigration.html)
 * [মালয়েশিয়ায় রিলোকেশন ৫ - লাইফস্টাইল টিপস](/malaysia/malaysia-life-style-tips.html)
 * [মালয়েশিয়ায় রিলোকেশন ৬ - ট্যাক্স বিষয়ক](/malaysia/malaysia-tax-related.html)
-* [মালয়েশিয়ায় রিলোকেশন ৭ - চাকরি বদলানো](/malaysia/malaysia-switch-job.html)
+* [মালয়েশিয়ায় রিলোকেশন ৭ - চাকরি বদলানো](/malaysia/malaysia-change-job.html)
 
 আপনারা চাইলে আপনাদের মতামত, অভিজ্ঞতাও শেয়ার করতে পারেন। ধন্যবাদ সবাইকে।
