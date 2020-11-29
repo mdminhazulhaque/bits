@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://bits.mdminhazulhaque.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bits.mdminhazulhaque.io/" rel="alternate" type="text/html" /><updated>2020-11-09T19:44:34+06:00</updated><id>https://bits.mdminhazulhaque.io/feed.xml</id><title type="html">Bits</title><subtitle>Random posts written by &lt;a href=&quot;https://mdminhazulhaque.io&quot;&gt;Minhaz&lt;/a&gt;</subtitle><entry><title type="html">মালয়েশিয়ায় রিলোকেশন ৭ - চাকরি বদলানো</title><link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-change-job.html" rel="alternate" type="text/html" title="মালয়েশিয়ায় রিলোকেশন ৭ - চাকরি বদলানো" /><published>2020-10-19T00:00:00+06:00</published><updated>2020-10-19T00:00:00+06:00</updated><id>https://bits.mdminhazulhaque.io/malaysia/malaysia-change-job</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/malaysia/malaysia-change-job.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://bits.mdminhazulhaque.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bits.mdminhazulhaque.io/" rel="alternate" type="text/html" /><updated>2020-11-29T18:35:42+06:00</updated><id>https://bits.mdminhazulhaque.io/feed.xml</id><title type="html">Bits</title><subtitle>Random posts written by &lt;a href=&quot;https://mdminhazulhaque.io&quot;&gt;Minhaz&lt;/a&gt;</subtitle><entry><title type="html">মালয়েশিয়ায় রিলোকেশন ৭ - চাকরি বদলানো</title><link href="https://bits.mdminhazulhaque.io/malaysia/malaysia-change-job.html" rel="alternate" type="text/html" title="মালয়েশিয়ায় রিলোকেশন ৭ - চাকরি বদলানো" /><published>2020-10-19T00:00:00+06:00</published><updated>2020-10-19T00:00:00+06:00</updated><id>https://bits.mdminhazulhaque.io/malaysia/malaysia-change-job</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/malaysia/malaysia-change-job.html">&lt;blockquote&gt;
   &lt;p&gt;পূর্ববর্তী পোস্ট &lt;a href=&quot;/malaysia/malaysia-tax-related.html&quot;&gt;মালয়েশিয়ায় রিলোকেশন ৬ - ট্যাক্স বিষয়ক&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -497,31 +497,175 @@ bob@mdminhazulhaque.io disconnected from 186.110.104.190
 &lt;h3 id=&quot;tools-required&quot;&gt;Tools Required&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/cli/&quot;&gt;aws&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://stedolan.github.io/jq/&quot;&gt;jq&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;aws https://aws.amazon.com/cli/&lt;/li&gt;
+  &lt;li&gt;jq https://stedolan.github.io/jq/&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;All Resource, Account, ARN, Hostname etc are generated using &lt;a href=&quot;https://faker.readthedocs.io/en/master&quot;&gt;Faker&lt;/a&gt;. They do not match any real user data.&lt;/p&gt;
+&lt;p&gt;Disclaimer: All Resource, Account, ARN, Hostname etc are generated using &lt;a href=&quot;https://faker.readthedocs.io/en/master&quot;&gt;Faker&lt;/a&gt;. They do not match any real user data.&lt;/p&gt;
 
 &lt;h3 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#ec2&quot;&gt;EC2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#s3&quot;&gt;S3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#api-gateway&quot;&gt;API Gateway&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#elb&quot;&gt;ELB&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#rds&quot;&gt;RDS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#elasticache&quot;&gt;ElastiCache&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#lambda&quot;&gt;Lambda&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#cloudwatch&quot;&gt;Cloudwatch&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#sns&quot;&gt;SNS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#dynamodb&quot;&gt;DynamoDB&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#sqs&quot;&gt;SQS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#cloudfront&quot;&gt;CloudFront&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#amplify&quot;&gt;Amplify&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#cognito&quot;&gt;Cognito&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#iam-user&quot;&gt;IAM User&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#iam-group&quot;&gt;IAM Group&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ec2&quot;&gt;EC2&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-instance-id-type-and-name&quot;&gt;List Instance ID, Type and Name&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-instances-with-public-ip-address-and-name&quot;&gt;List Instances with Public IP Address and Name&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-vpcs-and-cidr-ip-block&quot;&gt;List of VPCs and CIDR IP Block&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-subnets-for-a-vpc&quot;&gt;List of Subnets for a VPC&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-security-groups&quot;&gt;List of Security Groups&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#print-security-groups-for-an-instance&quot;&gt;Print Security Groups for an Instance&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#edit-security-groups-of-an-instance&quot;&gt;Edit Security Groups of an Instance&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#print-security-group-rules-as-fromaddress-and-toport&quot;&gt;Print Security Group Rules as FromAddress and ToPort&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#add-rule-to-security-group&quot;&gt;Add Rule to Security Group&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#delete-rule-from-security-group&quot;&gt;Delete Rule from Security Group&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#edit-rules-of-security-group&quot;&gt;Edit Rules of Security Group&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#delete-security-group&quot;&gt;Delete Security Group&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#s3&quot;&gt;S3&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-buckets&quot;&gt;List Buckets&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-files-in-a-bucket&quot;&gt;List Files in a Bucket&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#create-bucket&quot;&gt;Create Bucket&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#delete-bucket&quot;&gt;Delete Bucket&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#download-s3-object-to-local&quot;&gt;Download S3 Object to Local&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#upload-local-file-as-s3-object&quot;&gt;Upload Local File as S3 Object&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#delete-s3-object&quot;&gt;Delete S3 Object&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#download-bucket-to-local&quot;&gt;Download Bucket to Local&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#upload-local-directory-to-bucket&quot;&gt;Upload Local Directory to Bucket&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#share-s3-object-without-public-access&quot;&gt;Share S3 Object without Public Access&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#api-gateway&quot;&gt;API Gateway&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-api-gateway-ids-and-names&quot;&gt;List of API Gateway IDs and Names&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-api-gateway-keys&quot;&gt;List of API Gateway Keys&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-api-gateway-domain-names&quot;&gt;List API Gateway Domain Names&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-resources-for-api-gateway&quot;&gt;List of Resources for API Gateway&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#find-lambda-for-api-gateway-resource&quot;&gt;Find Lambda for API Gateway Resource&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#elb&quot;&gt;ELB&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-elb-hostnames&quot;&gt;List of ELB Hostnames&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-elb-arns&quot;&gt;List of ELB ARNs&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-elb-target-group-arns&quot;&gt;List of ELB Target Group ARNs&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#find-instances-for-a-target-group&quot;&gt;Find Instances for a Target Group&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rds&quot;&gt;RDS&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-db-clusters&quot;&gt;List of DB Clusters&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-db-instances&quot;&gt;List of DB Instances&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#take-db-instance-snapshot&quot;&gt;Take DB Instance Snapshot&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#take-db-cluster-snapshot&quot;&gt;Take DB Cluster Snapshot&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#elasticache&quot;&gt;ElastiCache&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-elasticache-machine-type-and-name&quot;&gt;List of ElastiCache Machine Type and Name&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-elasticache-replication-groups&quot;&gt;List of ElastiCache Replication Groups&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-elasticache-snapshots&quot;&gt;List of ElastiCache Snapshots&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#create-elasticache-snapshot&quot;&gt;Create ElastiCache Snapshot&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#delete-elasticache-snapshot&quot;&gt;Delete ElastiCache Snapshot&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#scale-updown-elasticache-replica&quot;&gt;Scale Up/Down ElastiCache Replica&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lambda&quot;&gt;Lambda&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-lambda-functions-runtime-and-memory&quot;&gt;List of Lambda Functions, Runtime and Memory&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-lambda-layers&quot;&gt;List of Lambda Layers&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-source-event-for-lambda&quot;&gt;List of Source Event for Lambda&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#download-lambda-code&quot;&gt;Download Lambda Code&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cloudwatch&quot;&gt;Cloudwatch&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-cloudwatch-alarms-and-status&quot;&gt;List of CloudWatch Alarms and Status&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#create-alarm-for-ec2-high-cpuutilization&quot;&gt;Create Alarm for EC2 High CPUUtilization&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#create-alarm-for-ec2-high-statuscheckfailed_instance&quot;&gt;Create Alarm for EC2 High StatusCheckFailed_Instance&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#route53&quot;&gt;Route53&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-domains&quot;&gt;List Domains&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-records-for-a-domain-zone&quot;&gt;List Records for a Domain (Zone)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#sns&quot;&gt;SNS&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-sns-topics&quot;&gt;List of SNS Topics&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-sns-topic-and-related-subscriptions&quot;&gt;List of SNS Topic and related Subscriptions&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#publish-to-sns-topic&quot;&gt;Publish to SNS Topic&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#dynamodb&quot;&gt;DynamoDB&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-dynamodb-tables&quot;&gt;List of DynamoDB Tables&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#get-all-items-from-a-table&quot;&gt;Get All Items from a Table&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#get-item-count-from-a-table&quot;&gt;Get Item Count from a Table&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#get-item-using-key&quot;&gt;Get Item using Key&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#get-specific-fields-from-an-item&quot;&gt;Get Specific Fields from an Item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#delete-item-using-key&quot;&gt;Delete Item using Key&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#sqs&quot;&gt;SQS&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-queues&quot;&gt;List Queues&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#create-queue&quot;&gt;Create Queue&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#count-messages-in-queue&quot;&gt;Count Messages in Queue&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#send-message&quot;&gt;Send Message&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#receive-message&quot;&gt;Receive Message&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#delete-message&quot;&gt;Delete Message&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#purge-queue&quot;&gt;Purge Queue&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#delete-queue&quot;&gt;Delete Queue&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cloudfront&quot;&gt;CloudFront&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-cloudfront-distributions-and-origins&quot;&gt;List of CloudFront Distributions and Origins&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#create-cache-invalidation&quot;&gt;Create Cache Invalidation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#check-cache-invalidation-status&quot;&gt;Check Cache Invalidation Status&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#amplify&quot;&gt;Amplify&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-amplify-apps-and-source-repository&quot;&gt;List of Amplify Apps and Source Repository&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cognito&quot;&gt;Cognito&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-user-pool-ids-and-names&quot;&gt;List of User Pool IDs and Names&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-phone-and-email-of-all-users&quot;&gt;List of Phone and Email of All Users&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#iam-user&quot;&gt;IAM User&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-userid-and-username&quot;&gt;List of UserId and UserName&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#get-single-user&quot;&gt;Get Single User&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#add-user&quot;&gt;Add User&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#delete-user&quot;&gt;Delete User&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-access-keys-for-user&quot;&gt;List Access Keys for User&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#delete-access-key-for-user&quot;&gt;Delete Access Key for User&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#activatedeactivate-access-key-for-user&quot;&gt;Activate/Deactivate Access Key for User&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#generate-new-access-key-for-user&quot;&gt;Generate New Access Key for User&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#iam-group&quot;&gt;IAM Group&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-groups&quot;&gt;List Groups&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#adddelete-groups&quot;&gt;Add/Delete Groups&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-policies-and-arns&quot;&gt;List of Policies and ARNs&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-usergrouproles-for-a-policy&quot;&gt;List of User/Group/Roles for a Policy&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-policies-for-a-group&quot;&gt;List Policies for a Group&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#add-policy-to-a-group&quot;&gt;Add Policy to a Group&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#add-user-to-a-group&quot;&gt;Add User to a Group&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#remove-user-from-a-group&quot;&gt;Remove User from a Group&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-users-in-a-group&quot;&gt;List Users in a Group&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-groups-for-a-user&quot;&gt;List Groups for a User&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#attachdetach-policy-to-a-group&quot;&gt;Attach/Detach Policy to a Group&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;pro-tip&quot;&gt;Pro Tip!&lt;/h3&gt;
@@ -557,7 +701,7 @@ i-00f11e8e33c971058  t2.nano    garrett.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;list-instances-with-public-ip-address-and-name&quot;&gt;List Instances with Public IP Address and Name&lt;/h4&gt;
-&lt;p&gt;You can directly put this to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/hosts&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Tip: You can directly put this to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/hosts&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws ec2 describe-instances &lt;span class=&quot;nt&quot;&gt;--query&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Reservations[*].Instances[?not_null(PublicIpAddress)]'&lt;/span&gt; | jq &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.[][]|.PublicIpAddress+&quot; &quot;+(.Tags[]|select(.Key==&quot;Name&quot;).Value)'&lt;/span&gt;
 223.64.72.64    fisher.com
 198.82.207.161  robinson.com
@@ -748,7 +892,7 @@ internal-prod  internal-dev.cluster-b6da07d35.ap-southeast-1.rds.amazonaws.com
 
 &lt;h4 id=&quot;list-of-db-instances&quot;&gt;List of DB Instances&lt;/h4&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws rds describe-db-instances | jq &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.DBInstances[] | .DBInstanceIdentifier+&quot; &quot;+.DBInstanceClass+&quot; &quot;+.Endpoint.Address'&lt;/span&gt;
-backend-dev   db.t3.medifum  backend-prod.b6da07d35.ap-southeast-1.rds.amazonaws.com
+backend-dev   db.t3.medium  backend-prod.b6da07d35.ap-southeast-1.rds.amazonaws.com
 internal-dev  db.t2.micro   internal-dev.b6da07d35.ap-southeast-1.rds.amazonaws.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -846,6 +990,36 @@ userdata-read      AWS/DynamoDB        OK
 userdata-write     AWS/DynamoDB        OK
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h4 id=&quot;create-alarm-for-ec2-high-cpuutilization&quot;&gt;Create Alarm for EC2 High CPUUtilization&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws cloudwatch put-metric-alarm &lt;span class=&quot;nt&quot;&gt;--alarm-name&lt;/span&gt; high-cpu-usage &lt;span class=&quot;nt&quot;&gt;--alarm-description&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Alarm when CPU exceeds 70 percent&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--metric-name&lt;/span&gt; CPUUtilization &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt; AWS/EC2 &lt;span class=&quot;nt&quot;&gt;--statistic&lt;/span&gt; Average &lt;span class=&quot;nt&quot;&gt;--period&lt;/span&gt; 300 &lt;span class=&quot;nt&quot;&gt;--threshold&lt;/span&gt; 70 &lt;span class=&quot;nt&quot;&gt;--comparison-operator&lt;/span&gt; GreaterThanThreshold  &lt;span class=&quot;nt&quot;&gt;--dimensions&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Name=InstanceId,Value=i-123456789&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--evaluation-periods&lt;/span&gt; 2 &lt;span class=&quot;nt&quot;&gt;--alarm-actions&lt;/span&gt; arn:aws:sns:ap-southeast-1:987654321:System-Alerts &lt;span class=&quot;nt&quot;&gt;--unit&lt;/span&gt; Percent
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;create-alarm-for-ec2-high-statuscheckfailed_instance&quot;&gt;Create Alarm for EC2 High StatusCheckFailed_Instance&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws cloudwatch put-metric-alarm &lt;span class=&quot;nt&quot;&gt;--alarm-name&lt;/span&gt; EC2-StatusCheckFailed-AppServer &lt;span class=&quot;nt&quot;&gt;--alarm-description&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;EC2 StatusCheckFailed for AppServer&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--metric-name&lt;/span&gt; StatusCheckFailed_Instance &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt; AWS/EC2 &lt;span class=&quot;nt&quot;&gt;--statistic&lt;/span&gt; Average &lt;span class=&quot;nt&quot;&gt;--period&lt;/span&gt; 60 &lt;span class=&quot;nt&quot;&gt;--threshold&lt;/span&gt; 0 &lt;span class=&quot;nt&quot;&gt;--comparison-operator&lt;/span&gt; GreaterThanThreshold  &lt;span class=&quot;nt&quot;&gt;--dimensions&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Name=InstanceId,Value=i-123456789&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--evaluation-periods&lt;/span&gt; 3 &lt;span class=&quot;nt&quot;&gt;--alarm-actions&lt;/span&gt; arn:aws:sns:ap-southeast-1:987654321:System-Alerts &lt;span class=&quot;nt&quot;&gt;--unit&lt;/span&gt; Count
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;route53&quot;&gt;Route53&lt;/h2&gt;
+
+&lt;h4 id=&quot;list-domains&quot;&gt;List Domains&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws route53 list-hosted-zones | jq &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.HostedZones[]|.Id+&quot; &quot;+.Name'&lt;/span&gt;
+/hostedzone/ZEB1PAH4U mysite.com.
+/hostedzone/ZQUOHGH3G yoursite.com.
+/hostedzone/ZEADEA0CO staywith.us.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;list-records-for-a-domain-zone&quot;&gt;List Records for a Domain (Zone)&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws route53 list-resource-record-sets &lt;span class=&quot;nt&quot;&gt;--hosted-zone-id&lt;/span&gt; /hostedzone/ZEB1PAH4U | jq &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.ResourceRecordSets[]| if (.AliasTarget!=null) then .Type+&quot; &quot;+.Name+&quot; &quot;+.AliasTarget.DNSName else .Type+&quot; &quot;+.Name+&quot; &quot;+.ResourceRecords[].Value end'&lt;/span&gt;
+A      mysite.com.              dualstack.mysite-lb-967522168.ap-southeast-1.elb.amazonaws.com.
+A      mysite.com.              11.22.33.44
+TXT    _amazonses.mysite.com.   6c6d761371f0480bbe60de0df275b550
+A      test.mysite.com.         55.66.77.88
+CNAME  www.mysite.com.          mysite.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h2 id=&quot;sns&quot;&gt;SNS&lt;/h2&gt;
 
 &lt;h4 id=&quot;list-of-sns-topics&quot;&gt;List of SNS Topics&lt;/h4&gt;
@@ -893,7 +1067,7 @@ events
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;get-item-using-key&quot;&gt;Get Item using Key&lt;/h4&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws dynamodb get-item &lt;span class=&quot;nt&quot;&gt;--table-name&lt;/span&gt; events &lt;span class=&quot;nt&quot;&gt;--key&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{&quot;email&quot;&quot;admin@mdminhazulhaque.io&quot;}}'&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws dynamodb get-item &lt;span class=&quot;nt&quot;&gt;--table-name&lt;/span&gt; events &lt;span class=&quot;nt&quot;&gt;--key&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{&quot;email&quot;: {&quot;S&quot;: &quot;admin@mdminhazulhaque.io&quot;}}'&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;s2&quot;&gt;&quot;Item&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;s2&quot;&gt;&quot;email&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -910,7 +1084,7 @@ events
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;get-specific-fields-from-an-item&quot;&gt;Get Specific Fields from an Item&lt;/h4&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws dynamodb get-item &lt;span class=&quot;nt&quot;&gt;--table-name&lt;/span&gt; events &lt;span class=&quot;nt&quot;&gt;--key&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{&quot;email&quot;&quot;admin@mdminhazulhaque.io&quot;}}'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--attributes-to-get&lt;/span&gt; event_type
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws dynamodb get-item &lt;span class=&quot;nt&quot;&gt;--table-name&lt;/span&gt; events &lt;span class=&quot;nt&quot;&gt;--key&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{&quot;email&quot;: {&quot;S&quot;: &quot;admin@mdminhazulhaque.io&quot;}}'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--attributes-to-get&lt;/span&gt; event_type
 &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;s2&quot;&gt;&quot;Item&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;s2&quot;&gt;&quot;event_type&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -921,7 +1095,7 @@ events
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;delete-item-using-key&quot;&gt;Delete Item using Key&lt;/h4&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws dynamodb delete-item &lt;span class=&quot;nt&quot;&gt;--table-name&lt;/span&gt; events &lt;span class=&quot;nt&quot;&gt;--key&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{&quot;email&quot;&quot;admin@mdminhazulhaque.io&quot;}}'&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws dynamodb delete-item &lt;span class=&quot;nt&quot;&gt;--table-name&lt;/span&gt; events &lt;span class=&quot;nt&quot;&gt;--key&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{&quot;email&quot;: {&quot;S&quot;: &quot;admin@mdminhazulhaque.io&quot;}}'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;sqs&quot;&gt;SQS&lt;/h2&gt;
@@ -935,6 +1109,11 @@ https://ap-southeast-1.queue.amazonaws.com/987654321/user-signup
 &lt;h4 id=&quot;create-queue&quot;&gt;Create Queue&lt;/h4&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws sqs create-queue &lt;span class=&quot;nt&quot;&gt;--queue-name&lt;/span&gt; public-events.fifo | jq &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; .QueueUrl
 https://ap-southeast-1.queue.amazonaws.com/987654321/public-events.fifo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;count-messages-in-queue&quot;&gt;Count Messages in Queue&lt;/h4&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws sqs get-queue-attributes &lt;span class=&quot;nt&quot;&gt;--queue-url&lt;/span&gt; https://ap-southeast-1.queue.amazonaws.com/987654321/public-events.fifo | jq &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.Attributes | .QueueArn + &quot; &quot; + .ApproximateNumberOfMessages'&lt;/span&gt;
+arn:aws:sqs:ap-southeast-1:987654321:events.fifo 42
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;send-message&quot;&gt;Send Message&lt;/h4&gt;
@@ -970,6 +1149,16 @@ d9d5bb1e3c281f.cloudfront.net  frontend-prod-hk.s3.amazonaws.com
 d12b09e8a0a996.cloudfront.net  frontend-prod-vn.s3.amazonaws.com
 db64e7e9b3cc22.cloudfront.net  frontend-prod-sg.s3.amazonaws.com
 d5e3221cf8b921.cloudfront.net  cdn.mdminhazulhaque.io
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;create-cache-invalidation&quot;&gt;Create Cache Invalidation&lt;/h4&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws cloudfront create-invalidation &lt;span class=&quot;nt&quot;&gt;--distribution-id&lt;/span&gt; D12B09E8A0A996  &lt;span class=&quot;nt&quot;&gt;--path&lt;/span&gt; /blog/&lt;span class=&quot;se&quot;&gt;\*&lt;/span&gt; /blog/assets/&lt;span class=&quot;se&quot;&gt;\*&lt;/span&gt; | jq &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.Invalidation.Id'&lt;/span&gt;
+IALJ5AL93ZD79
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;check-cache-invalidation-status&quot;&gt;Check Cache Invalidation Status&lt;/h4&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aws cloudfront get-invalidation &lt;span class=&quot;nt&quot;&gt;--distribution-id&lt;/span&gt; D12B09E8A0A996 &lt;span class=&quot;nt&quot;&gt;--id&lt;/span&gt; IALJ5AL93ZD79 | jq &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.Invalidation.Status'&lt;/span&gt;
+Completed
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;amplify&quot;&gt;Amplify&lt;/h2&gt;

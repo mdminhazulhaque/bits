@@ -13,29 +13,122 @@ I have published a curated list of frequent AWS commands that might come handy. 
 
 ### Tools Required
 
-* [aws](https://aws.amazon.com/cli/)
-* [jq](https://stedolan.github.io/jq/)
+* aws https://aws.amazon.com/cli/
+* jq https://stedolan.github.io/jq/
 
-All Resource, Account, ARN, Hostname etc are generated using [Faker](https://faker.readthedocs.io/en/master). They do not match any real user data.
+Disclaimer: All Resource, Account, ARN, Hostname etc are generated using [Faker](https://faker.readthedocs.io/en/master). They do not match any real user data.
 
 ### Table of Contents
 
-* [EC2](#ec2)
-* [S3](#s3)
-* [API Gateway](#api-gateway)
-* [ELB](#elb)
-* [RDS](#rds)
-* [ElastiCache](#elasticache)
-* [Lambda](#lambda)
-* [Cloudwatch](#cloudwatch)
-* [SNS](#sns)
-* [DynamoDB](#dynamodb)
-* [SQS](#sqs)
-* [CloudFront](#cloudfront)
-* [Amplify](#amplify)
-* [Cognito](#cognito)
-* [IAM User](#iam-user)
-* [IAM Group](#iam-group)
+- [EC2](#ec2)
+    + [List Instance ID, Type and Name](#list-instance-id-type-and-name)
+    + [List Instances with Public IP Address and Name](#list-instances-with-public-ip-address-and-name)
+    + [List of VPCs and CIDR IP Block](#list-of-vpcs-and-cidr-ip-block)
+    + [List of Subnets for a VPC](#list-of-subnets-for-a-vpc)
+    + [List of Security Groups](#list-of-security-groups)
+    + [Print Security Groups for an Instance](#print-security-groups-for-an-instance)
+    + [Edit Security Groups of an Instance](#edit-security-groups-of-an-instance)
+    + [Print Security Group Rules as FromAddress and ToPort](#print-security-group-rules-as-fromaddress-and-toport)
+    + [Add Rule to Security Group](#add-rule-to-security-group)
+    + [Delete Rule from Security Group](#delete-rule-from-security-group)
+    + [Edit Rules of Security Group](#edit-rules-of-security-group)
+    + [Delete Security Group](#delete-security-group)
+- [S3](#s3)
+    + [List Buckets](#list-buckets)
+    + [List Files in a Bucket](#list-files-in-a-bucket)
+    + [Create Bucket](#create-bucket)
+    + [Delete Bucket](#delete-bucket)
+    + [Download S3 Object to Local](#download-s3-object-to-local)
+    + [Upload Local File as S3 Object](#upload-local-file-as-s3-object)
+    + [Delete S3 Object](#delete-s3-object)
+    + [Download Bucket to Local](#download-bucket-to-local)
+    + [Upload Local Directory to Bucket](#upload-local-directory-to-bucket)
+    + [Share S3 Object without Public Access](#share-s3-object-without-public-access)
+- [API Gateway](#api-gateway)
+    + [List of API Gateway IDs and Names](#list-of-api-gateway-ids-and-names)
+    + [List of API Gateway Keys](#list-of-api-gateway-keys)
+    + [List API Gateway Domain Names](#list-api-gateway-domain-names)
+    + [List of Resources for API Gateway](#list-of-resources-for-api-gateway)
+    + [Find Lambda for API Gateway Resource](#find-lambda-for-api-gateway-resource)
+- [ELB](#elb)
+    + [List of ELB Hostnames](#list-of-elb-hostnames)
+    + [List of ELB ARNs](#list-of-elb-arns)
+    + [List of ELB Target Group ARNs](#list-of-elb-target-group-arns)
+    + [Find Instances for a Target Group](#find-instances-for-a-target-group)
+- [RDS](#rds)
+    + [List of DB Clusters](#list-of-db-clusters)
+    + [List of DB Instances](#list-of-db-instances)
+    + [Take DB Instance Snapshot](#take-db-instance-snapshot)
+    + [Take DB Cluster Snapshot](#take-db-cluster-snapshot)
+- [ElastiCache](#elasticache)
+    + [List of ElastiCache Machine Type and Name](#list-of-elasticache-machine-type-and-name)
+    + [List of ElastiCache Replication Groups](#list-of-elasticache-replication-groups)
+    + [List of ElastiCache Snapshots](#list-of-elasticache-snapshots)
+    + [Create ElastiCache Snapshot](#create-elasticache-snapshot)
+    + [Delete ElastiCache Snapshot](#delete-elasticache-snapshot)
+    + [Scale Up/Down ElastiCache Replica](#scale-updown-elasticache-replica)
+- [Lambda](#lambda)
+    + [List of Lambda Functions, Runtime and Memory](#list-of-lambda-functions-runtime-and-memory)
+    + [List of Lambda Layers](#list-of-lambda-layers)
+    + [List of Source Event for Lambda](#list-of-source-event-for-lambda)
+    + [Download Lambda Code](#download-lambda-code)
+- [Cloudwatch](#cloudwatch)
+    + [List of CloudWatch Alarms and Status](#list-of-cloudwatch-alarms-and-status)
+    + [Create Alarm for EC2 High CPUUtilization](#create-alarm-for-ec2-high-cpuutilization)
+    + [Create Alarm for EC2 High StatusCheckFailed_Instance](#create-alarm-for-ec2-high-statuscheckfailed_instance)
+- [Route53](#route53)
+    + [List Domains](#list-domains)
+    + [List Records for a Domain (Zone)](#list-records-for-a-domain-zone)
+- [SNS](#sns)
+    + [List of SNS Topics](#list-of-sns-topics)
+    + [List of SNS Topic and related Subscriptions](#list-of-sns-topic-and-related-subscriptions)
+    + [Publish to SNS Topic](#publish-to-sns-topic)
+- [DynamoDB](#dynamodb)
+    + [List of DynamoDB Tables](#list-of-dynamodb-tables)
+    + [Get All Items from a Table](#get-all-items-from-a-table)
+    + [Get Item Count from a Table](#get-item-count-from-a-table)
+    + [Get Item using Key](#get-item-using-key)
+    + [Get Specific Fields from an Item](#get-specific-fields-from-an-item)
+    + [Delete Item using Key](#delete-item-using-key)
+- [SQS](#sqs)
+    + [List Queues](#list-queues)
+    + [Create Queue](#create-queue)
+    + [Count Messages in Queue](#count-messages-in-queue)
+    + [Send Message](#send-message)
+    + [Receive Message](#receive-message)
+    + [Delete Message](#delete-message)
+    + [Purge Queue](#purge-queue)
+    + [Delete Queue](#delete-queue)
+- [CloudFront](#cloudfront)
+    + [List of CloudFront Distributions and Origins](#list-of-cloudfront-distributions-and-origins)
+    + [Create Cache Invalidation](#create-cache-invalidation)
+    + [Check Cache Invalidation Status](#check-cache-invalidation-status)
+- [Amplify](#amplify)
+    + [List of Amplify Apps and Source Repository](#list-of-amplify-apps-and-source-repository)
+- [Cognito](#cognito)
+    + [List of User Pool IDs and Names](#list-of-user-pool-ids-and-names)
+    + [List of Phone and Email of All Users](#list-of-phone-and-email-of-all-users)
+- [IAM User](#iam-user)
+    + [List of UserId and UserName](#list-of-userid-and-username)
+    + [Get Single User](#get-single-user)
+    + [Add User](#add-user)
+    + [Delete User](#delete-user)
+    + [List Access Keys for User](#list-access-keys-for-user)
+    + [Delete Access Key for User](#delete-access-key-for-user)
+    + [Activate/Deactivate Access Key for User](#activatedeactivate-access-key-for-user)
+    + [Generate New Access Key for User](#generate-new-access-key-for-user)
+- [IAM Group](#iam-group)
+    + [List Groups](#list-groups)
+    + [Add/Delete Groups](#adddelete-groups)
+    + [List of Policies and ARNs](#list-of-policies-and-arns)
+    + [List of User/Group/Roles for a Policy](#list-of-usergrouproles-for-a-policy)
+    + [List Policies for a Group](#list-policies-for-a-group)
+    + [Add Policy to a Group](#add-policy-to-a-group)
+    + [Add User to a Group](#add-user-to-a-group)
+    + [Remove User from a Group](#remove-user-from-a-group)
+    + [List Users in a Group](#list-users-in-a-group)
+    + [List Groups for a User](#list-groups-for-a-user)
+    + [Attach/Detach Policy to a Group](#attachdetach-policy-to-a-group)
 
 ### Pro Tip!
 
@@ -73,7 +166,7 @@ i-00f11e8e33c971058  t2.nano    garrett.com
 ```
 
 #### List Instances with Public IP Address and Name
-You can directly put this to your `/etc/hosts`
+Tip: You can directly put this to your `/etc/hosts`
 ```bash
 aws ec2 describe-instances --query 'Reservations[*].Instances[?not_null(PublicIpAddress)]' | jq -r '.[][]|.PublicIpAddress+" "+(.Tags[]|select(.Key=="Name").Value)'
 223.64.72.64    fisher.com
@@ -296,7 +389,7 @@ internal-prod  internal-dev.cluster-b6da07d35.ap-southeast-1.rds.amazonaws.com
 #### List of DB Instances
 ```bash
 aws rds describe-db-instances | jq -r '.DBInstances[] | .DBInstanceIdentifier+" "+.DBInstanceClass+" "+.Endpoint.Address'
-backend-dev   db.t3.medifum  backend-prod.b6da07d35.ap-southeast-1.rds.amazonaws.com
+backend-dev   db.t3.medium  backend-prod.b6da07d35.ap-southeast-1.rds.amazonaws.com
 internal-dev  db.t2.micro   internal-dev.b6da07d35.ap-southeast-1.rds.amazonaws.com
 ```
 
@@ -404,6 +497,40 @@ userdata-read      AWS/DynamoDB        OK
 userdata-write     AWS/DynamoDB        OK
 ```
 
+#### Create Alarm for EC2 High CPUUtilization
+
+```bash
+aws cloudwatch put-metric-alarm --alarm-name high-cpu-usage --alarm-description "Alarm when CPU exceeds 70 percent" --metric-name CPUUtilization --namespace AWS/EC2 --statistic Average --period 300 --threshold 70 --comparison-operator GreaterThanThreshold  --dimensions "Name=InstanceId,Value=i-123456789" --evaluation-periods 2 --alarm-actions arn:aws:sns:ap-southeast-1:987654321:System-Alerts --unit Percent
+```
+
+#### Create Alarm for EC2 High StatusCheckFailed_Instance
+
+```bash
+aws cloudwatch put-metric-alarm --alarm-name EC2-StatusCheckFailed-AppServer --alarm-description "EC2 StatusCheckFailed for AppServer" --metric-name StatusCheckFailed_Instance --namespace AWS/EC2 --statistic Average --period 60 --threshold 0 --comparison-operator GreaterThanThreshold  --dimensions "Name=InstanceId,Value=i-123456789" --evaluation-periods 3 --alarm-actions arn:aws:sns:ap-southeast-1:987654321:System-Alerts --unit Count
+```
+
+## Route53
+
+#### List Domains
+
+```bash
+aws route53 list-hosted-zones | jq -r '.HostedZones[]|.Id+" "+.Name'
+/hostedzone/ZEB1PAH4U mysite.com.
+/hostedzone/ZQUOHGH3G yoursite.com.
+/hostedzone/ZEADEA0CO staywith.us.
+```
+
+#### List Records for a Domain (Zone)
+
+```bash
+aws route53 list-resource-record-sets --hosted-zone-id /hostedzone/ZEB1PAH4U | jq -r '.ResourceRecordSets[]| if (.AliasTarget!=null) then .Type+" "+.Name+" "+.AliasTarget.DNSName else .Type+" "+.Name+" "+.ResourceRecords[].Value end'
+A      mysite.com.              dualstack.mysite-lb-967522168.ap-southeast-1.elb.amazonaws.com.
+A      mysite.com.              11.22.33.44
+TXT    _amazonses.mysite.com.   6c6d761371f0480bbe60de0df275b550
+A      test.mysite.com.         55.66.77.88
+CNAME  www.mysite.com.          mysite.com
+```
+
 ## SNS
 
 #### List of SNS Topics
@@ -458,7 +585,7 @@ aws dynamodb scan --table-name events --select COUNT | jq .ScannedCount
 
 #### Get Item using Key
 ```bash
-aws dynamodb get-item --table-name events --key '{"email""admin@mdminhazulhaque.io"}}'
+aws dynamodb get-item --table-name events --key '{"email": {"S": "admin@mdminhazulhaque.io"}}'
 {
     "Item": {
         "email": {
@@ -476,7 +603,7 @@ aws dynamodb get-item --table-name events --key '{"email""admin@mdminhazulhaque.
 
 #### Get Specific Fields from an Item
 ```bash
-aws dynamodb get-item --table-name events --key '{"email""admin@mdminhazulhaque.io"}}' --attributes-to-get event_type
+aws dynamodb get-item --table-name events --key '{"email": {"S": "admin@mdminhazulhaque.io"}}' --attributes-to-get event_type
 {
     "Item": {
         "event_type": {
@@ -488,7 +615,7 @@ aws dynamodb get-item --table-name events --key '{"email""admin@mdminhazulhaque.
 
 #### Delete Item using Key
 ```bash
-aws dynamodb delete-item --table-name events --key '{"email""admin@mdminhazulhaque.io"}}'
+aws dynamodb delete-item --table-name events --key '{"email": {"S": "admin@mdminhazulhaque.io"}}'
 ```
 
 ## SQS
@@ -504,6 +631,12 @@ https://ap-southeast-1.queue.amazonaws.com/987654321/user-signup
 ```bash
 aws sqs create-queue --queue-name public-events.fifo | jq -r .QueueUrl
 https://ap-southeast-1.queue.amazonaws.com/987654321/public-events.fifo
+```
+
+#### Count Messages in Queue
+```bash
+aws sqs get-queue-attributes --queue-url https://ap-southeast-1.queue.amazonaws.com/987654321/public-events.fifo | jq -r '.Attributes | .QueueArn + " " + .ApproximateNumberOfMessages'
+arn:aws:sqs:ap-southeast-1:987654321:events.fifo 42
 ```
 
 #### Send Message
@@ -545,6 +678,18 @@ d9d5bb1e3c281f.cloudfront.net  frontend-prod-hk.s3.amazonaws.com
 d12b09e8a0a996.cloudfront.net  frontend-prod-vn.s3.amazonaws.com
 db64e7e9b3cc22.cloudfront.net  frontend-prod-sg.s3.amazonaws.com
 d5e3221cf8b921.cloudfront.net  cdn.mdminhazulhaque.io
+```
+
+#### Create Cache Invalidation
+```bash
+aws cloudfront create-invalidation --distribution-id D12B09E8A0A996  --path /blog/\* /blog/assets/\* | jq -r '.Invalidation.Id'
+IALJ5AL93ZD79
+```
+
+#### Check Cache Invalidation Status
+```bash
+aws cloudfront get-invalidation --distribution-id D12B09E8A0A996 --id IALJ5AL93ZD79 | jq -r '.Invalidation.Status'
+Completed
 ```
 
 ## Amplify
