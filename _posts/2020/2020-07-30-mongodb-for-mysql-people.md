@@ -2,7 +2,7 @@
 layout: post
 title: MongoDB for MySQL People
 date: 2020-07-30
-categories: mongodb
+category: mongodb
 ---
 
 I am a MySQL guy. I can query MySQL, BigQuery or SQL-like databases for my day to day business. Last week, I faced a challenge where I needed to extract some information from a production MongoDB server that involves aggregation. I had no idea how MongoDB works or how to run CRUD operation on such database. So obviously, I spent my whole weekend in learning MongoDB. In this post I am going to share the MongoDB queries I learnt, and the equivalent MySQL queries as well.

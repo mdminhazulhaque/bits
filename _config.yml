@@ -13,7 +13,6 @@ plugins:
     - jekyll-sitemap
     - jekyll-paginate
     - jekyll-archives
-    - jekyll-admin
 sass:
     style: compressed
 exclude:
