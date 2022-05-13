@@ -58,7 +58,6 @@ Client Alice: alice@mdminhazulhaque.io
 
 Which means, the client names must be unique because OpenVPN uses the client name to map DHCP IP Addresses for remote users.
 
-<div>{% include ad_article.html %}</div>
 
 ## Run the Script!
 

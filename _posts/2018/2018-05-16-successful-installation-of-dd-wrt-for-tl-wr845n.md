@@ -15,7 +15,6 @@ So I opened the case of the router, took out the PCB, and insert 4 male headers 
 
 From the debug log, I found that the chip model is Qualcomm Atheros QCA9533-BL3A and it was connected to 32MB DRAM and 4 MB SPI Flash. I searched in the DD-WRT forum and found that the model is a rebranded version of TP Link TL-WR841ND v10. So I decided to use a firmware which was built for TL-WR841ND. I failed again because the product information in the firmware header was mismatched. But, I am glad that a user named `ian5142c` from [DD-WRT forum](https://www.dd-wrt.com/phpBB2/viewtopic.php?p=1107635) uploaded a firmware with the correct header info for that model.
 
-<div>{% include ad_article.html %}</div>
 
 I had to install TFTP server in my Linux PC and ran it via `xinetd`. Here is the config file located at `/etc/xinetd.d/tftp` -
 

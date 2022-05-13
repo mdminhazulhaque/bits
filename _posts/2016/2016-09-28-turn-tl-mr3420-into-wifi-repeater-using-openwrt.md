@@ -53,7 +53,6 @@ config wifi-iface
     option ssid 'repeater_ssid'
 ```
 
-<div>{% include ad_article.html %}</div>
 
 Now let's change `/etc/config/network` also. You have to be very careful in this step. Otherwise the repeater may not work, or even if it works, you may not get internet connectivity through it.
 

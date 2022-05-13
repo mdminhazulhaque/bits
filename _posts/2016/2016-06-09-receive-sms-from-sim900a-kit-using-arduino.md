@@ -58,7 +58,6 @@ String readSIM900A()
 }
 ```
 
-<div>{% include ad_article.html %}</div>
 
 I know this is not so memory efficient, but it gets the job done, right? Well, let's use this function for detecting incoming SMS events from SIM900A serial data.
 

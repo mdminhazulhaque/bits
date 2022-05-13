@@ -76,7 +76,6 @@ the pattern 1001:
     REJECT: 10010
     REJECT: 1100010001110
 
-<div>{% include ad_article.html %}</div>
 
 Regular expression that will accept three or four words:
 

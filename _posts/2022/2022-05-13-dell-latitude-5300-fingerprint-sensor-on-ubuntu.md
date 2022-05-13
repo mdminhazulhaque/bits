@@ -54,6 +54,7 @@ Finally, you have to allow PAM to use fingerprint sensor as authentication mecha
 sudo pam-auth-update
 ```
 
- From now on, simply put your finger on the sensor after executing `sudo -i`. This should work for login and lock screens too.
+From now on, simply put your finger on the sensor after executing `sudo -i`. This should work for login and lock screens too.
 
 Let me know how it works for you.
+

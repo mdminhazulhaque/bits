@@ -28,7 +28,6 @@ adb connect 192.168.0.122:5555 # adb uses this port by default
 
 Viola! It got connected. Another wonder was waiting for me. After trying `adb shell` I typed `su` and it worked too! That means I can do whatever I want with this box until it does. Yeee!!!
 
-<div>{% include ad_article.html %}</div>
 
 Okay back to the business. From the behaviors of the default, vendor-locked launcher app, I guessed it prohibits any other app to be used as a launcher. Plus there was no way to access the App Drawer. So I decided to get benefit from `adb` again.
 

@@ -481,7 +481,6 @@ aws lambda get-function --function-name DynamoToSQS | jq -r .Code.Location
 https://awslambda-ap-se-1-tasks.s3.ap-southeast-1.amazonaws.com/snapshots/987654321/backend-api-function-1fda0de7-a751-4586-bf64-5601a410c170
 ```
 
-<div>{% include ad_article.html %}</div>
 
 ## Cloudwatch
 

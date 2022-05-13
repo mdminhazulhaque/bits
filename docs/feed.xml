@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://bits.mdminhazulhaque.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bits.mdminhazulhaque.io/" rel="alternate" type="text/html" /><updated>2022-05-13T21:18:18+06:00</updated><id>https://bits.mdminhazulhaque.io/feed.xml</id><title type="html">Bits</title><subtitle>Random posts written by &lt;a href=&quot;https://mdminhazulhaque.io&quot;&gt;Minhaz&lt;/a&gt;</subtitle><entry><title type="html">Dell Latitude 5300 Fingerprint Sensor on Ubuntu</title><link href="https://bits.mdminhazulhaque.io/linux/dell-latitude-5300-fingerprint-sensor-on-ubuntu.html" rel="alternate" type="text/html" title="Dell Latitude 5300 Fingerprint Sensor on Ubuntu" /><published>2022-05-13T00:00:00+06:00</published><updated>2022-05-13T00:00:00+06:00</updated><id>https://bits.mdminhazulhaque.io/linux/dell-latitude-5300-fingerprint-sensor-on-ubuntu</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/linux/dell-latitude-5300-fingerprint-sensor-on-ubuntu.html"><![CDATA[<p>After struggling for several months, I have finally been able to make the fingerprint sensor on my <strong>Dell Latitude 5300</strong> laptop work on Ubuntu. The steps were pretty simple. I have no idea why never tried these steps.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://bits.mdminhazulhaque.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bits.mdminhazulhaque.io/" rel="alternate" type="text/html" /><updated>2022-05-13T21:30:49+06:00</updated><id>https://bits.mdminhazulhaque.io/feed.xml</id><title type="html">Bits</title><subtitle>Random posts written by &lt;a href=&quot;https://mdminhazulhaque.io&quot;&gt;Minhaz&lt;/a&gt;</subtitle><entry><title type="html">Dell Latitude 5300 Fingerprint Sensor on Ubuntu</title><link href="https://bits.mdminhazulhaque.io/linux/dell-latitude-5300-fingerprint-sensor-on-ubuntu.html" rel="alternate" type="text/html" title="Dell Latitude 5300 Fingerprint Sensor on Ubuntu" /><published>2022-05-13T00:00:00+06:00</published><updated>2022-05-13T00:00:00+06:00</updated><id>https://bits.mdminhazulhaque.io/linux/dell-latitude-5300-fingerprint-sensor-on-ubuntu</id><content type="html" xml:base="https://bits.mdminhazulhaque.io/linux/dell-latitude-5300-fingerprint-sensor-on-ubuntu.html"><![CDATA[<p>After struggling for several months, I have finally been able to make the fingerprint sensor on my <strong>Dell Latitude 5300</strong> laptop work on Ubuntu. The steps were pretty simple. I have no idea why never tried these steps.</p>
 
 <p>Let’s jump to the real stuff. First, you need to add official Dell apt repositories to your system.</p>
 
@@ -269,11 +269,6 @@ Client Alice: alice@mdminhazulhaque.io
 
 <p>Which means, the client names must be unique because OpenVPN uses the client name to map DHCP IP Addresses for remote users.</p>
 
-<div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9642838276352812" data-ad-slot="8294162148"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-<br />
-</div>
-
 <h2 id="run-the-script">Run the Script!</h2>
 
 <p>Well, now we know the common name. It could be <code class="language-plaintext highlighter-rouge">mdminhazulhaque.io</code>, or <code class="language-plaintext highlighter-rouge">example.com</code> or <code class="language-plaintext highlighter-rouge">server</code> or anything. We need to amend the <code class="language-plaintext highlighter-rouge">RE_COMMON_NAME</code> regex and put the correct value there. Once done, upload the script to the OpenVPN server and run it using <code class="language-plaintext highlighter-rouge">python3</code>.</p>
@@ -464,11 +459,6 @@ bob@mdminhazulhaque.io disconnected from 186.110.104.190
 <span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"probhat-osx"</span>, <span class="s2">"stargazers_count"</span> : 23 <span class="o">}</span>
 <span class="o">{</span> <span class="s2">"name"</span> : <span class="s2">"PyQt-BPNN"</span>, <span class="s2">"stargazers_count"</span> : 22 <span class="o">}</span>
 </code></pre></div></div>
-
-<div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9642838276352812" data-ad-slot="8294162148"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-<br />
-</div>
 
 <h3 id="select-name-stargazers_count-from-repos-where-language--python">select name, stargazers_count from repos where language = “Python”</h3>
 
@@ -1054,11 +1044,6 @@ arn:aws:lambda:function:marketing-promo-sqs-function   arn:aws:sqs:promo-input-m
 https://awslambda-ap-se-1-tasks.s3.ap-southeast-1.amazonaws.com/snapshots/987654321/backend-api-function-1fda0de7-a751-4586-bf64-5601a410c170
 </code></pre></div></div>
 
-<div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9642838276352812" data-ad-slot="8294162148"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-<br />
-</div>
-
 <h2 id="cloudwatch">Cloudwatch</h2>
 
 <h4 id="list-of-cloudwatch-alarms-and-status">List of CloudWatch Alarms and Status</h4>
@@ -1457,11 +1442,6 @@ aws iam attach-group-policy <span class="nt">--group-name</span> business-ro <sp
 </code></pre></div></div>
 
 <p>Viola! It got connected. Another wonder was waiting for me. After trying <code class="language-plaintext highlighter-rouge">adb shell</code> I typed <code class="language-plaintext highlighter-rouge">su</code> and it worked too! That means I can do whatever I want with this box until it does. Yeee!!!</p>
-
-<div><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9642838276352812" data-ad-slot="8294162148"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-<br />
-</div>
 
 <p>Okay back to the business. From the behaviors of the default, vendor-locked launcher app, I guessed it prohibits any other app to be used as a launcher. Plus there was no way to access the App Drawer. So I decided to get benefit from <code class="language-plaintext highlighter-rouge">adb</code> again.</p>
 
