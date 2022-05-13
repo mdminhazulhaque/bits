@@ -4,13 +4,59 @@
  <title>Bits</title>
  <link href="https://bits.mdminhazulhaque.io/atom.xml" rel="self"/>
  <link href="https://bits.mdminhazulhaque.io/"/>
- <updated>2022-05-13T20:36:10+06:00</updated>
+ <updated>2022-05-13T21:18:18+06:00</updated>
  <id>https://bits.mdminhazulhaque.io</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Extract/Patch a File inside a ConfigMap</title>
+   <link href="https://bits.mdminhazulhaque.io/kubernetes/extract-patch-file-configmap.html"/>
+   <updated>2022-05-13T00:00:00+06:00</updated>
+   <id>https://bits.mdminhazulhaque.io/kubernetes/extract-patch-file-configmap</id>
+   <content type="html">&lt;p&gt;ConfigMap works great when you need to mount several files inside a container virtually.&lt;/p&gt;
+
+&lt;p&gt;Imagine you have a ConfigMap (like the following) with multiple files inside it and you want to extract/patch a single one of them.&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;v1&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ConfigMap&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;app-config&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;config.json&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;server&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0.0.0.0&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;feature&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;na&quot;&gt;hosts&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;127.0.0.1  localhost&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;10.10.0.1  example.com&lt;/span&gt;
+
+  &lt;span class=&quot;na&quot;&gt;app.conf&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;[main]&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;appName=Awesome App&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To extract a single file say &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt;, run the following.&lt;/p&gt;
+
+&lt;!--  --&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl get cm app-config &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; go-template&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'{{index .data &quot;config.json&quot;}}'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; config.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;!--  --&gt;
+
+&lt;p&gt;To patch a single file say &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.conf&lt;/code&gt; inside the ConfigMap run the following.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl create cm app-config &lt;span class=&quot;nt&quot;&gt;--from-file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;app.conf&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;app.conf &lt;span class=&quot;nt&quot;&gt;--dry-run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;client &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; yaml | &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+kubectl patch cm app-config &lt;span class=&quot;nt&quot;&gt;--type&lt;/span&gt; merge &lt;span class=&quot;nt&quot;&gt;--patch-file&lt;/span&gt; /dev/stdin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Hope that helps.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Dell Latitude 5300 Fingerprint Sensor on Ubuntu</title>
